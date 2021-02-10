@@ -2,6 +2,7 @@ from gensim.models import word2vec
 import numpy as np
 from pprint import pprint
 import nltk
+# nltk.download('punkt')
 
 docs = np.array(["Human machine interface for lab abc computer applications",
                  "A survey of user opinion of computer system response time",
@@ -13,7 +14,7 @@ docs = np.array(["Human machine interface for lab abc computer applications",
                  "Graph minors IV Widths of trees and well quasi ordering",
                  "Graph minors A survey"])
 
-# 分かち書き
+# 単語に分割
 corpus = [nltk.word_tokenize(doc) for doc in docs]
 
 # モデル作成
