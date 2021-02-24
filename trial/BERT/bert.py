@@ -22,19 +22,26 @@ tokens_tensor = torch.tensor([tokens]).reshape(1, -1)
 # print(tokens_tensor)
 
 # BERTを読み込む．時間かかるかも
-model = BertModel.from_pretrained('bert-base-uncased')
+model = BertModel.from_pretrained('bert-base-uncased', output_hidden_states = True)
 model.eval()
 
 with torch.no_grad():
     all_encoder_layers = model(tokens_tensor, output_hidden_states=True)
 
-# 0:last_hidden_​​state, 1:pooler_output, 2:hidden_​​states
-print("Number of layers:", len(all_encoder_layers))                # 3
-print("Number of batches:", len(all_encoder_layers[0]))            # 1
-print("Number of tokens:", len(all_encoder_layers[0][0]))          # 506
+# all_encoder_layers[i]
+# i=0:last_hidden_​​state, i=1:pooler_output, i=2:hidden_​​states
+print("Number of batches:", len(all_encoder_layers[0]))             # 1
+print("Number of tokens:", len(all_encoder_layers[0][0]))           # 506
 print("Number of hidden units:", len(all_encoder_layers[0][0][0]))  # 768
 
-# embedding = np.array(all_encoder_layers)
+print("-------------------------------------")
+
+print("Number of layers:", len(all_encoder_layers[2]))                 # 13 (initial embeddiings + 12 BERT layers)
+print("Number of batches:", len(all_encoder_layers[2][0]))             # 1
+print("Number of tokens:", len(all_encoder_layers[2][0][0]))           # 506
+print("Number of hidden units:", len(all_encoder_layers[2][0][0][0]))  # 768
+
+# embedding = np.array(all_encoder_layers[2])
 # print(embedding)
 
 # VScodeの「ターミナルでpythonファイルを実行」から実行してもこのソースコードと同じディレクトリにcsvが保存されるよう設定
@@ -42,5 +49,8 @@ csv_path = os.path.join(os.path.dirname(__file__), 'BERT.csv')
 
 # テキストのベクトル表現を保存
 with open(csv_path, 'w', newline="") as f:
-    writer = csv.writer(f)
+    writer = csv.writer(f, lineterminator="\n")
+    for i in range(13):
+        writer.writerow(all_encoder_layers[2][0][0][i].tolist())
+    writer.writerow("\n")
     writer.writerow(all_encoder_layers[0][0][0].tolist())
