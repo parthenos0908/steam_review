@@ -1,6 +1,9 @@
 import numpy as np
-from sklearn.feature_extraction.text import TfidfVectorizer
 import pandas as pd
+import csv
+import os
+from sklearn.feature_extraction.text import TfidfVectorizer
+
 
 # TfidfVectorizer
 tfidf = TfidfVectorizer(stop_words="english")
@@ -18,5 +21,13 @@ docs = np.array(["Human machine interface for lab abc computer applications",
 # ベクトル化
 vec = tfidf.fit_transform(docs)
 
-print(tfidf.vocabulary_)
-print(pd.DataFrame(vec.toarray(), columns=tfidf.get_feature_names()))
+# print(tfidf.vocabulary_)
+# print(pd.DataFrame(vec.toarray(), columns=tfidf.get_feature_names()))
+
+# VScodeの「ターミナルでpythonファイルを実行」から実行してもこのソースコードと同じディレクトリにcsvが保存されるよう設定
+csv_path = os.path.join(os.path.dirname(__file__), 'tfidf.csv')
+
+with open(csv_path, 'w', newline="") as f:
+    writer = csv.writer(f)
+    writer.writerow(tfidf.get_feature_names())
+    writer.writerows(vec.toarray())
