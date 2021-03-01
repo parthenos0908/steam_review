@@ -29,10 +29,15 @@ with torch.no_grad():
     all_encoder_layers = model(tokens_tensor, output_hidden_states=True)
 
 # all_encoder_layers[i]
-# i=0:last_hidden_​​state, i=1:pooler_output, i=2:hidden_​​states
+# i=0:last_hidden_state, i=1:pooler_output, i=2:hidden_​​states
 print("Number of batches:", len(all_encoder_layers[0]))             # 1
 print("Number of tokens:", len(all_encoder_layers[0][0]))           # 506
 print("Number of hidden units:", len(all_encoder_layers[0][0][0]))  # 768
+
+print("-------------------------------------")
+
+print("Number of batches:", len(all_encoder_layers[1]))                 # 1
+print("Number of hidden units:", len(all_encoder_layers[1][0]))         # 768
 
 print("-------------------------------------")
 
@@ -50,7 +55,10 @@ csv_path = os.path.join(os.path.dirname(__file__), 'BERT.csv')
 # テキストのベクトル表現を保存
 with open(csv_path, 'w', newline="") as f:
     writer = csv.writer(f, lineterminator="\n")
-    for i in range(13):
-        writer.writerow(all_encoder_layers[2][0][0][i].tolist())
+    writer.writerow(["last_hidden_states"] + all_encoder_layers[0][0][0].tolist())
     writer.writerow("\n")
-    writer.writerow(all_encoder_layers[0][0][0].tolist())
+    writer.writerow(["pooler_output"] + all_encoder_layers[1][0].tolist())
+    writer.writerow("\n")
+    for i in range(13):
+        writer.writerow(["hidden_states" + "[" + str(i) + "]"] + all_encoder_layers[2][0][0][i].tolist())
+    
