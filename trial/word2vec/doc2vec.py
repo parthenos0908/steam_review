@@ -6,12 +6,13 @@ import nltk
 # nltk.download('punkt')
 
 docs = np.array(["Human machine interface for lab abc computer applications",
-                "Human machine interface for lab xyz computer applications",
-                "A survey of abc opinion of computer system response time",
-                "A survey of xyz opinion of computer system response time"])
+                 "Human machine interface for lab xyz computer applications",
+                 "A survey of abc opinion of computer system response time",
+                 "A survey of xyz opinion of computer system response time"])
 
 # 単語に分割 + tag付け
-corpus = [TaggedDocument(words=nltk.word_tokenize(doc), tags = [i]) for i,doc in enumerate(docs)]
+corpus = [TaggedDocument(words=nltk.word_tokenize(doc), tags=[i])
+          for i, doc in enumerate(docs)]
 
 # モデル作成
 # vector_size: 圧縮次元数

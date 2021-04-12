@@ -25,6 +25,10 @@ corpus = [nltk.word_tokenize(doc) for doc in docs]
 # model.wv.most_similarの結果が1に近いものばかりで、model.dict['wv']のベクトル値が小さい値ばかりのときは、学習回数が少ないと考えられます。その場合、iterの値を大きくして、再度学習を行います。
 model = word2vec.Word2Vec(corpus, size=100, min_count=1, window=3, iter=100)
 
-print(model.wv.vocab)
-print(model.__dict__['wv']['Graph'])
-print(model.wv.similarity(w1="computer", w2="trees"))
+# print(model.wv.vocab)
+# print(model.__dict__['wv']['Graph'])
+# print(model.wv.similarity(w1="computer", w2="trees"))
+
+ret = model.wv.most_similar(positive=['user'])
+for item in ret:
+    print(item[0], item[1])
