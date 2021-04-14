@@ -1,45 +1,14 @@
 import numpy as np
 import tensorflow as tf
 import transformers
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import accuracy_score, precision_recall_fscore_support
+import json
 
 # model_nameはここから取得(cf. https://huggingface.co/transformers/pretrained_models.html)
 # model_name = "cl-tohoku/bert-base-japanese"
 model_name = "bert-base-uncased"
 tokenizer = transformers.BertTokenizer.from_pretrained(model_name)
 
-# 訓練データ
-# train_texts = [
-#     "この犬は可愛いです",
-#     "その猫は気まぐれです",
-#     "あの蛇は苦手です"
-# ]
-# train_labels = [1, 0, 0]  # 1: 好き, 0: 嫌い
-
-
-train_texts = [
-    "This dog is cute.",
-    "That cat is fickle.",
-    "I hate those snakes.",
-    "you love me."
-]
-train_labels = [1, 0, 0, 1]  # 1: 好き, 0: 嫌い
-
-# テストデータ
-# test_texts = [
-#     "その猫はかわいいです",
-#     "どの鳥も嫌いです",
-#     "あのヤギは怖いです"
-# ]
-# test_labels = [1, 0, 0]
-
-test_texts = [
-    "This dog is cute.",
-    "I hate every bird.",
-    "I'm afraid of that goat.",
-    "I love tiger."
-]
-test_labels = [1, 0, 0, 1]
 
 # テキストのリストをtransformers用の入力データに変換
 
@@ -83,23 +52,56 @@ def build_model(model_name, num_classes, max_length):
                   loss="categorical_crossentropy", metrics=["acc"])
     return model
 
+# jsonを読み込んでリストに格納
 
-num_classes = 2
-max_length = 15
-batch_size = 10
-epochs = 10
+
+def load_json(text_list, label_list, json_filename):
+    f = open(json_filename, 'r')
+    json_data = json.load(f)  # json形式で読み込み
+    for text in json_data:
+        text_list.append(text['stopwords_removal'])
+        label_list.append(text['label'])
+
+
+text_list = []
+label_list = []
+json_filename = "c:/Users/disto/gitrepos/steam_review/trial/text_classification/all.json"
+load_json(text_list, label_list, json_filename)
+
+# labelは文字列なので数値に変換
+label_number_dict = {'Bug': 0, 'Rating': 1, 'Feature': 2, 'UserExperience': 3}
+label_number_list = []
+for label in label_list:
+    if label in label_number_dict:
+        label_number_list.append(label_number_dict[label])
+    else:
+        label_number_list.append(-1)
+
+print(len(text_list))
+
+# 訓練データ
+train_texts = text_list[0::10] + text_list[1::10] + text_list[2::10] + \
+    text_list[3::10] + text_list[4::10] + text_list[5::10] + text_list[6::10]
+train_labels = label_number_list[0::10] + label_number_list[1::10] + label_number_list[2::10] + \
+    label_number_list[3::10] + label_number_list[4::10] + \
+    label_number_list[5::10] + label_number_list[6::10]
+
+# テストデータ
+test_texts = text_list[7::10] + text_list[8::10] + text_list[9::10]
+test_labels = label_number_list[7::10] + \
+    label_number_list[8::10] + label_number_list[9::10]
+
+num_classes = 4
+max_length = 64
+batch_size = 16
+epochs = 3
 
 x_train = to_features(train_texts, max_length)
 y_train = tf.keras.utils.to_categorical(train_labels, num_classes=num_classes)
 model = build_model(model_name, num_classes=num_classes, max_length=max_length)
 
 # 訓練
-model.fit(
-    x_train,
-    y_train,
-    batch_size=batch_size,
-    epochs=epochs
-)
+history = model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs)
 
 # 予測
 x_test = to_features(test_texts, max_length)
@@ -108,3 +110,4 @@ y_preda = model.predict(x_test)
 y_pred = np.argmax(y_preda, axis=1)
 print(y_pred)
 print("Accuracy: %.5f" % accuracy_score(y_test, y_pred))
+print(precision_recall_fscore_support(y_test, y_pred))
