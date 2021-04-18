@@ -1,8 +1,9 @@
 import numpy as np
 import tensorflow as tf
 import transformers
-from sklearn.metrics import accuracy_score, precision_recall_fscore_support
+from sklearn.metrics import accuracy_score, classification_report
 import json
+from os import path
 
 # model_nameはここから取得(cf. https://huggingface.co/transformers/pretrained_models.html)
 # model_name = "cl-tohoku/bert-base-japanese"
@@ -59,13 +60,13 @@ def load_json(text_list, label_list, json_filename):
     f = open(json_filename, 'r')
     json_data = json.load(f)  # json形式で読み込み
     for text in json_data:
-        text_list.append(text['stopwords_removal'])
+        # text_list.append(text['stopwords_removal'])
+        text_list.append(text['comment'])
         label_list.append(text['label'])
-
 
 text_list = []
 label_list = []
-json_filename = "c:/Users/disto/gitrepos/steam_review/trial/text_classification/all.json"
+json_filename = path.join(path.dirname(__file__), "all.json")
 load_json(text_list, label_list, json_filename)
 
 # labelは文字列なので数値に変換
@@ -92,9 +93,9 @@ test_labels = label_number_list[7::10] + \
     label_number_list[8::10] + label_number_list[9::10]
 
 num_classes = 4
-max_length = 64
+max_length = 128
 batch_size = 16
-epochs = 3
+epochs = 5
 
 x_train = to_features(train_texts, max_length)
 y_train = tf.keras.utils.to_categorical(train_labels, num_classes=num_classes)
@@ -110,4 +111,4 @@ y_preda = model.predict(x_test)
 y_pred = np.argmax(y_preda, axis=1)
 print(y_pred)
 print("Accuracy: %.5f" % accuracy_score(y_test, y_pred))
-print(precision_recall_fscore_support(y_test, y_pred))
+print(classification_report(y_test, y_pred))
