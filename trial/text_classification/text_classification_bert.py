@@ -4,6 +4,9 @@ import transformers
 from sklearn.metrics import accuracy_score, classification_report
 import json
 from os import path
+import collections as cl
+import random
+import numpy
 
 # model_nameはここから取得(cf. https://huggingface.co/transformers/pretrained_models.html)
 # model_name = "cl-tohoku/bert-base-japanese"
@@ -57,17 +60,43 @@ def build_model(model_name, num_classes, max_length):
 
 
 def load_json(text_list, label_list, json_filename):
-    f = open(json_filename, 'r')
-    json_data = json.load(f)  # json形式で読み込み
+    with open(json_filename, mode='r') as f:
+        json_data = json.load(f)
     for text in json_data:
         # text_list.append(text['stopwords_removal'])
         text_list.append(text['comment'])
         label_list.append(text['label'])
 
+# 予測結果をjsonに書き込み
+
+def output_json(json_filename, comment_list, true_list, pred_list):
+    output = []
+    for i in range(len(comment_list)):
+        data = cl.OrderedDict()
+        data["comment"] = comment_list[i]
+        data["treu"] = true_list[i]
+        data["pred"] = pred_list[i]
+        output.append(data)
+
+    with open(json_filename, mode='w') as f:
+        json.dump(output, f, sort_keys=True, indent=4)
+
+# numpyオブジェクトをjson形式に変換するための自作エンコーダー
+class MyEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, numpy.integer):
+            return int(obj)
+        elif isinstance(obj, numpy.floating):
+            return float(obj)
+        elif isinstance(obj, numpy.ndarray):
+            return obj.tolist()
+        else:
+            return super(MyEncoder, self).default(obj)
+
 text_list = []
 label_list = []
-json_filename = path.join(path.dirname(__file__), "all.json")
-load_json(text_list, label_list, json_filename)
+input_json_filename = path.join(path.dirname(__file__), "all.json")
+load_json(text_list, label_list, input_json_filename)
 
 # labelは文字列なので数値に変換
 label_number_dict = {'Bug': 0, 'Rating': 1, 'Feature': 2, 'UserExperience': 3}
@@ -78,24 +107,23 @@ for label in label_list:
     else:
         label_number_list.append(-1)
 
-print(len(text_list))
+# テキストとラベルの関係を維持したままリストをシャッフル
+p = list(zip(text_list, label_number_list))
+random.shuffle(p)
+text_list, label_number_list = zip(*p)
 
 # 訓練データ
-train_texts = text_list[0::10] + text_list[1::10] + text_list[2::10] + \
-    text_list[3::10] + text_list[4::10] + text_list[5::10] + text_list[6::10]
-train_labels = label_number_list[0::10] + label_number_list[1::10] + label_number_list[2::10] + \
-    label_number_list[3::10] + label_number_list[4::10] + \
-    label_number_list[5::10] + label_number_list[6::10]
+train_texts = text_list[:int(len(text_list)*0.2)]
+train_labels = label_number_list[:int(len(label_number_list)*0.2)]
 
 # テストデータ
-test_texts = text_list[7::10] + text_list[8::10] + text_list[9::10]
-test_labels = label_number_list[7::10] + \
-    label_number_list[8::10] + label_number_list[9::10]
+test_texts = text_list[int(len(text_list)*0.9):]
+test_labels = label_number_list[int(len(label_number_list)*0.9):]
 
 num_classes = 4
 max_length = 128
 batch_size = 16
-epochs = 5
+epochs = 1
 
 x_train = to_features(train_texts, max_length)
 y_train = tf.keras.utils.to_categorical(train_labels, num_classes=num_classes)
@@ -109,6 +137,8 @@ x_test = to_features(test_texts, max_length)
 y_test = np.asarray(test_labels)
 y_preda = model.predict(x_test)
 y_pred = np.argmax(y_preda, axis=1)
-print(y_pred)
 print("Accuracy: %.5f" % accuracy_score(y_test, y_pred))
 print(classification_report(y_test, y_pred))
+
+output_json_filename = path.join(path.dirname(__file__), "output.json")
+output_json(output_json_filename, test_texts, y_test, y_pred, cls = MyEncoder)

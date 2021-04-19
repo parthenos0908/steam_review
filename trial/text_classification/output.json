@@ -1,0 +1,17 @@
+[
+    {
+        "comment": "a",
+        "pred": 1,
+        "treu": 0
+    },
+    {
+        "comment": "b",
+        "pred": 1,
+        "treu": 1
+    },
+    {
+        "comment": "c",
+        "pred": 2,
+        "treu": 2
+    }
+]
