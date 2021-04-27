@@ -14,6 +14,7 @@ model_name = "bert-base-uncased"
 tokenizer = transformers.BertTokenizer.from_pretrained(model_name)
 
 
+
 # テキストのリストをtransformers用の入力データに変換
 
 
@@ -122,8 +123,8 @@ test_labels = label_number_list[int(len(label_number_list)*0.9):]
 
 num_classes = 4
 max_length = 128
-batch_size = 16
-epochs = 1
+batch_size = 24
+epochs = 30
 
 x_train = to_features(train_texts, max_length)
 y_train = tf.keras.utils.to_categorical(train_labels, num_classes=num_classes)
