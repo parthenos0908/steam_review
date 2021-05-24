@@ -8,6 +8,19 @@ import collections as cl
 import random
 import numpy
 
+# メモリ不足回避
+# gpus = tf.config.experimental.list_physical_devices('GPU')
+# if gpus:
+#   try:
+#     # Currently, memory growth needs to be the same across GPUs
+#     for gpu in gpus:
+#       tf.config.experimental.set_memory_growth(gpu, True)
+#     logical_gpus = tf.config.experimental.list_logical_devices('GPU')
+#     print(len(gpus), "Physical GPUs,", len(logical_gpus), "Logical GPUs")
+#   except RuntimeError as e:
+#     # Memory growth must be set before GPUs have been initialized
+#     print(e)
+
 # model_nameはここから取得(cf. https://huggingface.co/transformers/pretrained_models.html)
 # model_name = "cl-tohoku/bert-base-japanese"
 model_name = "bert-base-uncased"
@@ -65,7 +78,7 @@ def load_json(text_list, label_list, json_filename):
         json_data = json.load(f)
     for text in json_data:
         # text_list.append(text['stopwords_removal'])
-        text_list.append(text['comment'])
+        text_list.append(text['stopwords_removal_nltk'])
         label_list.append(text['label'])
 
 # 予測結果をjsonに書き込み
@@ -74,25 +87,13 @@ def output_json(json_filename, comment_list, true_list, pred_list):
     output = []
     for i in range(len(comment_list)):
         data = cl.OrderedDict()
-        data["comment"] = comment_list[i]
-        data["treu"] = true_list[i]
-        data["pred"] = pred_list[i]
+        data["stopwords_removal_nltk"] = str(comment_list[i])
+        data["treu"] = int(true_list[i])
+        data["pred"] = int(pred_list[i])
         output.append(data)
 
     with open(json_filename, mode='w') as f:
         json.dump(output, f, sort_keys=True, indent=4)
-
-# numpyオブジェクトをjson形式に変換するための自作エンコーダー
-class MyEncoder(json.JSONEncoder):
-    def default(self, obj):
-        if isinstance(obj, numpy.integer):
-            return int(obj)
-        elif isinstance(obj, numpy.floating):
-            return float(obj)
-        elif isinstance(obj, numpy.ndarray):
-            return obj.tolist()
-        else:
-            return super(MyEncoder, self).default(obj)
 
 text_list = []
 label_list = []
@@ -122,9 +123,9 @@ test_texts = text_list[int(len(text_list)*0.9):]
 test_labels = label_number_list[int(len(label_number_list)*0.9):]
 
 num_classes = 4
-max_length = 128
-batch_size = 24
-epochs = 30
+max_length = 64
+batch_size = 16  # 24でメモリ不足
+epochs = 5
 
 x_train = to_features(train_texts, max_length)
 y_train = tf.keras.utils.to_categorical(train_labels, num_classes=num_classes)
@@ -142,4 +143,4 @@ print("Accuracy: %.5f" % accuracy_score(y_test, y_pred))
 print(classification_report(y_test, y_pred))
 
 output_json_filename = path.join(path.dirname(__file__), "output.json")
-output_json(output_json_filename, test_texts, y_test, y_pred, cls = MyEncoder)
+output_json(output_json_filename, test_texts, y_test, y_pred)
