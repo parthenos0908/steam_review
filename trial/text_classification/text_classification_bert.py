@@ -27,7 +27,6 @@ model_name = "bert-base-uncased"
 tokenizer = transformers.BertTokenizer.from_pretrained(model_name)
 
 
-
 # テキストのリストをtransformers用の入力データに変換
 
 
@@ -83,6 +82,7 @@ def load_json(text_list, label_list, json_filename):
 
 # 予測結果をjsonに書き込み
 
+
 def output_json(json_filename, comment_list, true_list, pred_list):
     output = []
     for i in range(len(comment_list)):
@@ -94,6 +94,7 @@ def output_json(json_filename, comment_list, true_list, pred_list):
 
     with open(json_filename, mode='w') as f:
         json.dump(output, f, sort_keys=True, indent=4)
+
 
 text_list = []
 label_list = []

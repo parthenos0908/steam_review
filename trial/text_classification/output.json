@@ -1,807 +1,57 @@
 [
     {
         "pred": 1,
-        "stopwords_removal_nltk": "theres many cool selections??",
+        "stopwords_removal_nltk": "cool app! sync desktop app",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "great!!!!!",
+        "stopwords_removal_nltk": "love it!!!",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "love this game",
+        "stopwords_removal_nltk": "use open table time! love app!!!",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "easy find songs purchase itunes",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "never take foreign language class again!!",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "its getting better better signature capture huge time saver ever wonder put contact info email contacts, copy signature app, separate different fields put iphone contacts great!",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "incruveu o melhor de conversa mundo",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "excellent need add features",
-        "treu": 1
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "problems signed tried sign back later says pages manage",
-        "treu": 2
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great app need accessible speaker button",
-        "treu": 2
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "good ,i like it accurate  high tech",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "nic nic editing photos",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "app good",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "every time log tripadvisor account facebook ipod touch, crashes able sign facebook, won't let glitch needs fixed",
+        "stopwords_removal_nltk": "new update doesnt work wont even open now cant believe paid app!! found better apps free!!!",
         "treu": 0
     },
     {
-        "pred": 0,
-        "stopwords_removal_nltk": "version still marketplace full ads can't hide, image attachment shows pics september earlier it's pretty useless quit trying sell stuff fix bugs!!!!!",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "best great",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "app used work wellnow never works please fix keeps sending warning messages",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "use forums lot, youll love app!",
+        "pred": 3,
+        "stopwords_removal_nltk": "love app phone ipad, too its accurate easy adddelete cities love graphics,",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "excellent wowww",
+        "stopwords_removal_nltk": "fix happen weekly levels",
         "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "good like jet",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "1st level completed bad moment, tryin get controls well, update days ) good job )",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "truly amazed well app worksthe thing stands fact recording voice translation, actually understands me!! deep voice never type software able take said convert correct versioni pleased appyou get ??",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "fantastic app ! makes reading forums much easier find more great!!",
-        "treu": 3
     },
     {
         "pred": 3,
-        "stopwords_removal_nltk": "started use evernote since high school, didn't feel useful college student, use evernote every life love highlight section, wish color yellow moreover, enjoy website version well organized sophistic thank providing application convenience",
-        "treu": 3
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "move files within existing folders? world may never know great, fast app moving files necessity",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "best pic edit app great app jus cant find remove text pic",
-        "treu": 0
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "useful difficult sometimes trying type essay without landscape mode ridiculous word processing app doesnt let u type landscape",
-        "treu": 3
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "cant email marked unread? reply email turns inbox?",
+        "stopwords_removal_nltk": "one thing needed able sub-boards example would board food board food could sub board dessert healthy brunch",
         "treu": 2
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "first best app parking rates place life saver useful app",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great app photo collection",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "useful apps okay",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "nice smooth photo streaming device device",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "upside htc one yes upside",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "good job far better appsbut needs still work frames effects",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "easy find want narrow search photo gallery feature great first filter looks",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": " best app ever!",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "love ive never problems uploads searches fine",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "excellent cool",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "1 click search sales plan trips love !!!!",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "love it! reminders, notes receipts one place thank goodness!",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "please add landscape support fat-fingered users!",
-        "treu": 2
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "ok",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "new mom, blogger writer, grad student full time professional, manage lots details, app helps keep straight! love it! thank you!!",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "neat app",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "superstitious person love kind ghost story short, long, book app everything short stories long definitely worth $$",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love variety monster fight,and love effect parking falling using ramp! good game!!",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "best app cute ideas forever!",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "inverted colors icon induce retinal images, in-app, whiteout hard eyes experience ipad air one huge expanses white badly contrasting off-whitelight blue stencil-thin pale icons battling brightness spartan look works fine iphone, proportionately less white assaulting eye ipad, however, keep trying reduce brightness display, impacts contrast legibility also possible change names files folders??",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "solid, weird volume settings,",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "sure people complaining clearly dropbox limits features due apple developer license agreement wanted indepth file system features would added don't blame dropbox",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "best app phone !!",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "takes forever upload photos, 2-3 weeks started photos finally became viewable problems installing last update love recent upgrades syncs perfectly sharing easy overall, great app needs tweaks",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "nice nice program",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "200 notes evernote (verified mac version evernotecom), 4 appeared new version app deleted reinstalled logging logging back didn't work new ui take getting used feels cleaner faster",
-        "treu": 3
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "app works wonders scans come clear easy send items one used apps!",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "good wth good camera everything used 100gb data last month heck that? sending out?",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "like lot",
-        "treu": 1
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "around 5pm every day latest (today's) files disappear still though search find tomorrow, magically back! desktop issue ios known bug?",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "nice nice app, enjoy kids fun wish manly stuff give 4 stars",
-        "treu": 0
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "bug new update favourite tab working please check n solve issue",
-        "treu": 2
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "brilliant!",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "amazing deserves ten stars!!",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "give permission upload pics settings say yet continues upload stop!!!",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "amazing!!!! its awesome app say download",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "app fantastic, actually find even better website easy navigate, easy modify reservations option add calendar puts information right phone calendar invite co-diners easily app (it creates email you) great part filter search 1000 point tables only, neighborhoods within city, distance you, much more use app regular basis- much ill make reservation decided go its easier get there! its great app (and business) always wonder restaurants dont it!",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love working great -)",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "app rules",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "like really easy use",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "good good",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "bad mobile phone game pretty impressive its nice able get pirate fix road im able play black flag home",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "pc, laptops , droid, tablet, two iphones one set reference documents wife heck sending copies updates msgs hand written notes, i'm embarrassed find 3 years ago?",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "awesome really nice,",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "good product",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "gr8 app gr8",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "its almost 2011 multitasking?",
-        "treu": 2
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "like aaps baptu dey",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "good game game freezes dont know please help cant get game",
-        "treu": 2
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "issues performance side app like ui find overall easy navigate handle",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "like organized able customize things well app think pretty good would recommend it! )",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "excellent excellent",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love app helpful",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "ok",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "worst atleast reply help worst since four days trying register everytime cut balnce verification send voice verification nd fails also crap negative star",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "helping one good app",
-        "treu": 1
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "every time try select seat never loads",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love pinterest app okay",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "app keeps crashing loading document im student college using ipad good considering book file",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "bad results search",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "cute love <3",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "never take foreign language class again!!",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "wow awesome",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "excellent app best photography app till date!!!! )",
-        "treu": 1
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "addict get pinterest suddenly hour disappeared",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "nice radar app easy use",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "easy use screen shots little small",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "gooood good application -)))))))))))))))))))",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "sick app jst luv app",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "awsome nice! love",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "awesome excellent love features app edit pictures high quality keep good work",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "overall good maneuverability love connectivity hate hard iris put different notes different notebooks, though!",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "like lot",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "pretty good! give three stars theres alot photo editing apps already features free youll get fifth star whenever clone effect addedbut its pretty good better free apps effects",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "yeh nice app 4 me ",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "used find lodge amazonia, judge restaurant options london",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great app",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "good really help fullbut u make free lifetimewe use life long",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "awesomeness gr8 app!!!!",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "always room improvement app replaced less 3 apps, reminders go-to application pretty much anything task project related",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "good",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "glitchy would never load new emails switched back native email client note ii",
-        "treu": 2
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "line want",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "goood gooooooood",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "ive addicted forever, thing would change time, want organized make another board wish move pin button place another board current technique repin, delete old board",
-        "treu": 2
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "best app ever!!",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "best travel site planning stay good reviews serious travelers",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "niceee perfects",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "someecards super funny! theyre great way give someone good laugh sometimes like look theyre fun read",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "gr8!!!! gr8!!!!!",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "good nice",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "awesome",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love it! really love game, game play amazing mobile based game graphics stunning",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great ui aggregates much information one place, great app! super intuitive use",
-        "treu": 3
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "poor job retaining starred items memory wait long time mp3 buffer, 'star' won't wait next time next time often buffer again!",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "good",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "nice love aap",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "pretty good app great free super slow load time needs fixed also change default time its annoying sometimes forget change dont see hw also push notofications would wonderful! its great im sophomore math major taking 20 hours app helped stay top things!",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great vacations tours love app )",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love know hype instagram release feature rich app blows water",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "says all",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "!!",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "overall great update made quickness also smoother running app , tripadvisor best app find restaurant hotel suits needs , love consistent users current date reviews draw distance filter longer sets 50 mi radius bit far u want go 20 less besides amazing!!",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great app bugs thoughtful, provoking news",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "sparta queen cool",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "sony xperia sp sony xperia sp native resolution supported",
-        "treu": 2
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "useful enjoy using",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great app love app!!",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great weather, eazy understand",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "use tripadvisor help plan trips!",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "gud bt excellent bt still like give opportunity people come closer",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "ive saved much money many neat apps!",
+        "stopwords_removal_nltk": "app awesome!",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "bill fun ez use",
+        "stopwords_removal_nltk": "love pinterest, im addicted! !",
         "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "idk forever download!?! galaxy 3 mini long ( like downloaded cuz says download wifi accepted still downloading two !@#$ing hrs!!!!!",
-        "treu": 2
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "app made searching easy, quick get app",
-        "treu": 3
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "love app great get recipes fron loys great decorating ideas parties",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "cool fantastic",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "best replacement app laptop broken!!",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love brave version better original graphics much better love phrases says objective hitting 100 stupid dont know ive done, improved status targets hit given tally drop much like distance markers end target segment",
-        "treu": 2
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "awesome! love app! use app time! totally worth installing it! )",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love make people look fat easy",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great way keep crossfit progress",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great easyuse everyday",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "used great cannot see anything people boards im following pretty frustrating",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "galaxy pocket excellent application allover",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great every way !",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "please please put back 'home' button top people used hitting back one used hitting 'back' bottom screen like that! seriously frustrating constantly re navigate looking due poor design",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "best whats available ive purchased word emulator apps office suite best its easy edit toolbars would give five word spacing issues ive lost edits occasionally saving dropbox",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "gud ousume",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "unclassified always dont get connected even though enough net band width unable line call",
-        "treu": 2
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "love it! addicting!",
+        "stopwords_removal_nltk": "",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "good showing chek stesus",
+        "stopwords_removal_nltk": "great app!! best everything works really great!! highly recommend app!!",
         "treu": 1
     },
     {
@@ -811,62 +61,1222 @@
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "fun!!! love it!!!",
+        "stopwords_removal_nltk": "great awesome",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "awesome amazing! its cool! love it!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "believe pics art gives opportunity adventurer its good",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "greatest apps ever love great great app",
+        "treu": 1
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "use app completing required expense report stores pics return them, pics super clear id wish two per page option scans come back full page overall, $2 hell app",
+        "treu": 3
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "simple enough use love recurring transactions forgetting figuring balance checkbook every month reason got app export quickbooks although used feature yet reports great would love able main categories sub-categories thats thing missing opinion make truly robust stand-alone financial management app keep good work!",
         "treu": 1
     },
     {
         "pred": 3,
-        "stopwords_removal_nltk": "used vacations paris, miami, cape cod always find fun things good food",
+        "stopwords_removal_nltk": "hi fox, would help fox news app, its frozen ice even write except review 1st time its happened fox im leaving 4 stars ) ty advance !! im ipod 4 wifi",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "make updates make stuff )",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "stars could higher would rate so want orthopedic surgeon best app ive ever came across learning skeletal system!!! would recommend anyone surgical trainee high school a&p student! best, cant say enough!",
+        "treu": 3
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "i'm planning trip italy several friends information reviews trip advisor invaluable else would know cooking classes cortona? tours rome, florence venice best value?",
         "treu": 3
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "great app love",
+        "stopwords_removal_nltk": "fast route information, culture lots fun!",
         "treu": 1
     },
     {
-        "pred": 1,
-        "stopwords_removal_nltk": "goodgood",
-        "treu": 1
+        "pred": 0,
+        "stopwords_removal_nltk": "dropbox design ios 7, still less air drop new thing update (for iphone) think 4 5 still can't rename files",
+        "treu": 2
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "super nice oparate",
+        "stopwords_removal_nltk": "great!!! addicted!!!",
+        "treu": 1
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "looking longest time save (favorites feature) button noticed appears ipad hold vertical position (upright) weird usually hold ipad trip advisor horizontal position (sideways), button nowhere found? hope tripadvisor fixes ux usability issue soon",
+        "treu": 0
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "remove open option music files? used able sound files why??",
+        "treu": 0
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "evernote longer usable jumped ios7 bandwagon never adopt new os kinks wrung lost use evernote?and used use lot bad call! looking something else use, let premium subscription expire",
         "treu": 1
     },
     {
         "pred": 3,
-        "stopwords_removal_nltk": "app grate planning va-kays activities restaurants awesome",
-        "treu": 1
+        "stopwords_removal_nltk": "dislike update news feed, dont want see boards pins pinned prefer old feed",
+        "treu": 0
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "detailed",
+        "stopwords_removal_nltk": "great product",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "tripadvisor let's us know clients candid comments great way improve time!",
         "treu": 3
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "m m",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "jennifer g amazing! food delicious! atmosphere naplease! service jennifer delivered helpful great suggestions enjoyed! g, manager checked us made sure everything perfect genuine sincere kind manner! overall, 5 stars! definite remember!! thanks lovely dining experience!",
+        "stopwords_removal_nltk": "audiobooks e books library app wonderful!",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "great app especially fantasy news one great sources use get info first thing freezes min scrolling article",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "great sharing love able search find exactly want! also makes preparing menu easier! its awesome exactly pinned organized, me!",
+        "stopwords_removal_nltk": "badest ui ever seen hard use nice visual good look dont like whats happen evernote???",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "htc one best social app ever!! (y)",
+        "stopwords_removal_nltk": "app absolutely best!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "cool like bit slow",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "nice !!!!!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "amazing! really awesome app??",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "asking make new already created oneafter post youre ready new one, tap collage twice takes back layout screen insert new pics",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "love it!",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "fort lauderdale il lugano making us feel like royalty! friendly, bending backward relax us end long travel day great app great hotels!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "good",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "excellent excellent",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "super super",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "said huhuhuhu",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "downloaded sat desktop million years got bright idea taking screen snapshot expedia itinerary wow! suddenly running, saving accessing info everything learning disabilities salad dressings would like better multi- layer nesting available notebooks, pretty cool btw, use skitch add-on editing,reformatting, *bold* print, etc it's great",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "omg omg its awesome luv &lt3",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "love thing, seriously use everything project tracking grocery lists personal archive can't recommend highly enough said, i've got ios7 phone, upgraded ipad waiting apple work bugs new os us tablet users result, synching devices always reliable right - watch-out",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "love it!",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "easy easy flex way chat share media",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "use time works great",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "crashes since update crashes whenever go purchase coins section purchased coins dont show",
+        "treu": 2
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "5 stars",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "good impressed",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "use recommendations regularly find restaurants travels rarely disappointed need say more?",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "best game ive played android",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "love, love, love pinterest!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "love love love app thanks",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "ran side side app beat hands down needs dedicated space mileage",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "find trip advisor way travel! little secrets appear make break travel! war travel!",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "great little app especially hectic schedules keeps like visual people like me",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "it's wonderful app",
+        "treu": 1
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "get push notifications things shared, besides folders bf photographer, often sticks photos shared folder - would like notification things arrive (i turned never get them)",
+        "treu": 2
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "serves purpose far",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "2 mounth good apps mobile",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "awesome great editing photo apk",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "fun never much interest astronomy, app changed everything",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "great love pinterest, mobile app great almost never issues pinterest",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "excellent need add features",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "finally secure place private photos worrying things accidentally seen buy this",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "hiiiii",
+        "treu": 1
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "different categories missing since update whats wrong this?",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "im dude im dude love pinterest app little glitchie android iphone getting better",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "great app!",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "consensus averages gives good sense expect reviewers generally truthful steer straight",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "great , love",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "able text documents! (",
+        "treu": 2
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "perfect love app, devices, use time fun effects make perfect picture",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "loved awesome",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "helpful love love )",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "love able look specific areas i'm visiting locals chiming too!!",
+        "treu": 3
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "evernote best note taking keeping appservice long time user, know make business offer better safer features anyone else",
+        "treu": 1
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "factory refurbished older ipad cannot run ios 7 can't make 'legacy' dropbox app available us don't brand new equipment?",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "timelapse !!!!! time lapse easyliy capture awesome app actually dont use app edit pics capture full resolution pics used make timelapsed d d damn happy app !",
+        "treu": 3
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "its need update u post new chapter story u upload cover story! >0 keeps crashing!",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "nice!! really like burst mode captures every sec momentcant beat cam app",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "reviews great tilripadvisor reads first review photos negative review wouldn't post photos something photos clear! bullsh$t! mint even bf take photos give ridiculous! speaking truth problem undercooked chicken didn't want post could've sick prefer alter reviews bother!!",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "pinerest app hope works",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "nic nic editing photos",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "awsome",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "hai gold",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "best app ever",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "nice good",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "use ipad take notes business meetings automatically synchs iphone laptop",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "amazing one best photo editor!!! loved it! &lt3",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "clear one best-designed user interfaces ive ever encountered iphoneipad way apps be simple easy im giving 5 stars despite shortcomings 1 would nice sync desktop (ical?) devices 2 needs reminders alerts (and due dates, etc) 3 kind support longer notes right now, single-tapping item lets edit item maybe double-tapping let open items detail page could enter due date, add alarm, type longer note 4 also, sharing list? would great wife could add see others shopping lists though now, admit feature creep could detract clears simplicity",
+        "treu": 2
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "seriously? keep trying get one files, app keeps crashing reason please fix that, you're average job!",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "thanks",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "annoyed would like log one time stays logged on also camera would work works fine apps need fix asap",
+        "treu": 2
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "day one ios devices, mac works beautifully, seamlessly, smoothly add simple photo function, youll rule journal app world five star!",
+        "treu": 2
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "nice love aap",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "amazing deserves ten stars!!",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "every time try go app crashes sends back home page keep trying trying get on crashing great app, ill give 5 stars crashing problem fixed",
+        "treu": 3
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "almost everything except allowing make quick diagram hand allow take pic, record voice, helps",
+        "treu": 2
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "even google drive refresh folders simple suggestions increase usability 1 currently, leave folder come back wish refresh folder let refresh folder refresh button view changes files streamlined manner constantly compiling document computer using ipad check looks okay constantly editing photo want high quality, true color representation, then#refresh! 2 refresh button 3 button refreshes current folder's contents 4 air smells bit don't refresh it? 5 stupidly simple add refresh button 6 mentos refresh button maker 7 there's space top left app header add refresh button nothing moment it's lonely 8 give r, give e, give f, give r, give e, give s, give h! spell? easily implementable refresh button high utility even people don't know need yet! yaaay!",
+        "treu": 2
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "rodney lawrence",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "love app allowing keep notes organized synchrd across devices also love feature sharing stuff mates thing long collaboration notes",
+        "treu": 2
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "ive addicted forever, thing would change time, want organized make another board wish move pin button place another board current technique repin, delete old board",
+        "treu": 2
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "love app!! love using app find fun foods funny things brighten day",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "julie robin life changer",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "love dis right herre",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "rely tripadvisor business personal travel",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "whatsapp good thig",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "awesome app never saw app like beforegood work",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "great! completely fixes nexus 5 camera problems!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "100% excellent application ever",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "never disappointed always better opinion hotels restaurants",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "kkk kkk",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "awesome app! love things part!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "think best gud",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "fantastic app ! makes reading forums much easier find more great!!",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "sooooooooooooooooooooooooooooo nice supper photo editing wow",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "search doesnt work anymore update, search function doesnt work keeps putting 20s within search nothing comes please fix, otherwise app useless cant search anything",
+        "treu": 0
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "able find music like play anywhere go",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "best reading app far! love nook reading app ipad! thanks great reading app",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "work progress quite tools looking great addition need looking ultimate set! still learning does",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "ive used app three seasons! first year nfl owns it ive drafted 8 teams years app! user friendly",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "really good app",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "great pictures",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "must buy",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "i've depending evernote years mobile app makes even convenient",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "awesome features",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "impossible refine hotel search specific criteria beyond location, price quality well done quality reviews coverage reasons use ta especially peak seasonal flows, many us travel pets terrible time finding clean, reliable hotels sites pet travel woefully inadequate hard would include additional search filter? would bring helpful reviews would enhance site experience also improve field",
+        "treu": 2
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "nicely put together bogland tourist attraction food hotels love using app",
+        "treu": 1
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "doesnt work texting update ap give instructions works text one star trying im texting person ap doesnt that",
+        "treu": 0
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "evernote one apps use everyday it's delight use recording ideas notes",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "even though lot stuff give away already free personally dont time search app store every day apps gone free brings top quality content daily basis thanks guys!!!",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "theory it's great pdf selected impossible close resorted tapping relentlessly screen magic show tools pdf sits way effective go browser really? irritating!",
+        "treu": 0
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "good ,i like it accurate  high tech",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "5 star excellent bit slow running",
+        "treu": 0
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "frequently ask users smart phones application love evernote frequent response love really empowers write go",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "absolutely love able save notes organize notebooks use app daily two useful notebooks 1 storing recipes 2 medical info current meds also love view various devices wish sharing notes, didn't look like garble use colors formatting also, haven't found undo option app version accidentally delete content, app still deserves 5 stars hands though!",
+        "treu": 3
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "one favorite apps wasnt sure beginning but, love spending time pinterest learned lot developed new interests",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "gettin stuck times also wasted 3 quid think shame nfs game designers deciving people like this dont expect them",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "helo slow ",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "ok",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "can't even uploadtransfer file pages",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "love it excursion kids experiencing new eateries ive save lot money try take advantage huge savings massages good its awesome!",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "main traveling guide wherever world",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "give permission upload pics settings say yet continues upload stop!!!",
+        "treu": 0
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "wont install got nexus 4 loads free space installer says 0 mb available",
+        "treu": 2
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "great app use again",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "best app cute ideas forever!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "good",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "best",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "new update doesn't detail what's changed app doesn't work black screen gray bar bottom please fix soon",
+        "treu": 0
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "stated title new user even though i've using evernote two months, come greatly depend fabulous able record meeting take notes time can't imagine anything better hope find ways use it!",
+        "treu": 3
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "best whats available ive purchased word emulator apps office suite best its easy edit toolbars would give five word spacing issues ive lost edits occasionally saving dropbox",
+        "treu": 3
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "im disappointed app loved worked, since new update wont even open! last update end october, its beginning december  one would think big company, im sure nicely paid tech team, would figured bugs now dont waste money app fix it!",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "great trip tool thank initiative",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "fantastic great app",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "interface works great mapping nice ) bug ive seen facebook integration times",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "useful chat connecting frnds really loves wats enjoy days chatting frnds tks thiz innovative idea hats",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "good life changed thanks cinco app",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "abdolutely love",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "dj super",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "app good, confusing hard navigate first review sheet doesnt make sense, good app, overall",
+        "treu": 1
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "nice , won't open since update",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "excellent",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "would given 5 could pin pinterest it",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "good",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "photoshop ok",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "miss them",
+        "treu": 1
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "app fixture college studies good reader technology turbo charges research puts ahead pack couple instapaper, papers, air printer app two power hands (and pocket)",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "app looks great, also provides excellent functionality flash drives thing past!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "whatsapp like social network",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "great",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "love it! inspiration! pinterest highly addictive dont know could survive without jk course seriously, great app lots useful information creative ideas! boot free app enjoy endlessly! tech problems superb through!",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "finely crafted bubble shooter great graphics, cute characters, fun gameplay merits 4 5 stars however, cancelled trying make pay real money order keep playing believe its 5 turns day get free, lose 5 times either wait specific amount time pay money keep playing breaks gameplay refuse make in-game payments sort hate type payment system would much rather buy game up-front $1, $2, even $3 option becomes available, would definitely buy game",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "fantastic app ! makes reading forums much easier find more great!!",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "luv best free picture app out!!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "app perfect, next ibook used app ipad(s) thing think make better would ability display long file names, use repository ebooks many times download 3 4 books find correct one series thanks great app!!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "great perfect love",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "excellent excellent",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "is, hands down, useful app lite version decided worth money upgrade makes much easier guess check calendar love it!!",
+        "treu": 3
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "sure lived without best way know keep important files one place access anywhere device!",
+        "treu": 3
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "couldnt better really, options copy results also send via textemail would like see option viewing results full-screen, sometimes end gets cut off still copiespastes its cool )",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "yeh nice app 4 me ",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "awesome nice appl 4 every one!",
+        "treu": 1
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "updated dropbox app ipad can't view pdf files viewing wasn't problem update help?",
+        "treu": 0
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "app phone ipad turn first hotel dining recommendations home exotic destination 2-4 major trips year i've seen hotels rated 4 opinion really 5 read current reviews get best feel hotel dining subjective rating don't always meet expectations look ones written last days extra really like street maps metro guides hard get lost use guide easy find get destination overall, guides best travel tools one could use",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "love app lets keep things find interesting one place",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "excellent amazing game best one ive played while hurry add levels!!!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "amazing apps superb apps",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "cool app ive used before search function ^^ need much",
+        "treu": 2
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "like msngrz",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "love its crashing new update!!",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "good app would give 5 star would logout option",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "used year never disappointed sound quality excellent iphone",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "great app",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "awesome app have sometime shuts u try open it calls r ok texting good!?????????????????????????????????????????????????????????????????",
+        "treu": 0
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "great finding hotels, restaurants especially helpful traveling new place",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "useful apps okay",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "brown excelent",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "like this   thanks  ",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "love it! love app us time!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "g g",
+        "treu": 1
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "cant get enough brilliant app switched samsung galaxy note 2 iphone noticed option switch timestamps unavailable samsung devices could included next update, 5 star rating sorted",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "app good time fun parties",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "cool cool",
+        "treu": 1
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "flawless operation - zero problems easy use - almost effortless new auto-upload photos videos great &amp useful addition customer support second none (when question, support answered two hours passed)",
+        "treu": 3
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "great app write reviews on! user friendly easy navigate",
+        "treu": 3
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "it's super easy copy pictures clipboard even save phone, can't download videos?",
+        "treu": 2
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "superb amazing app",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "app helped control phones battery usage",
+        "treu": 1
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "since new update 21 feb 15th, get splash screen followed crash otherwise, 5*",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "good app!",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "install dropbox yesterday start app dialog box ' app wants location' appears endless loop",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "app sucks",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "like its wonderful software, mindblowingi love use it, uivery muchjust like",
+        "treu": 1
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "good job far better appsbut needs still work frames effects",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "great app travelers highly recommend it!",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "creative juices flow anytime, anywhere i've got tool capture all!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "gd good",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "it's awesome way keep track thoughts!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": ")",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "awesome app use want communicate fun way!! recommend app ????",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "love checking see weather forecasts! its beautiful perspective planet!!! takes outside usual local mentality",
+        "treu": 3
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "okay thats it!! everytime download app says its finish downloading search dont found open playstore open viber says want download again!!",
+        "treu": 2
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "found tripadvisor planning trip boo helped us great deal good job guys thumbs",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "listen lot however, disconnect apparent reason disconnects, repeat previous transmissions would like apd less fire ambulance great app!",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "love excellent app easiest way keep touch close dear cheers",
+        "treu": 3
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "simply best note taking app platform platforms! i've tried many others always end going back evernote using chrome, mac &amp iphone versions!",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "app horrible need update x5 juss got taking forever features load #trashhhh!",
+        "treu": 0
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "started using trip advisor husband got traveling job occasionally would go since addicted i've hooked parents great finding local gems restaurants decent hotels love seeing trip advisor signs go restaurants everyone critic",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "really really helpful",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "hanging phone hanging phone must 2 restart>",
+        "treu": 2
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "well organized, easy use, doesn't shove buying upgrade face use phone laptop great stuff!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "absolutely love it must download",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "great security lets know threats phone",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "seems legit",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "update kept crashing barely usable programme begin with, kept crashing updated uninstalled it",
+        "treu": 2
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "using product 5 days love it seeking app mainly write school paper, basic spreadsheet, reading pdf articles, one course, cant compare iwork apps definitely beat app terms looks quality (called great marketing) poor student like me, paying student loans, seeking app mainly write papers read docs, recommend one tried powerpoint yet, cant say much it",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "app great road trips kids listen music put headphones listen books",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "new interface big disappointment way get version 232 back? way much white space hard eyes also, still able rename files -- unbelievable!!!",
+        "treu": 0
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "awful appi uploaded hundreds photos app could upload alllost hundreds precious memories concerts, times friends, etc solely relying app back photos deleted said done gone access",
+        "treu": 0
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "update makes harder slower use icons different file types look similar, makes slower scan find desired file old version used colors, made much faster use",
+        "treu": 0
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "accurate",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "would good if eould good focus wasnt screwed up works fine camera apps except one focus set macro acts like set auto, set auto acts macro forget night shot",
+        "treu": 2
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "author, definitely nee something like go its nice wait get home type next chapter book, dont carry around binder full notebook paper amazing ad extremely convenient!!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "come dropbox!!!! getting ridiculous! i've uninstalled reinstalled it's still stuck! customer service said update would fix it!",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "awesome best photo editior ever use",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "it's wonerful keep recipes, receipts, , knitting patterns, copies postcards greeting cards friends, car maintenance records, appliance manuals, parts numbers appliance parts, many things keep schedules favorite sports teams, information attractions would like visit next time travel various cities, keep business cards journal articles use work easy search information need",
+        "treu": 3
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "great needs features hope u advance videos",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "best app -*",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "xperia z1 awesome product reliable",
         "treu": 1
     },
     {
@@ -876,132 +1286,287 @@
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "wherever go, whatever it's good you!",
+        "stopwords_removal_nltk": "love",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "watts boys d best way keep touch ur friends 24 hrs",
+        "stopwords_removal_nltk": "good job",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "love app dont let forget birthdays",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "use evernote, ways find use love excellent consistent multi-platform experience sync",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "app useful!!! helped things",
+        "stopwords_removal_nltk": "great love app!",
         "treu": 1
     },
     {
-        "pred": 1,
-        "stopwords_removal_nltk": "doesnt save progress online great game except doesnt save progress online mode im smashing fools still stuck rank 11",
+        "pred": 2,
+        "stopwords_removal_nltk": "good app improved option select default camera ",
         "treu": 0
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "cool app ive used before search function ^^ need much",
+        "stopwords_removal_nltk": "faster",
         "treu": 1
     },
     {
         "pred": 3,
-        "stopwords_removal_nltk": "absolutely love able save notes organize notebooks use app daily two useful notebooks 1 storing recipes 2 medical info current meds also love view various devices wish sharing notes, didn't look like garble use colors formatting also, haven't found undo option app version accidentally delete content, app still deserves 5 stars hands though!",
+        "stopwords_removal_nltk": "excellent addition angry birds games great new features, challenges visuals angry birds fan, definitely worth it new orbit launching neat nice, innovative twist game its definitely harder least opinion, good thing get it",
         "treu": 3
     },
     {
-        "pred": 1,
-        "stopwords_removal_nltk": "excellent app first versions little slow app great favorite ui used apps",
-        "treu": 3
+        "pred": 3,
+        "stopwords_removal_nltk": "one favorite apps tell everyone know it music lover youll love it really like even gives lyrics song & shows songs music musician(s) children love too its great thank",
+        "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "visiting philippines discovered ta evaluating lodging choices discovered related features included rich info local eateries things see yelp included nothing philippines it's strong international contribution users (like me) make app really good won place home page",
-        "treu": 3
+        "stopwords_removal_nltk": "good job great job love",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "incredible !!!",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "ya went way far! bug game sold cell phone info charge u things dont agree to hell angry birds dont get itits scam take money u paid sign u pay $1000 month ur phone bill pay county its scam!!!!!!! ur warning!!!!",
+        "treu": 0
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "great photoshop like alot, especially small touch ups facebook!!",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "please please put back 'home' button top people used hitting back one used hitting 'back' bottom screen like that! seriously frustrating constantly re navigate looking due poor design",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "hi nice ",
+        "treu": 1
     },
     {
         "pred": 2,
-        "stopwords_removal_nltk": "its awesome however recently lapse receive message didnt receive notification open app",
+        "stopwords_removal_nltk": "great info houston restaurants though restaurant info needs updated relocated",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "good outstanding",
+        "stopwords_removal_nltk": "best site ever",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "amazing appss nice one",
+        "stopwords_removal_nltk": "like app amazing",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "probably beat around note taking app good pretty much everything",
-        "treu": 3
+        "stopwords_removal_nltk": "great app love cant get better",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "love im supper hooked looking wedding dress decorations moms wedding yaay excited",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "app works well",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "great app use everything grocery list list love app",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "samsung galaxy s4 awesome",
+        "treu": 1
+    },
+    {
+        "pred": 2,
+        "stopwords_removal_nltk": "nice app nice apps chat & calling easier using app one problem using app, please fix bugs",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "good getting better update",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "good good app works theres internet connetion?",
+        "treu": 1
     },
     {
         "pred": 3,
-        "stopwords_removal_nltk": "keep tabs brothers flight info, travels work quite bit im worrier nature, its wonderful able see progress flights ive always able pull easily & theyve always accurate great job!",
+        "stopwords_removal_nltk": "app pretty good, could use info like overview, weather &amp go info, etc would like see info would like website",
         "treu": 1
     },
     {
-        "pred": 1,
-        "stopwords_removal_nltk": "intaframe downloaded yesterday & loving app",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "best gr8 like nice good job plz add frame free pack",
+        "pred": 0,
+        "stopwords_removal_nltk": "game keeps crahing please fix",
         "treu": 2
     },
     {
+        "pred": 3,
+        "stopwords_removal_nltk": "travel d eastern us use frequently stay abreast weather conditions",
+        "treu": 3
+    },
+    {
         "pred": 1,
-        "stopwords_removal_nltk": "amazing love",
+        "stopwords_removal_nltk": "app helpful! use time!",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "best app ever made",
+        "stopwords_removal_nltk": "hello anil kumar",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "love sync & bday reminders )",
         "treu": 1
     },
     {
         "pred": 3,
-        "stopwords_removal_nltk": "tripadvisor let's us know clients candid comments great way improve time!",
-        "treu": 3
+        "stopwords_removal_nltk": "brilliant its great way keep contact people know )",
+        "treu": 1
     },
     {
         "pred": 3,
-        "stopwords_removal_nltk": "app go far ipod touch 4 generation done much little time little 30 seconds account created pictures uploading there! although looking this, trust keep mine apple devices' apps, music, photos videos safe personal files )",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "nice useful",
+        "stopwords_removal_nltk": "app fantastic, actually find even better website easy navigate, easy modify reservations option add calendar puts information right phone calendar invite co-diners easily app (it creates email you) great part filter search 1000 point tables only, neighborhoods within city, distance you, much more use app regular basis- much ill make reservation decided go its easier get there! its great app (and business) always wonder restaurants dont it!",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "great app!",
+        "stopwords_removal_nltk": "tripadvisory made planning trip maui much easier!!!! ??",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "works nicely",
+        "stopwords_removal_nltk": "nice antivirus one great antivirus",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "weather app awesome easy use!",
-        "treu": 3
+        "stopwords_removal_nltk": "hands down, time best p?r?o?d?u?c?t?i?v?i?t?y? app 'nuff said",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "pretty good! give three stars theres alot photo editing apps already features free youll get fifth star whenever clone effect addedbut its pretty good better free apps effects",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "zzzz keeps closingcrashing losing work zzzz fix it!",
+        "treu": 2
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "youre probably thinking pay get something similar freei thought thing finally ponied (do really spend *that* much moreless cup coffee?) value its added daily basis invaluable time tables pretty accurate, love service advisories constantly change every weekend neighborhoods maps, mention last minute emergencies lines due water main break police incident you better plan trip avoid certain line rather find station yellow tape blocking way, walk half mile catch another line find thing saying sod catching cab saved much time",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "p90x client time love workout! p90x app option taking workout gym travel plus nutrition journal makes easier keep track eat day great app! glad purchased app!",
+        "treu": 1
     },
     {
         "pred": 2,
-        "stopwords_removal_nltk": "use skritter learning japanese its application requires flash, however mainly study iphone probably wouldnt keep srs able access program computer thanks splashtop, practice go (that sounds like infomercial lol)",
+        "stopwords_removal_nltk": "love app ?? one problem, please cut prices iwork 399 dollars ilife apps 199",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "can't believe guys removed one useful features evernote, ability style lines either section, subsection, paragraph blockquote way could give hierarchy notes notes one dimensional impossible organize thoughts could evernote team consider feature unnecessary? guys use app? supposed outline notes? really big let otherwise great update it's big omission happy anything else that's give 2 stars",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "done playing updates",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "awesome! love gate youre thinking rather - it! shall disappointed big brian - clearwater, fl",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "love love",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "superb best worldwide",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "absolutely love app!!!",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "great application accurate information advise helped us west island vacation",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "harder thought would be, fun, neat",
+        "treu": 3
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "think app works better using desktop use forums fast, eat read, searches well wish miniusa bike forums great tacoma world",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "love easy use",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "seriously needed permissions?? think not!! world would give anyone application right make phone calls phone, edit text messages send them, take video pictures?? sadly getting worse update supposed security program??? pleased first app respect idiots coming updates needs stop!!! next need access credit report heres idea, deleted!!!!!!",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "need monitor cops learn lingo",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "title says all",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "can't imagine college without app",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "would definitely recommend one",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "symphony-w90 nice application",
         "treu": 1
     },
     {
@@ -1011,492 +1576,87 @@
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "must like cook think great! tried baked chicken wing recipe almost like deep fried im buffalo ny know like able save recipes recipe box app get app",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "easy use device os",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "hope whatsapp sms though!",
-        "treu": 2
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great app news demand wasted screens navigate through would give 5th star button close app love npr!",
-        "treu": 1
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "confusing never used pintrest confusing new mapping thing say want use every pin also pops rate every log save annoyance rate right away",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "app great! whoever created app post office wonderful job!",
-        "treu": 1
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "program 2 months, allot important information kept inside, picturesnotesmemos, etc ,all sudden using it, crashed went back in, everything gone! wiped completely!?! use ipad 2 plenty memory, programs running even suggest conflict! use unless wish risk losing important documentsfiles information trust me, computer literate program loaded problems even continue download 'bug fixes'",
-        "treu": 0
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "error report ok",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "cool app saids",
+        "stopwords_removal_nltk": "mediocre!! its primitive!!!",
         "treu": 1
     },
     {
         "pred": 3,
-        "stopwords_removal_nltk": "tripadvisor great appwebsite provides excellent,common sense, critical information traveller matter go conditions facilityrestaurant, cost, service provided staff, more, fingertips feedback provided actual travelers provided honest results definite place check aren't sure!",
-        "treu": 3
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "recent upgrade causing app crash ipad needs fixed tried delete reinstall didn't fix problem",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": ")",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "great uploading receipts go easier reconciling computer",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "seems evernote understand spirit ios 7 design seems flat sake flatness usability thrown door it's confusing use app simple actions painfully slow",
-        "treu": 0
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "frustrating solution delete re download app freezes camera launch! happened last month please fix gladly give five stars!",
-        "treu": 0
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "charges made without request approval",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "hi, good",
+        "stopwords_removal_nltk": "great app especially fantasy news one great sources use get info first thing freezes min scrolling article",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "h h",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "everything would hope would well wish could email documents dropbox attachments links",
+        "stopwords_removal_nltk": "memr cool",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "update 149 rounds recorded iphone 3gs battery 70-80% left rounds still side game tracking notes feature works somewhat that finally fivesomes! sixsomes! best app golf! 17 rounds belt app still happy new in-app stats (v13) blew away! still waiting side games (skins, etc) im confused many golfers leave phone entire round? pull mine im walking ball, usually im 20-30 yards away, get positive satellite lock time im standing ball, read yardage put phone back sleep putting whip out, score entire foursome (takes 15 seconds total) put back sleep consistently 80-85% battery life round complete get side gamesbetting included future update even cheerleader app!  used golfshot last 6 rounds continue use forever! its accurate, easy use, able email scorecard buddies review actual stats perks didnt know wanted, cant live without! ended cheaper buy new iphone 3gs app skycaddie looking at stand alone golf gps units serious trouble",
-        "treu": 2
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "awaome",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "black screen nexus 7 race starts screen goes black cant see car track please help",
-        "treu": 2
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "gets better better every update thank app much appreciated",
+        "stopwords_removal_nltk": "would want try get anything done without ever amazing",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "great app family bujet",
+        "stopwords_removal_nltk": "love app c take pic without hold like always -- <3",
         "treu": 3
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "like its good app, better looking now",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "funfunny love it! friends family funny old! lol",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "wonderful app enables users write whatever need variety ways variety devices",
-        "treu": 3
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "love photos backed automatically keep phone",
-        "treu": 3
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "awesome app have sometime shuts u try open it calls r ok texting good!?????????????????????????????????????????????????????????????????",
-        "treu": 0
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "perhaps most-used app mobile devices well organized, easy use great product",
-        "treu": 3
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "great app tracking flights! limousine company & drivers use track clients flights",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "worth every penny spent",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "wonderful app galaxy note 3 user wonderful app favorite far especially single full time dads need ideas projects help keep son busy",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "good",
+        "stopwords_removal_nltk": "addiction cool",
         "treu": 1
     },
     {
         "pred": 3,
-        "stopwords_removal_nltk": "great resource searching getting personnal feelings visitors like us always use travel plans",
+        "stopwords_removal_nltk": "excellent app love features easy use",
         "treu": 1
     },
     {
-        "pred": 1,
-        "stopwords_removal_nltk": "great app building wardrobe used pinterest create capsule wardrobe excellent app",
+        "pred": 3,
+        "stopwords_removal_nltk": "great tool rapid lab consultation",
         "treu": 3
     },
     {
-        "pred": 1,
-        "stopwords_removal_nltk": "love nice",
+        "pred": 3,
+        "stopwords_removal_nltk": "concept interesting part its accurate recognizing hand-written numbers operators entered calculation would definitely recommend it",
         "treu": 1
     },
     {
-        "pred": 1,
-        "stopwords_removal_nltk": "nice nice application",
+        "pred": 3,
+        "stopwords_removal_nltk": "pretty easy use - using 2 years easy learn new features added, features made sense!",
         "treu": 1
     },
     {
-        "pred": 1,
-        "stopwords_removal_nltk": "lag! laaagggg! please fix it!",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "far app purchases!",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "installed awsome!!!!! hope everyone agrees me need anything ask!!!!",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "sequel ios? developer released ios sequel android far android users, stupid?",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "bug gold mystery sprout work 100% chance give plant dont have getting kinds already",
-        "treu": 2
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "awesome updates awesome! keep up!",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "flight tickets best price i've seen, far wish would drop bit &amp people would buy more! saying ( like",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "works well friends loved",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "human like apps",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "god good believe",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great love see anything ??_??",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "ok much good",
-        "treu": 1
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "crashes since update crashes whenever go purchase coins section purchased coins dont show",
+        "pred": 3,
+        "stopwords_removal_nltk": "beautiful app, needs ability share folders people go, need able email links people, sending tons individual links people feasible",
         "treu": 2
     },
     {
         "pred": 0,
-        "stopwords_removal_nltk": "evernote longer usable jumped ios7 bandwagon never adopt new os kinks wrung lost use evernote?and used use lot bad call! looking something else use, let premium subscription expire",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "epic",
-        "treu": 1
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "happened?? cant access program now cancel problem fixed soon!",
+        "stopwords_removal_nltk": "pretty good glitches wanted use flight filters, wasn't applying start search haven't used much yet",
         "treu": 0
     },
     {
-        "pred": 2,
-        "stopwords_removal_nltk": "ok really like app cant find ringtones saved",
-        "treu": 1
-    },
-    {
         "pred": 1,
-        "stopwords_removal_nltk": "outstanding! everything u need ideas one place lot quicker searching web, good job fellas!",
-        "treu": 3
+        "stopwords_removal_nltk": "totally addicted this, app long ago one tiny problem freeze blue moon doesnt really bother #1 best app level 101 joke!!!!!!!",
+        "treu": 0
     },
     {
         "pred": 3,
-        "stopwords_removal_nltk": "bought app, entire workout set $60 app work correctly deleted re-installed it wants pay another $60 re-download workouts contacted manufacturer twice responded emails",
+        "stopwords_removal_nltk": "use good cannot open office documents",
         "treu": 0
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "says error collect calls wont let date anything needs fixed",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "works great! maps good, better garmin default lowest cache amount make sure turn cache amount dont find without maps lose service make sure scout area maps want hunting cache map area lose service still use cached maps best 5 bucks spent want good hunting gps",
-        "treu": 3
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "good thing would change need scroll able change tabs",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "g b",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "note 2 good messanger better others",
-        "treu": 1
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "im back! pinning -)",
-        "treu": 1
     },
     {
         "pred": 3,
-        "stopwords_removal_nltk": "really like app soo helpful tracking everything instantly accessible really amazing previously worked weight loss industry many years know key planning losing weight well both",
-        "treu": 3
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "fare still problems, got foreclosed like 20 times last night still arent able change password access boards, its pinterest compromised!)- please fix issue get back enjoying pinning thx pinterest!",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "good job great job love",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "awesome",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "best really cool",
-        "treu": 1
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "effects really cool nothing like instagram app crashes every time try save needs fixed",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "hi cool",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love able work phone laptop family tree always date",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "ganesh lg p350 great app",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "gud nice )",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "galaxy ace love app",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "simple intuitive",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "cool love many different frequencies listen to",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "useful!",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "like candor reflected reviews people like like propel usually easy fit review reviewer get good picture whether place person might like care things good source information 'trips'",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "buy",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "thats amazing awesome pretty cool love it ????",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "i'm enjoying far hopefully it's time go stuff ifs worth using!! )",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "nice pic art app ur phone gives u happiness everytime u use app",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love it! love site love app spend time online browsing pinterest",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "amazing",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "one good thing last update ws ability make folders but, able make folders inside folders wish could bad things last update? typing lag annoying dont see happened since crazy graphical interface anything animated major thing pretty much deal breaker people removal tab button always hated tab button ruler would prefer one shift key place tab keyboard wish back top least go complicated process menu use it ive stopped using pages since pain tab unless using bluetooth keyboard",
+        "stopwords_removal_nltk": "like new features make product stanza-like still would like able go directly library list current place given book without pass toc page",
         "treu": 2
     },
     {
-        "pred": 0,
-        "stopwords_removal_nltk": "bookmarks work bookmark favorite dispensary takes random place overall performance buggy crashes",
-        "treu": 0
+        "pred": 3,
+        "stopwords_removal_nltk": "used us, ireland continental europe, easy use good information including location, numbers web site reviews personal preference knowing majority opinion makes selecting places events easy",
+        "treu": 3
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "good aps realy good",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "good good",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love app, use time! never problem difficulties",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "good better app best link",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love app use instsgram facebook great!! definitly download worth it!",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "worked great first worked great scheduling feature while says check connection unexpected error occurred tried wifi 4g also tried restarting phone uninstalling reinstalling program help zte avid",
-        "treu": 2
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love application",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "best",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great app xolo q700i",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "going paperless working far great stuff recommend",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "wow, disappointment! stuff? reviews? what's retype search criteria hit back? trip advisor, awesomeness go? please start scratch redo app!",
+        "stopwords_removal_nltk": "nothing like listening big brother!",
         "treu": 1
     },
     {
@@ -1505,348 +1665,188 @@
         "treu": 0
     },
     {
-        "pred": 0,
-        "stopwords_removal_nltk": "mr? u spying us?",
+        "pred": 1,
+        "stopwords_removal_nltk": "nice nice",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "favourite! best photo app!!! ???",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "used plan ahead stays business pleasure wife got nice used looking restaurants safe places visits i'm abroad highly recommend use overseas",
         "treu": 1
     },
     {
         "pred": 2,
-        "stopwords_removal_nltk": "margin layout margin layout using office suite microsoft power point 2007",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "fort lauderdale il lugano making us feel like royalty! friendly, bending backward relax us end long travel day great app great hotels!",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "app really useful access documents i'm one big thing think lacks way share folders you're using app i'd love able share folder via app i've needed out, unfortunately, app 3113 doesn't feature would really useful have!",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "used good application ability search cities haven't yet reached filter rating well proximity however features replaced functionality focused marketing hotels don't use application purchase good guidebook instead",
+        "stopwords_removal_nltk": "new update great app would great app locker could turned widget also pattern password rather numbers letters",
         "treu": 0
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "excellent site cant go wrong here! however, dont join dont hours day kill highly addictive!",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "full rate",
+        "stopwords_removal_nltk": "swear tripadvisor app makes accessible user friendly",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "best app ever",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "helps much meal planning grocery shopping cuts time activities",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "superstitious person love kind ghost story short, long, book app everything short stories long definitely worth $$",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "don't leave home without consulting site",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love ability post stuff",
-        "treu": 3
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "cant easily share composition due file type",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "good cool",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "app great tool types foodies",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "needs improvement",
-        "treu": 1
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "select attraction click around read reviews view pictures go back full like defaults back beginning list hit 'next page' several times find place left annoying",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "excellent app performs many tasks! explore, get it!",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "awesome nice",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love app, super easy interface use time",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "good app gets info want quickly, auto adjusts times time zone (many apps dont)",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "beautiful looking app informative well!",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "practical, easy, music lovers",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love game best game ive ever played",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great nice appslove",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "great slow note takers use classes wish bullet option",
-        "treu": 3
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "found app pretty helpful overall finding hotels reading reviews, however search feature bit limited didn't allow filter brand name easily would nice feature add",
-        "treu": 3
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "i've tried google drive, box, skydrive, none could upload 20 minute video took dropbox one accepted file",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "good reference quick review doesnt take away manuel excellent resource refreshing minds acls",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "fab gd",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "use app completing required expense report stores pics return them, pics super clear id wish two per page option scans come back full page overall, $2 hell app",
+        "stopwords_removal_nltk": "great us abroad planning",
         "treu": 3
     },
     {
         "pred": 3,
-        "stopwords_removal_nltk": "decent photo editing",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "enjoy sending verses friends iphone",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "it*$ cooolll really hreat fun!!!",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love keeps busy",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "dhansu edting cool feature",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "best app ever",
-        "treu": 1
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "beginning trust app 7 update quit working practical purposes watch patches post updated review really wanting app effective silly new process sell post notes not!",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "funny!",
-        "treu": 1
-    },
-    {
-        "pred": 3,
-        "stopwords_removal_nltk": "great app keep track hours especially youre salary budgeting",
+        "stopwords_removal_nltk": "app must-have professional world great way stay 'green' storing documents rather printing hard copies ability search notes pdfs makes old-fashioned pen paper obsolete integration penultimate pleasing still wish 'write' rather type",
         "treu": 3
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "love app! sometimes get lost time addicting fun look everything pin likes needs boards also use lot ideas get pinterest classroom, used diy ideas home!",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "5star!!!!! love it! ! sumtime hate catch editing ever picture awesome much diff stuff try ! 8)-",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "pankaj nice",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "couldnt better really, options copy results also send via textemail would like see option viewing results full-screen, sometimes end gets cut off still copiespastes its cool )",
-        "treu": 3
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "love sync & bday reminders )",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "one favs!!!",
-        "treu": 1
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "fix please! new update detected malware (",
+        "stopwords_removal_nltk": "widget problem problem widget days widget gone show widgets bar",
         "treu": 2
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "great application accurate information advise helped us west island vacation",
+        "stopwords_removal_nltk": "would've lost hundreds photos wasn't app! thank you!",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "awesome really love put memories songs omg love it!!",
+        "stopwords_removal_nltk": "good app",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "long time ive long time always go back using ur basics",
+        "stopwords_removal_nltk": "excellent good",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "love app!!! use often dependable",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "love dropbox mac use time share files photography clients however find annoying cannot email link clients iphone app! makes hard on-the-go sharing! what's point app cannot share folders?! please change!",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "hands down, time best p?r?o?d?u?c?t?i?v?i?t?y? app 'nuff said",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "superb excellent app boost creativity",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "cool app awsome app works fantastic love !!! wow",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "eh personally fan latest update",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "excellent many features, enjoying application easy use options",
-        "treu": 1
-    },
-    {
-        "pred": 0,
-        "stopwords_removal_nltk": "good ap usage activity points work shown add button selected fix this that, problem",
-        "treu": 0
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "niceapp pin pin pin",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "nice!! really like burst mode captures every sec momentcant beat cam app",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "nice zakas",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "1oo excellent",
-        "treu": 1
-    },
-    {
-        "pred": 2,
-        "stopwords_removal_nltk": "wish u could use offline",
-        "treu": 1
-    },
-    {
-        "pred": 1,
-        "stopwords_removal_nltk": "nice 2 keep touch nice 2 keep touch vth friends",
+        "stopwords_removal_nltk": "intrsting app",
         "treu": 1
     },
     {
         "pred": 3,
-        "stopwords_removal_nltk": "shocked find app includes overhead clearances one filter worried about looks thorough yet tried road amazed find sitting house little concerned much functionality find remote locations cell service time tell may update rating situation arises 4 weeks happy camping everyone!",
+        "stopwords_removal_nltk": "really like app soo helpful tracking everything instantly accessible really amazing previously worked weight loss industry many years know key planning losing weight well both",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "great app",
+        "treu": 1
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "crashes connection spotty, completely useless",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "need show b&ampb , small inns",
+        "treu": 2
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "? it!! coz makes look super pretty )",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "it's super easy copy pictures clipboard even save phone, can't download videos?",
+        "treu": 3
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "great idea app works okay gas chain restaurants, literally find grocery stores, cafes, anything fast food large chains coffee shops starbucks foreign foods, definitely nothing remotely healthy also lacking option submissionsi excited possibilities app reality much disappointing",
+        "treu": 2
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "yea yea",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "great app!!",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "bad mobile phone game pretty impressive its nice able get pirate fix road im able play black flag home",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "great app (&amp website) extremely useful real life reviews always better sales pitch brochures recommendations use lot, even i'm traveling fun exploring thru app creates travel dreams great education",
+        "treu": 3
+    },
+    {
+        "pred": 0,
+        "stopwords_removal_nltk": "i've always found dropbox bit buggy, it's gotten worse since updated ios 7 download zip files webpages &amp open files, screen blank, blackened blurred enlarged image symbol (of facebook, google symbols related site zip file webpages came teacher, rely access online &amp line related research work work teacher also, required write notes &amp save zip files order save space so, please fix dropbox! keep telling can't open documents &amp don't authorization alter edit document flip side, documents tell enter password (???) anyone suggestions improve recommends different program recommend, would appreciate thanks!",
         "treu": 3
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "nyc gud",
+        "stopwords_removal_nltk": "old better",
         "treu": 1
     },
     {
-        "pred": 2,
-        "stopwords_removal_nltk": "lacks features options",
+        "pred": 3,
+        "stopwords_removal_nltk": "impressed versatility terms type note one take it's great ability input url, photos, audio, text great desktop integration computer drawback i've encountered though offers labels doesn't offer folders editing dashboard app could use easier interface still good app though",
+        "treu": 3
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "love trip advisor big screen app brings usefulness iphone program ipad thanks good program useful road find best places thanks take time provide reviews offered reviews years glad others well",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "doesnt work all want 99 app works!",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "love make people look fat easy",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "tnx ) ) )",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "id rather pinning! taken looks coolto look made!",
+        "stopwords_removal_nltk": "get things done, i'm organized, don't waste time work, it's changed game plan still learning aspects evernote, it's opened place love work accomplish much less time! 5 star review well deserved!",
+        "treu": 3
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "goood gooooooood",
         "treu": 1
     },
     {
         "pred": 1,
-        "stopwords_removal_nltk": "great zoom function galaxy tab 2 3 stars focus blurry zoom picture",
+        "stopwords_removal_nltk": "ma",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "good editor,but little slow yeah! good lil bit slow",
+        "treu": 0
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "love awesome -^_^-",
+        "treu": 1
+    },
+    {
+        "pred": 3,
+        "stopwords_removal_nltk": "love pinterest! maybe little much -) app helps fuel obsession, love",
+        "treu": 1
+    },
+    {
+        "pred": 1,
+        "stopwords_removal_nltk": "picsart favorite editing app! its free! runs super smooth galaxy iii keep great work! using nexus 5, still awesome! ?",
         "treu": 1
     }
 ]
