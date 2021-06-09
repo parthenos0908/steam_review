@@ -12,7 +12,7 @@ def main():
     print(len(reviews))
 
     json_filename = path.join(path.dirname(
-        __file__), "reviewData/" + str(appid) + ".json")
+        __file__), "reviewData/" + str(appid) + "_review.json")
     with open(json_filename, mode='w') as f:
         json.dump(reviews, f, sort_keys=True, indent=4)
 
