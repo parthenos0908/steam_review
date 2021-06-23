@@ -3,6 +3,7 @@ from os import path
 import urllib.request
 import json
 import time
+import re
 
 # cities-skylinesのforumnoスクレイピング
 steam_id = 255710
@@ -12,10 +13,10 @@ paradox_url = "https://forum.paradoxplaza.com"
 def main():
     general_url = "/forum/forums/cities-skylines.859/"
     general_forum = loadForums(general_url, "General", page_MAX=283)  # 283
-    del general_forum[0:5]  # Sticky threads の除去
+    del general_forum[0:6]  # Sticky threads の除去
 
     bug_url = "/forum/forums/support-bug-reports.879/"
-    bug_forum = loadForums(bug_url, "Bug", page_MAX=350)  # 350
+    bug_forum = loadForums(bug_url, "Bug", page_MAX=351)  # 351
     del bug_forum[0:5]  # Sticky threads の除去
 
     feature_url = "/forum/forums/suggestions-feedback.881/"
@@ -43,20 +44,22 @@ def loadForums(url, label, page_MAX):
         for thread in threads:
             count += 1
             print("{0}:{1}".format(label, count))
-            title = thread.get_text().replace("\n", " ")
+            title = thread.get_text()
             if not title:
                 title = ""
             thread_url = thread.contents[1].get(
                 "data-preview-url")  # /forum/threads/[title]/preview
             if thread_url:
-                comment = loadThread(paradox_url + thread_url)
+                forum_url = paradox_url + thread_url
+                comment = loadThread(forum_url)
             else:
+                forum_url = ""
                 comment = ""
             forum = {
                 "title": title,
                 "comment": comment,
                 "label": label,
-                "url": paradox_url + thread_url
+                "url": forum_url
             }
             forum_list.append(forum)
             time.sleep(0.01)
@@ -68,7 +71,9 @@ def loadThread(url):
     try:
         html = urllib.request.urlopen(url)
         soup = BeautifulSoup(html, "html.parser")
-        comment = soup.find(class_="bbWrapper").get_text().replace("\n", " ")
+        comment = soup.find(class_="bbWrapper").get_text()
+        # comment = soup.find(class_="bbWrapper").get_text().replace("\r\n", " ").replace("\n", " ") # 改行文字の揺れを吸収
+        # return re.sub(" +", " ", comment) # 連続した空白を一つに
         return comment
     except Exception as e:
         print(e)
@@ -77,3 +82,10 @@ def loadThread(url):
 
 if __name__ == '__main__':
     main()
+    # try:
+    #     html = urllib.request.urlopen("https://forum.paradoxplaza.com/forum/threads/post-your-city.842287/preview")
+    #     soup = BeautifulSoup(html, "html.parser")
+    #     comment = soup.find(class_="bbWrapper").get_text().replace("\r\n", " ").replace("\n", " ")
+
+    # except Exception as e:
+    #     print(e)
