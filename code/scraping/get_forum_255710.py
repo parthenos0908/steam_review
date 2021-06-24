@@ -45,7 +45,7 @@ def loadForums(url, label, page_MAX):
 
         for thread in threads:
             count += 1
-            print("{0}:{1}".format(label, count))
+            print("{0}:{1}".format(label, count),end="")
             title = thread.get_text()
             if not title:
                 title = ""
@@ -57,6 +57,7 @@ def loadForums(url, label, page_MAX):
                 forum_url = paradox_url + thread_url
                 comment = loadThread(forum_url)
             else:
+                print(" - non comment")
                 forum_url = ""
                 comment = ""
             forum = {
@@ -78,8 +79,9 @@ def loadThread(url):
         comment = soup.find(class_="bbWrapper").get_text()
         format_comment = re.search(r'Please explain your issue is in as much detail as possible\.(\r\n|\n|\r|.)*Can you replicate the issue\? If yes, please explain how you did it\.', comment)
         if format_comment is not None:
-            print("---")
+            print(" -format")
             comment = format_comment.group().replace("Please explain your issue is in as much detail as possible.", "").replace("Can you replicate the issue? If yes, please explain how you did it.", "")
+        else: print("")
         return comment
     except Exception as e:
         print(e)
