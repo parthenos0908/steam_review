@@ -13,14 +13,13 @@ import numpy
 model_name = "bert-base-uncased"
 tokenizer = transformers.BertTokenizer.from_pretrained(model_name)
 
-INPUT_FILENAME = "test.json"
-OUTPUT_FILENAME = "preprocessing_test.json"
+INPUT_FILENAME = "all.json"
+OUTPUT_FILENAME = "output.json"
+KEY = ""
 
 def main():
-    text_list = []
-    label_list = []
     input_json_filename = path.join(path.dirname(__file__), INPUT_FILENAME)
-    load_json(text_list, label_list, input_json_filename)
+    text_list, label_list = load_json(input_json_filename)
 
     # labelは文字列なので数値に変換
     label_number_dict = {'Bug': 0, 'Rating': 1, 'Feature': 2, 'UserExperience': 3}
@@ -37,17 +36,19 @@ def main():
     text_list, label_number_list = zip(*p)
 
     # 訓練データ
-    train_texts = text_list[:int(len(text_list)*0.2)]
-    train_labels = label_number_list[:int(len(label_number_list)*0.2)]
+    train_texts = text_list[:int(len(text_list)*0.7)]
+    train_labels = label_number_list[:int(len(label_number_list)*0.7)]
 
     # テストデータ
-    test_texts = text_list[int(len(text_list)*0.9):]
-    test_labels = label_number_list[int(len(label_number_list)*0.9):]
+    test_texts = text_list[int(len(text_list)*0.7):]
+    test_labels = label_number_list[int(len(label_number_list)*0.7):]
+
+    print("train data:{0}, test data:{1}".format(len(train_texts), len(test_texts)))
 
     num_classes = 4
     max_length = 64
-    batch_size = 16  # 24でメモリ不足
-    epochs = 5
+    batch_size = 32  # 24でメモリ不足
+    epochs = 10
 
     x_train = to_features(train_texts, max_length)
     y_train = tf.keras.utils.to_categorical(train_labels, num_classes=num_classes)
@@ -113,23 +114,25 @@ def build_model(model_name, num_classes, max_length):
 # jsonを読み込んでリストに格納
 
 
-def load_json(text_list, label_list, json_filename):
+def load_json(json_filename):
+    text_list = []
+    label_list = []
     with open(json_filename, mode='r') as f:
         json_data = json.load(f)
     for text in json_data:
-        # text_list.append(text['stopwords_removal'])
-        text_list.append(text['stopwords_removal_nltk'])
+        text_list.append(text['stopwords_removal_lemmatization'])
         label_list.append(text['label'])
+    return text_list, label_list
 
 # 予測結果をjsonに書き込み
 
 
-def output_json(json_filename, comment_list, true_list, pred_list):
+def output_json(json_filename, comment_list, answer_list, pred_list):
     output = []
     for i in range(len(comment_list)):
         data = cl.OrderedDict()
-        data["stopwords_removal_nltk"] = str(comment_list[i])
-        data["treu"] = int(true_list[i])
+        data["stopwords_removal_lemmatization"] = str(comment_list[i])
+        data["answer"] = int(answer_list[i])
         data["pred"] = int(pred_list[i])
         output.append(data)
 
