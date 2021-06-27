@@ -17,12 +17,20 @@ INPUT_FILENAME = "all.json"
 OUTPUT_FILENAME = "output.json"
 KEY = ""
 
+# DLパラメータ
+num_classes = 4
+max_length = 64
+batch_size = 32  # 24でメモリ不足
+epochs = 10
+
+
 def main():
     input_json_filename = path.join(path.dirname(__file__), INPUT_FILENAME)
     text_list, label_list = load_json(input_json_filename)
 
     # labelは文字列なので数値に変換
-    label_number_dict = {'Bug': 0, 'Rating': 1, 'Feature': 2, 'UserExperience': 3}
+    label_number_dict = {'Bug': 0, 'Rating': 1,
+                         'Feature': 2, 'UserExperience': 3}
     label_number_list = []
     for label in label_list:
         if label in label_number_dict:
@@ -43,16 +51,14 @@ def main():
     test_texts = text_list[int(len(text_list)*0.7):]
     test_labels = label_number_list[int(len(label_number_list)*0.7):]
 
-    print("train data:{0}, test data:{1}".format(len(train_texts), len(test_texts)))
-
-    num_classes = 4
-    max_length = 64
-    batch_size = 32  # 24でメモリ不足
-    epochs = 10
+    print("train data:{0}, test data:{1}".format(
+        len(train_texts), len(test_texts)))
 
     x_train = to_features(train_texts, max_length)
-    y_train = tf.keras.utils.to_categorical(train_labels, num_classes=num_classes)
-    model = build_model(model_name, num_classes=num_classes, max_length=max_length)
+    y_train = tf.keras.utils.to_categorical(
+        train_labels, num_classes=num_classes)
+    model = build_model(model_name, num_classes=num_classes,
+                        max_length=max_length)
 
     # 訓練
     history = model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs)
@@ -69,7 +75,6 @@ def main():
     output_json(output_json_filename, test_texts, y_test, y_pred)
 
 
-
 # テキストのリストをtransformers用の入力データに変換
 
 def to_features(texts, max_length):
@@ -84,6 +89,7 @@ def to_features(texts, max_length):
         input_ids[i] = encoded_dict["input_ids"]
         attention_mask[i] = encoded_dict["attention_mask"]
         token_type_ids[i] = encoded_dict["token_type_ids"]
+    print([input_ids, attention_mask, token_type_ids])
     return [input_ids, attention_mask, token_type_ids]
 
 # 単一テキストをクラス分類するモデルの構築
@@ -138,6 +144,7 @@ def output_json(json_filename, comment_list, answer_list, pred_list):
 
     with open(json_filename, mode='w') as f:
         json.dump(output, f, sort_keys=True, indent=4)
+
 
 if __name__ == '__main__':
     main()
