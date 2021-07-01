@@ -3,6 +3,7 @@ from tkinter import ttk
 from tkinter.scrolledtext import ScrolledText
 import json
 from os import path
+from typing import Text
 from googletrans import Translator
 
 translator = Translator()
@@ -12,6 +13,9 @@ OUTPUT_FILENAME = "test_out.json"
 
 WIDTH = 1000
 HEIGHT = 700
+
+MIN_WIDTH = 660
+MIN_HEIGHT = 520
 
 LABEL = {
     0: "Bug Report",
@@ -24,8 +28,9 @@ LABEL = {
 def main():
     # アプリの実行
     root = tk.Tk()
+    root.minsize(MIN_WIDTH, MIN_HEIGHT)
     app = labelingApp(master=root)
-    app.pack(fill=tk.Y, expand=True)
+    app.pack(fill=tk.BOTH, expand=True)
     app.bind("<Configure>", app.change_size)
     root.bind("<Key>", app.on_press_key)
     app.mainloop()
@@ -45,90 +50,97 @@ class labelingApp(tk.Frame):
         # タイトルの表示
         self.master.title('review labeling')
 
+        text_box = ttk.Frame(self, relief=tk.RIDGE)
+        text_box.place(x=2, rely=0, relwidth=4/5, relheight=3/4)
+
+        origin = ttk.Frame(text_box, relief=tk.RIDGE)
+        origin.place(relx=0, rely=0, relwidth=1/2, relheight=1)
+        translated = ttk.Frame(text_box, relief=tk.RIDGE)
+        translated.place(relx=1/2, rely=0, relwidth=1/2, relheight=1)
+
         # labelの表示
-        self.review_label = tk.Label(self, text='review',
+        self.review_label = tk.Label(origin, text='review',
                                      font=('', 20, 'bold'),
                                      foreground='#ffffff',
                                      background='#0000aa')
-        self.review_label.place(x=WIDTH/100, y=HEIGHT/20,
-                                width=100, height=30)
-        self.translated_review_label = tk.Label(self, text='review(google翻訳)',
+        self.review_label.pack(fill=tk.BOTH, pady=1)
+        self.translated_review_label = tk.Label(translated, text='review(google翻訳)',
                                                 font=('', 20, 'bold'),
                                                 foreground='#ffffff',
                                                 background='#aa00aa')
-        self.translated_review_label.place(
-            x=2*WIDTH/5+WIDTH/100, y=HEIGHT/20, width=275, height=30)
+        self.translated_review_label.pack(fill=tk.BOTH, pady=1)
 
         # 複数行のテキストフィールドの生成
-        self.review_field = ScrolledText()
+        self.review_field = ScrolledText(origin, wrap=tk.WORD)
         self.review_field.configure(font=("Calibri", 16, "normal"))
-        self.review_field.place(x=WIDTH/100, y=HEIGHT/10,
-                                width=2*WIDTH/5-2*(WIDTH/100), height=6*HEIGHT/10)
-        self.translated_review_field = ScrolledText()
+        self.review_field.pack()
+        self.translated_review_field = ScrolledText(translated, wrap=tk.WORD)
         self.translated_review_field.configure(font=("Calibri", 16, "normal"))
-        self.translated_review_field.place(
-            x=2*WIDTH/5+WIDTH/100, y=HEIGHT/10, width=2*WIDTH/5-2*(WIDTH/100), height=6*HEIGHT/10)
+        self.translated_review_field.pack()
 
         # チェックボックスの生成（翻訳機能のオンオフ）
         self.isTrans = tk.BooleanVar()
         self.isTrans.set(True)
         self.checkbox = ttk.Checkbutton(self,
                                         variable=self.isTrans, text='翻訳機能')
-        self.checkbox.place(x=2*WIDTH/5+WIDTH/100, y=7*HEIGHT /
-                            10+WIDTH/100, width=2*WIDTH/5-2*(WIDTH/100), height=30)
+        self.checkbox.place(relx=4/5, rely=99/100,  width=80,
+                            height=30, anchor=tk.SE)
 
         # リストボックスの生成
+        scroll_list_box = tk.Frame(self, relief=tk.RIDGE)
+        scroll_list_box.place(
+            relx=1, rely=0, relwidth=1/5, relheight=99/100, anchor=tk.NE)
         items = []
         for i, data in enumerate(self.input_data):
             items.append("{0} : {1}".format(
                 str(i).rjust(8, " "), data["label"]))
             if i > 100:
                 break
-        self.list_box = tk.Listbox(self, listvariable=tk.StringVar(
+        self.list_box = tk.Listbox(scroll_list_box, listvariable=tk.StringVar(
             value=items), selectmode='browse')
         self.list_box.bind('<<ListboxSelect>>', lambda e: self.on_select())
-        self.list_box.place(x=4*WIDTH/5+WIDTH/100, y=HEIGHT/20,
-                            width=WIDTH/5-4*(WIDTH/100), height=18*HEIGHT/20)
+        self.list_box.place(relx=0, rely=0, relwidth=9/10, relheight=1)
         self.scrollbar = ttk.Scrollbar(
-            self, orient=tk.VERTICAL, command=self.list_box.yview)
-        self.scrollbar.place(x=WIDTH-3*(WIDTH/100), y=HEIGHT/20,
-                             width=2*WIDTH/100, height=18*HEIGHT/20)
+            scroll_list_box, orient=tk.VERTICAL, command=self.list_box.yview)
+        self.scrollbar.place(relx=9/10, rely=0, relwidth=1/10, relheight=1)
         self.list_box['yscrollcommand'] = self.scrollbar.set
+
+        # ラジオボタンの親frame
+        radio = ttk.Frame(self, relief=tk.RIDGE)
+        radio.place(x=2, rely=99/100, width=100,
+                    height=120, anchor=tk.SW)
 
         # ラジオボタンの値
         self.tag_value = tk.IntVar()
         self.tag_value.set(2)
 
         # ラジオボタンの生成（タグ付け用）
-        text_height = 30
         self.radiobutton1 = ttk.Radiobutton(
-            self, variable=self.tag_value, value=0, text='バグ報告')
-        self.radiobutton1.place(
-            x=WIDTH/100, y=7*HEIGHT/10+5, width=100, height=text_height)
+            radio, variable=self.tag_value, value=0, text='バグ報告')
+        self.radiobutton1.pack(expand=True, anchor=tk.W, padx=10)
         self.radiobutton2 = ttk.Radiobutton(
-            self, variable=self.tag_value, value=1, text='機能要求')
-        self.radiobutton2.place(
-            x=WIDTH/100, y=7*HEIGHT/10+5+(5+text_height), width=100, height=text_height)
+            radio, variable=self.tag_value, value=1, text='機能要求')
+        self.radiobutton2.pack(expand=True, anchor=tk.W, padx=10)
         self.radiobutton3 = ttk.Radiobutton(
-            self, variable=self.tag_value, value=2, text='その他')
-        self.radiobutton3.place(
-            x=WIDTH/100, y=7*HEIGHT/10+5+2*(5+text_height), width=100, height=text_height)
+            radio, variable=self.tag_value, value=2, text='その他')
+        self.radiobutton3.pack(expand=True, anchor=tk.W, padx=10)
         self.radiobutton4 = ttk.Radiobutton(
-            self, variable=self.tag_value, value=3, text='未定義')
-        self.radiobutton4.place(
-            x=WIDTH/100, y=7*HEIGHT/10+5+3*(5+text_height), width=100, height=text_height)
+            radio, variable=self.tag_value, value=3, text='未定義')
+        self.radiobutton4.pack(expand=True, anchor=tk.W, padx=10)
 
-        # NEXTボタンの生成
-        self.nextButton = tk.Button(
-            self, text='Next >', command=self.on_click_next)
-        self.nextButton.place(x=WIDTH/100+WIDTH/10+WIDTH/100, y=19*HEIGHT/20-5,
-                              width=WIDTH/10, height=HEIGHT/20)
+        # ボタンの親frame
+        button = ttk.Frame(self, relief=tk.FLAT)
+        button.place(x=110, rely=99/100,  width=200, height=50, anchor=tk.SW)
 
         # BACKボタンの生成
         self.backButton = tk.Button(
-            self, text='< Back', command=self.on_click_back)
-        self.backButton.place(x=WIDTH/100, y=19*HEIGHT/20-5,
-                              width=WIDTH/10, height=HEIGHT/20)
+            button, text='< Back', command=self.on_click_back)
+        self.backButton.pack(expand=True, side=tk.LEFT, padx=10, fill=tk.BOTH)
+
+        # NEXTボタンの生成
+        self.nextButton = tk.Button(
+            button, text='Next >', command=self.on_click_next)
+        self.nextButton.pack(expand=True, side=tk.LEFT, padx=10, fill=tk.BOTH)
 
         # 初期化時実行関数
         self.display_review()
