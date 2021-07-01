@@ -45,17 +45,19 @@ class labelingApp(tk.Frame):
         self.iterator = 0
 
         input_filepath = path.join(path.dirname(__file__), INPUT_FILENAME)
-        self.input_data = load_json(input_filepath)
+        self.json_data = load_json(input_filepath)
+        self.data_size = len(self.json_data)
 
         # タイトルの表示
-        self.master.title('review labeling')
+        self.master.title(
+            'review labeling ({0}/{1})'.format(self.iterator, len(self.json_data)))
 
-        text_box = ttk.Frame(self, relief=tk.RIDGE)
-        text_box.place(x=2, rely=0, relwidth=4/5, relheight=3/4)
+        text_box = ttk.Frame(self, relief=tk.FLAT)
+        text_box.place(x=2, y=1, relwidth=4/5, relheight=4/5)
 
-        origin = ttk.Frame(text_box, relief=tk.RIDGE)
+        origin = ttk.Frame(text_box, relief=tk.FLAT)
         origin.place(relx=0, rely=0, relwidth=1/2, relheight=1)
-        translated = ttk.Frame(text_box, relief=tk.RIDGE)
+        translated = ttk.Frame(text_box, relief=tk.FLAT)
         translated.place(relx=1/2, rely=0, relwidth=1/2, relheight=1)
 
         # labelの表示
@@ -87,15 +89,15 @@ class labelingApp(tk.Frame):
                             height=30, anchor=tk.SE)
 
         # リストボックスの生成
-        scroll_list_box = tk.Frame(self, relief=tk.RIDGE)
+        scroll_list_box = tk.Frame(self, relief=tk.FLAT)
         scroll_list_box.place(
-            relx=1, rely=0, relwidth=1/5, relheight=99/100, anchor=tk.NE)
+            relx=1, y=1, relwidth=1/5, relheight=99/100, anchor=tk.NE)
         items = []
-        for i, data in enumerate(self.input_data):
-            items.append("{0} : {1}".format(
-                str(i).rjust(8, " "), data["label"]))
-            if i > 100:
-                break
+        # for i, data in enumerate(self.json_data):
+        #     items.append("{0} : {1}".format(
+        #         str(i).rjust(8, " "), data["label"]))
+        #     if i == 100:
+        #         break
         self.list_box = tk.Listbox(scroll_list_box, listvariable=tk.StringVar(
             value=items), selectmode='browse')
         self.list_box.bind('<<ListboxSelect>>', lambda e: self.on_select())
@@ -130,7 +132,7 @@ class labelingApp(tk.Frame):
 
         # ボタンの親frame
         button = ttk.Frame(self, relief=tk.FLAT)
-        button.place(x=110, rely=99/100,  width=200, height=50, anchor=tk.SW)
+        button.place(x=110, rely=99/100,  width=300, height=50, anchor=tk.SW)
 
         # BACKボタンの生成
         self.backButton = tk.Button(
@@ -140,6 +142,11 @@ class labelingApp(tk.Frame):
         # NEXTボタンの生成
         self.nextButton = tk.Button(
             button, text='Next >', command=self.on_click_next)
+        self.nextButton.pack(expand=True, side=tk.LEFT, padx=10, fill=tk.BOTH)
+
+        # SAVEボタンの生成
+        self.nextButton = tk.Button(
+            button, text='[SAVE]', command=self.on_click_save, relief=tk.SOLID)
         self.nextButton.pack(expand=True, side=tk.LEFT, padx=10, fill=tk.BOTH)
 
         # 初期化時実行関数
@@ -155,15 +162,15 @@ class labelingApp(tk.Frame):
     def on_press_key(self, e):
         key = e.keysym
         # print(key)
-        if key == "Right":
+        if key == "f":
             self.on_click_next()
-        elif key == "Left":
+        elif key == "s":
             self.on_click_back()
-        elif key == "Up":
+        elif key == "e":
             i = self.tag_value.get()
             if i != 0:
                 self.tag_value.set(i-1)
-        elif key == "Down":
+        elif key == "d":
             i = self.tag_value.get()
             if i != len(LABEL)-1:
                 self.tag_value.set(i+1)
@@ -177,13 +184,17 @@ class labelingApp(tk.Frame):
         self.iterator -= 1 if self.iterator != 0 else 0
         self.display_review()
 
+    def on_click_save(self):
+        output_filepath = path.join(path.dirname(__file__), OUTPUT_FILENAME)
+        save_json(self.json_data, output_filepath)
+
     def on_select(self):
         # curselectionの返り値はtuple
         self.iterator = self.list_box.curselection()[0]
         self.display_review()
 
     def display_review(self):
-        self.review = self.input_data[self.iterator]["review"]
+        self.review = self.json_data[self.iterator]["review"]
         if (self.review == "") or (self.isTrans.get() == False):
             self.review == ""
             self.translated_review = ""
@@ -200,18 +211,22 @@ class labelingApp(tk.Frame):
         self.translated_review_field.delete('1.0', 'end')
         self.translated_review_field.insert('1.0', self.translated_review)
         self.translated_review_field.configure(stat="disable")
+        # タイトルの変更
+        self.master.title(
+            'review labeling ({0}/{1})'.format(self.iterator, self.data_size))
 
     def add_tag(self):
-        self.input_data[self.iterator]["label"] = self.tag_value.get()
+        self.json_data[self.iterator]["label"] = self.tag_value.get()
         self.list_box.insert(self.iterator, "{0} : {1}".format(
-            str(self.iterator).rjust(8, " "), LABEL[self.input_data[self.iterator]["label"]]))
-        if self.input_data[self.iterator]["label"] == 0:
+            str(self.iterator).rjust(8, " "), LABEL[self.json_data[self.iterator]["label"]]))
+        self.list_box.see(self.iterator)
+        if self.json_data[self.iterator]["label"] == 0:
             text_color = "red"
-        elif self.input_data[self.iterator]["label"] == 1:
+        elif self.json_data[self.iterator]["label"] == 1:
             text_color = "green"
-        elif self.input_data[self.iterator]["label"] == 2:
+        elif self.json_data[self.iterator]["label"] == 2:
             text_color = "blue"
-        elif self.input_data[self.iterator]["label"] == 3:
+        elif self.json_data[self.iterator]["label"] == 3:
             text_color = "black"
         self.list_box.itemconfig(self.iterator, foreground=text_color)
         self.list_box.delete(self.iterator+1)
