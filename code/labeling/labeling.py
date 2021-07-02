@@ -31,7 +31,7 @@ def main():
     root.minsize(MIN_WIDTH, MIN_HEIGHT)
     app = labelingApp(master=root)
     app.pack(fill=tk.BOTH, expand=True)
-    app.bind("<Configure>", app.change_size)
+    # app.bind("<Configure>", app.change_size)
     root.bind("<Key>", app.on_press_key)
     app.mainloop()
 
@@ -189,8 +189,7 @@ class labelingApp(tk.Frame):
         save_json(self.json_data, output_filepath)
 
     def on_select(self):
-        # curselectionの返り値はtuple
-        self.iterator = self.list_box.curselection()[0]
+        self.iterator = self.list_box.curselection()[0] # curselectionの返り値はtuple
         self.display_review()
 
     def display_review(self):
