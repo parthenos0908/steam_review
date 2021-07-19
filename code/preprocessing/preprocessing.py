@@ -6,16 +6,18 @@ from nltk import pos_tag, word_tokenize
 from nltk.corpus import wordnet as wn
 import re
 
+from nltk.util import pr
+
 lemmatizer = WordNetLemmatizer()
 
 isStopwords = True
 # "Bug Report, Feature Request, or Just a Rating? On Automatically Classifying App Reviews" RE2015 から引用
-CUSTOM_STOPWORDS = ['i', 'me','up','my', 'myself', 'we', 'our', 'ours',
-                    'ourselves', 'you', 'your', 'yours','yourself', 'yourselves',
-                    'he', 'him', 'his', 'himself', 'she', 'her', 'hers' ,'herself',
-                    'it', 'its', 'itself', 'they', 'them', 'their', 'theirs',
-                    'themselves' ,'am', 'is', 'are','a', 'an', 'the', 'and','in',
-                    'out', 'on','up','down', 's', 't']
+CUSTOM_STOPWORDS = ['i', 'me', 'up', 'my', 'myself', 'we', 'our', 'ours',
+                    'ourselves', 'you', 'your', 'yours', 'yourself', 'yourselves',
+                    'he', 'him', 'his', 'himself', 'she', 'her', 'hers', 'herself',
+                    'it', 'its', 'itself', 'this', 'they', 'them', 'their', 'theirs',
+                    'themselves', 'am', 'is', 'are', 'a', 'an', 'the', 'and', 'in',
+                    'out', 'on', 'up', 'down', 's', 't']
 
 # アルファベット,数字,!,? 以外の文字のみで構成されたトークンを無視
 onlyCharacter = True
@@ -24,6 +26,7 @@ INPUT_FILENAME = "255710_forum.json"
 OUTPUT_FILENAME = "255710_forum.json_cleaned.json"
 # F:forum R:review
 MODE = "F"
+
 
 def main():
     input_filepath = path.join(path.dirname(__file__), INPUT_FILENAME)
@@ -42,10 +45,12 @@ def forumPreprocessing(forums):
     tmp_list = []
     i = 0
     for forum in forums:
-        if i % 1000 == 0: print("{0}/{1}".format(i, len(forums)))
+        if i % 1000 == 0:
+            print("{0}/{1}".format(i, len(forums)))
         i += 1
         try:
-            forum["comment_lem"], commont_wordsNum = lemmatize(forum["comment"])
+            forum["comment_lem"], commont_wordsNum = lemmatize(
+                forum["comment"])
             forum["title_lem"], title_wordsNum = lemmatize(forum["title"])
             forum["combined"] = forum["title_lem"] + " " + forum["comment_lem"]
             forum["num_words"] = commont_wordsNum + title_wordsNum
@@ -55,14 +60,17 @@ def forumPreprocessing(forums):
             continue
     return tmp_list
 
+
 def reviewPreprocessing(reviews):
     tmp_list = []
     i = 0
     for review in reviews:
-        if i % 1000 == 0: print("{0}/{1}".format(i, len(reviews)))
+        if i % 1000 == 0:
+            print("{0}/{1}".format(i, len(reviews)))
         i += 1
         try:
-            review["review_lem"], review["num_words"] = lemmatize(review["review"])
+            review["review_lem"], review["num_words"] = lemmatize(
+                review["review"])
             tmp_list.append(review)
         except Exception as e:
             print(e)
@@ -70,6 +78,8 @@ def reviewPreprocessing(reviews):
     return tmp_list
 
 # (sentence) → (sentence, 単語数)
+
+
 def lemmatize(text):
     word_tokenize_list = pos_tag(word_tokenize(text))
     token_list = []
@@ -84,6 +94,8 @@ def lemmatize(text):
     return " ".join(token_list), len(token_list)
 
 # tagの変換 (Stanford POS → WordNet POS)
+
+
 def pos_tagger(nltk_tag):
     if nltk_tag.startswith('J'):
         return wn.ADJ
@@ -109,4 +121,7 @@ def save_json(output_list, json_filepath):
 
 
 if __name__ == '__main__':
-    main()
+    text = "I bought this game yesterday and it is full of bugs!"
+    print(word_tokenize(text))
+    print(lemmatize(text))
+    # main()
