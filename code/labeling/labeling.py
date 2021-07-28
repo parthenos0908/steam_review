@@ -2,14 +2,15 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter.scrolledtext import ScrolledText
 import json
+import random
 from os import path
 from typing import Text
 from googletrans import Translator
 
 translator = Translator()
 
-INPUT_FILENAME = "test_in.json"
-OUTPUT_FILENAME = "test_out.json"
+INPUT_FILENAME = "255710_review_cleaned_5000_out.json"
+OUTPUT_FILENAME = "255710_review_cleaned_5000_out.json"
 
 WIDTH = 1000
 HEIGHT = 700
@@ -93,11 +94,7 @@ class labelingApp(tk.Frame):
         scroll_list_box.place(
             relx=1, y=1, relwidth=1/5, relheight=99/100, anchor=tk.NE)
         items = []
-        # for i, data in enumerate(self.json_data):
-        #     items.append("{0} : {1}".format(
-        #         str(i).rjust(8, " "), data["label"]))
-        #     if i == 100:
-        #         break
+
         self.list_box = tk.Listbox(scroll_list_box, listvariable=tk.StringVar(
             value=items), selectmode='browse')
         self.list_box.bind('<<ListboxSelect>>', lambda e: self.on_select())
@@ -106,6 +103,32 @@ class labelingApp(tk.Frame):
             scroll_list_box, orient=tk.VERTICAL, command=self.list_box.yview)
         self.scrollbar.place(relx=9/10, rely=0, relwidth=1/10, relheight=1)
         self.list_box['yscrollcommand'] = self.scrollbar.set
+
+        # リストボックスの初期状態を描画（入力データのラベル情報を表示）
+        count_bug = 0
+        count_feature = 0
+        for i, data in enumerate(self.json_data):
+            if data.get('label') in (0, 1, 2, 3):
+                self.list_box.insert(i, "{0} : {1}".format(
+                    str(i).rjust(8, " "), LABEL[data["label"]]))
+                if data["label"] == 0:
+                    text_color = "red"
+                    count_bug += 1
+                elif data["label"] == 1:
+                    text_color = "green"
+                    count_feature += 1
+                elif data["label"] == 2:
+                    text_color = "blue"
+                else:
+                    text_color = "black"
+            else:
+                self.list_box.insert(i, "{0} : {1}".format(
+                    str(i).rjust(8, " "), LABEL[3]))
+                text_color = "black"
+            self.list_box.itemconfig(i, foreground=text_color)
+            # if i == 100:
+            #     break
+        print("bug:{0}, feature:{1}".format(count_bug, count_feature))
 
         # ラジオボタンの親frame
         radio = ttk.Frame(self, relief=tk.RIDGE)
@@ -189,7 +212,8 @@ class labelingApp(tk.Frame):
         save_json(self.json_data, output_filepath)
 
     def on_select(self):
-        self.iterator = self.list_box.curselection()[0] # curselectionの返り値はtuple
+        # curselectionの返り値はtuple
+        self.iterator = self.list_box.curselection()[0]
         self.display_review()
 
     def display_review(self):
@@ -243,4 +267,10 @@ def save_json(output_list, json_filepath):
 
 
 if __name__ == '__main__':
+    # input_filepath = path.join(path.dirname(__file__), INPUT_FILENAME)
+    # json_data = load_json(input_filepath)
+    # out_data = random.sample(json_data, 5000)
+    # output_filepath = path.join(path.dirname(
+    #     __file__), "255710_review_cleaned_5000.json")
+    # save_json(out_data, output_filepath)
     main()
