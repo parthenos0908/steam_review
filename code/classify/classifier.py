@@ -6,7 +6,10 @@ import json
 from os import path
 import collections as cl
 import random
+from tensorflow.python.keras.utils.vis_utils import plot_model
 import numpy
+
+
 
 # model_nameはここから取得(cf. https://huggingface.co/transformers/pretrained_models.html)
 # model_name = "cl-tohoku/bert-base-japanese"
@@ -147,4 +150,7 @@ def output_json(json_filename, comment_list, answer_list, pred_list):
 
 
 if __name__ == '__main__':
-    main()
+    model = build_model(model_name, num_classes=num_classes,
+                        max_length=max_length)
+    plot_model(model)
+    # main()
