@@ -6,7 +6,7 @@ from os import path
 
 
 def main():
-    appid = 255710
+    appid = 427520
 
     reviews = get_all_reviews(appid)
     print(len(reviews))
