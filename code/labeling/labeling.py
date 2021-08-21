@@ -9,8 +9,11 @@ from googletrans import Translator
 
 translator = Translator()
 
-INPUT_FILENAME = "255710_review_cleaned_5000_out.json"
-OUTPUT_FILENAME = "255710_review_cleaned_5000_out.json"
+# INPUT_FILENAME = "255710_review_cleaned_5000_out.json"
+# OUTPUT_FILENAME = "255710_review_cleaned_5000_out.json"
+
+INPUT_FILENAME = "review/test_out.json"
+OUTPUT_FILENAME = "review/test_out.json"
 
 WIDTH = 1000
 HEIGHT = 700
