@@ -6,18 +6,14 @@ import random
 from os import path
 from typing import Text
 from googletrans import Translator
-import time
 
 translator = Translator()
 
-# INPUT_FILENAME = "review/255710_review_cleaned_5000_out.json"
-# OUTPUT_FILENAME = "review/255710_review_cleaned_5000_out.json"
+# INPUT_FILENAME = "255710_review_cleaned_5000_out.json"
+# OUTPUT_FILENAME = "255710_review_cleaned_5000_out.json"
 
-# INPUT_FILENAME = "review/255710_review_BR_filtered_3757_out.json"
-# OUTPUT_FILENAME = "review/255710_review_BR_filtered_3757_out.json"
-
-INPUT_FILENAME = "f_out.json"
-OUTPUT_FILENAME = "f_out.json"
+INPUT_FILENAME = "review/255710_review_FR_filtered_7464_out.json"
+OUTPUT_FILENAME = "review/255710_review_FR_filtered_7464_out.json"
 
 WIDTH = 1000
 HEIGHT = 700
@@ -37,6 +33,7 @@ def main():
     # アプリの実行
     root = tk.Tk()
     root.minsize(MIN_WIDTH, MIN_HEIGHT)
+    
     app = labelingApp(master=root)
     app.pack(fill=tk.BOTH, expand=True)
     # app.bind("<Configure>", app.change_size)
@@ -229,8 +226,11 @@ class labelingApp(tk.Frame):
             self.review == ""
             self.translated_review = ""
         else:
-            self.translated_review = translator.translate(
-                self.review, src="en", dest="ja").text
+            # google翻訳の上限文字数
+            if len(self.review) < 5000:
+                self.translated_review = translator.translate(self.review, src="en", dest="ja").text
+            else:
+                self.translated_review = ""
         # reviewの表示
         self.review_field.configure(stat="normal")
         self.review_field.delete('1.0', 'end')
