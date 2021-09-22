@@ -6,11 +6,19 @@ import random
 from os import path
 from typing import Text
 from googletrans import Translator
+# deepl
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from bs4 import BeautifulSoup
+import chromedriver_binary  # chromedriverとのPATHを通すために必要
+import re
+import time
+
 
 translator = Translator()
 
-# INPUT_FILENAME = "255710_review_cleaned_5000_out.json"
-# OUTPUT_FILENAME = "255710_review_cleaned_5000_out.json"
+# INPUT_FILENAME = "review/255710_review_cleaned_5000_out.json"
+# OUTPUT_FILENAME = "review/255710_review_cleaned_5000_out.json"
 
 INPUT_FILENAME = "review/255710_review_FR_filtered_7464_out.json"
 OUTPUT_FILENAME = "review/255710_review_FR_filtered_7464_out.json"
@@ -33,7 +41,7 @@ def main():
     # アプリの実行
     root = tk.Tk()
     root.minsize(MIN_WIDTH, MIN_HEIGHT)
-    
+
     app = labelingApp(master=root)
     app.pack(fill=tk.BOTH, expand=True)
     # app.bind("<Configure>", app.change_size)
@@ -111,6 +119,8 @@ class labelingApp(tk.Frame):
         # リストボックスの初期状態を描画（入力データのラベル情報を表示）
         count_bug = 0
         count_feature = 0
+        count_other = 0
+        count_undefined = 0
         for i, data in enumerate(self.json_data):
             if data.get('label') in (0, 1, 2, 3):
                 self.list_box.insert(i, "{0} : {1}".format(
@@ -123,8 +133,10 @@ class labelingApp(tk.Frame):
                     count_feature += 1
                 elif data["label"] == 2:
                     text_color = "blue"
+                    count_other += 1
                 else:
                     text_color = "black"
+                    count_undefined += 1
             else:
                 self.list_box.insert(i, "{0} : {1}".format(
                     str(i).rjust(8, " "), LABEL[3]))
@@ -132,7 +144,8 @@ class labelingApp(tk.Frame):
             self.list_box.itemconfig(i, foreground=text_color)
             # if i == 100:
             #     break
-        print("bug:{0}, feature:{1}".format(count_bug, count_feature))
+        print("bug:{0}, feature:{1}, other:{2}, undefined:{3}".format(
+            count_bug, count_feature, count_other, count_feature))
 
         # ラジオボタンの親frame
         radio = ttk.Frame(self, relief=tk.RIDGE)
@@ -159,7 +172,7 @@ class labelingApp(tk.Frame):
 
         # ボタンの親frame
         button = ttk.Frame(self, relief=tk.FLAT)
-        button.place(x=110, rely=99/100,  width=300, height=50, anchor=tk.SW)
+        button.place(x=110, rely=99/100,  width=400, height=50, anchor=tk.SW)
 
         # BACKボタンの生成
         self.backButton = tk.Button(
@@ -172,9 +185,14 @@ class labelingApp(tk.Frame):
         self.nextButton.pack(expand=True, side=tk.LEFT, padx=10, fill=tk.BOTH)
 
         # SAVEボタンの生成
-        self.nextButton = tk.Button(
+        self.saveButton = tk.Button(
             button, text='[SAVE]', command=self.on_click_save, relief=tk.SOLID)
-        self.nextButton.pack(expand=True, side=tk.LEFT, padx=10, fill=tk.BOTH)
+        self.saveButton.pack(expand=True, side=tk.LEFT, padx=10, fill=tk.BOTH)
+
+        # deeplボタンの生成
+        self.deeplButton = tk.Button(
+            button, text='deepl翻訳', command=self.on_click_deepl)
+        self.deeplButton.pack(expand=True, side=tk.LEFT, padx=10, fill=tk.BOTH)
 
         # 初期化時実行関数
         self.display_review()
@@ -201,9 +219,13 @@ class labelingApp(tk.Frame):
             i = self.tag_value.get()
             if i != len(LABEL)-1:
                 self.tag_value.set(i+1)
+        elif key == "space":
+            self.on_click_deepl()
 
     def on_click_next(self):
         self.add_tag()
+        # ラジオボタンを"その他"の位置に戻す
+        self.tag_value.set(2)
         self.iterator += 1
         self.display_review()
 
@@ -214,6 +236,14 @@ class labelingApp(tk.Frame):
     def on_click_save(self):
         output_filepath = path.join(path.dirname(__file__), OUTPUT_FILENAME)
         save_json(self.json_data, output_filepath)
+
+    def on_click_deepl(self):
+        self.translated_review_field.configure(stat="normal")
+        self.translated_review_field.delete('1.0', 'end')
+
+        self.translated_review = translate_deepl(self.review)
+        self.translated_review_field.insert('1.0', self.translated_review)
+        self.translated_review_field.configure(stat="disable")
 
     def on_select(self):
         # curselectionの返り値はtuple
@@ -228,7 +258,8 @@ class labelingApp(tk.Frame):
         else:
             # google翻訳の上限文字数
             if len(self.review) < 5000:
-                self.translated_review = translator.translate(self.review, src="en", dest="ja").text
+                self.translated_review = translator.translate(
+                    self.review, src="en", dest="ja").text
             else:
                 self.translated_review = ""
         # reviewの表示
@@ -271,6 +302,46 @@ def load_json(json_filepath):
 def save_json(output_list, json_filepath):
     with open(json_filepath, mode='w') as f:
         json.dump(output_list, f, sort_keys=True, indent=4)
+
+
+def translate_deepl(from_text, from_lang="en", to_lang="ja", sleep_time=1, try_max_count=30):
+    url = 'https://www.deepl.com/translator#' + from_lang + '/' + to_lang
+
+    #　ヘッドレスモードでブラウザを起動
+    options = Options()
+    options.add_argument('--headless')
+    options.add_argument('--user-agent=Mozilla/5.0')
+
+    # ブラウザーを起動
+    driver = webdriver.Chrome(options=options)
+    driver.get(url)
+    driver.implicitly_wait(20)  # 見つからないときは、20秒まで待つ
+    textarea = driver.find_element_by_css_selector(
+        '.lmt__textarea.lmt__source_textarea.lmt__textarea_base_style')  # deeplのtextボックス
+    textarea.send_keys(from_text)
+
+    # 入力文字列の末尾の改行を保持(翻訳結果で消されるため)
+    match = re.search(r'\n+$', from_text)
+    end_newline = ""
+    if match:
+        end_newline = match.group()
+
+    for i in range(try_max_count):
+        time.sleep(sleep_time)
+        html = driver.page_source
+        to_text = get_text_from_page_source(html)
+        if to_text:
+            break
+    driver.quit()  # ブラウザ停止
+    return to_text + end_newline
+
+
+def get_text_from_page_source(html):
+    soup = BeautifulSoup(html, features="html.parser")
+    # deeplの翻訳結果出力(<div id="source-dummydiv" class="lmt__textarea lmt__textarea_dummydiv">はうまくいかず)
+    target_elem = soup.find(class_="lmt__translations_as_text__text_btn")
+    text = target_elem.text
+    return text
 
 
 if __name__ == '__main__':
