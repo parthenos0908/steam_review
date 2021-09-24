@@ -145,7 +145,7 @@ class labelingApp(tk.Frame):
             # if i == 100:
             #     break
         print("bug:{0}, feature:{1}, other:{2}, undefined:{3}".format(
-            count_bug, count_feature, count_other, count_feature))
+            count_bug, count_feature, count_other, count_undefined))
 
         # ラジオボタンの親frame
         radio = ttk.Frame(self, relief=tk.RIDGE)
@@ -191,7 +191,7 @@ class labelingApp(tk.Frame):
 
         # deeplボタンの生成
         self.deeplButton = tk.Button(
-            button, text='deepl翻訳', command=self.on_click_deepl)
+            button, text='deepl翻訳', command=self.on_click_deepl, relief=tk.SOLID)
         self.deeplButton.pack(expand=True, side=tk.LEFT, padx=10, fill=tk.BOTH)
 
         # 初期化時実行関数
@@ -243,7 +243,7 @@ class labelingApp(tk.Frame):
 
         self.translated_review = translate_deepl(self.review)
         self.translated_review_field.insert('1.0', self.translated_review)
-        self.translated_review_field.configure(stat="disable")
+        self.translated_review_field.configure(stat="disable", fg="blue")
 
     def on_select(self):
         # curselectionの返り値はtuple
@@ -271,7 +271,7 @@ class labelingApp(tk.Frame):
         self.translated_review_field.configure(stat="normal")
         self.translated_review_field.delete('1.0', 'end')
         self.translated_review_field.insert('1.0', self.translated_review)
-        self.translated_review_field.configure(stat="disable")
+        self.translated_review_field.configure(stat="disable", fg="black")
         # タイトルの変更
         self.master.title(
             'review labeling ({0}/{1})'.format(self.iterator, self.data_size))
@@ -345,10 +345,4 @@ def get_text_from_page_source(html):
 
 
 if __name__ == '__main__':
-    # input_filepath = path.join(path.dirname(__file__), INPUT_FILENAME)
-    # json_data = load_json(input_filepath)
-    # out_data = random.sample(json_data, 5000)
-    # output_filepath = path.join(path.dirname(
-    #     __file__), "255710_review_cleaned_5000.json")
-    # save_json(out_data, output_filepath)
     main()
