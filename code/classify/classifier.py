@@ -10,7 +10,6 @@ from tensorflow.python.keras.utils.vis_utils import plot_model
 import numpy
 
 
-
 # model_nameはここから取得(cf. https://huggingface.co/transformers/pretrained_models.html)
 # model_name = "cl-tohoku/bert-base-japanese"
 model_name = "bert-base-uncased"
