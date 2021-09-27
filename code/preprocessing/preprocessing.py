@@ -1,3 +1,4 @@
+from itertools import count
 import json
 from os import path
 from posixpath import commonpath
@@ -5,6 +6,7 @@ from nltk.stem import WordNetLemmatizer
 from nltk import pos_tag, word_tokenize
 from nltk.corpus import wordnet as wn
 import re
+from tqdm import tqdm
 
 from nltk.util import pr
 
@@ -22,8 +24,14 @@ CUSTOM_STOPWORDS = ['i', 'me', 'up', 'my', 'myself', 'we', 'our', 'ours',
 # アルファベット,数字,!,? 以外の文字のみで構成されたトークンを無視
 onlyCharacter = True
 
+LABEL = {
+    "Bug" : 0,
+    "Feature" : 1,
+    "General" : 2
+}
+
 INPUT_FILENAME = "255710_forum.json"
-OUTPUT_FILENAME = "255710_forum.json_cleaned.json"
+OUTPUT_FILENAME = "255710_forum_cleaned.json"
 # F:forum R:review
 MODE = "F"
 
@@ -37,6 +45,19 @@ def main():
     elif MODE == "R":
         preprocessing_data = reviewPreprocessing(input_data)
 
+
+    count_br = 0
+    count_fr = 0
+    count_other = 0
+    for p in preprocessing_data:
+        if p["label"] == 0:
+            count_br += 1
+        elif p["label"] == 1:
+            count_fr += 1
+        elif p["label"] == 2:
+            count_other += 1
+    print("bug:{0}, feature:{1}, other:{2}".format(count_br, count_fr, count_other))
+
     output_filepath = path.join(path.dirname(__file__), OUTPUT_FILENAME)
     save_json(preprocessing_data, output_filepath)
 
@@ -44,16 +65,15 @@ def main():
 def forumPreprocessing(forums):
     tmp_list = []
     i = 0
-    for forum in forums:
-        if i % 1000 == 0:
-            print("{0}/{1}".format(i, len(forums)))
-        i += 1
+    for i, forum in enumerate(tqdm(forums)):
         try:
             forum["comment_lem"], commont_wordsNum = lemmatize(
                 forum["comment"])
             forum["title_lem"], title_wordsNum = lemmatize(forum["title"])
             forum["combined"] = forum["title_lem"] + " " + forum["comment_lem"]
             forum["num_words"] = commont_wordsNum + title_wordsNum
+            forum["label"] = LABEL[forum["label"]]
+            forum["id"] = i
             tmp_list.append(forum)
         except Exception as e:
             print(e)
@@ -63,14 +83,10 @@ def forumPreprocessing(forums):
 
 def reviewPreprocessing(reviews):
     tmp_list = []
-    i = 0
-    for review in reviews:
-        if i % 1000 == 0:
-            print("{0}/{1}".format(i, len(reviews)))
-        i += 1
+    for i, review in enumerate(tqdm(reviews)):
         try:
-            review["review_lem"], review["num_words"] = lemmatize(
-                review["review"])
+            review["review_lem"], review["num_words"] = lemmatize(review["review"])
+            review["id"] = i
             tmp_list.append(review)
         except Exception as e:
             print(e)
@@ -121,7 +137,7 @@ def save_json(output_list, json_filepath):
 
 
 if __name__ == '__main__':
-    text = "I bought this game yesterday and it is full of bugs!"
-    print(word_tokenize(text))
-    print(lemmatize(text))
-    # main()
+    # text = "I bought this game yesterday and it is full of bugs!"
+    # print(word_tokenize(text))
+    # print(lemmatize(text))
+    main()

@@ -17,11 +17,11 @@ import time
 
 translator = Translator()
 
-# INPUT_FILENAME = "review/255710_review_cleaned_5000_out.json"
-# OUTPUT_FILENAME = "review/255710_review_cleaned_5000_out.json"
+INPUT_FILENAME = "review/255710_review_cleaned_5000_out.json"
+OUTPUT_FILENAME = "review/255710_review_cleaned_5000_out.json"
 
-INPUT_FILENAME = "review/255710_review_FR_filtered_7464_out.json"
-OUTPUT_FILENAME = "review/255710_review_FR_filtered_7464_out.json"
+# INPUT_FILENAME = "review/255710_review_FR_filtered_7464_out.json"
+# OUTPUT_FILENAME = "review/255710_review_FR_filtered_7464_out.json"
 
 WIDTH = 1000
 HEIGHT = 700
