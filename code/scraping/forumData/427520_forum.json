@@ -1,0 +1,452 @@
+[
+    {
+        "comment": "Hey there,\n\ni'm not a fan of big words so i'll keep it short and simple:\n\nThank you for making such a lovely game!\nThank you for countless hours of pure gaming fun!\nThank you for making it so very customizable via mod support!\nThank you for not pushing things too fast!\n\nWell, thank you and keep up the fantastic work!",
+        "label": "General",
+        "title": "Thank you (Make the dev-team happy today!)",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=4580"
+    },
+    {
+        "comment": "I'm looking for save files where people are experiencing specific (or extreme) performance issues so I can work on optimizing them.\n\nA few examples of existing specific/extreme saves I've profiled and found areas to optimize:\n During heavy combat with 120 + robots (particle slowdown)\n Having 5000+ beacons active at once (tick slowdown)\n Having 66,000+ robots on screen at the same time (Render slowdown)\n Opening a chest with 5000 slots (GUI slowdown)\n Having 50,000 + logistic containers and trying to render the logistic selection for all of them (Render slowdown)\n\nPushing the game well beyond what it can handle helps to show areas that can easily be improved but don't normally stick out due to how in-frequent they're used in a normal game.\n\nIf you're going to post a modded save please include the mods. The mods and save also need to run on the latest 0.15.",
+        "label": "General",
+        "title": "Performance optimization - post your saves",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=17501"
+    },
+    {
+        "comment": "I am very interested in the game but I have a few questions/concerns before I actually buy it.\n\nFirst off, my friend told me that after you do a few runs in the game the process begins to get repetitive. I was just wondering how long into the game do you guys feel it gets a little boring? And are there good mods that could alter game play enough to enhance the replay value? \n\nSecondly everyone talks about making the most efficient factories, are there multiple ways or \"setups' to be used to achieve the same level of efficiency of others builds?  I guess my point being is there enough room for creativity to the point where there is multiple ways to achieve the same goal. \n\nLastly how friendly is the learning curve to newer players? I don't have allot of time to just sit down and watch/read tutorials. I was hoping that I could jump on for a few hours and try to improve my builds or factories and there being enough things to do that will keep me interested. Hope you guys could help me out.\n\nAnd yes I played the demo but still just want the opinions of people who own the game.",
+        "label": "General",
+        "title": "Have Some Questions Before I Buy.",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=13362"
+    },
+    {
+        "comment": "My first impression is that I need to rebind the controls to something more like Minecraft. I keep right clicking to go into the machine GUIs.... ",
+        "label": "General",
+        "title": "Just bought the game; What were Your first impressions?",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=8197"
+    },
+    {
+        "comment": "Adding last little feature just before the release\n",
+        "label": "General",
+        "title": "Factorio development explained in gifs",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=1878"
+    },
+    {
+        "comment": "Can be found here: https://discord.gg/factorio\n\nIts a good place to chat and find people to play with",
+        "label": "General",
+        "title": "Factorio Discord",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=64699"
+    },
+    {
+        "comment": "Is located HERE:\nhttps://mods.factorio.com/\n\nThe make an account, go HERE:\nhttps://www.factorio.com/\n\nOnce logged in, click on your name and scroll all the way to the bottom to find a way to link it to your steam account. See the stickied thread for more info HERE:\nviewtopic.php?f=5&t=27203\n\nTHE FORUM ACCOUNT AND THE MOD PORTAL ACCOUNT ARE DIFFERENT ACCOUNTS\n\nDiscussions about mod portal subforum :\nviewforum.php?f=189\n\nYes, even as someone who's been dwelling about the forums regularly for the last few months I found this information to be terribly scattered, and the title of that stickied thread wasn't ringing any bells for me either. And trying to log in from within the game was just   \nSo there, I hope it's as obvious as possible.",
+        "label": "General",
+        "title": "THE MOD PORTAL",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=27377"
+    },
+    {
+        "comment": "Lately I looked some videos of how guys used the graphics card to speed up some complicated calculations. This changed their apps from practically unusable to wow.   \n\nSo I imagine how cool it would be to use a graphics card for physic-simulations of the Factorio world:\n- realistic simulation of the fluid system/heat-pipes\n- real-time power-loss over distance\n- calculating the positions of bots and items on belts in real-time\n- calculating inserter positions/state of recipe assembling depending on power-supply\n- extremely fast pathfinding\n- \u2026\n\nI don\u2019t know much about what\u2019s needed to achieve that Factorio could use this magic power and where the problems are laying, but interested to know more.",
+        "label": "General",
+        "title": "Using the graphics card to help the CPU out\u2026",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=100015"
+    },
+    {
+        "comment": "Just a thought: When (construction/logistic) bots get attacked by aliens they scream out \"Help, help, I'm an unarmed repair bot taking damage.\" and all the game things to do is to send in a second unarmed repair bot. Because, yeah, it will totally scare of the alines. \n\nWhy isn't there a defense bot. Give it the pistol every player starts off with and put some ammo in the roboport and have it go out and defend bots or entities that get attacked.\n\nOr can you put any of the personal weapon bots into a roboport?",
+        "label": "General",
+        "title": "Why aren't there defense bots?",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=100035"
+    },
+    {
+        "comment": "https://www.wsj.com/articles/why-railro ... %20traffic.\n\n\"Longer trains are the most important advance in achieving economies of scale in the past quarter century.\u201d\n\nI have been thinking lately that short trains just suck, period, and would like to start using very long trains.   I played around in editor mode, and there doesn't seem to be a limit.\n\nWas wondering if there were any good bases that were successfully using very long trains?  Not looking for designs or anything, just general impressions.\n\nThe biggest issue I see is the lack of proper train offloading equipment in Factorio, though I'm sure someone will suggest a mod for that.   And limit of 12 on the visualization length?  Seriously, wtf wube.\n\nCheers",
+        "label": "General",
+        "title": "Anyone standardizing on very long trains?",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=96099"
+    },
+    {
+        "comment": "I was trying to think of what I rarely, if ever use:\n\nWater barrels, can't think of a use for them, tbh.\nShotguns, Artillery Cannon / Tank Cannon, Tanks in general.  Lots of fun, but I never need them.  Easier, safer ways to take out spawners.\nRefined hazard concrete.  Mostly because I do everything in map mode, so running from one place to another is never required.  They can be useful for cosmetics, though.\nDischarge Defense Remote, Capsules (though poison capsules are handy)\nGates, fun, but I never use them.  Prefer landmines, plus I do everything in map mode.   Cosmetically, however, I can see uses.",
+        "label": "General",
+        "title": "What are the most impractical items in Factorio?",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=99229"
+    },
+    {
+        "comment": "I'm finding myself sort of outside of the Factorio community at present because I decided to play with some old Factorio versions and have got stuck there -  at 0.14 to be precise.  The reason is that I quite like the Alien Artifact thing, it means I have to go and destroy some biter nests at some point, even though I avoid this in the earlier part of the game in order to keep evolution down. Without this the biters feel a bit irrelevant unless they attack you.\n\n Maybe I'll get over this at some point, but at present I'm stuck in 2016/2017. My question is whether anyone else still likes the old stuff.",
+        "label": "General",
+        "title": "Nostalgia..",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=100097"
+    },
+    {
+        "comment": "After a long while, an ancient contributor by the name of Lovely_Santa is back in his writing pen! We\u2019ve last heard from our hero all the way back in Issue #2 where he was experimenting with the modding abilities of the new (at the time) spidertron. This time, he actually stays on the topic of Angel\u2019s mods, while writing about something completely different \u2026\n\nContinue reading: https://alt-f4.blog/ALTF4-48/",
+        "label": "General",
+        "title": "Alt-F4 #48 - Angel's Automated Unit Tests",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=100054"
+    },
+    {
+        "comment": "I'm always interested in how fast it'd be possible to complete a run in factorio, at least theoretically.\n\nThe biggest friction right now in runs are operator actions per minute(APM).  \n\nSomeone posted a computer enhanced run, it was about 1 hour and 21 minutes (https://www.youtube.com/watch?v=qYIplmAQcWU&t=3464s), faster than the current record of 1:27 (https://www.speedrun.com/factorio/run/z1rwkw9m).  The tool assisted run(TAR) wasn't that well planned out, IMHO, but I get it - scripting a computer to do a run is probably a nightmare.  The human one is exceedingly well planned out, but APM still rules over planning.\n\nAnother way to do it is via the creative mod.  I use blueprints, but climbing the tech tree is required.  As this is theoretical, I think having unlimited inventory (except for intermediates) is fine.  I also use unlimited reach and insta construction.\n\nThe idea really is to figure out if some ideas are missing from the current plans and running around (at least for me) just distracts from that goal.\n\nNot a big surprise - I am able to beat the TAR with something rough.  It's still rather messy and I'm cleaning it up as I go along and I'm pretty sure I can do much better.  Right now I'm finding the biggest way to improve times is increase base production earlier (steel, green circuits, copper, iron).\n\nOne thing on my to do list is to rework the blueprints with an eye for how a human would lay it out in a real run.  \n\nAnother useful thing about this approach is they make for shorter games.  I don't have the same time to spend on factorio I used to.",
+        "label": "General",
+        "title": "Theoretical speedrun",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=99935"
+    },
+    {
+        "comment": "Hi All,\n\nSince some time I like to play Factorio multiplayer on my old workstation with an antique i7 920 CPU, in the years upgraded with faster storage and 4K display.\n\nI could catch up and play with my old PC surprisingly well, until end game. With multiplayer games on larger bases I get big lags and it's unplayable, so I decided it was time for a new PC \n\nToday I ordered a PC with components below, curious for your remarks, positive but also negative. BTW: I've to wait 1 -2 weeks for all components to arrive.\n\nIntel Core i7-11700K 3.6GHz / 5.0 GHz, 16MB, S1200\nMSI MEG Z590 ACE, ATX, 4xDDR4\nG.Skill Trident Z 32GB(2x16GB) 3200Mhz CL14\nFractal Design Define 7, E-ATX, Zwart\nNoctua NH-D15S Chromax.Black\nSamsung SSD 980 Pro 2TB, PCIe 4.0 NVMe M.2\nCorsair High Performance Series HX750i\n\nKind regards, Iwan",
+        "label": "General",
+        "title": "My new PC (Specially ordered for Factorio)",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=100010"
+    },
+    {
+        "comment": "After a three-week hiatus, Alt-F4 is back, more motivated than ever! We start off with a bang as *ilbJanissary* goes into depth about how the calculation engine behind [FactorioLab](https://factoriolab.github.io) does its magic. It might seem complicated at the surface, but the process is broken down into granular parts that are illustrated with actual examples. No eyes will glaze over reading this piece (hopefully!).\n\nContinue reading: https://alt-f4.blog/ALTF4-47/",
+        "label": "General",
+        "title": "Alt-F4 #47 - Optimizing the Solution",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=99980"
+    },
+    {
+        "comment": "this post is just a question, is the game ever gonna get optimized to a better degree?? i run a gtx 1650 with a ryzen 5 2600 and i feel like i should be getting more fps when im running at low and windowed, applinked is there something wrong with my pc? or is the game just not optimized?",
+        "label": "General",
+        "title": "game optimization",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=99970"
+    },
+    {
+        "comment": "https://wiki.factorio.com/Glossary shared by by Amarula thanks for the Glossaric, i was looking for that a common term used for Modders\nuse Ctrl + F to find the word your looking for.\nhttps://wiki.factorio.com/Keyboard_bindings \u3000List of ShortCut Keys.\nModders Terms also included\nAlien = Bitters and Worms and other NPC you encounter in the game. the ones that keeps you company in the Lonely Planet.\nBase = where your Spawn point is Located and All your installations are clumped together\nBelts = Conveyor belts.\n\u3000\u3000Lanes = a single belt has 2 lanes. a left & right towards it's moving Direction.\nBootstrap (Phase) = Very start of the game trying to Reach the Fuel powered Drills.\nBitters = Alien Race that messess what you build and kills you in the process the only enemies you get in the game.\n\u3000\u3000Worms = immovable defensive creatures that protect Spawners.\n\u3000\u3000Spawners = where Bitters originate to give your life meaning.\n\u3000\u3000Spitters = aliens that fire projectiles. and can move.\nSpawn = a point where you get revived when you get killed. or hitch a ride from a moving train's path.\nBus = multiple belts side by side in long paths.\nBurner Phase = Establishing LABS & USING Fueled Facilities.\nCharacter = see Engineer\n\u3000\u3000Engineer = the one that's running around the map like it's head chopped off trying to figure out and fix the industry its' trying to build while being attack by bitters.\nChunk = a piece of size of a map.\nEntities = items placed on the MAP.\nIngredients = see mats\n\u3000\u3000Mats = (Materials) = ingredients that you need to make an installation or science potion, etc...\nMid-game = when your able to use Steam Engines. and start Exploring Resource patches.\nWhere you reached past the Green Science. and trying to reach these Stages of Development\n\u3000\u3000Vehicles & Train Stage.\n\u3000\u3000Solar Stage.\n\u3000\u3000Armor Stage. = the fancy upgrades you place on your character QoL, Slots\n\u3000\u3000Weapons Stage\n\u3000\u3000Laser Turrets Stage\n\u3000\u3000Bots Stage.\n\u3000\u3000Nuke Stage.\n\u3000\u3000Rocket Stage.\nMods = Features that players of this game made that you download to make your game better or Crash.\nBenefiting from their work, you enjoy that you don't even give thanks and buy them coffee or send them money when they beg for it. because they are starving and Economy can't give them work that they like or find sufficient.\nModders = see MODS. skills that they have and we don't.\nModPack = combination of Mods\nModdable = Mods that have settings in the Menu Screen before initializing the game.\nLib = (Libraries) = commonly used code in their different mods.\nLoader = a mod alternative for inserters.\nLUA =\nNauvis = the whole area of the map including unseen. Where you spend time enjoying yourself \"mostly\" alone till visitors come.\nOutpost = Constructing Buildings in the remote ore/oil patches.\nPollution = installations on the map emit, that players that usually ignore and wonder why bitters keeps messing their base.\nRailKill = when you forget to look both ways when crossing a Rail way path.\nSideLoading= using one of the Belt Lanes.\nSprite = the Animations of Entities.\nStacker = the system you build to Load Trains.\nSushi = Mixing multiple mats in one belt or more.\nTrash = mats that are not needed anymore. or old tech.\nTroughput = industrial engineering term for out put of the system or installation being efficient.\nTurret creep = Strategy using Defensive installations to move close to a Spawner.\nQoL = \uff08Quality of Life\uff09\u3000refers the ability you use or gain by your engineer.\nQuickbar = where you place links to your inventory to your items. the Bottom Center of your screen.\nUnless a Modder moves it to a vertical position on the side of your screen.\n\u3000\u3000Shortcuts = the buttons available beside your quickbar. to the Right.\nZoo = Gathering point of Swarms\n\u3000\u3000Swarms = Bunch of bitters and spitters etc.\u3000\u3000\n\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\u3000\n",
+        "label": "General",
+        "title": "Modding & Game Terminology & Dictionary Consensus. GLOSSARY",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=99831"
+    },
+    {
+        "comment": "I missed the event, I think we have a new dev working on the mod portal it seems ?\n\nWelcome vinzenz !",
+        "label": "General",
+        "title": "Welcome to vinzenz",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=99714"
+    },
+    {
+        "comment": "Hello everyone!\nI'm on the Factorio train since 2016 and I'm well over 2000 hours into the game. I had a lot of fun playing, modding, single, multi, basically, I know the game and I like it very much. But there is one problem, which bothers me, always did, and probably will in the future, I want to talk about end-game, late late game. I feel like this game has such a great potential to be the best game ever created, but the game engine is holding it back, every time you start a new game you already know you will not be able to play past some point. This makes me very sad, and sometimes I just don't even start. What is the point spending 300hrs on a save, when there is only one thing, which is 100% going to happen, and it's reaching the roof. Already when creating a new world I can tell you when it is going to end. I know that the game cannot be simply turned to multithreaded, but it would make me feel a lot better if I knew there was something going on behind the scenes to enhance the performance. I don't know guys how do you fell about this, and if you ever created a mega-base, but for me, it has become tiring, when you cannot just do what you want and instead you need to calculate the best UPS efficient methods in order to make your games last longer. It kills the creativity and in the end the fun. I really hope the only solution to this problem is not i9-999999999K at 50GHz. Let me know what do you think, cheers <3\n",
+        "label": "General",
+        "title": "Game optimization and playability",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=88414"
+    },
+    {
+        "comment": "So, achievements are disabled in a map if ANY console command is used. I learned this the hard way.\n\nI've got 50ish hours in a map and I use the console command to check the evolution rate. Little did I know this would ruin my whole game since I can no longer get the achievements I was working toward.\nThere was no warning and it doesn't even make sense for this command! (it's not cheating is it?)\n\nIs there a way to clear this flag in the save-file so I can continue where I left off and get the achievements I've been working so hard for?",
+        "label": "General",
+        "title": "Re-Enable Achievements...",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=29709"
+    },
+    {
+        "comment": "Oh man. It really has been a year since I started this project. Can\u2019t quite believe it\u2019s already been a year, while also not quite believing the project carried on for a whole year. In the beginning, it was just a silly idea that I wanted to try out and see where it would go, not really expecting it to become an actual project with dozens of people regularly contributing. It would have likely faded after a few weeks without tons of people stepping up and contributing. But (at least in this reality) it didn\u2019t, which I\u2019m very happy about and grateful for.\n\nContinue reading: https://alt-f4.blog/ALTF4-46/",
+        "label": "General",
+        "title": "Alt-F4 #46 - One Year And Counting",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=99675"
+    },
+    {
+        "comment": "I just did an achievement run (no mods) and am now back working on my megabase (with mods).\n\nI am running out of ideas/motivation of what to strive for. The current ideas I have are:\n\n1k SPM (currently at 350 mainly using my first launch base (I.e. not train supplying rocket parts). I have already launched ~500 rockets).\n\nModify my trains to be more efficient (I have nuclear fuel. But my train stops can be improved with circuits and better routing).\n\nExpand my walls. I have plenty of space tho.\n\nMoar resource outposts! Kinda bored of that atm.\n\nPower: have 24 reactors and lotsa solar. Not a current problem.\n192.168.0.1 routerlogin 192.168.l.l\nStart a new run with Bob's and/or Angel's.\n\nI dunno, just kinda burning out and looking for something more exciting. (maybe I should just take a break lol). Any other ideas/suggestions are muchly appreciated. Thanks!",
+        "label": "General",
+        "title": "Megabase ideas",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=99529"
+    },
+    {
+        "comment": "This is not a feature suggestion.\n\nI was putting down some roboports in an outpost. The outpost didn't have power. After having put some construction bots in one of the ports, they rushed out to get some trash from me and stuck around as there was no storage. Then they bounced from port to port as the ports ran out of power before heading off to another outpost and getting themselves destroyed in the process.\n\nNo doubt many of you have experienced some variation of bots doing what they are told over doing what you want (much like writing software). This makes me feel that there's a missing piece here. It has come up time and time again with many suggestions but from what I've read, they come up with new things you can place in your factory rather than pieces you can assemble into something you want. As the game has progressed, we have gotten more features for the bots but no way to actually make them smarter or customisable.\n\nAnd I think that's it: what we are missing for bots is what the circuit network is to the rest of the factory.",
+        "label": "General",
+        "title": "We need more control over bots",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=99001"
+    },
+    {
+        "comment": "For issue #45, Alt-F4 has another mod spotlight to share, with the twist that the issue will be released alongisde the mod itself! Niet has been plugging away at bringing some of Satisfactory\u2019s mechanics to Factorio, and it\u2019s way more involved than just bringing over the recipes and calling it a day. The article below goes into all the tricks that are used to try and emulate another game as closely as possible.\n\nContinue reading: https://alt-f4.blog/ALTF4-45/",
+        "label": "General",
+        "title": "Alt-F4 #45 - Satisfactorio",
+        "url": "https://forums.factorio.com/viewtopic.php?f=5&t=99533"
+    },
+    {
+        "comment": "When trying to connect to some multiplayer games it will get stuck on the waiting for server to save map screen. This happans on multiple servers and is more frequent on servers with small maps. I also know, through hosting the deadicated server, that multiple people will experience this while connecting to our server. Our server has non blocking saving enabled if this has any effect. Below are the server logs and client logs when I have the issue. The logs include me pressing esc to cancel the connection as it will just hang with no further log activity. From what I can make of the logs the client never receives mapReadyForDownload and then everything just hangs. The invalid packet states are common to both successful joins and failed joins, and downloading the map never has any issues once it starts.\nServer Logs FailCode: Select all84798.783 ConnectionRequestReplyConfirm (type(ConnectionRequestReplyConfirm) ) from(IP ADDR:({CLIENT_ADDR:57423}))\n84798.783 Info ServerRouter.cpp:425: Replying to connectionRequest for address(IP ADDR:({CLIENT_ADDR:57423})).\n84798.783 Info ServerSynchronizer.cpp:599: nextHeartbeatSequenceNumber(2526614) adding peer(62)\n84798.801 Info ServerMultiplayerManager.cpp:771: updateTick(128393) changing state from(InGame) to(InGameSavingMap)\n84798.972 Info ServerMultiplayerManager.cpp:986: UpdateTick(128393) Serving map(/opt/factorio-servers/factorio-eu-08/temp/mp-save-61.zip) for peer(62) size(2593231) crc(1143283117)\n84798.972 Info ServerMultiplayerManager.cpp:771: updateTick(128393) changing state from(InGameSavingMap) to(InGame)\n84799.278 ConnectionRequestReplyConfirm (type(ConnectionRequestReplyConfirm) ) from(IP ADDR:({CLIENT_ADDR:57423}))\n84799.278 Info ServerRouter.cpp:425: Replying to connectionRequest for address(IP ADDR:({CLIENT_ADDR:57423})).\n84799.653 Info ServerMultiplayerManager.cpp:919: updateTick(128433) received stateChanged peerID(62) oldState(Ready) newState(ConnectedWaitingForMap)\n84823.211 Info RemoteCommandProcessor.cpp:238: New RCON connection from IP ADDR:({216.245.221.88:37752})\n84872.297 Info ServerMultiplayerManager.cpp:1037: Disconnect notification for peer (62)\n84872.297 Info ServerMultiplayerManager.cpp:919: updateTick(128579) received stateChanged peerID(62) oldState(ConnectedWaitingForMap) newState(DisconnectScheduled)\n84872.314 Info ServerSynchronizer.cpp:618: nextHeartbeatSequenceNumber(2528803) removing peer(62).\n\nClient Logs FailCode: Select all 647.474 Joining game IP ADDR:({5.196.93.138:34204})\n 647.474 Info UDPSocket.cpp:33: Opening socket\n 647.475 Info ClientMultiplayerManager.cpp:581: UpdateTick(4294967295) changing state from(Ready) to(Connecting)\n 647.884 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n 647.884 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n 647.884 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n 647.884 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n 647.884 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n 647.902 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n 647.902 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n 647.902 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n 647.902 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n 647.918 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n 647.951 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n 647.983 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n 648.018 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n 648.050 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n 648.385 Info ClientSynchronizer.cpp:35: Initialized Synchronizer local peer(1) latency(32).\n 648.385 Info ClientMultiplayerManager.cpp:581: UpdateTick(4294967295) changing state from(Connecting) to(ConnectedWaitingForMap)\n 648.386 Info ClientRouter.cpp:221: ConnectionAccepted\n 648.386 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ConnectionAcceptOrDeny) received from IP ADDR:({5.196.93.138:34204}): invalid state (Connected) for packet type\n 648.951 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ConnectionAcceptOrDeny) received from IP ADDR:({5.196.93.138:34204}): invalid state (Connected) for packet type\n 649.417 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ConnectionAcceptOrDeny) received from IP ADDR:({5.196.93.138:34204}): invalid state (Connected) for packet type\n 721.019 Info ClientMultiplayerManager.cpp:144: Disconnecting multiplayer connection. Reason: Quit.\n 721.019 Info ClientMultiplayerManager.cpp:581: UpdateTick(4294967295) changing state from(ConnectedWaitingForMap) to(DisconnectScheduled)\n 721.035 Info ClientMultiplayerManager.cpp:581: UpdateTick(4294967295) changing state from(DisconnectScheduled) to(WaitingForDisconnectConfirmation)\n 721.135 Info ClientMultiplayerManager.cpp:581: UpdateTick(4294967295) changing state from(WaitingForDisconnectConfirmation) to(Disconnected)\n 721.135 Info ClientMultiplayerManager.cpp:891: Disconnect notification for peer (62)\n 721.138 Info UDPSocket.cpp:218: Closing socket\n 721.138 Info UDPSocket.cpp:248: Socket closed\n\nServer Logs SuccessCode: Select all86232.215 ConnectionRequestReplyConfirm (type(ConnectionRequestReplyConfirm) ) from(IP ADDR:({CLIENT_ADDR:62845}))\n86232.215 Info ServerRouter.cpp:425: Replying to connectionRequest for address(IP ADDR:({CLIENT_ADDR:62845})).\n86232.215 Info ServerSynchronizer.cpp:599: nextHeartbeatSequenceNumber(2569307) adding peer(84)\n86232.234 Info ServerMultiplayerManager.cpp:771: updateTick(130884) changing state from(InGame) to(InGameSavingMap)\n86232.405 Info ServerMultiplayerManager.cpp:986: UpdateTick(130884) Serving map(/opt/factorio-servers/factorio-eu-08/temp/mp-save-83.zip) for peer(84) size(2593302) crc(3960836900)\n86232.405 Info ServerMultiplayerManager.cpp:771: updateTick(130884) changing state from(InGameSavingMap) to(InGame)\n86232.744 ConnectionRequestReplyConfirm (type(ConnectionRequestReplyConfirm) ) from(IP ADDR:({CLIENT_ADDR:62845}))\n86232.744 Info ServerRouter.cpp:425: Replying to connectionRequest for address(IP ADDR:({CLIENT_ADDR:62845})).\n86232.780 Info ServerMultiplayerManager.cpp:919: updateTick(130906) received stateChanged peerID(84) oldState(Ready) newState(ConnectedWaitingForMap)\n86233.790 Info ServerMultiplayerManager.cpp:919: updateTick(130908) received stateChanged peerID(84) oldState(ConnectedWaitingForMap) newState(ConnectedDownloadingMap)\n86235.084 Info ServerMultiplayerManager.cpp:919: updateTick(130910) received stateChanged peerID(84) oldState(ConnectedDownloadingMap) newState(ConnectedLoadingMap)\n86236.255 Info ServerMultiplayerManager.cpp:919: updateTick(130979) received stateChanged peerID(84) oldState(ConnectedLoadingMap) newState(TryingToCatchUp)\n86236.391 Info ServerMultiplayerManager.cpp:919: updateTick(130987) received stateChanged peerID(84) oldState(TryingToCatchUp) newState(WaitingForCommandToStartSendingTickClosures)\n86236.391 Info GameActionHandler.cpp:4308: UpdateTick (130987) processed PlayerJoinGame peerID(84) playerIndex(0) mode(connect) \n\nClient Logs SuccessCode: Select all2080.901 Joining game IP ADDR:({5.196.93.138:34204})\n2080.901 Info UDPSocket.cpp:33: Opening socket\n2080.902 Info ClientMultiplayerManager.cpp:581: UpdateTick(4294967295) changing state from(Ready) to(Connecting)\n2081.285 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n2081.285 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n2081.285 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n2081.285 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n2081.285 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n2081.301 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n2081.301 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n2081.301 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n2081.301 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n2081.316 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n2081.351 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n2081.385 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n2081.418 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n2081.450 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n2081.485 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ServerToClientHeartbeat) received from IP ADDR:({5.196.93.138:34204}): invalid state (WaitingForAccept) for packet type\n2081.502 Info ClientSynchronizer.cpp:35: Initialized Synchronizer local peer(1) latency(32).\n2081.502 Info ClientMultiplayerManager.cpp:581: UpdateTick(4294967295) changing state from(Connecting) to(ConnectedWaitingForMap)\n2081.502 Info ClientRouter.cpp:221: ConnectionAccepted\n2082.068 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ConnectionAcceptOrDeny) received from IP ADDR:({5.196.93.138:34204}): invalid state (Connected) for packet type\n2082.468 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ConnectionAcceptOrDeny) received from IP ADDR:({5.196.93.138:34204}): invalid state (Connected) for packet type\n2082.485 Info ClientMultiplayerManager.cpp:750: Received mapReadyForDownload\n2082.485 Downloading file C:\\Users\\User\\AppData\\Roaming\\Factorio\\temp\\mp-download.zip (2593302 B, 5156 blocks)\n2082.487 Info ClientMultiplayerManager.cpp:581: UpdateTick(4294967295) changing state from(ConnectedWaitingForMap) to(ConnectedDownloadingMap)\n2082.833 Info UnparsedNetworkMessage.cpp:91: Invalid packet (type ConnectionAcceptOrDeny) received from IP ADDR:({5.196.93.138:34204}): invalid state (Connected) for packet type\n2083.752 Finished download (1 s, 2.5 MB, 2.0 MB/s)\n2083.778 Info ClientMultiplayerManager.cpp:730: updateTick(4294967295) map download finished creating scenario\n2083.778 Info ClientMultiplayerManager.cpp:581: UpdateTick(4294967295) changing state from(ConnectedDownloadingMap) to(ConnectedLoadingMap)\n",
+        "label": "Bug",
+        "title": "[Oxyd] [0.18.28] Stuck on waiting to save map",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=85425"
+    },
+    {
+        "comment": "The certificate for direct.mods-data.factorio.com, issued by R3, has ran out today (26/09/2021). This means that users that download mods in browser see a scary message:\n\nAttackers might be trying to steal your information from direct.mods-data.factorio.com (for example, passwords, messages, or credit cards).",
+        "label": "Bug",
+        "title": "[Site] Certificate for `direct.mods-data.factorio.com` has ran out",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=100083"
+    },
+    {
+        "comment": "Ever since installing 1.1.39, startup crashes have become the norm. If I'm lucky, I am able to start the game on 1 out of 5 attempts. I've also experienced other crashes, and my long-running game has become unplayable. Recently I had a very bad crash when clicking on an item in a Spidertron equipment grid, and the game would not start at all, aafter something like 40+ tries. I deleted Factorio and my user folder (after making backups), downloaded the 1.1.39 installer, and started from scratch. Same results, had to try a bunch of times to even get to the main menu. Eventually I was able to make a new sandbox game, which crashed when I saved it. Factorio was solid and reliable up through 1.1.38, and now it's a disaster for me. Please help!",
+        "label": "Bug",
+        "title": "[1.1.39][mac]Relentless crashes on startup",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=100012"
+    },
+    {
+        "comment": "Hi guys, \n\nafter upgrading from 1.1.39 to 1.1.40 I get the error that I cannot save any more:\n\n\nI'm using quite a few mods (Krastorio 2, Space Exploration, and others).\n\nWhen I downgrade to 1.1.39 then saving and loading works again.\n\nEdit:\nThe whole Factorio installation including the latest save file can be found here (3 GB):\nhttps://drive.google.com/file/d/1-IjRwQ ... 2GwtT/view",
+        "label": "Bug",
+        "title": "[1.1.40] Error saving map: Corruption of game state detected",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=100036"
+    },
+    {
+        "comment": "This is with 0.18.31 from Steam on Linux.\n\n\n\nScreenshot at 2020-06-14 03-09-50.png (719.12 KiB) Viewed 1185 times\n\n\n\nThis is a default sizing of this dialog on my system, and it has the right side cut off. I in fact never realized there are some extra options for train on the right size, because I never realized the dialog is cropped on the right.\n\nQuick demonstration in real time: https://www.youtube.com/watch?v=oAJF9WINm9k",
+        "label": "Bug",
+        "title": "[kovarex][0.18.31] Incorrectly sized train view dialog on 1920x1920 display",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=85964"
+    },
+    {
+        "comment": "I think the screen shot tells the story. When I have just the right zoom level and the line is aligned just right, I can see this column where no pollution overlay is visible. Scrolling left and right may cause it to disappear. The line is typically visible when it is on the right half of the screen.\n\nNote this is a Linux system, so maybe some kind of opengl issue?\n\n\n\npollution-cloud-column.png (1.45 MiB) Viewed 727 times\n\n",
+        "label": "Bug",
+        "title": "[posila] [1.1.38] Pollution overlay missing on vertical line",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99705"
+    },
+    {
+        "comment": "There is a loophole in the modding API that allows a player to bypass blueprint editing mods. This example is a rather hostile mod, but it also affects mods that add helpful tags to blueprints.\n\nSteps to reproduce:\n1. Create a simple mod that deletes all transport belts from new blueprints.\nCode: Select all/c function delete_belts(event)\n  local bp = game.get_player(event.player_index).cursor_stack\n  if not bp or not bp.valid_for_read or not bp.is_blueprint or not bp.is_blueprint_setup() then return end\n  local entities = bp.get_blueprint_entities()\n  if not entities then return end\n  for key, entity in pairs(entities) do\n    if entity.name:find(\"transport-belt\", 1, true) then\n      entities[key] = nil\n    end\n  end\n  bp.set_blueprint_entities(entities)\nend\nscript.on_event(defines.events.on_player_configured_blueprint, delete_belts)\nscript.on_event(defines.events.on_player_setup_blueprint, delete_belts)\n2. Select the copy tool.\n3. Hold down shift while creating a blueprint that includes transport belts.\n4. Click \"Create blueprint\".\n5. Select the paste tool.\n\nExpected result: Paste tool is missing transport belts.\n\nActual result: Paste tool has transport belts.\n\n\nThe other ways of creating blueprints all work as expected, the belts are gone:\nCopy tool without shift\nBlueprint tool with shift\nBlueprint tool without shift",
+        "label": "Bug",
+        "title": "[kovarex] [1.1.39] Shift+Copy+Paste ignores on_player_configured_blueprint",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99845"
+    },
+    {
+        "comment": "For mods using on_player_setup_blueprint event.\n\nIf you use a new blueprint and capture a selection, player.blueprint_to_setup contains a valid blueprint, and contains a valid BlueprintEntity list via get_blueprint_entities(). If you reuse a blueprint (blue \"select new contents\" button) though, the blueprint_to_setup is invalid, and the blueprint obtained via the player's cursor_stack is defective, as the get_blueprint_entities() gives nil.\n\nThis could also affect this pending one: viewtopic.php?f=29&t=88793\nAnother thread talking about this same issue (thanks to mk-fg): 88100\nEdit: added links to possibly related/same bug.",
+        "label": "Bug",
+        "title": "[kovarex] [1.1.36] Blueprints missing entity list when reused",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99323"
+    },
+    {
+        "comment": "On left, the Angel's clarifier (furnace), next to the Angel's strand casting machine (assembling machine). Both working_visualisations specify that animation has fadeout = true:\n\n\nNow, editing the clarifier to be an assembly machine:\n\n\nThe animation fades in properly, but when the machine is finished as a furnace it immediately disappears instead of fading out.",
+        "label": "Bug",
+        "title": "[boskid][1.1.39] working_visualisation/fadeout is broken on Furnace prototype",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99997"
+    },
+    {
+        "comment": "This seems like it is an unwanted behavior. \n\nWhat happens:\ninserters pick up items marked for deconstruction.\n\nWhat should happen:\nInserters shouldn't pick up items marked for deconstruction.\n\nOther relevant things: \nBelts already do NOT pick up items marked for deconstruction that sit on top of them.\n\nhttps://youtu.be/qFlfcQGQwSU",
+        "label": "Bug",
+        "title": "[Genhis] [1.1.38] Inserters pick up deconstructed items on ground",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99770"
+    },
+    {
+        "comment": "See attached save game. Disable editor mode to start. Save has a regular furnace that has the issue and a metal mixing furnace (like a furnace but can have a recipe set) that works as expected. Wood can both be used for fuel as well as being an ingredient for the recipe, turning it into coal. The metal mixing furnace loads 5 wood into the fuel slot then loads wood into the ingredient slot. The regular furnace will load 200 wood into the fuel slot before loading any into the ingredient slot.\n\n\n\nBoth of these were started at the same time. The metal mixing furnace has started making coal. The regular furnace won't start until it's fuel slot is full.\n\nMod list:\nboblibrary\nbobplates\n\n\n Fuel Issue.zip\n(1.43 MiB) Downloaded 54 times\n\n",
+        "label": "Bug",
+        "title": "[boskid][1.1.39] Furnaces over fuel when fuel is also an ingredient",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99924"
+    },
+    {
+        "comment": "I had two uranium miners extracting from the same tile.  When the top miner depleted the tile while the second miner did not have sufficient Sulfuric Acid, the second miner continued to report 'Missing of required fluid' despite the tile it was attempting to mine no longer existing. It continued to report this status even after having well over the required Sulfuric Acid required to perform a mining operation.",
+        "label": "Bug",
+        "title": "[Genhis] [1.1.36] Uranium miner incorrectly states status on tile depletion",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99527"
+    },
+    {
+        "comment": "According to the doc create_entity accepts direction, but when trying to spawn a character it's always spawned facing north. Did not test with other entity types.\nCode: Select all/c game.player.surface.create_entity{name='character', direction=defines.direction.south, position={0,0}}\n",
+        "label": "Bug",
+        "title": "[Rseding91] [1.1.39] create_entity ignores direction",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99887"
+    },
+    {
+        "comment": "I am aware of 84210! Loewchen, please read before you move to duplicates.\n\nWhen removing an entity in the editor, the undo command yields a ghost.\n\nThis was reported as a bug in 0.18.21, but Rseding decided not to fix it because \"undo isn't officially supported in the map editor;\" however, in 1.1.21, Kovarex fixed 96015, despite the link to 65683, another 'won't fix, it is not supported' from Rseding.\u2007Sic, Kovarex must have decided to support undo in the editor by 1.1.21: for this reason I believe the bug should be at least reconsidered.",
+        "label": "Bug",
+        "title": "[Tobias] [1.1.37] Undo of deconstruction in editor mode should instant revive (if enabled)",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99622"
+    },
+    {
+        "comment": "Cut tool preview highlights and counts unaffected entities.\nThat includes trees, rocks, cliffs and fish.\n\n\n\nScreenshot (8).png (742.58 KiB) Viewed 584 times\n\n\nI think it started doing so a few versions ago.",
+        "label": "Bug",
+        "title": "[Tobias] [1.1.38] Cut preview highlights unaffected entities",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99720"
+    },
+    {
+        "comment": "In my game I have built a Wood burner to remove excess wood from logistic network and As a mistake hve put wooden chest in there too. When the burner inserters ran out of fuel they were about to refuel themselves with more wood and then stopped midway, I in an attempt to restart it refueled it manualy by selecting wood from my inventory and let it run. and then when the insererter was about to put in the next item wood to the next chest instead of refueling the game stopped and prodused an error.",
+        "label": "Bug",
+        "title": "[boskid][1.1.39] Crash refueling burner inserter (Inserter::dropHeldItem)",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99858"
+    },
+    {
+        "comment": "Hey there, on latest 1.1.36, I'm running into problems switching a blueprint from absolute to relative snapping to grid. I can change it in the interface, and can save the blueprint with the change, and when I go back to the blueprint, it's updated. But when I go to place the blueprint in the world, it's still using absolute positioning. Once I place it ONCE with absolute positioning, then it starts using relative positioning. Persists through saves, and only happens to one blueprint.\n\nSteps to reproduce in attached save file:\n1. Load save\n2. Try placing currently selected blueprint (named \"20.96 MW Solar\", inside blueprint book \"IR\")\n3. Observe that despite using relative positioning with 64x64 size and grid position 2, 2, the blueprint only uses absolute positioning as you try to place it in the world\n4. Place the blueprint once in a free spot\n5. Observe that the blueprint now uses relative positioning as it was set to previously\n\nIf before step 2, you try changing positioning to absolute and back to relative (saving each change), there's no effect on the outcome of steps 3-5.",
+        "label": "Bug",
+        "title": "[kovarex] [1.1.36] Blueprint refuses to switch to \"relative\" from \"absolute\" snap to grid",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99496"
+    },
+    {
+        "comment": "1. Logged into the game\nOpened the list of servers\n2. Error 520\n3. Server list",
+        "label": "Bug",
+        "title": "[1.1.38] Error code 520 in the server list",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99857"
+    },
+    {
+        "comment": "Problem:\nGrenades are not damaging entity-with-health that have no flags set.\nTo recreate:\nCreate an entity-with-health with no flags, or remove the flags of an existing entity, like so:\nCode: Select alldata.raw[\"simple-entity\"][\"rock-big\"].flags = {}\ndata.raw[\"simple-entity\"][\"rock-big\"].flags = nil\n--Either one works.\n\nThen find or spawn this entity and throw a grenade at it.  Entity does not take damage as expected.\n\nThis seems to be a problem with ANY flags, as even setting flags to { \"not-on-map\" } makes it vulnerable to grenade damage.\nExpected:\nGrenade causes entity to take damage as normal, respecting it's resistances.",
+        "label": "Bug",
+        "title": "[1.1.38] Grenades ignore entities with no flags",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99773"
+    },
+    {
+        "comment": "1. What did I do?\nMarking a belt in front of a miner for deconstructions while the mining drill is in operating state (green status indicator led) and had at least outputted one ore on the belt (not directly after placing the miner).\n\n2. What happened?\nThe led instantaneously turned red and the text showed: \"No minable resources\"\n\n3. What did you expect to happen instead? It might be obvious to you, but do it anyway!\nYellow led with the text \"Waiting for space in destination\"\n\n\nThis is the case for belts, underground belts, splitter, chests and train waggons.\nThis is also NOT the case if the drill is already in the yellow \"Waiting for space in destination\" state and then marking the belt for deconstruction (the state will not change)\n\n\n\n\n\nScreenshot 2021-08-21 120727.png (1.12 MiB) Viewed 531 times\n\n\n\n\n\nScreenshot 2021-08-21 120824.png (95.68 KiB) Viewed 531 times\n\n",
+        "label": "Bug",
+        "title": "[Genhis] [1.1.38] Wrong status indicator/text on mining drills",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99679"
+    },
+    {
+        "comment": "Problem description:\n\nThe little flag showing the center of the blueprint snapping rectangle doesn't render if there's a roboport in the way.\n\nIt would seem the flag renders under a layer of the roboport graphic.\nSteps to reproduce:\n\n Create a blueprint of consisting only of a roboport.\n Enable snap to grid.\n\nExpected behavior:\n\nThe red flag indicating the center of the snapping rectangle should be visible.\n\nImage example: \n\n\nno-problem.png (31.1 KiB) Viewed 446 times\n\n\nObserved behavior:\n\nIt doesn't.\n\nImage example: \n\n\nproblem.png (30.45 KiB) Viewed 446 times\n\n\nAdditional data:\n\nMinimal illustrative save file: \n\n BUG REPORT.zip\n(580.45 KiB) Downloaded 232 times\n\n\nLog file: \n\n factorio-current.log\n(5.71 KiB) Downloaded 234 times\n\n",
+        "label": "Bug",
+        "title": "[Genhis] [1.1.38] Blueprint snapping rectangle flag renders behind part of roboport graphic.",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99704"
+    },
+    {
+        "comment": "So I was looking at one of my trains on my map (which I can see because I have a radar there), and I found that I could access the train fuel from where I am, which shouldn't be possible. \n",
+        "label": "Bug",
+        "title": "[boskid][1.1.38] Train fuel can be accessed from across the entire map",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99731"
+    },
+    {
+        "comment": "This behavior occurs in a modded game, but can be reproduced in a minimally modded game (no mods save one specifically designed to show this behavior). The MiningUPSGrade mod (available via mod portal) can demonstrate this behavior easily enough. Lay down an assembler, select the MiningUPSGrade recipe, try to insert 51 speed 3 or prod 3 modules into the slot in the assembler and it will fail; blocking you at 50.\n\nThis does not seem to occur with anything other than modules (at least, I haven't noticed it happening with anything else). In 1.1.37 this does not happen, and I reverted my game to 1.1.37 to confirm that.\n\nNote: When loading in 1.38, there will be 100 modules in the assembler. Take them out and try to re-insert them, you'll find you are unable. Reload the save file and grab 50 more modules from the infinity chest in your inventory, and you'll find you won't be able to increase either prod or speed module stack to 150, but in 1.37 you can, easily.",
+        "label": "Bug",
+        "title": "[boskid][1.1.38] Regression from 1.1.37 - unable to have more than 50 modules in a recipe",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99708"
+    },
+    {
+        "comment": "Hello,\n\nI just had a desync on a multiplayer Steam-hosted server and I'm doing my part to report it. I've attached the .zip file that generated during the event.\n\nHardware/Network Config: I am not fully aware of the host's hardware or network config. However, the host has a relatively unstable connection (satellite internet). Downloading a ~25MB map takes about 5 minutes at around 100KB/s. My hardware config (client side) is in my forum signature.\n\nContext for desync: I am joining a game that has been hosted by a single player for a long stretch of uptime. Currently I am the only one on the server except for the host, who has been AFK for hours. The map was created since before 1.0. The desync occurred after I uploaded a blueprint containing a train and train stop with config to game blueprints, and then tried to stamp it on top of an existing train/train stop. I tried reconnecting and doing this again and I was able to reproduce the desync by performing the same action. After manually removing the train and train stop, I was able to place the blueprint without issue. My best guess is that pasting the settings on top of the train or station is what caused the desync.\n\nIn case the forum attachments don't work, here is a mediafire link:\nhttps://www.mediafire.com/file/m1a73lmk ... 1.zip/file\n\nHope this helps!",
+        "label": "Bug",
+        "title": "[boskid][1.1.37] Desync when placing train blueprint over existing train",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99592"
+    },
+    {
+        "comment": "Hello.\n\nThe API of the LuaGameScript-function check_prototype_translations() claims that it checks technologies for missing locales. But it doesn't find my technologies that don't have a localisation. \n\nSo there's a technology with an unknown name:\n\n\nBut it doesn't appear in the log:\n\n\nI can provide a mod that showcases the problem, if needed. \n\nThank you!",
+        "label": "Bug",
+        "title": "[1.1.38] game.check_prototype_translations() doesn't check technologies",
+        "url": "https://forums.factorio.com/viewtopic.php?f=11&t=99672"
+    },
+    {
+        "comment": "It would be nice to drag and drop logistics slots to re-order their position.  This is useful to keep a consistent order in items requested for organization and readability (especially with mods adding more slots).  Without this feature to reorder would require removing and re-setting all logistics slots after the insertion point.\n\nThis is not a crucial feature, but a nice to have and goes along with general gui polish and improvement, more interactivity, and modern features like drag and drop.",
+        "label": "Feature",
+        "title": "New Feature: Allow reordering logistics requester slots",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=18993"
+    },
+    {
+        "comment": "The problem\n\nImagine that you manually drive your train into the wilderness. That train has some artillery wagons. And if you stop, those wagons would shoot and attract all neighbours.\n\nSimilar problem arises when you want to temporary park your artillery train at outpost but don't want it to shoot yet.\n\nOf course, there are some workarounds, like clearing train schedule and quickly switching to automatic drive before train stops. But they are annoying and error-prone.\n\nThe proposal\n\nDisable artillery wagon auto-fire when train is in manual mode (driven by the player).\n\nNo need for fancy UI. And  this behaviour would be very intuitive for new players too: train in manual mode does nothing without your explicit action.\n\nWagons already have reference to their train, so they just need to lookup for manual_mode property. So, no impact on performance, I hope.\n\nPrevious discussions\n\nThere were many threads about artillery auto-fire:\n\nOption for disabling artillery auto target\nSuggestion: Allow enabling/disabling artillery turrets with circuit network\nArtillery Auto-fire Toggle\nArtillery auto-targetting\n\n\nBut all of them attempt to solve more general problem and propose to add something to the UI. That's why I decided to make a separate thread.",
+        "label": "Feature",
+        "title": "Disable artillery wagon auto-fire when train is in manual mode",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=86718"
+    },
+    {
+        "comment": "TL;DR\nSeparate key binding for vehicles and movement on foot.\n\nWhat ?\nAdd to the game's options separete key binding for vehicles (car and tank). Base controls should stay the same as for movement on foot.\nWhy ?\nI want to bind vehicle movement on my steering wheel and keep WSAD movement on foot.",
+        "label": "Feature",
+        "title": "separate key binding for vehicle control",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=100167"
+    },
+    {
+        "comment": "https://www.reddit.com/r/Damnthatsinter ... mbly_line/\n\nPlease consider my two cents...\n\nMake track building a strategic process instead of instant stamps.\n\nHere is the most gorgeous template, it's even in our colors.\n\nIf the game had a fleet of lifelike automated track laying machines, and maintenance machines after the millions of tons use...\n\nThis would give us a rail yard full of more train toys...OMG if you could see in my brain.\n\nThe Stone, Ties and Rails...  all feed the moving rail laying factory...  more delayed gratification... more planning... more tie ups in traffic...\n\nAnother suggested crane cars and flatbeds to manufacture facilities beside rails too. but that's their toys...",
+        "label": "Feature",
+        "title": "OMG Help Make this Real... Track Building Machine's Process... Real Life OMG",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=100168"
+    },
+    {
+        "comment": "TL;DR: When you move cursor over resource icon in charts (Production, Electric Network, etc), please highlight/bold the matching line in the line-graph chart.\n\nFactorio's statistics are awesome. I use Production and Electric network info charts regularly, especially to check trends and look for unexpected dips. It is also extremely helpful to use the graphs to watch if final products closely follow intermediate product production trends (do they go up and down together). My complaint is that if I click on a single resource, the graph automatically \"highlights\" [only] that resource but ALSO changes the scale and line color (if not first resource that is blue) so you lose the immediate point of reference relative to other products that were previously showing on the graph. Thus, selecting the resource(s) by itself is an unsatisfactory work-around.\n\nPlease make it so that when you hover over a resource icon/button that it also highlights the corresponding line in the graph at the same time as the icon/button is highlighted in the table.",
+        "label": "Feature",
+        "title": "Highlight resource's line in production line graph chart",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=100160"
+    },
+    {
+        "comment": "TL;DR\nAdd a confirm to the \"back\" function in the mod menu (modlist) [MOUSE]\n\nWhat ?\nWhen i press the \"back\" button on my mouse in modlist (mod browser?), it immediately restarts the game applying changes (when pressing the back button while installing mods). Because this back function does not bring me \"back\"  to the previous windows (from the downloading page to the installed mods page), i suggest to add a simple popup like \"Restart now?\", or even better, make the back function work(returning you to the previous mod menu category).\nEdit1: Also found out, that if you \"back out\" from the menu while still downloading the mods, you lose the whole mod queue to be downloaded, having to do it all again\nWhy ?\nI think it would make browsing the modmenu a lot better for some users (maybe only me tho).",
+        "label": "Feature",
+        "title": "Mod menu back button confirm [MOUSE]",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=100157"
+    },
+    {
+        "comment": "Hey\n\njust a small suggestion.\n\nI often drag pipes to the shoreline and then have to deconstruct the last pipe and then place the pump",
+        "label": "Feature",
+        "title": "Let offshorepumps fast replace (water)pipes",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=100101"
+    },
+    {
+        "comment": "You can make tags and for example label a factory with a red circuit on the map. It would be nice if the tag had a button so that you could go to the next red circuit factory and the next after that because if you have a sprawling build you need to check on things quickly. Also would be nice to have a page listing all your factories by whatever they produce so that you can see stats on them and click on them to go there. \n\nYou already have a page for production. If I could click on things in the production page and go to that entity's factories one after the other in map view I could quickly look for which factory isn't producing and get a look at what needs to be done without having to do a lot of scrolling.",
+        "label": "Feature",
+        "title": "Especially for huge builds, a quick way to check on various factories",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=100108"
+    },
+    {
+        "comment": "TL;DR\nWhen using ALT mode, there's no visual distinction in the icon between a filter that's blacklisting or whitelisting the item.\n\nWhat ?\nThere's no visual difference between a filter that's blacklisting vs a filter that's whitelisting. (attachment 1)  I suggest either changing the blacklisting background to a color like red, since blacklisting is a new function of the filter inserter and the black background could be already strongly associated with a whitelisting filter inserter and does not defy the visual expectation of the veteran player, or changing the whitelisting background to something like light gray, so a black background would mean the filter is blacklisting and a (dark) white glow will mean the filter is whitelisting.\nWhy ?\nOne can more quickly distinguish at a glance using ALT mode what the filter is doing, leading to quicker decisionmaking.",
+        "label": "Feature",
+        "title": "show different appearance to blacklist/whitelist icons in alt mode",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=66255"
+    },
+    {
+        "comment": "Background: I'm currently playing Space Explore with friends on a headless server. Currently the game size has reached over 600MiB and the game takes a little bit above 13 GiB of RAM for every system. It is indeed heavy and we run Global Tick Time Scale at 30UPS to free up CPU so all computers involved can play smoothly and lag-free.\n\nWhen closing down the game, we have taken into habit to pause the game, because the server setting does not carry out the pausing in a good fashion. If we forget this or is dropped, we are left to painfully slow joining times.\n\nThe setting makes it do pause the game after all have left, but, it does not keep the game paused until the first player have loaded the map. It instead unpauses the game directly when someone is downloading the map. When playing with such huge maps it adds several extra minutes in catching-up time. We are already talking minutes in just loading the map, so this behaviour makes the client be very far behind the server when the loading is done and it starts catching up. It do also contribute to disconnect errors since the server is running away from a joining client. More of that in another report.\n\nWhat the game properly should do, is that it should wait with unpausing until the first client are ready, meaning when the map are loaded and the client can join directly without catching up. That would save a huge amount of time.",
+        "label": "Feature",
+        "title": "Keep empty server paused until first player downloaded map",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=94793"
+    },
+    {
+        "comment": "TL;DR\nWhen you pull a blueprint out of your blueprint library to place into the world, also put it in the clipboard so that if you cancel, you can get it back with Ctrl-V. \nWhat ?\nUnfortunately it's hard to make pictures describing this, because it's all about the keyboard interface.\nWhy ?\nOften I go to pull a blueprint out and get ready to paste it down, but then realize I need to remove something or change something to make that blueprint fit.   I cancel, then make whatever changes I need to, and then I have to go find the blueprint again.  I have an extensive blueprint library now and it can take a few clicks and some scrolling to get back to it.  For a big complicated blueprint where I'm changing a bunch of things out, I may have to pull it up 4 or 5 times before I get everything cleaned up and ready to place the new stuff down, and all that clicking into the blueprint library gets obnoxious.  Sometimes I'll put a blueprint onto my tool bar that I only intend to use once, just so I don't have to go back in a bunch of times. \n\nA few times lately I have been confused that a blueprint I just had wasn't in my Ctrl-V history and then it hit me that I had pulled it out of my library instead of copying it from my world which was why it was missing.  What I think would fix both of these issues is for a blueprint to enter that history when I select it.   It seems like a simple common sense change that would make the blueprint library seem much less cumbersome.",
+        "label": "Feature",
+        "title": "Put blueprints into the clipboard history when pulling them up to place",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=100089"
+    },
+    {
+        "comment": "TL;DR\nSome blueprints with chemical plants could be flipped\nWhat ?\nRecipes with the same liquid in both pipes allow the chemical plant to be flipped (sulfur, solid fuel from light and heavy oil, lubricant, plastic, batteries and explosives).\nIf all chemical plants in the blueprint have a recipe and it is one of them, the blueprint can be flipped.\nWhy ?\nTo be able to flip 1/3 to 1/2 of the  chemical plant blueprints.",
+        "label": "Feature",
+        "title": "Some chemical plant recipes allow flipping",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=92589"
+    },
+    {
+        "comment": "Hello Fellos.\n\n\n1. After many hours of gameplay, I found what can make game more engaging.\n   I found that if you play Factorio in peaceful mode as base builder, there's many repetetive \n   Craft schemes, for example on contrary [heavy oil] and [light oil]  production chains are one of most\n   interesting game craft schemes. because if player want that these chains exist effectively, he must think out a very coherent\n   chain system, wich very exististence is based on each other, like in true life. Of course game is crafted to  best with war element.\n   So does reducing game to peaceful builder is also price for less rich gameplay ? good question.\n\n  Despite this question, correct formula of good PC game is to give player most logical crafting freedom, which cyber framework can provide.\nMore possibilites game have, more unique gameplays can occur, and  this is how best game is can be definated. Chess&Go is ultimate of current \n  know  games in planet, because they have most of possibilites in logical , harmonical game framework.\n\n\n  So My Vision is to give game ability to rule electrical energy more freely.\n\n     * electrical energy current can be manualy reigned to game transporting&constructing elements. \n     * Increasing electrical current increases efficiency of game dynamical elements. \n     * Increased efficiancy due e.current increases Temperature.\n     * Integrate Real Time Thermodynamics in game , which will allow to lay down water flow systems around elements in order to absorb and allocate heat.\n     * Make water flow system more rich, integrating pipe elements wich can hold water in heat until it can transfrom to steams. this is how you can make \n       more efficiant systems, wich will allow player to use output of thermol energy back to system ( Like Formula - 1). \n     * This is also gonna make player more cautions due the possibility of overheating consequences.\n\n  --- SO because if such integrations, Game will have not only possibilty to build multiply core schematic system base ( due limitations of belts) , but also you can make infinitly smart huge crafting cores, with devoloping heat >water > steam > energy system around such huge cores. \n\n\n    So if you lover of Objective Reasoning , you will agree that his  power&thermo gameplay enrichment will be not game changing, not game imbalancing, \n    but just very enriching and giving more    possibilites to build your base. And i Hope that Dear Factorio Dev Team, will integrated analogical game \n    dynamics in Upcoming Expansion Pack.",
+        "label": "Feature",
+        "title": "Essence of Games, Factorio game enrichment.",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=100051"
+    },
+    {
+        "comment": "Hello, I'd like to suggest adding a FAV button for mods. The target would be people who: \"always install this ones\" or \"this suite of mods contains\" so that way they could have it was easier to keep track of them. I don't actually know how hard it would be to implement this ingame to be completely honest but it would be a really good addition for the Mod menu. Thanks in advance and I'd love to read what people thinks about this ",
+        "label": "Feature",
+        "title": "Adding a FAV button in the Mod menu",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=100059"
+    },
+    {
+        "comment": "Please add:\nShift F \nShift G \nbindings that flip blueprints despite the warning message.\n\nThere are many chemical setups that do not break after flipping.\nUsually it is faster to flip refineries blueprint and fix piping than make it anew.",
+        "label": "Feature",
+        "title": "Force Flip bindings",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=92665"
+    },
+    {
+        "comment": "Either by having their path finding logic avoid fire, or make items ineligible for automated repair, while they are in proximity to a fire.\n\nThis is the only part of the game that I really don't like. Flamethrower turrets are truly awesome, but having all your bots commit suicide by trying to patch up the flaming wall in front of them breaks it.",
+        "label": "Feature",
+        "title": "Can we please make constructions bots avoid fire?",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=99838"
+    },
+    {
+        "comment": "TL;DR\nEither in the station or the train schedule have an option to skip stations when destination is full.\nWhat ?\nOne can make trains skip stations that are full by disabling them. But that is a purely binary option: all trains vs. no trains. This doesn't play well with the train station limit. I'm suggesting extending the train station limit feature so trains can skip stations instead of waiting with a destination full message.\n\nThis could go one of two ways:\n\n1) In the train station have an option for trains to skip the station when the train limit is reached. A negative limit could be used to signal \"may skip\" allowing this to be activated via circuit network and wouldn't even need any GUI work.\n2) In the train schedule add an icon after the station name that can be toggled on or off. The icon would say weather to skip the station when destination full. This would be more work and I'm not sure of it's usefulness over option 1.\nWhy ?\nThe ability to skip stations in the schedule is an often requested feature. In a very limited way one can use the enable/disable station feature. But that is limited to one train at a time and constructing a station with enable/disable feature for multiple trains is possible but it involves a dummy train stop per train and complex circuit logic that is beyond most players. Being able to combine skipping stations with the train station limits would open up a lot more options.",
+        "label": "Feature",
+        "title": "Please add option to skip stations when destination is full",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=100019"
+    },
+    {
+        "comment": "This is a simple quality of life improvement for long distance circuit network connections.\n\nWhen placing large electric poles, they should automatically connect red and green wires to other large electric poles, and ONLY to other large poles.\n\nI think this is a fair trade to allow players to run wire connections long distance without excess tedium and still ensure that short range connections along small poles, medium poles, and substations can be wired up without risk of making unwanted connections. So it's easy to make a big central circuit network and at the same time one can also make small local networks.",
+        "label": "Feature",
+        "title": "Large poles should automatically connect Red&Green wires",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=21958"
+    },
+    {
+        "comment": "TL;DR\nEnhance locale system to support dialects which differ from full languages by having a parent language to fall back on if not overridden.\nWhat ?\nInstead of just having an en/ locale directory for English, have that, but also allow subdirectories for dialects of the language, such as American English, British English, Australian English, etc.  These dialects will not have entries for most things, because they will match the generic English language.  But they will have the option of overriding a few key words or phrases only where the dialects diverge.  For languages that may lack full localisations, especially in mods, they can use a similar system to specify a language to fall back on that is likely to be at least somewhat mutually intelligible.\nWhy ?\nMaintaining an entire new locale for every dialect of every supported language is probably untenable, especially for mods which often only support one or a few languages.  By allowing a heirarchy of backup localisations, it's unnecessary to maintain that level of support.  This may be even more useful for certain other languages like Latin American Spanish vs. European Spanish than for the example of English listed above.  For English, the dialects are all mutually comprehensible, but are nevertheless a consistent source of annoyance in mods that make use of words that differ between them  (e.g. aluminium/aluminum, color/colour).  An example where it might be helpful for an incomplete language to fall back on another might be Norwegian, which the Crowdin page lists as incomplete.  A lot of it is either the same as the Swedish localization or is more or less mutually intelligible, so it could fall back on Swedish as a default until complete.  And even when complete in the base game it might still be a good option to fall back on for mods that only have one or the other.",
+        "label": "Feature",
+        "title": "Dialect localisation",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=100014"
+    },
+    {
+        "comment": "making the subject more distinct \u2014 ssilk\nHi,\n\nI know one can shift-left click, shift-right click to copy orders between locomotives; I propose a way of copying orders within the actual order list for the train.\nI love that you can now re-order them and AND / OR operations are far clearer visually. But I'd like to be able to copy them too; for example:\n\nA Coal train.\n1. Load at coal mine to x amount of product\n    Whatever else you want it to check\n    Wait time if you like\n2. Unload at power plant\n    Includes checks of circuit condition and a time delay\n3. Go back to the coal plant (This is the bit I would like to copy from order 1)\n4. Unload some coal at a smelter.\n    Includes checks of circuit condition and a time delay.\n5. Copy the coal loading order order #1 AGAIN\n6. Unload some coal for military science, or another smelter, or a plastics plant. Whatever. The number of stops it feeds in turn may be long or short.\nRepeat orders as usual.\n\nFurther to this, if your coal plant starts to run low, it'd be nice to copy and insert another \"Order 1 - Load Coal\" and \"Order 2 - Service Power Plant\" into the queue, for example between 4 and 5. This would mean more visits to the power plant in between other jobs.\n\nAs it stands one must create the same set of orders for a particular stop over again every time that your train is to visit it.\n\nThoughts?",
+        "label": "Feature",
+        "title": "Copying Train Orders within Train-Schedule List",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=86162"
+    },
+    {
+        "comment": "TL;DR\nOne can not make a train wait somewhere till a passenger (other than the driver) has borded.\nWhat ?\nInstead of the condition \"passenger present\" and \"passenger not present\" there should be a \"passenger count = N\".\nWhy ?\nWith a passenger count one can make a train wait for a second person to join the train or for a team to board the train. Say I'm having problems with a build and ask another person in a multiplayer game to help me. He answers: \"I'm so far away, it will take me hours to get there.\" So I say: \"Go to <coords>\" and I will pick you up with a train. I take my trusty Taxi train, send it to <coords> and set condition \"passenger count = 2\" so the train waits till he has boarded.",
+        "label": "Feature",
+        "title": "Please add passenger count condition for trains",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=100001"
+    },
+    {
+        "comment": "TL;DR\nWhen a train is at a station waiting to be unloaded show the progress in the schedule of the train.\n\nWhat ?\nWhen a train is loading (left side) the condition is usually one of \">\" or \">=\" and the progress is shown as items present / items needed:\n\n\n\nunloading-progress.png (111.03 KiB) Viewed 149 times\n\n\n\nWhen a train is unloading (right side) the condition is usually \"= 0\" or \"<\" or simply \"Empty cargo inventory\". The last will show a progress computed from the amount present in the train on arrival and the amount currently left in the train. The first two conditions show no progress and only turn green when they are finally met.\n\nMy suggestion is to show the progress for any condition with a count as follows:\n\n on arrival remember the current content of the train\n calculate the difference between the current content and the needed content = delta\n for any condition not already met the progress is: abs(needed - current) / delta\n\n\nThis will work for any condition with a count for both loading and unloading.\n\nNote: On loading the progress will start at 0% even if the train already is partially loaded. I think that is a divergence from current behavior but will show the actual progress made at this station towards the goal.\nWhy ?\nHaving a train schedule open and watching what the train does one can clearly see what is happening when the train is loaded. But on unloading nothing seems to happen unless the \"Empty cargo inventory\" condition is included. Showing a progress for all condition with count would be more constistent and easier to see what is going on when a train is stuck at a station or when simply watching the train.",
+        "label": "Feature",
+        "title": "Trains: show progress while unloading",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=99991"
+    },
+    {
+        "comment": "I was hoping this would be an easy upgrade, but when you list multiplayer servers, you can sort by the number of players, but it would be nice to be able to sort by ping also.  \nMany time I find a potential game, but the ping is very high so I need to choose another. ",
+        "label": "Feature",
+        "title": "Sort by ping for servers.",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=42321"
+    },
+    {
+        "comment": "TL;DR\nModule/Power armor equippable spider legs, similar to an exoskeleton, but provides a limited form of the spidertron leg mechanic.\nWhat\nAn armor component/equippable item, similar to exoskeletons, providing the player spider legs -- but not as large as the actual spidertron.\nWhy\nSeveral parts in game can't be walked over/around (most notably pipes) -- and this suggestion would be a neat (and awesome looking) quality-of-life addition. Seems easily balancable with less leg stretch than spidertron, being after spidertron tech, and/or requiring more armor slots.\nPrevious Work\nI couldn't find any mods or suggestions similar to this -- I haven't gotten into Factorio modding yet, but when I do, I may implement this as a mod.\n\nThe squeakthrough mod/similar suggestions has a similar purpose, but less interesting (read: awesome looking) method of implementation and versatility of use.",
+        "label": "Feature",
+        "title": "Equippable Spider Legs",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=99988"
+    },
+    {
+        "comment": "TL;DR\nAdd profiles to the logistic/trash slots menu. \n\nWhat ?\nAdd multiple customizable profile tabs to the personal logistic menu each containing a different set of items (put there by the player).\n\nWhy ?\nJust like the hotbar has different profiles for different needs, the logistic requests/trash slot profiles should also mirror this circumstantial nature. This would allow players to fully use their limited inventory space to its maximum capacity. \n\nThis would not be very advantageous in the early game as bots would be very limited, but once the player reaches the mid to late game this would become a life changing quality of life improvement as now we can quickly switch out inventories using our bots, allowing us address numerous amounts of different situations without of having to spend 5 minutes reducing the amount of belts in our inventory, increasing number of walls, turrets, decreasing number of rails, etc... however number of times we might need to do it.",
+        "label": "Feature",
+        "title": "Personal logistic profiles",
+        "url": "https://forums.factorio.com/viewtopic.php?f=6&t=99982"
+    }
+]
