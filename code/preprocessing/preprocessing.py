@@ -30,10 +30,10 @@ LABEL = {
     "General" : 2
 }
 
-INPUT_FILENAME = "255710_forum.json"
-OUTPUT_FILENAME = "255710_forum_cleaned.json"
+INPUT_FILENAME = "427520_review.json"
+OUTPUT_FILENAME = "427520_review_cleaned.json"
 # F:forum R:review
-MODE = "F"
+MODE = "R"
 
 
 def main():
@@ -42,21 +42,19 @@ def main():
     print(len(input_data))
     if MODE == "F":
         preprocessing_data = forumPreprocessing(input_data)
+        count_br = 0
+        count_fr = 0
+        count_other = 0
+        for p in preprocessing_data:
+            if p["label"] == 0:
+                count_br += 1
+            elif p["label"] == 1:
+                count_fr += 1
+            elif p["label"] == 2:
+                count_other += 1
+        print("bug:{0}, feature:{1}, other:{2}".format(count_br, count_fr, count_other))
     elif MODE == "R":
         preprocessing_data = reviewPreprocessing(input_data)
-
-
-    count_br = 0
-    count_fr = 0
-    count_other = 0
-    for p in preprocessing_data:
-        if p["label"] == 0:
-            count_br += 1
-        elif p["label"] == 1:
-            count_fr += 1
-        elif p["label"] == 2:
-            count_other += 1
-    print("bug:{0}, feature:{1}, other:{2}".format(count_br, count_fr, count_other))
 
     output_filepath = path.join(path.dirname(__file__), OUTPUT_FILENAME)
     save_json(preprocessing_data, output_filepath)
@@ -87,6 +85,7 @@ def reviewPreprocessing(reviews):
         try:
             review["review_lem"], review["num_words"] = lemmatize(review["review"])
             review["id"] = i
+            review["label"] = -1
             tmp_list.append(review)
         except Exception as e:
             print(e)
