@@ -17,7 +17,7 @@ import time
 
 translator = Translator()
 
-INPUT_FILENAME = "review/427520_review_random_5000.json"
+INPUT_FILENAME = "review/427520_review_random_5000_out.json"
 OUTPUT_FILENAME = "review/427520_review_random_5000_out.json"
 
 WIDTH = 1000
@@ -169,7 +169,7 @@ class labelingApp(tk.Frame):
 
         # ボタンの親frame
         button = ttk.Frame(self, relief=tk.FLAT)
-        button.place(x=110, rely=99/100,  width=400, height=50, anchor=tk.SW)
+        button.place(x=110, rely=99/100,  width=500, height=50, anchor=tk.SW)
 
         # BACKボタンの生成
         self.backButton = tk.Button(
@@ -185,6 +185,11 @@ class labelingApp(tk.Frame):
         self.saveButton = tk.Button(
             button, text='[SAVE]', command=self.on_click_save, relief=tk.SOLID)
         self.saveButton.pack(expand=True, side=tk.LEFT, padx=10, fill=tk.BOTH)
+
+        # googleボタンの生成
+        self.deeplButton = tk.Button(
+            button, text='google翻訳', command=self.on_click_google, relief=tk.SOLID)
+        self.deeplButton.pack(expand=True, side=tk.LEFT, padx=10, fill=tk.BOTH)
 
         # deeplボタンの生成
         self.deeplButton = tk.Button(
@@ -216,6 +221,8 @@ class labelingApp(tk.Frame):
             i = self.tag_value.get()
             if i != len(LABEL)-1:
                 self.tag_value.set(i+1)
+        elif key == "r":
+            self.on_click_google()
         elif key == "space":
             self.on_click_deepl()
 
@@ -234,6 +241,20 @@ class labelingApp(tk.Frame):
         output_filepath = path.join(path.dirname(__file__), OUTPUT_FILENAME)
         save_json(self.json_data, output_filepath)
 
+    def on_click_google(self):
+        self.translated_review_field.configure(stat="normal")
+        self.translated_review_field.delete('1.0', 'end')
+
+        if len(self.review) < 5000:
+            self.translated_review = translator.translate(
+                self.review, src="en", dest="ja").text
+            self.translated_review_field.insert('1.0', self.translated_review)
+            self.translated_review_field.configure(stat="disable", fg="black")
+        else:
+            self.translated_review = "over 5000 words"
+            self.translated_review_field.insert('1.0', self.translated_review)
+            self.translated_review_field.configure(stat="disable", fg="red")
+
     def on_click_deepl(self):
         self.translated_review_field.configure(stat="normal")
         self.translated_review_field.delete('1.0', 'end')
@@ -250,7 +271,6 @@ class labelingApp(tk.Frame):
     def display_review(self):
         self.review = self.json_data[self.iterator]["review"]
         if (self.review == "") or (self.isTrans.get() == False):
-            self.review == ""
             self.translated_review = ""
         else:
             # google翻訳の上限文字数
