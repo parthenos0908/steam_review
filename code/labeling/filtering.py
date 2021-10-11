@@ -1,9 +1,10 @@
 import enum
 import json
+import random
 from os import path
 
-INPUT_FILENAME = "review/255710_review_cleaned.json"
-OUTPUT_FILENAME = "f_out.json"
+INPUT_FILENAME = "review/427520_review_cleaned.json"
+OUTPUT = "review/427520_review"
 
 # BR_WORDS = ["bug", "fix", "problem", "issue", "defect", "crash", "solve"]
 BR_WORDS = ["bug", "fix", "crash"]
@@ -12,20 +13,39 @@ BR_WORDS = ["bug", "fix", "crash"]
 FR_WORDS = ["please", "hope", "improve", "need",
             "prefer", "request", "suggest", "wish"]
 
+# random:ランダムに5000件, BR:バグ報告, FR:機能要求
+MODE = "FR"
 
 def main():
     input_filepath = path.join(path.dirname(__file__), INPUT_FILENAME)
     data = load_json(input_filepath)
 
-    count_filtered_review(data)
-    filtered_review = filter_review(data)
-    print(len(filtered_review))
+    if MODE == "random":
+        random.seed(0)
+        filtered_review = random.sample(data, 5000)
+    elif MODE == "BR":
+        filtered_review = filter_BR_review(data)
+    elif MODE == "FR":
+        filtered_review = filter_FR_review(data)
+    output_filename = OUTPUT + "_" + MODE + "_" + str(len(filtered_review)) + ".json"
+    print(output_filename)
 
-    output_filepath = path.join(path.dirname(__file__), OUTPUT_FILENAME)
+    output_filepath = path.join(path.dirname(__file__), output_filename)
     save_json(filtered_review, output_filepath)
 
 
-def filter_review(data):
+def filter_BR_review(data):
+    filtered_review = []
+    for i, datum in enumerate(data):
+        flag = False
+        for br_word in BR_WORDS:
+            if br_word in datum["review_lem"]:
+                flag = True
+        if flag:
+            filtered_review.append(datum)
+    return filtered_review
+
+def filter_FR_review(data):
     filtered_review = []
     for i, datum in enumerate(data):
         flag = False
@@ -35,16 +55,6 @@ def filter_review(data):
         if flag:
             filtered_review.append(datum)
     return filtered_review
-
-
-def count_filtered_review(data):
-    print("all data:{0}".format(len(data)))
-    for fr_word in FR_WORDS:
-        filtered_review = []
-        for i, datum in enumerate(data):
-            if fr_word in datum["review_lem"]:
-                filtered_review.append(datum)
-        print("{0}:{1}".format(fr_word, len(filtered_review)))
 
 
 def load_json(json_filepath):

@@ -4,10 +4,11 @@ from os import path
 INPUT_FILENAMES = [
     "review/255710_review_cleaned_5000_out.json",
     "review/255710_review_BR_filtered_3757_out.json",
-    "review/255710_review_FR_filtered_7464_out.json",    
+    "review/255710_review_FR_filtered_7464_out.json",
 ]
 
 OUTPUT_FILENAME = "review/255710_review_cleaned_out.json"
+
 
 def main():
     # inputfileのjsonを辞書listにして結合
@@ -17,21 +18,21 @@ def main():
     random = load_json(input_filepath)
     for review in random:
         if "label" in review:
-            if review["label"] in [0,1,2]:
+            if review["label"] in [0, 1, 2]:
                 data.append(review)
     # BR
     input_filepath = path.join(path.dirname(__file__), INPUT_FILENAMES[1])
     br = load_json(input_filepath)
     for review in br:
         if "label" in review:
-            if review["label"] in [0,1]:
+            if review["label"] in [0, 1]:
                 data.append(review)
     # FR
     input_filepath = path.join(path.dirname(__file__), INPUT_FILENAMES[2])
     fr = load_json(input_filepath)
     for review in fr:
         if "label" in review:
-            if review["label"] in [0,1]:
+            if review["label"] in [0, 1]:
                 data.append(review)
     print("labeled_review:{0}".format(len(data)))
 
@@ -47,7 +48,7 @@ def main():
             dup_id_list.append(id)
     print("重複review数:{0}".format(len(dup_id_list)))
 
-    # 同一reviewに異なるラベルを付けていないかチェック    
+    # 同一reviewに異なるラベルを付けていないかチェック
     for dup_id in dup_id_list:
         labelbox = []
         for datum in data:
@@ -56,7 +57,8 @@ def main():
         if len(set(labelbox)) > 1:
             print("{0}: {1}".format(dup_id, labelbox))
 
-    input_filepath = path.join(path.dirname(__file__), "review/255710_review_cleaned.json")
+    input_filepath = path.join(path.dirname(
+        __file__), "review/255710_review_cleaned.json")
     allReview = load_json(input_filepath)
 
     # 全reviewデータにまとめる
@@ -76,10 +78,12 @@ def main():
                 count_fr += 1
             elif allReview[i]["label"] == 2:
                 count_other += 1
-    print("bug:{0}, feature:{1}, other:{2}".format(count_br, count_fr, count_other))
+    print("bug:{0}, feature:{1}, other:{2}".format(
+        count_br, count_fr, count_other))
 
     output_filepath = path.join(path.dirname(__file__), OUTPUT_FILENAME)
     save_json(allReview, output_filepath)
+
 
 def load_json(json_filepath):
     with open(json_filepath, mode='r') as f:
