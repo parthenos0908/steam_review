@@ -71,6 +71,7 @@ def loadForums(url, label, page_MAX):
     return forum_list
 
 
+
 def loadThread(url):
     try:
         html = urllib.request.urlopen(url)
