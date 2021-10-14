@@ -17,7 +17,7 @@ import time
 
 translator = Translator()
 
-INPUT_FILENAME = "review/427520_review_BR_3321.json"
+INPUT_FILENAME = "review/427520_review_BR_3321_out.json"
 OUTPUT_FILENAME = "review/427520_review_BR_3321_out.json"
 
 WIDTH = 1000
