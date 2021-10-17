@@ -3,8 +3,8 @@ import json
 import random
 from os import path
 
-INPUT_FILENAME = "review/427520_review_cleaned_out.json"
-OUTPUT = "review/427520_review"
+INPUT_FILENAME = "review/227300_review_cleaned.json"
+OUTPUT = "review/227300_review"
 
 # BR_WORDS = ["bug", "fix", "problem", "issue", "defect", "crash", "solve"]
 BR_WORDS = ["bug", "fix", "crash"]
@@ -14,7 +14,8 @@ FR_WORDS = ["please", "hope", "improve", "need",
             "prefer", "request", "suggest", "wish"]
 
 # random:ランダムに5000件, BR:バグ報告, FR:機能要求
-MODE = "BR"
+MODE = "random"
+
 
 def main():
     input_filepath = path.join(path.dirname(__file__), INPUT_FILENAME)
@@ -29,7 +30,8 @@ def main():
     elif MODE == "FR":
         filtered_review = filter_FR_review(data)
         random.shuffle(filtered_review)
-    output_filename = OUTPUT + "_" + MODE + "_" + str(len(filtered_review)) + ".json"
+    output_filename = OUTPUT + "_" + MODE + \
+        "_" + str(len(filtered_review)) + ".json"
     print(output_filename)
 
     output_filepath = path.join(path.dirname(__file__), output_filename)
@@ -46,6 +48,7 @@ def filter_BR_review(data):
         if flag:
             filtered_review.append(datum)
     return filtered_review
+
 
 def filter_FR_review(data):
     filtered_review = []

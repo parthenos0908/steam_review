@@ -25,13 +25,13 @@ CUSTOM_STOPWORDS = ['i', 'me', 'up', 'my', 'myself', 'we', 'our', 'ours',
 onlyCharacter = True
 
 LABEL = {
-    "Bug" : 0,
-    "Feature" : 1,
-    "General" : 2
+    "Bug": 0,
+    "Feature": 1,
+    "General": 2
 }
 
-INPUT_FILENAME = "427520_review.json"
-OUTPUT_FILENAME = "427520_review_cleaned.json"
+INPUT_FILENAME = "227300_review.json"
+OUTPUT_FILENAME = "227300_review_cleaned.json"
 # F:forum R:review
 MODE = "R"
 
@@ -52,7 +52,8 @@ def main():
                 count_fr += 1
             elif p["label"] == 2:
                 count_other += 1
-        print("bug:{0}, feature:{1}, other:{2}".format(count_br, count_fr, count_other))
+        print("bug:{0}, feature:{1}, other:{2}".format(
+            count_br, count_fr, count_other))
     elif MODE == "R":
         preprocessing_data = reviewPreprocessing(input_data)
 
@@ -83,7 +84,8 @@ def reviewPreprocessing(reviews):
     tmp_list = []
     for i, review in enumerate(tqdm(reviews)):
         try:
-            review["review_lem"], review["num_words"] = lemmatize(review["review"])
+            review["review_lem"], review["num_words"] = lemmatize(
+                review["review"])
             review["id"] = i
             review["label"] = -1
             tmp_list.append(review)

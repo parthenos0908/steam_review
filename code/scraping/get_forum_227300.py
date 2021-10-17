@@ -4,24 +4,38 @@ import urllib.request
 import json
 import time
 import re
-from tqdm import tqdm # 進捗表示
+import math
+from bs4.element import Comment
+from tqdm import tqdm  # 進捗表示
 
 from nltk.util import pr
 
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context  # SSL証明
+
+
 # Euro Truck Simulator 2のforumスクレイピング
 steam_id = 227300
-paradox_url = "https://forum.scssoft.com"
+euro_url = "https://forum.scssoft.com/"
+
+# BRのforumの(url番号, topic数)
+BR_LINK = [(113, 105), (124, 92), (125, 42), (126, 12), (127, 16), (128, 36), (129, 124), (130, 130), (131, 88), (132, 17), (133, 23), (136, 69), (140, 29), (141, 8), (142, 76), (143, 249), (146, 65), (147, 131), (148, 63), (149, 29), (151, 191), (153, 91), (157, 73), (166, 253), (167, 129),
+           (168, 244), (170, 96), (171, 74), (173, 39), (174, 157), (209, 71), (215, 146), (218, 212), (220, 378), (225, 283), (228, 349), (230, 982), (234, 548), (235, 1470), (238, 642), (261, 450), (264, 899), (268, 603), (272, 495), (275, 466), (277, 380), (278, 1549), (283, 370), (288, 60)]
 
 
 def main():
     general_url = "viewforum.php?f=41"
-    general_forum = loadForums(general_url, "General", page_MAX=168) #168
+    general_forum = loadForums(general_url, "General", page_MAX=168)  # 168
 
-    bug_url = "viewforum.php?f=40" # BRはver毎に管理
-    bug_forum = loadForums(bug_url, "Bug", page_MAX=1) 
+    # BRはver毎に1forumが用意されている
+    bug_forum = []
+    for url_num, topics in BR_LINK:
+        bug_url = "viewforum.php?f=" + str(url_num)
+        page = math.ceil(topics/float(25))
+        bug_forum.extend(loadForums(bug_url, "Bug", page_MAX=page))
 
     feature_url = "viewforum.php?f=5"
-    feature_forum = loadForums(feature_url, "Feature", page_MAX=192) #192
+    feature_forum = loadForums(feature_url, "Feature", page_MAX=192)  # 192
 
     forum_list = general_forum + bug_forum + feature_forum
 
@@ -36,23 +50,27 @@ def main():
 def loadForums(url, label, page_MAX):
     forum_list = []
     count = 0
-    for i in range(page_MAX):
-        html = urllib.request.urlopen(paradox_url + url + "page-" + str(i+1))
+    for i in tqdm(range(page_MAX)):
+        # for i in range(page_MAX):
+        html = urllib.request.urlopen(euro_url + url + "&start=" + str(i*25))
         soup = BeautifulSoup(html, "html.parser")
-        threads = soup.find_all(class_="structItem-title")
+        threads = soup.find_all(class_="topictitle")
 
-        for thread in threads:
-            count += 1
-            print("{0}:{1}".format(label, count),end="")
+        for i, thread in enumerate(tqdm(threads, leave=False)):
+            # for i, thread in enumerate(threads):
+            if (label == "General" and i == 0):
+                continue
+            if (label == "Bug" and i == 0):
+                continue
+            if (label == "Feature" and i == 0):
+                continue
             title = thread.get_text()
             if not title:
                 title = ""
-            elif title.startswith("\nCities: Skylines (Steam) - "): # formatが決まっているバグ報告の例外処理
-                title = title.replace("\nCities: Skylines (Steam) - ", "")
-            thread_url = thread.contents[1].get(
-                "data-preview-url")  # /forum/threads/[title]/preview
+            thread_url = thread.get("href")
             if thread_url:
-                forum_url = paradox_url + thread_url
+                # ./viewtipic~ となっているので前2文字を削除して結合
+                forum_url = euro_url + thread_url[2:]
                 comment = loadThread(forum_url)
             else:
                 print(" - non comment")
@@ -74,12 +92,8 @@ def loadThread(url):
     try:
         html = urllib.request.urlopen(url)
         soup = BeautifulSoup(html, "html.parser")
-        comment = soup.find(class_="bbWrapper").get_text()
-        format_comment = re.search(r'Please explain your issue is in as much detail as possible\.(\r\n|\n|\r|.)*Can you replicate the issue\? If yes, please explain how you did it\.', comment)
-        if format_comment is not None:
-            print(" -format")
-            comment = format_comment.group().replace("Please explain your issue is in as much detail as possible.", "").replace("Can you replicate the issue? If yes, please explain how you did it.", "")
-        else: print("")
+        first_post = soup.find(class_="postbody")
+        comment = first_post.find(class_="content").get_text()
         return comment
     except Exception as e:
         print(e)
@@ -88,12 +102,3 @@ def loadThread(url):
 
 if __name__ == '__main__':
     main()
-    # try:
-    #     html = urllib.request.urlopen("https://forum.paradoxplaza.com/forum/threads/cities-skylines-steam-ship-lines-wont-connect.1373526/preview")
-    #     soup = BeautifulSoup(html, "html.parser")
-    #     comment = soup.find(class_="bbWrapper").get_text()
-    #     if comment.startswith("Describe your issue\n") or comment.startswith("Description\n"):
-    #         a = re.search(r'Please explain your issue is in as much detail as possible\.(\r\n|\n|\r|.)*Can you replicate the issue\? If yes, please explain how you did it\.', comment)
-    #         print(a.group().replace("Please explain your issue is in as much detail as possible.", "").replace("Can you replicate the issue? If yes, please explain how you did it.", ""))
-    # except Exception as e:
-    #     print(e)

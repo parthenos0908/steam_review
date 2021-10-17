@@ -6,7 +6,7 @@ from os import path
 
 
 def main():
-    appid = 427520
+    appid = 227300
 
     reviews = get_all_reviews(appid)
     print(len(reviews))
@@ -15,6 +15,7 @@ def main():
         __file__), "reviewData/" + str(appid) + "_review.json")
     with open(json_filename, mode='w') as f:
         json.dump(reviews, f, sort_keys=True, indent=4)
+
 
 def get_all_reviews(appid):
     reviews = []
@@ -31,20 +32,21 @@ def get_all_reviews(appid):
     }
 
     counter = 0
-    while (1):
+    # while (1):
+    for i in range(976):
         params['cursor'] = cursor.encode()
 
         response = get_reviews(appid, params)
         cursor = response['cursor']
         print(counter)
-        if len(response['reviews']) == 0:
-            print("cursor:{0}, encoded: {1}".format(cursor, urllib.parse.quote(cursor)))
-            break
+        # if len(response['reviews']) == 0:
+        #     break
         reviews += response['reviews']
         counter += 1
         time.sleep(0.05)
 
     return reviews
+
 
 def get_reviews(appid, params={'json': 1}):
     url = 'https://store.steampowered.com/appreviews/'
@@ -52,6 +54,7 @@ def get_reviews(appid, params={'json': 1}):
                             headers={'User-Agent': 'Mozilla/5.0'})
     print(response.url)
     return response.json()
+
 
 if __name__ == '__main__':
     main()
