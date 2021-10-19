@@ -3,7 +3,7 @@ import json
 import random
 from os import path
 
-INPUT_FILENAME = "review/227300_review_cleaned.json"
+INPUT_FILENAME = "review/227300_review_cleaned_out.json"
 OUTPUT = "review/227300_review"
 
 # BR_WORDS = ["bug", "fix", "problem", "issue", "defect", "crash", "solve"]
@@ -14,7 +14,7 @@ FR_WORDS = ["please", "hope", "improve", "need",
             "prefer", "request", "suggest", "wish"]
 
 # random:ランダムに5000件, BR:バグ報告, FR:機能要求
-MODE = "random"
+MODE = "BR"
 
 
 def main():
