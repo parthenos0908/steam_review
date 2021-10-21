@@ -31,7 +31,7 @@
     },
     {
         "answer": 1,
-        "pred": 1,
+        "pred": 2,
         "review": "Great game. But I wish the controls are more user friendly I guess. And why is there no undo option? With that, this should've been perfect.",
         "review_lem": "great game but wish control more user friendly guess why there no undo option ? with that this should 've be perfect"
     },
@@ -199,7 +199,7 @@
     },
     {
         "answer": 1,
-        "pred": 1,
+        "pred": 0,
         "review": "The points I liked is the level of attention to detail I have seen during my last play. \nThe availability of a steam workshop. +++\nThe balance between simulation and design +++\n\nThe bad?\nFrom my experience,\nThe game now is locking up in several repeating loading screens and the dis-ability to play your game offline.\nThis game is bloatware to me. Turns out that is only on first run/boot of game.\n\nThe creation progress for someone new to the game is frustrating, especially because starter road and other stuff is locked for the duration of the tutorial. Which makes it hard to prethink and prepare you city for a grand scale-able increase, so the bulldozer is there and wil be used too often. and that will waste precious starter money. Especially since Building can be a pain, first I had trouble bending road before I knew of the bend button, the tutorial didn't help there.\nThe tutorial also didn't warn me that you need plenty of space for electrical towers and I vaguely rememeber the last time I played having trouble with the irrigation system which also it doesn't prep you for.\n\nLastly some of the UI could need a bit of brushing up. When you select left sided driving or right it can get confusing if it's on or off. This game will frustrate you and possibly reload a dozen times. But for the patient and steadfast, this could be a quite enjoyable simulation.\n\nI am recommending this game because I like creative games like this and I do want to spend some time getting to know the in's and out's of this game.",
         "review_lem": "point like level of attention to detail have see during last play availability of steam workshop balance between simulation design bad ? from experience game now lock several repeat load screen dis-ability to play game offline this game bloatware to turn that only first run/boot of game creation progress for someone new to game frustrate especially because starter road other stuff lock for duration of tutorial which make hard to prethink prepare city for grand scale-able increase so bulldozer there wil be use too often that will waste precious starter money especially since building can be pain first have trouble bend road before know of bend button tutorial do n't help there tutorial also do n't warn that need plenty of space for electrical tower vaguely rememeber last time play have trouble with irrigation system which also do n't prep for lastly some of ui could need bit of brush when select leave sided driving or right can get confusing if 's or off this game will frustrate possibly reload dozen time but for patient steadfast this could be quite enjoyable simulation recommend this game because like creative game like this do want to spend some time get to know 's 's of this game"
     },
@@ -349,7 +349,7 @@
     },
     {
         "answer": 2,
-        "pred": 0,
+        "pred": 2,
         "review": "This game has been patched several times but to my disappointment it runs like shit on my linux box with intel graphics.  So be warned.  I can't see the zones.  This seems to be a continuing problem with intel.  So intel, if you are listening out there, you suck!  Fix this!",
         "review_lem": "this game have be patch several time but to disappointment run like shit linux box with intel graphic so be warn ca n't see zone this seem to be continue problem with intel so intel if listen there suck ! fix this !"
     },
@@ -745,7 +745,7 @@
     },
     {
         "answer": 1,
-        "pred": 1,
+        "pred": 2,
         "review": "There is no dictionary with enough words, to describe the sheer awesomeness of this Game. There has never been a city builder, So detailed, and so utterly massive and influential since the release of this game. I do not believe there is a way to top this masterpiece. That said, there are still multiple things I wish the developers would release as expansions. \n\nOne, a major water physics update. Cities Skylines Dynamic water, maybe the very thing that made it famous, and while texture packs exist, there is still much that could be done to improve it. \n\nTwo, Natural Disasters. The inclusion of this brought much fun, but it still felt like there could have been more. Volcanoes for example, with lava that cools over time, or perhaps whirlpools like in Simcity 3000 Unlimited, a game that EA has not re-released last i checked. With Dynamic water, the effects would be amazing. Ice Storms, which force the city to have to thaw itself with special polocies, these things could be improved. \n\nThree, Man Made Disasters. Everyone knows these can happen, in real cities either from poor planning or negligence, Cities skylines is limited in this category. It would be fun if there were more types of pollution, even radiation. And have way for us to experiment in figuring out work arounds or major clean up operations. Toxic pools, or even a scenario where we are given a toxic wasteland and must make a city out of it, and clean it up. These challenges would bring a new competition to the growth of the game. \n\nFour. Maybe perhaps this a bad idea, you can say so below, I have no problem with it. But on a personal note, I would love to open dialog with the developers, Because this is the game I had wanted since i first played SimCity, and now, I want to ensure that all future games that expand the city building genre meet the requirements and expectations of this game. Thank You so Much Paradox Games. \n\nYou have not ceased in my mind to Wow. \nYou keep me in Awe. \nThank you.",
         "review_lem": "there no dictionary with enough word to describe sheer awesomeness of this game there have never be city builder so detailed so utterly massive influential since release of this game do not believe there way to top this masterpiece that say there still multiple thing wish developer would release a expansion one major water physic update city skyline dynamic water maybe very thing that make famous while texture pack exist there still much that could be do to improve two natural disaster inclusion of this brought much fun but still felt like there could have be more volcano for example with lava that cool over time or perhaps whirlpool like simcity 3000 unlimited game that ea have not re-released last check with dynamic water effect would be amaze ice storm which force city to have to thaw with special polocies these thing could be improve three man made disaster everyone know these can happen real city either from poor planning or negligence city skylines limit this category would be fun if there be more type of pollution even radiation have way for u to experiment figure work arounds or major clean operation toxic pool or even scenario where give toxic wasteland must make city of clean these challenge would bring new competition to growth of game four maybe perhaps this bad idea can say so below have no problem with but personal note would love to open dialog with developer because this game have want since first play simcity now want to ensure that all future game that expand city building genre meet requirement expectation of this game thank so much paradox game have not cease mind to wow keep awe thank"
     },
@@ -865,7 +865,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "I wish I got paid for playing this game",
         "review_lem": "wish get pay for play this game"
     },
@@ -901,7 +901,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 0,
         "review": "my game is loading but is not wanting to make a game\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
         "review_lem": "game load but not want to make game"
     },
@@ -1033,7 +1033,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "The tutorial and UX are total crap - un-intuitive and hard to grasp compared to other contemporary games. First impressions - very bad.\nFor example - the game does a really bad job at explaining how you should connect the different resources (water, electricity, sewer system) to your city. It starts with sortof a tutorial, but the tutorial stops after a few steps and sucks balls in general.\nEven after following a youtube guide (no thanks to the game developers) I still get \"not operating\" on my water pipe and water pumping station, which have been connected to the power plant. wtf.\nThere is one positive thing tho. I only paid 7\u20ac for this crap at 75% discount, so I guess I'll survive somehow. If you're smart, you will learn from my mistake.",
         "review_lem": "tutorial ux total crap un-intuitive hard to grasp compare to other contemporary game first impressions very bad for example game do really bad job at explain how should connect different resource water electricity sewer system to city start with sortof tutorial but tutorial stop after few step suck ball general even after follow youtube guide no thanks to game developer still get not operate water pipe water pump station which have be connect to power plant wtf there one positive thing tho only pay 7\u20ac for this crap at 75 discount so guess 'll survive somehow if 're smart will learn from mistake"
     },
@@ -1045,7 +1045,7 @@
     },
     {
         "answer": 1,
-        "pred": 1,
+        "pred": 2,
         "review": "Great game if you want to play it casually.\n\nKind of horrible if you want to mod it and build a really specific and detailed city. It's a pain in the ass to constantly look for which mod is causing one specific error message that spams you and makes the game unplayable, terraforming is really weird and does not make sense, you need mods to be able to freely place a lot of objects and roads.\n\nI hope that the developers are looking at the modding community and taking notes. IF they're working on a new game, I really hope that they put in more modularity and that they will make terraforming and detailing much simpler. I guess this game was in the beginning not really intended to be played this way.",
         "review_lem": "great game if want to play casually kind of horrible if want to mod build really specific detailed city 's pain as to constantly look for which mod cause one specific error message that spam make game unplayable terraforming really weird do not make sense need mod to be able to freely place lot of object road hope that developer look at modding community take note if 're work new game really hope that put more modularity that will make terraforming detail much simpler guess this game be beginning not really intend to be play this way"
     },
@@ -1117,7 +1117,7 @@
     },
     {
         "answer": 0,
-        "pred": 1,
+        "pred": 0,
         "review": "very fun city bulding game but 1 issue very long loading time for save game / new game / editor  \n\nsince the snow* dlc came out i has this issue it used to take 7 min to load a game or new but after the pardox luncher it now takes 12 min they say to remove all mods and reinstall the game wich i have tryed but stull have same issue if you buy this game make shure you have a 3.5 gz cpu , 18 gb ram 1650 geforce gfx card",
         "review_lem": "very fun city bulding game but 1 issue very long loading time for save game new game editor since snow dlc come have this issue use to take 7 min to load game or new but after pardox luncher now take 12 min say to remove all mod reinstall game wich have try but stull have same issue if buy this game make shure have 3.5 gz cpu 18 gb ram 1650 geforce gfx card"
     },
@@ -1135,7 +1135,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 0,
         "review": "Generally okay but has some big issues.\n\n1. The developers only release bad DLC that is next to useless\n2. Too easy. Even without natural resources I can get easily a positive bank balance and never really worry about it again.\n3. With natural resources after a couple of hours I had $15m\n4. As long as buildings are covered by services there's not much else to worry about.\n5. Traffic management is usually the biggest part of the game, ensuring that key buildings e.g Train cargo stations can service the 10,000 trucks that visit daily\n6. Traffic is also pretty bad, on a 4-6 lane 1 way all of the trucks will stay to the first lane 75% of the time (mods can somewhat fix this though)\n7. Solve traffic problems by building only metros (high passenger count, dont need to bulldoze)\n8. Too easy to please citizens - they're never unhappy\n9. Buildings like airports are fairly useless, so is tourism\n\nSo in short, if you're looking for a scenic city builder with not much challenge then go here.",
         "review_lem": "generally okay but have some big issue 1 developer only release bad dlc that next to useless 2 too easy even without natural resource can get easily positive bank balance never really worry about again 3 with natural resource after couple of hour have 15m 4 as long a building cover by service there 's not much else to worry about 5 traffic management usually big part of game ensure that key building e.g train cargo station can service 10,000 truck that visit daily 6 traffic also pretty bad 4-6 lane 1 way all of truck will stay to first lane 75 of time mod can somewhat fix this though 7 solve traffic problem by build only metro high passenger count dont need to bulldoze 8 too easy to please citizen 're never unhappy 9 building like airport fairly useless so tourism so short if 're look for scenic city builder with not much challenge then go here"
     },
@@ -1225,7 +1225,7 @@
     },
     {
         "answer": 0,
-        "pred": 0,
+        "pred": 2,
         "review": "i just started playing again and i love it but for some reason it crashes",
         "review_lem": "just start play again love but for some reason crash"
     },
@@ -1423,7 +1423,7 @@
     },
     {
         "answer": 0,
-        "pred": 0,
+        "pred": 2,
         "review": "Wow... Crashed when I changed the music.  WTF.  It also seems like a feature of Paradox titles to try to confuse the user.  Sewer isn't working.  Why? Who knows.  I am not a sewer expert IRL.  I've got the pipes connected, its got power.  What could be wrong?  Can the UI tell me? Yes.  Does it.  Hell NO.",
         "review_lem": "wow crash when change music wtf also seem like feature of paradox title to try to confuse user sewer n't work why ? who know not sewer expert irl 've get pipe connect got power what could be wrong ? can ui tell ? yes do hell no"
     },
@@ -1513,7 +1513,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "Having played Sim City games since the 90's, I find this to be a beautiful breath of fresh air.\n\nCompared to my SimCity experiences, the MAJOR PLUSSES are:\n\n-Roads are the primary construction, not zones. Organic bending streets reign over the poopty grid.\n-No \"Advisors\": All needs are displayed via the Tweeter panel, or as speech bubbles on your buildings.\n-Simple finance, tax, and loan modification panels.\n-MODS. Whatever you need, it's there.\n-Aesthetic. It's wonderful.\n\nThe bad (All mod related):\n-Load times when over-modded (Is this even at all controllable by the developer?)\n-All mods count as \"cheating\" and disable achievements.",
         "review_lem": "have play sim city game since 90 's find this to be beautiful breath of fresh air compare to simcity experience major plus -roads primary construction not zone organic bend street reign over poopty grid -no advisor all need display via tweeter panel or a speech bubble building -simple finance tax loan modification panel -mods whatever need 's there -aesthetic 's wonderful bad all mod relate -load time when over-modded this even at all controllable by developer ? -all mod count a cheat disable achievement"
     },
@@ -1681,7 +1681,7 @@
     },
     {
         "answer": 0,
-        "pred": 1,
+        "pred": 2,
         "review": "Its a decent game but the content feels very limited without the expansions. The controls are good. The graphics are demanding and its an okay-ish game.\n\nSo many simple features would add greatly to this game. I miss the feature that SIM city had that you could trade with neighbouring cities based on requirements. I wish you could export garbage or import power etc. It would add a new dynamic. Right now its basically a huge traffic manager simulator. The twitter bird is super annoying and you get the same 10 messages endlessly which makes it really stupid and obviously unfinished somehow.\n\nSim city had more varied and random petitions from the citizens about things like shuttle services, legalising gambling, various policies etc. Here they have very few policy options tucked away in the menu that you can use. But it feels so unsatisfactory. \n\nYou feel a huge disconnect from the citizens in your city. Not for one second do you ever feel involved or like they're real people in your city. Its good but after a few hours, the repetition in everything really gets jarring and annoying. The expansions and mods add some content but still overall it feels inadequate.\n\nThe worst part is the obvious bug that it seems like they don't intend to fix. Its the death waves. Every few years you have a sudden death wave where about 1/3rd of your city randomly just dies. The deathcare system is overwhelmed, and the city is full of corpses. Land values fall, buildings get abandoned and its an overall PITA. \n\nThey justify this bug by claiming you need to stagger residential zoning but this theory makes no sense. New residential properties are not exclusively populated by infants of the same age who live in the  same spot all their lives, grow old and then suddenly die all together. It is absurd but after running into my third death wave and having a massive number of crematoriums spare that I turn off except during the death waves, I realised that this was complete nonsense. Oh and you need to manually click and demolish every abandoned building...\n\nOverall I enjoyed the traffic management and the mass transit DLC and some mods that added in new buildings. Somehow the game has such excellent ratings on Steam that I do not believe accurately represent the game's shortcomings. I'm kind of on the fence and would ordinarily give a neutral rating. The game got boring fairly quick and I do not really recommend it as a good city builder unless it is more involving and has more content. OR unless they fix the deathwave bug.",
         "review_lem": "decent game but content feel very limit without expansion control good graphic demand okay-ish game so many simple feature would add greatly to this game miss feature that sim city have that could trade with neighbour city base requirement wish could export garbage or import power etc would add new dynamic right now basically huge traffic manager simulator twitter bird super annoy get same 10 message endlessly which make really stupid obviously unfinished somehow sim city have more varied random petition from citizen about thing like shuttle service legalise gambling various policy etc here have very few policy option tuck away menu that can use but feel so unsatisfactory feel huge disconnect from citizen city not for one second do ever feel involved or like 're real people city good but after few hour repetition everything really get jarring annoying expansion mod add some content but still overall feel inadequate bad part obvious bug that seem like do n't intend to fix death wave every few year have sudden death wave where about 1/3rd of city randomly just dy deathcare system overwhelm city full of corps land value fall building get abandon overall pita justify this bug by claim need to stagger residential zone but this theory make no sense new residential property not exclusively populate by infant of same age who live same spot all life grow old then suddenly die all together absurd but after run into third death wave have massive number of crematorium spare that turn off except during death wave realise that this be complete nonsense oh need to manually click demolish every abandon building overall enjoy traffic management mass transit dlc some mod that add new building somehow game have such excellent rating steam that do not believe accurately represent game 's shortcoming 'm kind of fence would ordinarily give neutral rating game get boring fairly quick do not really recommend a good city builder unless more involve have more content or unless fix deathwave bug"
     },
@@ -1693,7 +1693,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "The font size is extremely bad, straining my eyes. Buyers beware!",
         "review_lem": "font size extremely bad strain eye buyer beware !"
     },
@@ -1981,7 +1981,7 @@
     },
     {
         "answer": 0,
-        "pred": 0,
+        "pred": 2,
         "review": "good game\n\n*except for the stupid death wave bug*\n\npsa, if you notice a lot of people start dying very quickly you are probably encountering this bug. If your citizens start dying and your death services cannot recover the bodies quickly enough (this could be due to a lack of deathcare facilities but is more than likely a traffic issue) then citizens living near the dead body will eventually get sick, die, make more dead bodies, cycle repeats... eventually your entire city population will be down about 80%\n\nLearned this the hard way. Save often ;)",
         "review_lem": "good game except for stupid death wave bug psa if notice lot of people start die very quickly probably encounter this bug if citizen start die death service can not recover body quickly enough this could be due to lack of deathcare facility but more than likely traffic issue then citizens live near dead body will eventually get sick die make more dead body cycle repeat eventually entire city population will be about 80 learn this hard way save often"
     },
@@ -2101,7 +2101,7 @@
     },
     {
         "answer": 1,
-        "pred": 1,
+        "pred": 2,
         "review": "Love the game so much, that I focus on transport and making more people in one area. I wish more to be added into the game where it can be the biggest land to build or a bit of war on polities. mostly the airport could be more flexible.\nBe came the mayor in the districts and be came president. ;ol \nStill love the game ever since playing the game.",
         "review_lem": "love game so much that focus transport make more people one area wish more to be add into game where can be big land to build or bit of war polity mostly airport could be more flexible be come mayor district be come president ol still love game ever since play game"
     },

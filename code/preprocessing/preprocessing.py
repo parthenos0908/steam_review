@@ -30,10 +30,10 @@ LABEL = {
     "General": 2
 }
 
-INPUT_FILENAME = "227300_review.json"
-OUTPUT_FILENAME = "227300_review_cleaned.json"
+INPUT_FILENAME = "227300_forum.json"
+OUTPUT_FILENAME = "227300_forum_cleaned.json"
 # F:forum R:review
-MODE = "R"
+MODE = "F"
 
 
 def main():

@@ -57,11 +57,11 @@ def main():
 
     # 教師データにforumを使う場合
     if MODE == "F":
+
         input_forum_json_filename = path.join(path.dirname(__file__), INPUT_FORUM_FILENAME)
         # f_text_list, f_label_list = load_forum_json(input_forum_json_filename)
 
-
-        # forumのデータ数をreviewのtestデータ数に合わせて学習
+        # forumのデータ数をreviewのtestデータ数に合わせて学習--------------------------------------
         forum = load_forum_json(input_forum_json_filename)
         br = []
         fr = []
@@ -73,8 +73,15 @@ def main():
                 fr.append(forum[0])
             elif forum[1] == 2:
                 other.append(forum[0])
-        #----------------------ここから-------------------------
-        
+        f_text_list = random.sample(br, k=train_texts.count(0)) + random.sample(fr, k=train_texts.count(1)) + random.sample(other, k=train_texts.count(2))
+        f_label_list = []
+        for _ in range(train_texts.count(0)):
+            f_label_list.append(0)
+        for _ in range(train_texts.count(1)):
+            f_label_list.append(1)
+        for _ in range(train_texts.count(2)):
+            f_label_list.append(2)
+    #---------------------------------------------------------------------------------------------
 
         p = list(zip(f_text_list, f_label_list))
         random.seed(1)
