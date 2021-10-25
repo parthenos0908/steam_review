@@ -6,11 +6,13 @@ import random
 from os import path
 from typing import Text
 from googletrans import Translator
+
 # deepl
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import chromedriver_binary  # chromedriverとのPATHを通すために必要
+from webdriver_manager.chrome import ChromeDriverManager  # chromedriverのバージョンを管理
 import re
 import time
 
@@ -330,8 +332,9 @@ def translate_deepl(from_text, from_lang="en", to_lang="ja", sleep_time=1, try_m
     options.add_argument('--headless')
     options.add_argument('--user-agent=Mozilla/5.0')
 
-    # ブラウザーを起動
-    driver = webdriver.Chrome(options=options)
+    # ブラウザを起動
+    # ChromeDriverManagerによって最新のドライバをインストール
+    driver = webdriver.Chrome(ChromeDriverManager().install(), options=options)
     driver.get(url)
     driver.implicitly_wait(20)  # 見つからないときは、20秒まで待つ
     textarea = driver.find_element_by_css_selector(
