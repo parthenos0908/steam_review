@@ -2,11 +2,11 @@ import json
 from os import path
 from tqdm import tqdm  # 進捗表示
 
-LABELED_REVIEW = "review/227300_review_random_5000_out.json"
+LABELED_REVIEW = "review/227300_review_FR_5813_out.json"
 ALL_REVIEW = "review/227300_review_cleaned_out.json"
 
 # random:ランダムに5000件, BR:バグ報告, FR:機能要求
-MODE = "random"
+MODE = "FR"
 
 # BR,FRのotherは排除
 if MODE == "random":

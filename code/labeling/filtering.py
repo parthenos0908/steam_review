@@ -14,7 +14,7 @@ FR_WORDS = ["please", "hope", "improve", "need",
             "prefer", "request", "suggest", "wish"]
 
 # random:ランダムに5000件, BR:バグ報告, FR:機能要求
-MODE = "BR"
+MODE = "FR"
 
 
 def main():
