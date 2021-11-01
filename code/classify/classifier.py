@@ -4,34 +4,24 @@ import transformers
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 import json
 from os import path
+import sys
 import collections as cl
 import random
 from tensorflow.python.keras.utils.vis_utils import plot_model
 import numpy
 from tqdm import tqdm
 
-
 # model_nameはここから取得(cf. https://huggingface.co/transformers/pretrained_models.html)
 # model_name = "cl-tohoku/bert-base-japanese"
 model_name = "bert-base-uncased"
 tokenizer = transformers.BertTokenizer.from_pretrained(model_name)
-
-INPUT_REVIEW_FILENAME = "255710_review_cleaned_out.json"
-INPUT_FORUM_FILENAME = "255710_forum_cleaned.json"
-
-OUTPUT_FILENAME = "255710_predict_forum.json"
-
-
-
-KEY = ""
-
-MODE = ""
 
 # DLパラメータ
 num_classes = 3
 max_length = 128  #256はメモリ不足
 batch_size = 32
 epochs = 5
+hold_out_rate = 0.7 # 訓練データとテストデータの比率
 
 
 def main():
@@ -45,43 +35,43 @@ def main():
     random.shuffle(p)
     r_text_list, r_label_list, r_origin_list = zip(*p)
 
-    # 訓練データ
-    train_texts = r_text_list[:int(len(r_text_list)*0.7)]
-    train_labels = r_label_list[:int(len(r_label_list)*0.7)]
-    train_texts_origin = r_origin_list[:int(len(r_origin_list)*0.7)] # 現状不要
+    # 訓練データ(review)
+    train_texts = r_text_list[:int(len(r_text_list)*hold_out_rate)]
+    train_labels = r_label_list[:int(len(r_label_list)*hold_out_rate)]
+    train_texts_origin = r_origin_list[:int(len(r_origin_list)*hold_out_rate)] # 現状不要
 
     # テストデータ
-    test_texts = r_text_list[int(len(r_text_list)*0.7):]
-    test_labels = r_label_list[int(len(r_label_list)*0.7):]
-    test_texts_origin = r_origin_list[int(len(r_origin_list)*0.7):]
+    test_texts = r_text_list[int(len(r_text_list)*hold_out_rate):]
+    test_labels = r_label_list[int(len(r_label_list)*hold_out_rate):]
+    test_texts_origin = r_origin_list[int(len(r_origin_list)*hold_out_rate):]
 
     # 教師データにforumを使う場合
-    if MODE == "F":
+    if MODE == "forum":
 
         input_forum_json_filename = path.join(path.dirname(__file__), INPUT_FORUM_FILENAME)
-        # f_text_list, f_label_list = load_forum_json(input_forum_json_filename)
+        f_text_list, f_label_list = load_forum_json(input_forum_json_filename)
 
         # forumのデータ数をreviewのtestデータ数に合わせて学習--------------------------------------
-        forum = load_forum_json(input_forum_json_filename)
-        br = []
-        fr = []
-        other = []
-        for f in forum:
-            if forum[1] == 0:
-                br.append(forum[0])
-            elif forum[1] == 1:
-                fr.append(forum[0])
-            elif forum[1] == 2:
-                other.append(forum[0])
-        f_text_list = random.sample(br, k=train_texts.count(0)) + random.sample(fr, k=train_texts.count(1)) + random.sample(other, k=train_texts.count(2))
-        f_label_list = []
-        for _ in range(train_texts.count(0)):
-            f_label_list.append(0)
-        for _ in range(train_texts.count(1)):
-            f_label_list.append(1)
-        for _ in range(train_texts.count(2)):
-            f_label_list.append(2)
-    #---------------------------------------------------------------------------------------------
+        # forum = load_forum_json(input_forum_json_filename)
+        # br = []
+        # fr = []
+        # other = []
+        # for f in forum:
+        #     if forum[1] == 0:
+        #         br.append(forum[0])
+        #     elif forum[1] == 1:
+        #         fr.append(forum[0])
+        #     elif forum[1] == 2:
+        #         other.append(forum[0])
+        # f_text_list = random.sample(br, k=train_texts.count(0)) + random.sample(fr, k=train_texts.count(1)) + random.sample(other, k=train_texts.count(2))
+        # f_label_list = []
+        # for _ in range(train_texts.count(0)):
+        #     f_label_list.append(0)
+        # for _ in range(train_texts.count(1)):
+        #     f_label_list.append(1)
+        # for _ in range(train_texts.count(2)):
+        #     f_label_list.append(2)
+        #---------------------------------------------------------------------------------------------
 
         p = list(zip(f_text_list, f_label_list))
         random.seed(1)
@@ -127,7 +117,6 @@ def to_features(texts, max_length):
     attention_mask = np.zeros(shape, dtype="int32")
     token_type_ids = np.zeros(shape, dtype="int32")
     for i, text in enumerate(tqdm(texts)):
-        # if i == 724: continue
         encoded_dict = tokenizer.encode_plus(
             text, max_length=max_length, pad_to_max_length=True)
         input_ids[i] = encoded_dict["input_ids"]
@@ -170,7 +159,7 @@ def load_review_json(json_filename):
     with open(json_filename, mode='r') as f:
         json_data = json.load(f)
     for text in json_data:
-        if "label" in text:
+        if ("label" in text) and (text["label"] in [0,1,2]):
             text_list.append(text['review_lem'])
             label_list.append(text['label'])
             origin_list.append(text['review'])
@@ -206,14 +195,21 @@ def output_json(json_filename, comment_list, answer_list, pred_list, origin_list
 
 
 if __name__ == '__main__':
-    # text = "weird behavior of tourist who arrive via train tl dr tourist often arrive at wrong station when come via rail have 3 train station city which will call b c for convenience all three connect to train line intercity train allow for all of outermost station all inbound train either go through or pass next to before enter rest of city do n't know when begin to happen for while thing all look normal each of station have 100-300 passenger weekly but a begin build overpass for cim other side of station to reach station notice that even though number indicate moderate usage platform fill with busy cim no one actually enter or exit station 's door upon close investigation find that everyone platform literally everyone tourist or new immigrant to city who wait for city train to b or c even though intercity train can do arrive at b c. there explanation to phenomenon ? do intercity train arrive at random passenger pick destination randomly after alight ?"
+    args = sys.argv
+    if 3 <= len(args):
+        if args[1].isdigit():
+            ID = args[1]
+            if args[2] in ["r", "f"]:
+                MODE = "review" if args[2] == "r" else "forum"
 
-    # shape = (1, max_length)
-    # # input_idsやattention_mask, token_type_idsの説明はglossaryに記載(cf. https://huggingface.co/transformers/glossary.html)
-    # input_ids = np.zeros(shape, dtype="int32")
-    # attention_mask = np.zeros(shape, dtype="int32")
-    # token_type_ids = np.zeros(shape, dtype="int32")
-    # encoded_dict = tokenizer.encode_plus(
-    #     text, max_length=max_length, pad_to_max_length=True)
-    # print(encoded_dict)
-    main()
+                INPUT_REVIEW_FILENAME = "data/" + str(ID) + "/" + str(ID) + "_review_cleaned_out.json"
+                INPUT_FORUM_FILENAME = "data/" + str(ID) + "/" + str(ID) + "_forum_cleaned.json"
+
+                OUTPUT_FILENAME = "data/" + str(ID) + "/" + str(ID) + "_predict_" + str(MODE) + ".json"
+                main()
+            else:
+                print('Argument must be "f" or "r"')
+        else:
+            print('Argument is not digit')
+    else:
+        print('Arguments are too short')
