@@ -7,7 +7,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "a",
         "review_lem": ""
     },
@@ -73,7 +73,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": ".",
         "review_lem": ""
     },
@@ -85,7 +85,7 @@
     },
     {
         "answer": 2,
-        "pred": 0,
+        "pred": 2,
         "review": "its fine ig",
         "review_lem": "fine ig"
     },
@@ -109,7 +109,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 1,
         "review": "Can be played again and again.... what if, my city favoured buses over metro, what if I swapped the power and sewerage outlets, how would it affect property values, taxes, health, education. So many what-if scenarios are possible.",
         "review_lem": "can be play again again what if city favour bus over metro what if swap power sewerage outlet how would affect property value tax health education so many what-if scenario possible"
     },
@@ -139,13 +139,13 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "this game is so russian",
         "review_lem": "this game so russian"
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "sheeeit its aight",
         "review_lem": "sheeeit aight"
     },
@@ -247,7 +247,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "Positives:\nVery Enjoyable\nExtremely Moddable\nFlexible to your play style\nPublished by Paradox Interactive (always a plus)\n\nNegatives (Kind of..):\nSomewhat Expensive DLCs \nLoading times when the game is heavily modded\n\nAll in all highly reccomended!",
         "review_lem": "positive very enjoyable extremely moddable flexible to play style publish by paradox interactive always plus negative kind of somewhat expensive dlcs loading time when game heavily modded all all highly reccomended !"
     },
@@ -349,7 +349,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "This game has been patched several times but to my disappointment it runs like shit on my linux box with intel graphics.  So be warned.  I can't see the zones.  This seems to be a continuing problem with intel.  So intel, if you are listening out there, you suck!  Fix this!",
         "review_lem": "this game have be patch several time but to disappointment run like shit linux box with intel graphic so be warn ca n't see zone this seem to be continue problem with intel so intel if listen there suck ! fix this !"
     },
@@ -379,7 +379,7 @@
     },
     {
         "answer": 1,
-        "pred": 1,
+        "pred": 2,
         "review": "Still to this day the only good modern town planner, if you ask me. TT clones don't count for this. Neither does Sim City 2/3/4.\n\nAlmost everything you might want in this game is either covered by the mostly must-have DLCs or the tenthousands of mods and assets.\n\nThis leaves me basically with the biggest issue that this game has: I wish there were seasonal changes. It's the only gripe I have.\n\nStunning and eye-opening for its time, these days, the mods make it what it is.\n\nVanilla is functional for a few hours, but you'll soon want around half of the DLCs, and 10+ gameplay mods - imho, the devs should pick up all the no-brainer ones (like traffic manager and such) and incorporate / bundle / pay the mod devs for their work - because honestly, I wouldn't want to play this game on console or vanilla anymore.\n\n-\n\nWhat I'd wish for the eventual successor to have:\n\n-Seasons and seasonal events\n-Several distinct international styles, maybe picked on a globe, which could also influence seasonal day-night cycle durations and how harsh or little the season changes are. (still with the option to have a 'china town' aka themed districts, but it'd be a lot more intuitive to go by globe, esp for the season / weather part)\n-map-local weather - rain here, sunshine there, snow in the higher regions, fog elsewhere, etc.\n-A rethinking of the disasters - they're way too devastating and punishing - I wouldn't mind them if they wouldn't mean I'd have to rebuild the overly detailed whole areas they ruin, desperately having to try to remember how they were and how they did function, or give it up and have to come to gripes with that I'll have to build anew over them. Long story short, I switched off disasters and I would not recommend spending money on that DLC in this game. Next game needs to do that better.\n-As said above, just incorporate the top 20 of must-have mods of this one directly into the next game from the get-go.\n\n-\n\nI don't want yet another Transport Tycoon clone / reskin. Those games are great on their own accord, but here I want to build a city / region, and with all the DLC and like 50+ mods, this here is near perfect. Round that up to perfect, and it'd be the best game ever.\n\n-\n\nOh and yeah, I upgraded my PC to an otherwise overbuilt monster for just this game. You might have to do that, too.\n\nBasically, have at least 8 CPU cores, and as much RAM (16 GB is a min req if you ask me) and V-RAM as you can afford. Especially if you want a lot of asset mods.",
         "review_lem": "still to this day only good modern town planner if ask tt clone do n't count for this neither do sim city 2/3/4 almost everything might want this game either cover by mostly must-have dlcs or tenthousands of mod asset this leave basically with big issue that this game have wish there be seasonal change 's only gripe have stunning eye-opening for time these day mod make what vanilla functional for few hour but 'll soon want around half of dlcs 10+ gameplay mod imho devs should pick all no-brainer one like traffic manager such incorporate bundle pay mod devs for work because honestly would n't want to play this game console or vanilla anymore what 'd wish for eventual successor to have -seasons seasonal event -several distinct international style maybe pick globe which could also influence seasonal day-night cycle duration how harsh or little season change still with option to have 'china town aka theme district but 'd be lot more intuitive to go by globe esp for season weather part -map-local weather rain here sunshine there snow high region fog elsewhere etc -a rethinking of disaster 're way too devastating punish would n't mind if would n't mean 'd have to rebuild overly detailed whole area ruin desperately have to try to remember how be how do function or give have to come to gripe with that 'll have to build anew over long story short switch off disaster would not recommend spend money that dlc this game next game need to do that good -as say above just incorporate top 20 of must-have mod of this one directly into next game from get-go do n't want yet another transport tycoon clone reskin those game great own accord but here want to build city region with all dlc like 50+ mod this here near perfect round that to perfect 'd be best game ever oh yeah upgrade pc to otherwise overbuilt monster for just this game might have to do that too basically have at least 8 cpu core as much ram 16 gb min req if ask v-ram a can afford especially if want lot of asset mod"
     },
@@ -391,7 +391,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 0,
         "review": "Cities Skylines is a neat little city-builder that starts great but is sadly lacking an \"end game\". The graphics are cute and the mechanics mostly work. The lack of diversity in buildings or vehicles in your city can easily be fixed by downloading the hundreds of quality mods existing. The only downside to the game is that once you've understood the formula and reached a decent-sized city, there isn't much driving you forward to go bigger and better, and not much new to unlock. Hopefully they'll fix this in an upcoming patch or expansion.",
         "review_lem": "city skyline neat little city-builder that start great but sadly lack end game graphic cute mechanic mostly work lack of diversity building or vehicle city can easily be fix by download hundred of quality mod exist only downside to game that once 've understand formula reach decent-sized city there n't much drive forward to go big good not much new to unlock hopefully 'll fix this upcoming patch or expansion"
     },
@@ -427,25 +427,25 @@
     },
     {
         "answer": 2,
-        "pred": 0,
+        "pred": 2,
         "review": "11/10",
         "review_lem": "11/10"
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "Sim City 4 meets Colossal Order with Paradox Interactive to create your wildest desireable city building dreams!!! :)",
         "review_lem": "sim city 4 meet colossal order with paradox interactive to create wild desireable city building dream ! ! !"
     },
     {
         "answer": 0,
-        "pred": 0,
+        "pred": 2,
         "review": "game crashing a bunch  \n\nit was still good before the CrAsHeS came so i still recommend it\n:p",
         "review_lem": "game crash bunch be still good before crash come so still recommend p"
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 1,
         "review": "good relaxing game",
         "review_lem": "good relaxing game"
     },
@@ -493,19 +493,19 @@
     },
     {
         "answer": 1,
-        "pred": 1,
+        "pred": 2,
         "review": "This is a good city building game , it will suck you in and your free time will be eaten up, with that said there are a couple of things that need to be addressed by the devs that has not been \" fixed\" since the game came out , these are my \" pet peeves \" of the game , 1: There is no way of adding trees in block form , you have to add them one at a time , time consuming. 2: The highways need to be one Single Expressway with 4-6 lanes in each direction instead of putting 2 expressways ,one in each direction. 3: you should be able to control how many \" outside town trains\" to have , this gets very conjested very quick and is anoying . 4: Traffic also gets conjested like the outer city trains , would be nice to have a traffic flow system , there is a mod for this on the work shop , but i could not get it to work . Like i said above , this will eat up your time. Go get it .",
         "review_lem": "this good city building game will suck free time will be eat with that say there couple of thing that need to be address by devs that have not be fix since game come these pet peeve of game 1 there no way of add tree block form have to add one at time time consume 2 highway need to be one single expressway with 4-6 lane each direction instead of put 2 expressway one each direction 3 should be able to control how many outside town train to have this get very conjested very quick anoying 4 traffic also get conjested like outer city train would be nice to have traffic flow system there mod for this work shop but could not get to work like say above this will eat time go get"
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 1,
         "review": "itz cool",
         "review_lem": "itz cool"
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 1,
         "review": "Better than sim city",
         "review_lem": "good than sim city"
     },
@@ -547,13 +547,13 @@
     },
     {
         "answer": 2,
-        "pred": 0,
+        "pred": 2,
         "review": "let me walk you through the game\n\n1.)Place roads \n2.)Zone areas \n3.)Exspand\n4.)Get to a population of 20 thousand people\n5,)Rip down buildings because to dead bodys and garbage due to traffic from the highway\n6.)Try to fix it but more people hit elderly status and then they die and all you see is a line of like 40 hursts that arnt going any were\n7,) Table flip\n8.) start again",
         "review_lem": "let walk through game 1 place roads 2 zone area 3 exspand 4 get to population of 20 thousand people 5 rip building because to dead body garbage due to traffic from highway 6 try to fix but more people hit elderly status then die all see line of like 40 hursts that arnt go any be 7 table flip 8 start again"
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 1,
         "review": "A nice, quiet, city builder.",
         "review_lem": "nice quiet city builder"
     },
@@ -577,7 +577,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "It's aight",
         "review_lem": "'s aight"
     },
@@ -595,7 +595,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "I grew up playing SimCity. I now work in local government administration. Despite my great memories of SimCity, Cities: Skylines has become the far superior city building simulator. There are numerous aspects that aren't realistic, but the complexity, the amount of customization, and more is fantastic.",
         "review_lem": "grow play simcity now work local government administration despite great memory of simcity city skyline have become far superior city building simulator there numerous aspect that n't realistic but complexity amount of customization more fantastic"
     },
@@ -649,7 +649,7 @@
     },
     {
         "answer": 2,
-        "pred": 0,
+        "pred": 2,
         "review": "This game is not for the people with weak hearts xD Rating: 8/10",
         "review_lem": "this game not for people with weak heart xd rat 8/10"
     },
@@ -691,7 +691,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": ".",
         "review_lem": ""
     },
@@ -775,7 +775,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "This is a very fun alternative to Sim City. It's pretty tough to start out but when you really get the ball rolling you never seem to run out of things you want to add or get done. If your sick of the same old from \"The Sims\" this is a very fresh take on city building. I like to play when I just wanna sit back and watch most of the time. Only have to use the mouse. One last thing, must have the Mass Transit DLC to play as well. It helps with roads and traffic a lot!",
         "review_lem": "this very fun alternative to sim city 's pretty tough to start but when really get ball roll never seem to run of thing want to add or get do if sick of same old from sims this very fresh take city building like to play when just wan na sit back watch most of time only have to use mouse one last thing must have mass transit dlc to play as well help with road traffic lot !"
     },
@@ -805,7 +805,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "city",
         "review_lem": "city"
     },
@@ -895,13 +895,13 @@
     },
     {
         "answer": 0,
-        "pred": 0,
+        "pred": 2,
         "review": "I paid 30 something euros for this game, played for a couple of days and it started crashing for no reason . I tried everything from uninstalling the game and reinstall it later, to contacting Steam support for a refund but they said it wasn't possible because i waited too many days to ask for a refund.  Also , some of my friends had the same [ crashing ] problem so there wasn't an issue with computer which in fact can handle way ''heavier'' games . And i'm honestly very disappointed because i liked the game and i'd like to continue play it but unfortunately i can't...",
         "review_lem": "pay 30 something euro for this game play for couple of day start crash for no reason try everything from uninstalling game reinstall later to contact steam support for refund but say be n't possible because wait too many day to ask for refund also some of friend have same crash problem so there be n't issue with computer which fact can handle way heavy game 'm honestly very disappointed because like game 'd like to continue play but unfortunately ca n't"
     },
     {
         "answer": 2,
-        "pred": 0,
+        "pred": 2,
         "review": "my game is loading but is not wanting to make a game\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
         "review_lem": "game load but not want to make game"
     },
@@ -979,7 +979,7 @@
     },
     {
         "answer": 2,
-        "pred": 0,
+        "pred": 2,
         "review": "Vanilla is a bit trash but load up on a bunch of mods then its the best city builder ever",
         "review_lem": "vanilla bit trash but load bunch of mod then best city builder ever"
     },
@@ -997,7 +997,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "This game taught me that I'd be a bad mayor.",
         "review_lem": "this game teach that 'd be bad mayor"
     },
@@ -1009,7 +1009,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "Relaxing game, seems like it takes a lot more effort to play than what I recall of the old SimCity games but I can see it would be worth it when I'm ready to start spending that kind of time in the game.",
         "review_lem": "relax game seem like take lot more effort to play than what recall of old simcity game but can see would be worth when 'm ready to start spending that kind of time game"
     },
@@ -1075,7 +1075,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 1,
         "review": "cool",
         "review_lem": "cool"
     },
@@ -1225,7 +1225,7 @@
     },
     {
         "answer": 0,
-        "pred": 2,
+        "pred": 0,
         "review": "i just started playing again and i love it but for some reason it crashes",
         "review_lem": "just start play again love but for some reason crash"
     },
@@ -1321,7 +1321,7 @@
     },
     {
         "answer": 0,
-        "pred": 2,
+        "pred": 0,
         "review": "It used to work fine, by they've updated something and since then it crashes when launching. \nStay Away",
         "review_lem": "use to work fine by 've update something since then crash when launch stay away"
     },
@@ -1333,7 +1333,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "i made a communist america and then nuked any district (state) that was doing poorly, 100/10",
         "review_lem": "make communist america then nuke any district state that be do poorly 100/10"
     },
@@ -1351,7 +1351,7 @@
     },
     {
         "answer": 1,
-        "pred": 1,
+        "pred": 2,
         "review": "As an old SimCity fanatic, I love this game.  Way better than the new SimCity.  Reminds me of the old Rush Hour pack in Sim City 4 which I loved and it's expanded so far beyond it.  This game is much closer to the Sim City 5 that I was hoping for instead of the one that we got.  The only suggestion I have for developers is that they consider increasing some of the building limits for people with systems that can support it.  My very first major city that I started and I actually hit both the building limit and the node (Streets) limit.  Granted, the city was huge, but it limited it on adding a new building or adding a new sidewalk/path to my already huge city.  I understand the reason for the limits, but I think now that the game is several years old and computer CPU and GPU have advanced even further, it's time to expand on those limits a little more.  \nBut all in all, I absolutely love this game.",
         "review_lem": "a old simcity fanatic love this game way good than new simcity remind of old rush hour pack sim city 4 which love 's expand so far beyond this game much closer to sim city 5 that be hop for instead of one that get only suggestion have for developer that consider increase some of building limit for people with system that can support very first major city that start actually hit both building limit node street limit grant city be huge but limit add new building or add new sidewalk/path to already huge city understand reason for limit but think now that game several year old computer cpu gpu have advance even far 's time to expand those limit little more but all all absolutely love this game"
     },
@@ -1363,7 +1363,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 1,
         "review": "Love this type of game.  Played Simcitys for years.  This is like a more complex version of those early games.",
         "review_lem": "love this type of game played simcitys for year this like more complex version of those early game"
     },
@@ -1405,7 +1405,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "I hope you have a lot of imagination because as you play this game it becomes very clear that outside of placing roads and zoning districts this game has much to be desired in the depth department. I feel myself on the brink of existential angst as I find that their is little to no reason to do anything in this game. Reaching milestones in game are nearly pointless as special, and overpriced, \u201ccosmetic\u201d building are unlocked to spruce up your towns. Gameplay becomes tedious late game, if you can call it a late game, as you constantly place roads and zone areas again and again and again. The only thing that happens that \u201cspikes\u201d the difficulty is when you run out of room to place roads and zones, and that challenge is overcome by buying more endless dead space so that you can place more districts and roads. People state that this game is a joy in the modding department, and that if you just let loose and mix things up by applying your own flare and creativity to city planning that this game just seems to open up. But despite all this I find the game to be a chore, a grindy and unrewarding chore. The faults of the game are further emphasized by the dlc direction that Paradox has decided to take with Cities skylines. Pointless and paradoxical (no pun intended) dlc\u2019s are released for this game to include a radio show, snow maps, and concerts. Sounds good on paper, but snow maps are unique to themselves and add little to nothing to the base game. The radio show that adds tracks to ingame music can be circumvented by simply turning in-game music off and streaming music on your pc\u2019s background. And concerts\u2026.. Who the fuck asked for concerts, It's a single building that is much the same as any other overpriced single building cosmetic that you would place in your city, it accomplishes nothing provides superficial depth to a game that deserves better. No, instead of making dlc\u2019s that would add to the base game and give further depth to a game that desperately needs it we get cosmetics and content packs that cater to exclusive, limited, and casual gameplay mechanics. Idk what they are smoking over at Paradox Interactive, they are literally sitting on a gold mine in my opinion. Can it be said generally that they game is \u201cgood\u201d possibly, but i think if you\u2019re being truly critical with this game it is \u201cok\u201d at best and is easily forgettable which is a shame because if the game had gone in a different direction it could have been truly great.",
         "review_lem": "hope have lot of imagination because a play this game become very clear that outside of place road zone district this game have much to be desire depth department feel brink of existential angst a find that little to no reason to do anything this game reach milestone game nearly pointless a special overprice cosmetic building unlock to spruce town gameplay becomes tedious late game if can call late game a constantly place road zone area again again again only thing that happen that spike difficulty when run of room to place road zone that challenge overcome by buy more endless dead space so that can place more district road people state that this game joy modding department that if just let loose mix thing by apply own flare creativity to city planning that this game just seem to open but despite all this find game to be chore grindy unrewarding chore fault of game far emphasize by dlc direction that paradox have decide to take with city skyline pointless paradoxical no pun intend dlc release for this game to include radio show snow map concert sound good paper but snow map unique to add little to nothing to base game radio show that add track to ingame music can be circumvent by simply turn in-game music off stream music pc background concerts\u2026 who fuck ask for concert 's single building that much same a any other overpriced single building cosmetic that would place city accomplish nothing provide superficial depth to game that deserve good no instead of make dlc that would add to base game give further depth to game that desperately need get cosmetic content pack that cater to exclusive limited casual gameplay mechanic idk what smoke over at paradox interactive literally sit gold mine opinion can be say generally that game good possibly but think if re be truly critical with this game ok at best easily forgettable which shame because if game have go different direction could have be truly great"
     },
@@ -1429,7 +1429,7 @@
     },
     {
         "answer": 0,
-        "pred": 2,
+        "pred": 0,
         "review": "Between the issues with the game, Steam, and Paradox this is the absolute worst gaming experince ive ever had. The game, and Steam and Paradox always have issues, crashing, failure to install, you pay for a game, its broken on many levels many times and usually you have to search to figure out how to fix it. The creators and steam and Paradox all are just like oh well figure it out everyone!! Im on day three trying to get the game to just install again. I had everything working until the \"installer'' updated now it no longer works and Ive been trying everything to figure it out.",
         "review_lem": "between issue with game steam paradox this absolute bad game experince ive ever have game steam paradox always have issue crash failure to install pay for game break many level many time usually have to search to figure how to fix creator steam paradox all just like oh well figure everyone ! ! im day three try to get game to just install again have everything work until installer update now no longer work ive be try everything to figure"
     },
@@ -1465,7 +1465,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 1,
         "review": "cool",
         "review_lem": "cool"
     },
@@ -1483,13 +1483,13 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 1,
         "review": "good gameplay",
         "review_lem": "good gameplay"
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "Probably one of the most fun city building games. Lots of mods on the workshop and expandable cities.",
         "review_lem": "probably one of most fun city building game lot of mod workshop expandable city"
     },
@@ -1501,7 +1501,7 @@
     },
     {
         "answer": 0,
-        "pred": 1,
+        "pred": 2,
         "review": "Ill advised to play without the Green Cities Expansion and the Parks Expansions adds a (unrealistically) profitable metagame from planning for and building rewarding parks\u2026 once these two expansions existed the game met the requirements I need for a city builder to replace Sim City 4.\n\nGreen cities... solves that nasty water pollution problem so that you can actually not pollute water thus not be forced to pump all rivers (if any) bone-dry if one does not, drinking water to be polluted.\n\n\nIf one could in-game build road configuration templates designed for above/below ground junctures, then that would be ideal... this game seems to require some tact even when attempting such a template in the template editor... and such templates refuse to work in-game as the terrain is never flat\u2026 wish it had an augmentation that would give some play in how the roads paste in rather than having to craft every above/below ground junction\u2026 \n\nParks, well, it pained me not to be able to make use of otherwise dead-space that buildings can't properly utilize if you do not do a grid layout\u2026 I want to be able to have triangular sliver buildings, L shaped buildings that wrap around other buildings, buildings built above or at least with skybridges above (unburied) roads.\n\nMass transit, maybe I make roads too efficient as out of 80,000 only ~2,000 ride it despite the entire city being hooked up with a stop on various lines every 2-4 blocks.\n\nWhat is my air pollution at with all these cars? No really, what is it? It cannot be nothing.\n\nThe last thing I would want in a city builder is something that gives it life past After Dark, which a city really needs\u2026\n\nLet me drive, fly, locomote around my city... maybe throw some missions in with that that have cultural references or challenges that perhaps unlock things or give temporary buffs/debuffs to the city? Simply city building can get boring, especially when despite dead body collection/destruction is all the way to the right on the green bar and yet people are moving out because there are dead bodies everywhere and the crematoriums and graveyards just can't keep up... despite being spread throughout the city and traffic flow is in the green for all but a very small subsection due to an overbuilt road infrastructure... that makes no sense, must be a bug (part of original review, unfortunately lost that city as there were no cloud saves at the time and the game (at least used to) do(es) a poor job of storing it\u2019s saves on disk).",
         "review_lem": "ill advise to play without green city expansion park expansion add unrealistically profitable metagame from plan for build reward parks\u2026 once these two expansion exist game meet requirement need for city builder to replace sim city 4 green city solve that nasty water pollution problem so that can actually not pollute water thus not be force to pump all river if any bone-dry if one do not drink water to be pollute if one could in-game build road configuration template design for above/below ground juncture then that would be ideal this game seem to require some tact even when attempt such template template editor such template refuse to work in-game a terrain never flat\u2026 wish have augmentation that would give some play how road paste rather than have to craft every above/below ground junction\u2026 park well pain not to be able to make use of otherwise dead-space that building ca n't properly utilize if do not do grid layout\u2026 want to be able to have triangular sliver building l shape building that wrap around other building building build above or at least with skybridges above unburied road mass transit maybe make road too efficient a of 80,000 only ~2,000 ride despite entire city be hook with stop various line every 2-4 block what air pollution at with all these car ? no really what ? can not be nothing last thing would want city builder something that give life past after dark which city really needs\u2026 let drive fly locomote around city maybe throw some mission with that that have cultural reference or challenge that perhaps unlock thing or give temporary buffs/debuffs to city ? simply city building can get boring especially when despite dead body collection/destruction all way to right green bar yet people move because there dead body everywhere crematorium graveyard just ca n't keep despite be spread throughout city traffic flow green for all but very small subsection due to overbuilt road infrastructure that make no sense must be bug part of original review unfortunately lose that city a there be no cloud save at time game at least use to do es poor job of store save disk"
     },
@@ -1549,7 +1549,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "This is one of the best sims...but I only wish I could  load my citiy and play it. A note says windows 10 may find a solution. When I wonder??",
         "review_lem": "this one of best sims but only wish could load citiy play note say windows 10 may find solution when wonder ? ?"
     },
@@ -1573,7 +1573,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "*Keep in mind I actually have had real sucessful cities\n\nGets city to 15k\n\nStarts having people move out due to inadequite amount of hearses\n\ntherefore people move out of homes\n\nalmost every home has a dead person\n\npeople perpetually moving from house to house\n\nservices and industry go down\n\neverything is in anarchy\n\npeople leave or die off leaving the city to a population of 500\n\n11/10 would destroy a city with dead bodies again",
         "review_lem": "keep mind actually have have real sucessful city get city to 15k start have people move due to inadequite amount of hearse therefore people move of home almost every home have dead person people perpetually move from house to house service industry go everything anarchy people leave or die off leave city to population of 500 11/10 would destroy city with dead body again"
     },
@@ -1633,7 +1633,7 @@
     },
     {
         "answer": 0,
-        "pred": 0,
+        "pred": 2,
         "review": "all this game likes to do its crash and validate for about 30 min and repeat",
         "review_lem": "all this game like to do crash validate for about 30 min repeat"
     },
@@ -1705,7 +1705,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "City",
         "review_lem": "city"
     },
@@ -1717,7 +1717,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 1,
         "review": "This is the game that i can play for days and than stop to play it for months (i played it before i bought it)\n\n\n7/10",
         "review_lem": "this game that can play for day than stop to play for month play before buy 7/10"
     },
@@ -1729,7 +1729,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 1,
         "review": "very addictive",
         "review_lem": "very addictive"
     },
@@ -1747,7 +1747,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "One of the Best City Simulation game so far.It has everything",
         "review_lem": "one of best city simulation game so far.it have everything"
     },
@@ -1795,7 +1795,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "One of the best city sims I have played, Plenty of mods available. Micro manager's dream.",
         "review_lem": "one of best city sims have play plenty of mod available micro manager 's dream"
     },
@@ -1813,7 +1813,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "I love this game. It's classic SimCity style city building with modern interface magic. So much <3.",
         "review_lem": "love this game 's classic simcity style city building with modern interface magic so much 3"
     },
@@ -1831,7 +1831,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "A handful of flaws, but this fun and addictive city-builder still climbs high.",
         "review_lem": "handful of flaw but this fun addictive city-builder still climb high"
     },
@@ -1843,13 +1843,13 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": ".",
         "review_lem": ""
     },
     {
         "answer": 2,
-        "pred": 0,
+        "pred": 2,
         "review": "This is SimCity for adults.",
         "review_lem": "this simcity for adult"
     },
@@ -1939,7 +1939,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "i made a city and that shit was boring as frickity frick balls",
         "review_lem": "make city that shit be bore a frickity frick ball"
     },
@@ -1951,7 +1951,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
         "review_lem": "reeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
     },
@@ -1993,13 +1993,13 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 1,
         "review": "nice game i like build own city yes",
         "review_lem": "nice game like build own city yes"
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "city skyline is probably the most  timetaking game , but i love it",
         "review_lem": "city skyline probably most timetaking game but love"
     },
@@ -2017,7 +2017,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "'Cities: Skylines' is what SimCity 5 should have been. If you're into city builder games, you won't find any real surprises, apart from the usual evolution in the genre. But everything is so much better executed that, let's say SimCity 4. Sure it's pretty, sure there are mods,... But where 'Cities: Skylines' really shines, is in the building tools it provides. Whether it is drawing complex roads, modifing terain, colouring zones, organising public transit,... the tools always cooperate instead of working against you. And that is quite a refreshing feature!",
         "review_lem": "'cities skyline what simcity 5 should have be if 're into city builder game wo n't find any real surprise apart from usual evolution genre but everything so much well execute that let 's say simcity 4 sure 's pretty sure there mod but where 'cities skyline really shine building tool provide whether draw complex road modifing terain colour zone organise public transit tool always cooperate instead of work against that quite refreshing feature !"
     },
@@ -2029,7 +2029,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "Great initial experience, surprisingly lacking a bit of depth once you get the hang of it. Still unrivaled for city building sims.",
         "review_lem": "great initial experience surprisingly lack bit of depth once get hang of still unrivaled for city building sims"
     },
@@ -2113,7 +2113,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": ".",
         "review_lem": ""
     }
