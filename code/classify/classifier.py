@@ -18,16 +18,18 @@ tokenizer = transformers.BertTokenizer.from_pretrained(model_name)
 
 # DLパラメータ
 num_classes = 3
-max_length = 128  #256はメモリ不足
+max_length = 128  # 256はメモリ不足
 batch_size = 32
 epochs = 5
-hold_out_rate = 0.7 # 訓練データとテストデータの比率
+hold_out_rate = 0.7  # 訓練データとテストデータの比率
 
 
 def main():
     # review読み込み
-    input_review_json_filename = path.join(path.dirname(__file__), INPUT_REVIEW_FILENAME)
-    r_text_list, r_label_list, r_origin_list = load_review_json(input_review_json_filename)
+    input_review_json_filename = path.join(
+        path.dirname(__file__), INPUT_REVIEW_FILENAME)
+    r_text_list, r_label_list, r_origin_list = load_review_json(
+        input_review_json_filename)
 
     # テキストとラベルの関係を維持したままリストをシャッフル
     p = list(zip(r_text_list, r_label_list, r_origin_list))
@@ -38,7 +40,8 @@ def main():
     # 訓練データ(review)
     train_texts = r_text_list[:int(len(r_text_list)*hold_out_rate)]
     train_labels = r_label_list[:int(len(r_label_list)*hold_out_rate)]
-    train_texts_origin = r_origin_list[:int(len(r_origin_list)*hold_out_rate)] # 現状不要
+    train_texts_origin = r_origin_list[:int(
+        len(r_origin_list)*hold_out_rate)]  # 現状不要
 
     # テストデータ
     test_texts = r_text_list[int(len(r_text_list)*hold_out_rate):]
@@ -48,7 +51,8 @@ def main():
     # 教師データにforumを使う場合
     if MODE == "forum":
 
-        input_forum_json_filename = path.join(path.dirname(__file__), INPUT_FORUM_FILENAME)
+        input_forum_json_filename = path.join(
+            path.dirname(__file__), INPUT_FORUM_FILENAME)
         f_text_list, f_label_list = load_forum_json(input_forum_json_filename)
 
         # forumのデータ数をreviewのtestデータ数に合わせて学習--------------------------------------
@@ -71,7 +75,7 @@ def main():
         #     f_label_list.append(1)
         # for _ in range(train_texts.count(2)):
         #     f_label_list.append(2)
-        #---------------------------------------------------------------------------------------------
+        # ---------------------------------------------------------------------------------------------
 
         p = list(zip(f_text_list, f_label_list))
         random.seed(1)
@@ -82,7 +86,6 @@ def main():
 
     print("[train data] BR:{0}, FR:{1}, OTHER:{2} [test data] BR:{3}, FR:{4}, OTHER:{5}".format(
         train_labels.count(0), train_labels.count(1), train_labels.count(2), test_labels.count(0), test_labels.count(1), test_labels.count(2)))
-
 
     # モデル構築
     # x_:テキストデータ, y_:ラベル
@@ -105,7 +108,8 @@ def main():
     print(confusion_matrix(y_test, y_pred, labels=[0, 1, 2]))
 
     output_json_filename = path.join(path.dirname(__file__), OUTPUT_FILENAME)
-    output_json(output_json_filename, test_texts, y_test, y_pred, test_texts_origin)
+    output_json(output_json_filename, test_texts,
+                y_test, y_pred, test_texts_origin)
 
 
 # テキストのリストをtransformers用の入力データに変換
@@ -159,7 +163,7 @@ def load_review_json(json_filename):
     with open(json_filename, mode='r') as f:
         json_data = json.load(f)
     for text in json_data:
-        if ("label" in text) and (text["label"] in [0,1,2]):
+        if ("label" in text) and (text["label"] in [0, 1, 2]):
             text_list.append(text['review_lem'])
             label_list.append(text['label'])
             origin_list.append(text['review'])
@@ -202,10 +206,13 @@ if __name__ == '__main__':
             if args[2] in ["r", "f"]:
                 MODE = "review" if args[2] == "r" else "forum"
 
-                INPUT_REVIEW_FILENAME = "data/" + str(ID) + "/" + str(ID) + "_review_cleaned_out.json"
-                INPUT_FORUM_FILENAME = "data/" + str(ID) + "/" + str(ID) + "_forum_cleaned.json"
+                INPUT_REVIEW_FILENAME = "data/" + \
+                    str(ID) + "/" + str(ID) + "_review_cleaned_out.json"
+                INPUT_FORUM_FILENAME = "data/" + \
+                    str(ID) + "/" + str(ID) + "_forum_cleaned.json"
 
-                OUTPUT_FILENAME = "data/" + str(ID) + "/" + str(ID) + "_predict_" + str(MODE) + ".json"
+                OUTPUT_FILENAME = "data/" + \
+                    str(ID) + "/" + str(ID) + "_predict_" + str(MODE) + ".json"
                 main()
             else:
                 print('Argument must be "f" or "r"')
