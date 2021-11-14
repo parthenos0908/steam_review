@@ -96,7 +96,8 @@ def main():
                         max_length=max_length)
 
     # 訓練
-    history = model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs)
+    model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs)
+    model.save(MODEL_NAME)
 
     # 予測
     x_test = to_features(test_texts, max_length)
@@ -198,6 +199,9 @@ def output_json(json_filename, comment_list, answer_list, pred_list, origin_list
         json.dump(output, f, sort_keys=True, indent=4)
 
 
+# classifier.py [ID] [MODE]
+# MODE:"r" or "f"
+# ID: 227300(Eur truck sim), 255710(cities:Skylines)
 if __name__ == '__main__':
     args = sys.argv
     if 3 <= len(args):
@@ -213,6 +217,8 @@ if __name__ == '__main__':
 
                 OUTPUT_FILENAME = "data/" + \
                     str(ID) + "/" + str(ID) + "_predict_" + str(MODE) + ".json"
+                MODEL_NAME = "data/" + \
+                    str(ID) + "/" + str(ID) + "_" + str(MODE) + ".h5"
                 main()
             else:
                 print('Argument must be "f" or "r"')
