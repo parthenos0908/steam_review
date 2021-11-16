@@ -61,7 +61,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 0,
         "review": "One does not simply stopping a truck running 150 km/h\n\n10/10 would mess up the traffic again",
         "review_lem": "one do not simply stop truck run 150 km/h 10/10 would mess traffic again"
     },
@@ -127,7 +127,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "This is a game that's very easy to glance at and write off as being some sort of weird, boring niche product. It's a game about driving trucks around, and to a lot of people that's not going to sound like riveting gameplay. You should really give it a shot, though. This is a truly fantastic game.\n\nThere's sort of two sides to Euro Truck, both of which are really well-executed. On the one side, it's a driving sim - you just cruise the highways of Europe, night and day, rain or shine. It's peaceful, cathartic even. On the other hand, it's basically an RPG, with levels, unlockable upgrades, etc. For me, it presses all the same mental buttons as progression systems in a grindy JRPG do.\n\nYou really have no excuse not to give Euro Truck a shot. It's frequently on sale for under $10, and chances are high you'll end up having a bunch of fun. Two years on, the visuals are starting to show their age a bit, but that's really the only complaint to be made about this game.",
         "review_lem": "game that 's very easy to glance at write off a be some sort of weird bore niche product 's game about drive truck around to lot of people that 's not go to sound like rivet gameplay should really give shot though truly fantastic game there 's sort of two side to euro truck both of which really well-executed one side 's driving sim just cruise highway of europe night day rain or shine 's peaceful cathartic even other hand 's basically rpg with level unlockable upgrade etc for press all same mental button a progression system grindy jrpg do really have no excuse not to give euro truck shot 's frequently sale for under 10 chance high 'll end have bunch of fun two year visuals start to show age bit but that 's really only complaint to be make about game"
     },
@@ -175,7 +175,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "gud game",
         "review_lem": "gud game"
     },
@@ -253,7 +253,7 @@
     },
     {
         "answer": 1,
-        "pred": 2,
+        "pred": 1,
         "review": "The game is good, especially with a mods.\nUnfortunately, the simulator is not so detailed and you can not fully experience the thrill of keeping a truck.\nThe game allows you to take and carry loads from point \"A\" to point \"B\".\nThere is support for controllers and manual settings, the map is just beautiful and the roads are relaxing!\n\n- There is no option to disembark the truck and attach the trailer, no cosmetic injuries occurred, you do not have the option of picking up and reading the cargo documents, missing signal signs that are placed on trucks for different categories country codes, speed limit, warning, ecology warning and others (E, EEV, G, L, S, A, R, H, R, III-VI, ROAD, TRAIN, OVERSIZE, TIR, 22, 265, and etc), there is no tuning for the brands volvo, man, iveco, mercedes, the game also needs an online option - LAN/Dedicated Servers (without mod) ...\n\n7/10 I will continue to buy DLC to help you!",
         "review_lem": "game good especially with mod unfortunately simulator not so detailed can not fully experience thrill of keep truck game allow to take carry load from point to point b there support for controller manual setting map just beautiful road relax ! there no option to disembark truck attach trailer no cosmetic injury occur do not have option of pick read cargo document miss signal sign that place truck for different category country code speed limit warning ecology warning others e eev g l r h r iii-vi road train oversize tir 22 265 etc there no tune for brand volvo man iveco mercedes game also need online option lan/dedicated server without mod 7/10 will continue to buy dlc to help !"
     },
@@ -271,7 +271,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "highly reccomended",
         "review_lem": "highly reccomended"
     },
@@ -325,7 +325,7 @@
     },
     {
         "answer": 1,
-        "pred": 1,
+        "pred": 2,
         "review": "OS: GNU/Linux \nDistro: Arch Linux \n\nVery cool and addictive game. Yes, you can remove truck speed limit :-D Some awesome mods, and loads of great ones. Great community as well.\nSome issues with the game, AI still needs a bit of work (it got a lot better with 1.9.22, changelog also states advancements in that regard) in my opinion; infractions sometimes occur without you having any control over it: AI car crash into the trailer, when truck's doing a tricky turn, everybody knows a truck with it's trailer needs space! Or when re-entering a highway, sometimes AI cars will just stop, and even when they have enough time, they won't step on the gas and get going. Waited for them to get going sometimes almost 2mins, they should get going when they hear me using the horn! :D\nThe map could use some more improvements, better exits on some gas stations (no acceleration lane), for example.\nThe GPS could talk your way around, with a sweet female voice, preferably. :-)\nActually seeing the drivers hands on the wheel, using the parking brake, turn lights, gears, that'd be awesome and add a lot more life to the cabin view.",
         "review_lem": "o gnu/linux distro arch linux very cool addictive game yes can remove truck speed limit -d some awesome mod load of great one great community as well some issue with game ai still need bit of work get lot well with 1.9.22 changelog also state advancement that regard opinion infraction sometimes occur without have any control over ai car crash into trailer when truck 's do tricky turn everybody know truck with 's trailer needs space ! or when re-enter highway sometimes ai car will just stop even when have enough time wo n't step gas get go wait for to get go sometimes almost 2mins should get go when hear use horn ! d map could use some more improvement good exit some gas station no acceleration lane for example gps could talk way around with sweet female voice preferably actually see driver hand wheel use parking brake turn light gear that 'd be awesome add lot more life to cabin view"
     },
@@ -457,7 +457,7 @@
     },
     {
         "answer": 0,
-        "pred": 0,
+        "pred": 2,
         "review": "The game simulation is really nice , the problem is the game crashes at launch. I have tried all possible solutions which sometimes did work but to often the game has crashed leaving me with a black screen unable to do anything apart an forced switch off which on the long run can damage your drive or even your os. So sadly i uninstall the game. I have tried to get support from SCS but on their website i could not find any.",
         "review_lem": "game simulation really nice problem game crash at launch have try all possible solution which sometimes do work but to often game have crash leave with black screen unable to do anything apart forced switch off which long run can damage drive or even o so sadly uninstall game have try to get support from sc but website could not find any"
     },
@@ -505,7 +505,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "This was a very beautiful game and it made me very emotional because the landscapes were hyper-realistic and breath taking. I love being a trucker and driving the truck around for countless hours on end, However i disagree with the lack of representivity of the Black and LGBTQII++ community.\n\nThis game is multiple times better than the modern day teen-addicting games such as Minecraft and Crush Crush because it teaches a valuable lesson. \"truckers are tough men\"\n\nThis simulator felt more like a stimulator because it made me feel in control and i was able to play for hours on end, unlike in real life where i am not in control and don't last long with the mrs.\n\nI felt racially targeted by the police that gave me speeding tickets, even though it is a computerized system, it still felt wrong and immoral.\n\nIt is a shame that one must purchase a truck before freely driving around without the need to do a job, however this adds to the realistic effect.",
         "review_lem": "be very beautiful game make very emotional because landscape be hyper-realistic breath taking love be trucker drive truck around for countless hour end however disagree with lack of representivity of black lgbtqii++ community game multiple time well than modern day teen-addicting game such a minecraft crush crush because teach valuable lesson trucker tough men simulator felt more like stimulator because make feel control be able to play for hour end unlike real life where not control do n't last long with mr felt racially target by police that give speeding ticket even though computerized system still felt wrong immoral shame that one must purchase truck before freely drive around without need to do job however add to realistic effect"
     },
@@ -631,13 +631,13 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "idc",
         "review_lem": "idc"
     },
     {
         "answer": 0,
-        "pred": 0,
+        "pred": 2,
         "review": "The game just became unplayable on MacOS after update 1.36, so don't bother paying for ETS2 or ATS until the developer recognizes and fixes the issue. And yes, I have a brand new computer that far exceeds the minimum system requirements. Everything else runs flawlessly, as did this game, until 1.36 was released.",
         "review_lem": "game just become unplayable macos after update 1.36 so do n't bother pay for ets2 or at until developer recognize fix issue yes have brand new computer that far exceed minimum system requirement everything else run flawlessly a do game until 1.36 be release"
     },
@@ -673,7 +673,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "fcxncvgbhn",
         "review_lem": "fcxncvgbhn"
     },
@@ -853,7 +853,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 1,
         "review": "Great graphics and there is always something new being added to the game.",
         "review_lem": "great graphic there always something new be add to game"
     },
@@ -901,7 +901,7 @@
     },
     {
         "answer": 0,
-        "pred": 0,
+        "pred": 2,
         "review": "Game is realy cool but I have an issue with crashing. I have a couple of mods but I don't think that is the issue. I crash whenever I come close to Mannheim and Rotterdam, if there is someone who knows what is wrong please tell me.",
         "review_lem": "game realy cool but have issue with crash have couple of mod but do n't think that issue crash whenever come close to mannheim rotterdam if there someone who know what wrong please tell"
     },
@@ -949,7 +949,7 @@
     },
     {
         "answer": 0,
-        "pred": 2,
+        "pred": 0,
         "review": "I would recommend this until they fix the micro stutters. I used to love playing this, but as of recent, it has become unplayable. The game stutters all the time, which makes it impossible to enjoy. I see this is not a new issue either, people have been reporting this since 2018, so I do not know why they are not fixing it? I have gone through every forum post and every YouTube tutorial on this issue, and not one has worked. What I have gathered is that its there engine that is buggy.",
         "review_lem": "would recommend until fix micro stutter use to love playing but a of recent have become unplayable game stutter all time which make impossible to enjoy see not new issue either people have be report since 2018 so do not know why not fix ? have go through every forum post every youtube tutorial issue not one have work what have gather that there engine that buggy"
     },
@@ -973,7 +973,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 1,
         "review": "Cops in the game are unrealistic and unnecessary. I roam in the game, whenever I overspeed, a cop shows up and gives a penalty, double the default penalty. This is no real. Feels like game forces to send cops whenever the player excesses speed limit. It should be definetely improved until it makes sense. Overall, cops in the game makes me not to recommend this game.",
         "review_lem": "cop game unrealistic unnecessary roam game whenever overspeed cop show give penalty double default penalty no real feel like game force to send cop whenever player excesses speed limit should be definetely improve until make sense overall cop game make not to recommend game"
     },
@@ -1273,7 +1273,7 @@
     },
     {
         "answer": 2,
-        "pred": 0,
+        "pred": 2,
         "review": "Very realistic. I crashed into a wall immediately.",
         "review_lem": "very realistic crash into wall immediately"
     },
@@ -1381,7 +1381,7 @@
     },
     {
         "answer": 1,
-        "pred": 1,
+        "pred": 2,
         "review": "[h1]Rating: Recommended[/h1]\n\n[h1]Premise and gameplay[/h1]\nEuro Truck Simulator 2 casts you as an up-and-coming truck driver in Europe. You start out doing freelance jobs for other companies who provide you with a truck for each job, eventually amassing enough money to buy your own garage and truck, which is when the game truly begins. Of course, you can always take out a bank loan, but if you want to stay debt-free, you have to work for that money. You can always take a quick job if you feel like it, but to gain access to the most powerful trucks you need to buy and upgrade them yourself, both visually and performance-wise.\nAfter each job you will gain money, experience and truck upgrades. Experience can be used to level up your driver in various ways. For instance, you can put points into certifications for dangerous cargo or long distance driving to unlock more job types or eco-driving to reduce fuel consumption and the resulting costs.\nOnce you've got your truck company off the ground you can start expanding by buying more trucks, hiring drivers and more garages across Europe. The game doesn't offer much in the way of micro-managing you employees, but you can upgrade their trucks in the same way you upgrade your own and decide what attribute they should focus on levelling up.\nDo note that there's no win-state in this game. It just keeps going while you expand your freight empire and if you want a clear goal you need to set it yourself.\n\nWhen you're ready to hit the road you either pick from a list of available quick jobs or go the the freight market to find cargo to haul with your own truck. Quick jobs are great if you just want a quick fix, as you don't have to drive all the way to pick up your cargo. If you want the pure experience you buy a truck, pick a job and drive to pick up the trailer before embarking on your journey. Along the way you will need to follow the rules of the road and watch out for traffic. Any and all traffic offences will result in a fine, which can severely bite into your profits if you're not careful. While you can get away with speeding, there are speed cameras along most roads that you need to be on the lookout for. You also need to keep an eye on your gas tank and your sleepiness levels and pull into a gas station or rest stop when needed. When you arrive at your destination you can choose to park your truck yourself, which can be a true challenge in certain locations, or relinquish a handful of experience points by using auto-park.\n\nOne immersion breaker is that there is no real in-game economy to speak of. Everything stays pretty much static no matter what happens in the game and there are no realistic cargo chains (i.e. raw materials to factory, products to store). This will hopefully likely in the near future as the developer has created tools for creating such chains and has implemented a few in the Scandinavia DLC.\n\n[h1]Presentation[/h1]\nSince I'm so late in writing this review, I'm lucky enough to write it after the 1.17 patch was released. This patch brought plenty of changes to the graphical presentation, most importantly the lighting. The game is definitely no Project CARS, but it has absolutely been serviceable and is now even more so with the improved rendering engine. Some scenes are made absolutely gorgeous by it. World textures could definitely use some upgrades to make the game a look bit more realistic and some models look a bit basic, but overall the visuals of the game are just fine. Not mind-blowing, but they do the job well.\n\nThe trucks themselves are modelled in stunning detail, and the Mercedes-Benz New Actros that was released in patch 1.18 takes this to a whole new level. It's clear that a lot of love and hard labour has gone into the trucks and they are definitely the highlight of the game's presentation. The only downside to the models is that the switches and knobs inside the cabin aren't adjustable. I may have been spoiled by other pure simulators, but it would be a nice touch if you could actually use the physical buttons instead of mapped keys on a keyboard or controller.\n\nThe physics simulation leave a little more to be desired. The truck cabins don't sway as much as they ought, which is especially noticeable during roundabouts or when decelerating. Trailers don't [i]feel[/i] heavy, but just slow you down, and there's very little feedback from the road surface.\n\nThe sound design as a whole is serviceable. The truck sounds are of course very good, but the rest of the sound scape doesn't feel as fleshed out. Not that it matters all that much when you spend most of your time inside the cabin (which [i]is[/i] the proper way to play), but it would be nice to have a some more prominent ambient sounds to instil a sense of place when you pull over and turn off the engine. If the truck sounds or road noise aren't to your liking, there are loads of mods available that remedy this.\n\nThe world design is generally pretty good. Areas like Great Britain and Switzerland feature some of the best roads and vistas the game has to offer, but some areas feel very bland, especially Germany, which unfortunately is the country you travel through the most because of its location. These areas have generic roads with generic intersections and generic city layouts. It all starts to feel very same-y when you pass the same copy-pasted intersection for the fifth time on a single haul. Some off/on-ramps are also very confusing, where one lane suddenly turns off the road without any heads-up. The signs don't always indicate correctly and these intersections are unrealistically common in the game.\nThe DLC that has been released is a lot better in this regard, but if you want to up the fidelity of the base game, there are a lot of map mods to try. ProMods is one of the bigger mods that add new areas to the game, but they are also currently in the process of redesigning a lot of the base game to get it up to scratch with the new areas.\n\nThe game also supports TrackIR and Oculus, but I haven't had any chance to try these features out.\n\n[h1]Controls[/h1]\nThe game supports keyboard & mouse, gamepads and steering wheels.\nThe controls for kb&m and gamepads are fairly straight-forward and work just fine. The wheels are way more interesting and you get a lot of settings to perfect your experience. Earlier, the trucks had some wonky wheel rotation properties, but a recent patch gave all trucks 900\u00ba rotation. I haven't found any settings I feel are missing, either. There are multiple sliders for different axes and FFB settings, all buttons are rebindable and there is a useful wizard for quick setup.\nThe force feedback feels a bit \"grindy\", though. I use a Logitech G27 and it feels like the engines struggle with providing resistance, almost like they're slipping on sand. This does not happen in other games, where the feedback is tight and grippy. I have no idea what causes this, and it doesn't seem like any of the settings fix it. It [i]works[/i] and can give you a juicy jolt if you crash, but it's not what I've come to expect from force feedback.\n\n[h1]Summary[/h1]\nDespite some technical flaws this is one of my favorite games. It's a solid package and great for a relaxing evening of driving.\nIf you can stomach long drives, gradual progression and being responsible for your own fun [strike]in an open world[/strike] on the open road, this game comes highly recommended.\n\nI rate this game:\n[strike]Essential[/strike]\n[b]Recommended[/b]\n[strike]Conditionally recommended[/strike]\n[strike]Not recommended[/strike]\n[strike]Avoid[/strike]",
         "review_lem": "h1 rat recommend /h1 h1 premise gameplay /h1 euro truck simulator 2 cast a up-and-coming truck driver europe start do freelance job for other company who provide with truck for each job eventually amass enough money to buy own garage truck which when game truly begin of course can always take bank loan but if want to stay debt-free have to work for that money can always take quick job if feel like but to gain access to most powerful truck need to buy upgrade both visually performance-wise after each job will gain money experience truck upgrade experience can be use to level driver various way for instance can put point into certification for dangerous cargo or long distance driving to unlock more job type or eco-driving to reduce fuel consumption resulting cost once 've get truck company off ground can start expand by buy more truck hire driver more garage across europe game do n't offer much way of micro-managing employee but can upgrade truck same way upgrade own decide what attribute should focus level do note that there 's no win-state game just keep go while expand freight empire if want clear goal need to set when 're ready to hit road either pick from list of available quick job or go freight market to find cargo to haul with own truck quick job great if just want quick fix a do n't have to drive all way to pick cargo if want pure experience buy truck pick job drive to pick trailer before embark journey along way will need to follow rule of road watch for traffic any all traffic offence will result fine which can severely bite into profit if 're not careful while can get away with speeding there speed camera along most road that need to be lookout for also need to keep eye gas tank sleepiness level pull into gas station or rest stop when need when arrive at destination can choose to park truck which can be true challenge certain location or relinquish handful of experience point by use auto-park one immersion breaker that there no real in-game economy to speak of everything stay pretty much static no matter what happen game there no realistic cargo chain i.e raw material to factory product to store will hopefully likely near future a developer have create tool for create such chain have implement few scandinavia dlc h1 presentation /h1 since 'm so late write review 'm lucky enough to write after 1.17 patch be release patch bring plenty of change to graphical presentation most importantly lighting game definitely no project car but have absolutely be serviceable now even more so with improved rendering engine some scene make absolutely gorgeous by world texture could definitely use some upgrade to make game look bit more realistic some model look bit basic but overall visuals of game just fine not mind-blowing but do job well truck model stun detail mercedes-benz new actros that be release patch 1.18 take to whole new level 's clear that lot of love hard labour have go into truck definitely highlight of game 's presentation only downside to model that switch knobs inside cabin n't adjustable may have be spoil by other pure simulator but would be nice touch if could actually use physical button instead of mapped key keyboard or controller physic simulation leave little more to be desire truck cabin do n't sway as much a ought which especially noticeable during roundabout or when decelerate trailer do n't feel /i heavy but just slow there 's very little feedback from road surface sound design a whole serviceable truck sound of course very good but rest of sound scape do n't feel a flesh not that matter all that much when spend most of time inside cabin which /i proper way to play but would be nice to have some more prominent ambient sound to instil sense of place when pull over turn off engine if truck sound or road noise n't to liking there load of mod available that remedy world design generally pretty good area like great britain switzerland feature some of best road vistas game have to offer but some area feel very bland especially germany which unfortunately country travel through most because of location these area have generic road with generic intersection generic city layout all start to feel very same-y when pass same copy-pasted intersection for fifth time single haul some off/on-ramps also very confusing where one lane suddenly turn off road without any heads-up sign do n't always indicate correctly these intersection unrealistically common game dlc that have be release lot well regard but if want to fidelity of base game there lot of map mod to try promods one of big mod that add new area to game but also currently process of redesign lot of base game to get to scratch with new area game also support trackir oculus but have n't have any chance to try these feature h1 control /h1 game support keyboard mouse gamepads steer wheel control for kb m gamepads fairly straight-forward work just fine wheel way more interesting get lot of setting to perfect experience earlier truck have some wonky wheel rotation property but recent patch give all truck 900\u00ba rotation have n't find any setting feel miss either there multiple slider for different ax ffb setting all button rebindable there useful wizard for quick setup force feedback feel bit grindy though use logitech g27 feel like engine struggle with provide resistance almost like 're slip sand do not happen other game where feedback tight grippy have no idea what cause do n't seem like any of setting fix work /i can give juicy jolt if crash but 's not what 've come to expect from force feedback h1 summary /h1 despite some technical flaw one of favorite game 's solid package great for relax evening of drive if can stomach long drive gradual progression be responsible for own fun strike open world /strike open road game come highly recommended rate game strike essential /strike b recommended /b strike conditionally recommend /strike strike not recommend /strike strike avoid /strike"
     },
@@ -1393,7 +1393,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "While I cannot offer a review of this game, I can offer my favorite recipe for beef wellington. Enjoy!\n\nFor the Duxelles:\nTo make the Duxelles: Add mushrooms, shallots, garlic, and thyme to a food processor and pulse until finely chopped. Add butter and olive oil to a large saute pan and set over medium heat. Add the shallot and mushroom mixture and saute for 8 to 10 minutes until most of the liquid has evaporated. Season with salt and pepper and set aside to cool.\nFor the Beef:\nTo prepare the beef: Tie the tenderloin in 4 places so it holds its cylindrical shape while cooking. Drizzle with olive oil, then season with salt and pepper and sear all over, including the ends, in a hot, heavy-based skillet lightly coated with olive oil - about 2 to 3 minutes. Meanwhile set out your prosciutto on a sheet of plastic wrap (plastic needs to be about a foot and a half in length so you can wrap and tie the roast up in it) on top of your cutting board. Shingle the prosciutto so it forms a rectangle that is big enough to encompass the entire filet of beef. Using a rubber spatula cover evenly with a thin layer of duxelles. Season the surface of the duxelles with salt and pepper and sprinkle with fresh thyme leaves. When the beef is seared, remove from heat, cut off twine and smear lightly all over with Dijon mustard. Allow to cool slightly, then roll up in the duxelles covered prosciutto using the plastic wrap to tie it up nice and tight. Tuck in the ends of the prosciutto as you roll to completely encompass the beef. Roll it up tightly in plastic wrap and twist the ends to seal it completely and hold it in a nice log shape. Set in the refrigerator for 30 minutes to ensure it maintains its shape.\nPreheat oven to 425 degrees F.\nOn a lightly floured surface, roll the puff pastry out to about a 1/4-inch thickness. Depending on the size of your sheets you may have to overlap 2 sheets and press them together. Remove beef from refrigerator and cut off plastic. Set the beef in the center of the pastry and fold over the longer sides, brushing with egg wash to seal. Trim ends if necessary then brush with egg wash and fold over to completely seal the beef - saving ends to use as a decoration on top if desired. Top with coarse sea salt. Place the beef seam side down on a baking sheet.\nBrush the top of the pastry with egg wash then make a couple of slits in the top of the pastry using the tip of a paring knife \u2014 this creates vents that will allow the steam to escape when cooking. Bake for 40 to 45 minutes until pastry is golden brown and beef registers 125 degrees F on an instant-read thermometer. Remove from oven and rest before cutting into thick slices. Garnish with minced chives, and serve with Green Peppercorn Sauce, Roasted Fingerling Potatoes with Fresh Herbs and Garlic, and Warm Wilted Winter Greens.\nGreen Peppercorn Sauce:\nAdd olive oil to pan after removing beef. Add shallots, garlic, and thyme; saute for 1 to 2 minutes, then, off heat, add brandy and flambe using a long kitchen match. After flame dies down, return to the heat, add stock and reduce by about half. Strain out solids, then add 2 cups cream and mustard. Reduce by half again, then shut off heat and add green peppercorns.\nRoasted Fingerling Potatoes with Fresh Herbs and Garlic:\nPreheat oven to 500 degrees F and place a baking sheet inside to heat.\nAdd potatoes, rosemary, sage, thyme, and garlic to a medium bowl. Drizzle with olive oil, and season with salt and pepper. Remove sheet pan from oven, lightly coat with olive oil, and pour potatoes onto pan. Place potatoes in oven and reduce heat to 425 degrees F. Roast for 20 minutes, or until crispy on outside and tender on inside.\nWarm Wilted Winter Greens:\nCook honey and balsamic together over medium-high heat in a large saute pan, about 5 minutes. Toast walnuts in a small skillet; set aside to cool.\nPile greens on a platter. Stir mustard into balsamic-honey dressing, then whisk in about 1 cup extra-virgin olive oil; pour over greens. Season greens with salt and pepper and garnish with walnuts, pomegranate seeds, shavings of Parmesan, and shallot.",
         "review_lem": "while can not offer review of game can offer favorite recipe for beef wellington enjoy ! for duxelles to make duxelles add mushroom shallot garlic thyme to food processor pulse until finely chop add butter olive oil to large saute pan set over medium heat add shallot mushroom mixture saute for 8 to 10 minute until most of liquid have evaporate season with salt pepper set aside to cool for beef to prepare beef tie tenderloin 4 place so hold cylindrical shape while cook drizzle with olive oil then season with salt pepper sear all over include end hot heavy-based skillet lightly coat with olive oil about 2 to 3 minute meanwhile set prosciutto sheet of plastic wrap plastic need to be about foot half length so can wrap tie roast top of cut board shingle prosciutto so form rectangle that big enough to encompass entire filet of beef use rubber spatula cover evenly with thin layer of duxelles season surface of duxelles with salt pepper sprinkle with fresh thyme leaf when beef sear remove from heat cut off twine smear lightly all over with dijon mustard allow to cool slightly then roll duxelles cover prosciutto use plastic wrap to tie nice tight tuck end of prosciutto a roll to completely encompass beef roll tightly plastic wrap twist end to seal completely hold nice log shape set refrigerator for 30 minute to ensure maintain shape preheat oven to 425 degree f. lightly flour surface roll puff pastry to about 1/4-inch thickness depend size of sheet may have to overlap 2 sheet press together remove beef from refrigerator cut off plastic set beef center of pastry fold over long side brush with egg wash to seal trim end if necessary then brush with egg wash fold over to completely seal beef save end to use a decoration top if desire top with coarse sea salt place beef seam side baking sheet brush top of pastry with egg wash then make couple of slit top of pastry use tip of par knife create vent that will allow steam to escape when cooking bake for 40 to 45 minute until pastry golden brown beef register 125 degree f instant-read thermometer remove from oven rest before cut into thick slice garnish with minced chive serve with green peppercorn sauce roast fingerling potato with fresh herb garlic warm wilted winter green green peppercorn sauce add olive oil to pan after remove beef add shallot garlic thyme saute for 1 to 2 minute then off heat add brandy flambe use long kitchen match after flame die return to heat add stock reduce by about half strain solid then add 2 cup cream mustard reduce by half again then shut off heat add green peppercorn roast fingerling potato with fresh herb garlic preheat oven to 500 degree f place baking sheet inside to heat add potato rosemary sage thyme garlic to medium bowl drizzle with olive oil season with salt pepper remove sheet pan from oven lightly coat with olive oil pour potato onto pan place potato oven reduce heat to 425 degree f. roast for 20 minute or until crispy outside tender inside warm wilt winter green cook honey balsamic together over medium-high heat large saute pan about 5 minute toast walnuts small skillet set aside to cool pile green platter stir mustard into balsamic-honey dressing then whisk about 1 cup extra-virgin olive oil pour over green season green with salt pepper garnish with walnut pomegranate seed shaving of parmesan shallot"
     },
@@ -1411,13 +1411,13 @@
     },
     {
         "answer": 1,
-        "pred": 2,
+        "pred": 0,
         "review": "SCS, is this game available on my iPad?\nI wanna play it on my iPad. \nMy little pc wont work.\nPlease make it available on iPad.",
         "review_lem": "sc game available ipad ? wan na play ipad little pc wont work please make available ipad"
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "This is one of those games that surprise you - I thought that I would never be interested in a game about truck driving - and here I am after several years and over 200 hours in-game (and almost the same in American Truck Simulator). \n\nThis is a great, relaxing game, and if you invest in a good steering wheel - it's even more revarding. Over the years SCS Software added a lot of new contenct (both a free updates and also as paid DLC's) and the game is still in development. \n\nA wide range of countries, cities and trucks makes it a great game for truck fans and gamers searching for a relaxing title. I usualy listen to podcasts or audiobooks while driving and it works really well.",
         "review_lem": "one of those game that surprise think that would never be interested game about truck drive here after several year over 200 hour in-game almost same american truck simulator great relaxing game if invest good steering wheel 's even more revarding over year sc software add lot of new contenct both free update also a pay dlc 's game still development wide range of country city truck make great game for truck fan gamers search for relaxing title usualy listen to podcasts or audiobooks while drive work really well"
     },
@@ -1465,7 +1465,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 1,
         "review": "This is very good game thx for the game.\n",
         "review_lem": "very good game thx for game"
     },
@@ -1531,7 +1531,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "1\n",
         "review_lem": "1"
     },
@@ -1621,13 +1621,13 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "truck",
         "review_lem": "truck"
     },
     {
         "answer": 1,
-        "pred": 1,
+        "pred": 2,
         "review": "Good  game but please add sneaky roads in some places...",
         "review_lem": "good game but please add sneaky road some place"
     },
@@ -1651,7 +1651,7 @@
     },
     {
         "answer": 2,
-        "pred": 1,
+        "pred": 2,
         "review": "I play this game when I want to get away from the boredom of real life, and experience boredom in a virtual environment. \n\nThe main enjoyment from this game comes from sticking to the speed limit, stopping at red lights and being able to use your wipers in the rain. Negatives include not being able to buy the awesome soundtrack to this game, the fact that flashing other lorry drivers does not yeild a friendly flash back 100% of the time, and that this game actually exists.\n\nAs a whole, I will never get bored of being bored playing this game. 10/10",
         "review_lem": "play game when want to get away from boredom of real life experience boredom virtual environment main enjoyment from game come from stick to speed limit stop at red light be able to use wiper rain negative include not be able to buy awesome soundtrack to game fact that flash other lorry driver do not yeild friendly flash back 100 of time that game actually exist a whole will never get bore of be bore play game 10/10"
     },
@@ -1693,7 +1693,7 @@
     },
     {
         "answer": 2,
-        "pred": 0,
+        "pred": 2,
         "review": "zzz",
         "review_lem": "zzz"
     },
@@ -1711,7 +1711,7 @@
     },
     {
         "answer": 2,
-        "pred": 0,
+        "pred": 2,
         "review": "Not for the hardcore gamers as the title suggests, but this game is possibly the best way of relaxing perhaps with some music in e background. \n\nGraphics - 9/10 (is comparable to Battlefield 3 when on max graphics)\nGameplay - 9/10 (a few movement glitches but otherwise outstanding)\nSound - 5/10 (suits the game but becomes repetitive and annoying)\nOverall - 8/10",
         "review_lem": "not for hardcore gamers a title suggest but game possibly best way of relax perhaps with some music e background graphic 9/10 comparable to battlefield 3 when max graphic gameplay 9/10 few movement glitch but otherwise outstanding sound 5/10 suit game but become repetitive annoy overall 8/10"
     },
@@ -1735,7 +1735,7 @@
     },
     {
         "answer": 2,
-        "pred": 0,
+        "pred": 2,
         "review": "pretty sick",
         "review_lem": "pretty sick"
     },
@@ -1921,7 +1921,7 @@
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 1,
         "review": "i like all",
         "review_lem": "like all"
     },
@@ -1939,19 +1939,19 @@
     },
     {
         "answer": 0,
-        "pred": 0,
+        "pred": 2,
         "review": "I don't know what happened to this game, but back in the days after the launch it was better.\nNow it has many bugs. As example, when I pass over a speedbump or a border on the road, my truck starts flying around getting 100% damage, or the cabin gets in a weird position and it's not drivable anymore, and every time I have to call service.\nThese bugs are pretty annoying and I'm sure I'm not the only one who meet these problems.",
         "review_lem": "do n't know what happen to game but back day after launch be well now have many bug a example when pass over speedbump or border road truck start fly around get 100 damage or cabin get weird position 's not drivable anymore every time have to call service these bug pretty annoy 'm sure 'm not only one who meet these problem"
     },
     {
         "answer": 1,
-        "pred": 1,
+        "pred": 2,
         "review": "This is one of the best games on steam. I really recomend downloading ets2mp, though. Then you can play with friends.\nThis game has great graphics and is made very well.\n\nThis game is also very chill to play on evenings. You can easily play this for hours at a time without thinking about it.\n\nReally recomend this to anyone, even if you dont like trucks nor Europe. :)\n\nThings I wish to be added:\nFinland, more Norway and more Sweeden [SCANDINAVIA DLC]\nMaybe a \u00a8\"Baltics DLC\", Lithuania, Latvia and Estionia\nSouth Europe: Spain, Greece, Portugal etc.",
         "review_lem": "one of best game steam really recomend download ets2mp though then can play with friend game have great graphic make very well game also very chill to play evening can easily play for hour at time without think about really recomend to anyone even if dont like truck nor europe things wish to be add finland more norway more sweeden scandinavia dlc maybe baltic dlc lithuania latvia estionia south europe spain greece portugal etc"
     },
     {
         "answer": 2,
-        "pred": 2,
+        "pred": 0,
         "review": "Tipped my truck on it's side doing 90 round a corner. Totally worth it. 10/10",
         "review_lem": "tipped truck 's side do 90 round corner totally worth 10/10"
     },

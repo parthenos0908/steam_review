@@ -7,9 +7,11 @@ import sys
 import collections as cl
 import random
 from tensorflow.python.keras.utils.vis_utils import plot_model
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, roc_curve
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix, roc_curve, roc_auc_score, precision_recall_curve, auc
+from sklearn.preprocessing import label_binarize
 import numpy
 from tqdm import tqdm
+import matplotlib.pyplot as plt
 
 # model_nameはここから取得(cf. https://huggingface.co/transformers/pretrained_models.html)
 # model_name = "cl-tohoku/bert-base-japanese"
@@ -95,15 +97,71 @@ def main():
     model = build_model(model_name, num_classes=num_classes,
                         max_length=max_length)
 
-    # 訓練
-    model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs)
-    model.save(MODEL_NAME)
+
+    output_model_filename = path.join(path.dirname(__file__), MODEL_WEIGHT_FILENAME)
+
+    # 新しく学習する(0)or既存の学習結果使う(1)
+    tmp = 1
+    if tmp == 0:
+        # 訓練
+        model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs)
+
+        # モデルの保存
+        model.save_weights(output_model_filename)
+    elif tmp == 1:
+        # モデルの読み込み
+        model.load_weights(output_model_filename)
 
     # 予測
     x_test = to_features(test_texts, max_length)
     y_test = np.asarray(test_labels)
+    y_test_b = label_binarize(y_test, classes=[0,1,2])
     y_preda = model.predict(x_test)
     y_pred = np.argmax(y_preda, axis=1)
+
+    TAGS = ["BR", "FR", "OTHER"]
+    COLOR = ["#d62728", "#2ca02c", "#1f77b4"]
+    true_list = [[],[],[]]
+    for label in y_test_b:
+        true_list[0].append(label[0])
+        true_list[1].append(label[1])
+        true_list[2].append(label[2])
+
+    score_list = [[],[],[]]
+    for score in y_preda:
+        score_list[0].append(score[0])
+        score_list[1].append(score[1])
+        score_list[2].append(score[2])
+
+    # roc
+    for i in range(len(TAGS)):
+        fpr, tpr, thresholds = roc_curve(true_list[i], score_list[i])
+        label = "[{0}] AUC = {1}".format(TAGS[i], round(roc_auc_score(true_list[i], score_list[i]), 3))
+        plt.plot(fpr, tpr, label=label, color=COLOR[i])
+        plt.xlabel('FPR: False positive rate')
+        plt.ylabel('TPR: True positive rate')
+        plt.grid()
+    plt.plot([0, 1], [0, 1], 'k--', lw=1)
+    plt.legend(loc="lower right")
+    roc_filename = path.join(path.dirname(__file__), ROC_FILENAME + ".pdf")
+    plt.savefig(roc_filename)
+
+    # 描画リセット
+    plt.clf()
+    
+    # pr
+    for i in range(len(TAGS)-1):
+        precision, recall, thresholds = precision_recall_curve(true_list[i], score_list[i])
+        label = "[{0}] AUC = {1}".format(TAGS[i], round(auc(recall, precision), 3))
+        plt.plot(recall, precision, label=label, color=COLOR[i])
+        plt.xlabel('recall')
+        plt.ylabel('precision')
+        plt.grid()
+    plt.plot([1, 0], [1, 1], 'k--', lw=1)
+    plt.legend(loc="lower left")
+    pr_filename = path.join(path.dirname(__file__), PR_FILENAME + ".pdf")
+    plt.savefig(pr_filename)
+
     print("Accuracy: %.5f" % accuracy_score(y_test, y_pred))
     print(classification_report(y_test, y_pred))
     print(confusion_matrix(y_test, y_pred, labels=[0, 1, 2]))
@@ -111,7 +169,6 @@ def main():
     output_json_filename = path.join(path.dirname(__file__), OUTPUT_FILENAME)
     output_json(output_json_filename, test_texts,
                 y_test, y_pred, test_texts_origin)
-
 
 # テキストのリストをtransformers用の入力データに変換
 
@@ -138,7 +195,7 @@ def build_model(model_name, num_classes, max_length):
     attention_mask = tf.keras.layers.Input(input_shape, dtype=tf.int32)
     token_type_ids = tf.keras.layers.Input(input_shape, dtype=tf.int32)
     bert_model = transformers.TFBertModel.from_pretrained(model_name)
-    last_hidden_state, pooler_output = bert_model(
+    last_hidden_state, pooler_output = bert_model.bert(
         input_ids,
         attention_mask=attention_mask,
         token_type_ids=token_type_ids
@@ -216,9 +273,11 @@ if __name__ == '__main__':
                     str(ID) + "/" + str(ID) + "_forum_cleaned.json"
 
                 OUTPUT_FILENAME = "data/" + \
-                    str(ID) + "/" + str(ID) + "_predict_" + str(MODE) + ".json"
-                MODEL_NAME = "data/" + \
-                    str(ID) + "/" + str(ID) + "_" + str(MODE) + ".h5"
+                    str(ID) + "/" + str(ID) + "_" + str(MODE) + "_predict" + ".json"
+                MODEL_WEIGHT_FILENAME = "data/" + \
+                    str(ID) + "/" + str(ID) + "_" + str(MODE) + "_model" + "/checkpoint"
+                ROC_FILENAME = "data/" + str(ID) + "/" + str(ID) + "_" + str(MODE) + "_ROC"
+                PR_FILENAME = "data/" + str(ID) + "/" + str(ID) + "_" + str(MODE) + "_PR"
                 main()
             else:
                 print('Argument must be "f" or "r"')
