@@ -97,8 +97,8 @@ def main():
     model = build_model(model_name, num_classes=num_classes,
                         max_length=max_length)
 
-
-    output_model_filename = path.join(path.dirname(__file__), MODEL_WEIGHT_FILENAME)
+    output_model_filename = path.join(
+        path.dirname(__file__), MODEL_WEIGHT_FILENAME)
 
     # 新しく学習する(0)or既存の学習結果使う(1)
     tmp = 1
@@ -115,19 +115,19 @@ def main():
     # 予測
     x_test = to_features(test_texts, max_length)
     y_test = np.asarray(test_labels)
-    y_test_b = label_binarize(y_test, classes=[0,1,2])
+    y_test_b = label_binarize(y_test, classes=[0, 1, 2])
     y_preda = model.predict(x_test)
     y_pred = np.argmax(y_preda, axis=1)
 
     TAGS = ["BR", "FR", "OTHER"]
     COLOR = ["#d62728", "#2ca02c", "#1f77b4"]
-    true_list = [[],[],[]]
+    true_list = [[], [], []]
     for label in y_test_b:
         true_list[0].append(label[0])
         true_list[1].append(label[1])
         true_list[2].append(label[2])
 
-    score_list = [[],[],[]]
+    score_list = [[], [], []]
     for score in y_preda:
         score_list[0].append(score[0])
         score_list[1].append(score[1])
@@ -136,10 +136,12 @@ def main():
     # roc
     for i in range(len(TAGS)):
         fpr, tpr, thresholds = roc_curve(true_list[i], score_list[i])
-        label = "[{0}] AUC = {1}".format(TAGS[i], round(roc_auc_score(true_list[i], score_list[i]), 3))
+        label = "[{0}] AUC = {1}".format(TAGS[i], round(
+            roc_auc_score(true_list[i], score_list[i]), 3))
         plt.plot(fpr, tpr, label=label, color=COLOR[i])
         plt.xlabel('FPR: False positive rate')
         plt.ylabel('TPR: True positive rate')
+        plt.ylim([0, 1])
         plt.grid()
     plt.plot([0, 1], [0, 1], 'k--', lw=1)
     plt.legend(loc="lower right")
@@ -148,14 +150,17 @@ def main():
 
     # 描画リセット
     plt.clf()
-    
+
     # pr
     for i in range(len(TAGS)-1):
-        precision, recall, thresholds = precision_recall_curve(true_list[i], score_list[i])
-        label = "[{0}] AUC = {1}".format(TAGS[i], round(auc(recall, precision), 3))
+        precision, recall, thresholds = precision_recall_curve(
+            true_list[i], score_list[i])
+        label = "[{0}] AUC = {1}".format(
+            TAGS[i], round(auc(recall, precision), 3))
         plt.plot(recall, precision, label=label, color=COLOR[i])
         plt.xlabel('recall')
         plt.ylabel('precision')
+        plt.ylim([0, 1])
         plt.grid()
     plt.plot([1, 0], [1, 1], 'k--', lw=1)
     plt.legend(loc="lower left")
@@ -171,6 +176,7 @@ def main():
                 y_test, y_pred, test_texts_origin)
 
 # テキストのリストをtransformers用の入力データに変換
+
 
 def to_features(texts, max_length):
     shape = (len(texts), max_length)
@@ -273,11 +279,15 @@ if __name__ == '__main__':
                     str(ID) + "/" + str(ID) + "_forum_cleaned.json"
 
                 OUTPUT_FILENAME = "data/" + \
-                    str(ID) + "/" + str(ID) + "_" + str(MODE) + "_predict" + ".json"
+                    str(ID) + "/" + str(ID) + "_" + \
+                    str(MODE) + "_predict" + ".json"
                 MODEL_WEIGHT_FILENAME = "data/" + \
-                    str(ID) + "/" + str(ID) + "_" + str(MODE) + "_model" + "/checkpoint"
-                ROC_FILENAME = "data/" + str(ID) + "/" + str(ID) + "_" + str(MODE) + "_ROC"
-                PR_FILENAME = "data/" + str(ID) + "/" + str(ID) + "_" + str(MODE) + "_PR"
+                    str(ID) + "/" + str(ID) + "_" + \
+                    str(MODE) + "_model" + "/checkpoint"
+                ROC_FILENAME = "data/" + \
+                    str(ID) + "/" + str(ID) + "_" + str(MODE) + "_ROC"
+                PR_FILENAME = "data/" + \
+                    str(ID) + "/" + str(ID) + "_" + str(MODE) + "_PR"
                 main()
             else:
                 print('Argument must be "f" or "r"')
