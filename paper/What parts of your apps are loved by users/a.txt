@@ -1,0 +1,265 @@
+“What parts of your apps are loved by users?”
+
+Abstract
+Recently, Begel et al. found that one of the most important questions software developers ask is “what parts of software are used/loved by users.” User reviews provide an effective channel to address this question. However, most existing review summarization tools treat reviews as bags-of-words (i.e., mixed review categories) and are limited to extract software aspects and user preferences.
+
+We present a novel review summarization framework, SURMiner. Instead of a bags-of-words assumption, it classifies reviews into five categories and extracts aspects in sentences which include evaluation of aspect using a pattern-based parser. Then, SURMiner visualizes the summaries using two interactive diagrams. Our evaluation on 17 popular apps shows that SUR-Miner summarizes more accurate and clearer aspects than state-of-theart techniques, with an average F1-score of 0.81, significantly greater than that of ReviewSpotlight (0.56) and Guzmans’ method (0.55). Feedback from developers shows that 88% developers agreed with the usefulness of the summaries from SUR-Miner.
+
+I.INTRODUCTION
+
+Often software developers are eager to know what parts of their software is used/loved by users. According to a survey covering 4,000 Microsoft engineers, the question “What parts (aspects) of a software product are most used and/or loved by customers?” ranks the second among the top 145 questions developers asked [5]. This question requires developers to analyze preferences for and opinions toward different software aspects.
+
+User reviews are an important channel for software developers to understand users’ requirements, preferences and complaints [21], [31]. Through analyzing user reviews, developers can evaluate their products, identify users’ preference [21], and improve software maintenance and evolution tasks [33].
+
+Yet understanding software reviews is very challenging and tedious. First, the volume of user reviews is too large to be checked manually. Developers receive hundreds or thousands of reviews every day [10], [31]. Given the large number of reviews, they need to read and manually classify the reviews into complaints or new feature requests [30]. Such processes are extremely time-consuming and tedious. On the other hand, user reviews fall into too many varieties that need to be distinguished [31]. They can be new feature requests, bug reports, praises, or complaints. Different types of reviews target different tasks and developers [30]. For example, a praising review may not be valuable for software testing but can be essential for product evaluation. A review reporting a bug is not important for requirements analysis but can be crucial for software testing. Given millions of reviews, developers must first categorize them manually [30].
+
+A few tools are proposed for software user review summarization. For example, Chen et al. [10] filter non-informative reviews by a classification technique and apply Latent Dirichlet Allocation (LDA) [6] to summarize topics of the informative reviews. Fu et al. [15] filter rating-inconsistent reviews, which have sentiments different from their rating by a regression model. They also apply LDA to summarize topics in the remaining reviews and show rating trends for different topics. Iacob et al. [21] filter reviews that request new features by linguistic rules and summarize key words of the requests with LDA. These tools summarize informative and reliable reviews. However, the LDA model that they used is based on a bag-of-word assumption without considering sentence structures and semantics. Such assumption may be problematic for software reviews which exhibit multiple purposes (e.g., aspect evaluation and feature request) and sentiments. Since these tools mix up aspects and opinions, and mix topics related to different categories, they are not effective to gauge users’ sentiments toward each aspect.
+
+To address these limitations, we propose Software User Review Miner (SUR-Miner), a framework that can summarize users’ sentiments and opinions toward corresponding software aspects. Instead of treating reviews as bags of words, SURMiner makes full use of the monotonous structure and semantics of software user reviews, and directly parses aspectopinion pairs from review sentences based on pre-defined sentence patterns. It then analyzes sentiments for each review sentence and associate sentiments with aspect-opinion pairs in the same sentence. Finally, it summarizes software aspects by clustering aspect-opinion pairs with the same aspects.
+
+We empirically evaluate the performance of SUR-Miner on recent user reviews of 17 Android apps such as Swiftkey, Camera360, WeChat and Templerun2. We measure the performance of key processes (i.e., classification, aspect-opinion extraction and sentiment analysis) by F1-score which is a common accuracy measure in the text mining literature [14], [38]. Results show that the SUR-Miner produces reliable summaries, with average F1-scores of 0.75, 0.85 and 0.80 for review classification, aspect-opinion extraction and sentiment analysis, respectively. The final aspects from SUR-Miner are significantly more accurate and clearer than state-of-the-art techniques, with an F1-score of 0.81, greater than that of ReviewSpotlight (0.56) and Guzmans’ method (0.55).
+
+As a proof-of-concept application, we design two interactive diagrams, aspect heat map and aspect trend map, using the summaries from SUR-Miner to help developers grasp users’ preferences and typical opinions towards each software aspect. Feedback from corresponding app developers is also encouraging, with 88% of respondents agreeing that the summaries of SUR-Miner are useful, indicating that SUR-Miner helps developers understand users’ preferences for different aspects in practice.
+
+Overall, our study makes the following contributions:
+
+1) We leverage a classification technique in which we designed text features to distinguish five review categories such as bug reports and new feature requests.
+
+2) We propose a pattern-based parsing technique which can parse complex app review sentences, and extract aspects and corresponding opinions.
+
+3) We design novel interactive visualizations to present summaries efficiently for app developers and managers.
+
+4) We conduct an empirical evaluation of SUR-Miner to investigate its usefulness.
+
+The rest of this paper is organized as follows. Section II presents the related work. Section III presents the detailed design of our framework. Section IV presents the evaluation. Section V discusses the threats to validation, and Section VI concludes the paper.
+
+II. RELATED WORK
+
+A. App Review Filtering
+
+App review filtering has drawn increasing attention in the software engineering community. Chen et al. [10] filter noninformative reviews and rank the user review by significance. Their framework trains a classifier and categorizes reviews into two classes, namely, informative and non-informative. Fu et al. [15] filter rating-inconsistent reviews (reviews that have sentiments different from their rating) by a regression model on the review vocabulary. These tools can partially select informative reviews. However, they do not define clearly under which circumstances reviews are informative since different developers need different types of reviews [30], [31]. To a further step of their work, we aim at distinguishing different review purposes (categories) and selecting reviews from a specific category to extract and summarize software aspects.
+
+Recent work by Sorbo et al. [13] proposes a similar idea to classify development emails according to their purposes. They also design a classification approach using natural language parsing techniques. While their technique could also be applied for app review classification, it does not support aspect summarization within each category.
+
+B. Aspect Extraction from App Reviews
+
+Aspect extraction also has been widely investigated in software engineering. Chen et al. [10] use LDA [6] to extract topics of reviews. Hu et al. [19] propose a method for web review mining. Their method extracts frequent words as aspects and link corresponding adjective words as opinions. Fu [15] address the problem of mining users’ negative feedback. They apply LDA topic model to mine topics from negative feedback and rank the summarized problems for each release. Galvis et al. [16] mine requirement changes by adapting a topic model named Aspect and Sentiment Unification Model (ASUM) [22]. They also extract common topics and present users’ opinions toward those topics.
+
+However, their approaches differ significantly from ours. They applied frequent items mining or topic models which are based on a bag-of-word assumption without considering sentence structures and semantics. That means they can distinguish neither review categories (praising, feature requests, bug reports, shortcomings) nor aspects and user opinions, which could result in inaccuracy and confusion. For example, a topic word “prediction” extracted by LDA may mean that users appreciate the prediction feature or alternatively, users wish for a new prediction feature. In such case, developers cannot efficiently interpret the topics.
+
+Recent work by Sarro et al. extracts features from app descriptions using natural language processing [34]. Our work differs to theirs in that we extract features from app reviews. Besides, we aim at summarizing app features, while their goal is to investigate feature lifecycles [34].
+
+To our best knowledge, there is only one previous work that are closely related to ours. Guzman and Maalej [17] proposed to extract software features and analyze their sentiments. Our work differs from theirs in three major aspects. First, our approach aims not only to identify features, but also to distinguish feature evaluations and feature requests. Second, our approach can identify complex and novel features since it parses review sentences with semantic patterns, while their techniques are based on frequent item mining and topic model as traditional approaches did. Finally, we propose interactive visualizations to help app managers and developers grasp the feature evaluations and sentiment trends.
+
+C. Review Mining in Other Marketplaces
+
+User review mining is also an attractive topic in other marketplaces (e.g., commodity goods, movies). Yatani et al. [37] proposed a review summarization tool called ReviewSpotlight which extracts aspect-opinion pairs by identifying adjectivenoun word pairs from review sentences. Huang et al. [20] adopted a similar idea and designed Revminer - an extractive interface for summarizing restaurant reviews. Nichols et al. [29] proposed ReCloud, which parses review sentences with NLP techniques. Zhuang et al. [38] studied movie review summarization. Their approach integrates multiple knowledge including WordNet, statistical analysis and movie knowledge.
+
+However, these techniques can hardly be applied to app reviews directly. App reviews are quite different from reviews in other marketplaces [10], [15]. They have different lexicons and formats that existing tools can hardly parse. The ReviewSpotlight [37] presents a word cloud by extracting adjective-noun word pairs. Likewise, the RevMiner [20] extracts word pairs using a bootstrapping algorithm. The ReCloud [29] takes semantic into consideration, it also presents a word cloud but with a spatial layout reflecting the NLP context. However, app reviews cannot simply be represented by word clouds or word pairs. For example:
+
+case 1: “I love the fact that we can change themes”
+
+The ReviewSpotlight cannot output anything since there is no adjective. The RevMiner and ReCloud may present some meaningless word pairs. In contrast, SUR-Miner can present the correct pair <we can change themes, love> as it considers semantics and app review patterns. In addition, app reviews contain multiple purposes that target different developers [31]. None of existing tools can distinguish such categories. Consider the following cases
+
+case 2: “The blue screen after clicking the ‘ok’ button is annoying.” case 3: “A simple UI would be better.”
+
+From developers’ perspective, they are just a bug report and a feature request and should not be considered as users’ opinions toward “screen” and “UI”. Such cases account for a large proportion in app reviews [31]. While all these tools still output word pairs(cloud) such as <button, annoying> and <U I, simple>, SUR-Miner can distinguish the above cases as it leverages a classification technique.
+
+III.SUR-MINER
+
+This section introduces the generic architecture of SUR-Miner.
+
+As illustrated in Figure 1, our framework takes user reviews including texts and ratings as inputs and outputs the main opinions and sentiments toward different aspects of the app. The whole procedure consists of six main steps: For raw reviews that need to be summarized, we first split them into sentences (step 1). Then, we classify each sentence into five categories, namely, aspect evaluation, praises, feature requests, bug reports and others (step 2). Then, we only select sentences in the aspect evaluation category and filter out other types of sentences. We then extract aspects and corresponding opinions and sentiments from the set of “aspect evaluation” sentences (step 3-4). The resulting aspect-opinion-sentiment pairs are clustered and visualized with two interactive diagrams (step 56). Each step is explained in detail herein below.
+
+A. Step 1 - Preprocessing
+
+The raw user review needs preprocessing. It often consists of more than one sentences with different purposes. For example, a raw review “The UI is ugly. I want a beautiful UI” consists of two sentences. The first sentence is an evaluation of an aspect UI, while the second is a request for improvement in the aspect UI. They have different purposes and sentiments. Therefore, it would be desirable to separate these sentences for analysis. Furthermore, user reviews have many typos and contractions which make it hard to understand the meaning automatically.
+
+To address these two issues, we split the raw review text into sentences using the Stanford CoreNLP tool [26]. Each review sentence is time stamped and assigned rating, to be the same as in its raw review. We also correct common typos, contractions and repetitions such as “U→you”, “coz→because”, “&→and”, “Plz→Please”, “soooo→so” and “thx→thanks”. We collected 60 such typos and contractions, and replaced them with regular expressions2.
+
+B. Step 2 - Review Classification
+
+As discussed in Section I, review sentences may have different categories [31]. Different categories target different tasks and developers [30]. It is very tedious and time consuming for developers to manually classify them and select appropriate sentences for aspect evaluation. In the review classification step, we aim to automatically classify and select review sentences which contain aspect evaluation.
+
+We define five review categories including aspect evaluation, bug reports, feature requests, praise and others. Pagano et al. found 17 categories (topics) of user reviews [31]. We use top four categories from their taxonomy [31] and merge other minor categories into an “others” category. Table I illustrates the definitions and sample review sentences for each category.
+
+To classify review sentences into the above mentioned categories, we follow a supervised machine learning approach. We first collect historical review sentences, extract their text features, and manually label them according to the definitions in Table I. Then, we train a classifier using these text features and labels. Finally, we execute the classifier on new review instances to predict their categories.
+
+We adopt a well-known classifier, Max Entropy which has great performance on text classification [24], [28]. In the following, we present the text features that we designed for classification.
+
+1) Text Feature Extraction: We extracted two dimensions of text features: lexicon features and structural features.
+
+Lexicons are important to characterize review categories since different review categories may have significantly different lexicons. For example, “amazing” and “great” appear frequently in praising reviews, while “bug” and “fix” are representative words for bug reports. We choose character NGram and trunk word as two lexicon features since they reflect lexicons of different categories.
+
+Character N-Gram
+Character N-Gram, an important lexical representation, is a commonly used feature in text classification [8], [9], [18], [23], [25]. It has also been found to be effective in many applications such as malicious code detection [4] and duplicate bug report detection [36] in software engineering. Character N-Gram features for a sentence are all n consecutive letters in the tokens of that sentence. For example, the 3-Grams for the sentence “The UI is OK” are The, heU, eUI, UIi, Iis, isO, and sOK. We use 2-4 Grams for classification.
+
+Trunk Words We also propose trunk word as a lexicon feature. We define trunk word as the word at the root of a semantic dependence graph [12] which is introduced later in this section. For example, the trunk word of the sentence “The graphics are amazing” is “are”.
+
+Sentence structures can also reflect text features as different review categories may have different syntax and semantics. For example, for aspect evaluations, users tend to use descriptive syntax such as “The graphic (noun) is amazing (adjective)”, while for feature request, users often use imperative sentences such as “please add more themes” and “It could be better to have more themes (noun)”.
+
+We leverage three structural features: POS tags, parsing tree, and semantic dependence graph.
+
+POS tag
+Part Of Speech (POS) [11] is a widely used grammatical feature for texts. It indicates the property of each word in a sentence. For example, POS tags for sentence “The user interface is beautiful” are DT-NN-NN-VBZ-JJ in sequence [11]. Here, the POS tag for the word is is VBZ, which means is is a verb of 3rd person present singular. We generate POS tags using the Stanford CoreNLP tools [3], [26] and concatenate all POS tags together as a text feature.
+
+Parsing Tree
+A parsing tree is a typical representation of the grammatical structure of a sentence [35]. It shows how a sentence is comprised. Each node represents a grammar unit, and its children are subunits that it is comprised of. Figure 2 illustrates a parsing tree for a sample review sentence “The user interface is not very elegant”, which is generated by the Stanford Parser [3]. The label in each node denotes a POS tag. This tree means that the sentence (ROOT) is constituted by a noun phrase (NP) and a sub-sentence (S), where the noun phrase is constituted with a determiner (DT) and two nouns (NN).
+
+In order to represent a parsing tree as a flat text feature, we traverse tree nodes in the breadth first order and select the first five nodes. We concatenate the POS tags of these five nodes as the text feature. For example, the feature for the parsing tree in Figure 2 is “ROOT-NP-S-DT-NN-NN”. Semantic Dependence Graph (SDG) Semantic dependence graph (SDG) [12] exhibits the semantic dependence among words in one sentence. It is a directed graph [12]. Nodes in the graph represent words and the corresponding POS tags. Edges represent semantic relations between words (e.g., noun subjection and adjective modifier). Each SDG has a root node which has no incoming edges. Figure 3 illustrates an SDG of a sample review sentence “The user interface is not elegant”, which is generated by the Stanford Parser [3]. The root node is the word elegant which is an adjective (noted as JJ). It has three children: a noun subjection (nsubj) interface, a copula (cop) is and a negation modifier (neg) not. The child interface also has two children: a determiner (det) the and a noun compound modifier (nn) user.
+
+
+To convert an SDG into a flat text feature, we traverse its nodes in breadth first order, then concatenate edges and POS tags in the traversal. We ignore leaves that are not linked to the root. For example, the feature for the SDG in Figure 3 is “VBZ-nsubj-NN-cop-VBZ-neg-RB”.
+
+C. Step 3 - Aspect-Opinion Extraction
+
+Our next goal is to summarize users’ opinions toward corresponding aspects. To do that, we need to identify words that express aspects and words that express opinions toward these aspects. In this step, SUR-Miner extracts aspect-opinion pairs (i.e., aspect and opinion words) from each review sentence classified in the aspect evaluation category. For example, the resulting aspect-opinion pairs for the review sentence “The Prediction is accurate, but the auto-correct is annoying” are: <prediction, accuracy> and <auto-correct, annoying>.
+
+In general, the state-of-the-art techniques extract aspects by frequent item mining or by topic model which views user reviews as bags of words [6], [10], [15]. Such an assumption may be problematic for software reviews that exhibit multiple purposes and sentiments.
+
+As an empirical study indicates, software reviews have quite monotonous patterns for different purposes [31]. Therefore, it is possible to determine aspect-opinion pairs from the sentence patterns directly. Based on this assumption, we design a pattern-based parsing method which makes use of the syntax and semantics of review sentences and parses aspects and corresponding opinions from them directly. To do that, we first apply an NLP parser to annotate a semantic dependence graph (SDG) [12] for a review sentence. Then, we build a patternbased parser to extract aspect-opinion pairs from the SDG.
+
+1) Pattern-based Parsing: Our pattern-based parser is implemented as a sequence of cascading finite state machines [7]. The parser accepts a SDG and identifies aspect-opinion pairs based on predefined semantic templates.
+
+Table II lists some typical semantic templates we use. The two letters at the beginning (e.g., JJ and NN) represent the POS tag of the root. Words in the following round brackets (e.g., have and like) represent root words. The children of the root are listed in the square brackets as edge-POS pairs. For example, the template in the first row means a root node with a POS tag of JJ and two children: a noun subjection (nsubj) with a POS tag of NN and a copula (cop) with a POS tag of VBZ. We generated the templates by manually identifying aspect part and opinion part from review sentences. We randomly selected 2,000 reviews sentences labeled as Aspect Evaluation except those we later used for evaluating the accuracy. First, we went through all these sentences and generated their SDGs. Then, we associated each SDG with a template which denotes the places of the aspect part and the opinion part in the SDG. We selected all those templates which were associated with more than 10 sentences in order to avoid accidental associations. We identified 26 such templates to design the finite state machine3.
+
+Then, given a new SDG instance, the parser travels from the root to all other nodes, checking the nodes, edges, and the corresponding children to determine the aspect and opinion words according to the templates. For example, given the SDG in Figure 3, the parser checks the POS tag of the root. Since it is an adjective (JJ) that matches the first and second templates in Table II, it further checks whether it has three children: a noun subjection (nsubj) with a POS tag of noun (NN), a copula (cop) with a POS tag of VBZ, and a negation modifier (neg) with a POS tag of RB. The second template is matched. Then, it checks whether the first child has a child of noun compound modifier (nn) with a POS tag of noun(NN). As the second template is an absolute match with the sample SDG, the parser recognizes the nsubj-NN node interface with its child user as aspect words and the neg-RB node not together with the root node elegant as opinion words.
+
+D. Step 4 - Aspect Sentiment Analysis
+
+In addition to opinions, a quantitative summarization of users’ feeling towards each aspect may also be useful to grasp users’ preferences. Users’ ratings can provide such summarization objectively. However, an overall rating cannot satisfactorily characterize users’ preferences for different aspects. For example, consider the review “The UI is nice but the sound sucks.” with a rating of 2 (out of 5). The user obviously likes the aspect UI but dislikes the aspect sound. Therefore, the actual ratings for both two aspects cannot be 2; it could be 3 for UI and 1 for sound.
+
+At the fourth step, we apply sentiment analysis for each review sentence and associate the sentiments to the corresponding aspects with user ratings and a sentiment analysis tool. We first apply a state-of-the-art sentiment analysis tool Deeply Moving [1] to analyze sentiment for each review sentence. The Deeply Moving produces sentiments in a 0 to 4 scale, where 4 represents strongly positive, 0 means strongly negative and 2 means neutral. Then, to improve accuracy, we adjust the sentiments by user rating (1 to 5). Specifically, if the rating for a whole review is 5 (strongly positive), we add 1 to the sentiments of 0. If the rating is 1 (strongly negative), we minus 1 to the sentiments of 4.
+
+For example, the following review has two sentences: The interface is beautiful. I don’t like the theme. The sentiments for the two sentences are 4 and 0, respectively. If the user rating for the review is 5, we adjust the sentiment for the second sentence to 1 (= 0+1). If the user rating is 1, we adjust the sentiment for the first sentence to 3 (= 4-1).
+
+E. Step 5 - Aspect Clustering and Summarization
+
+At this step, we group aspect-opinion pairs with the same aspects and summarize sentiments and typical opinions for each aspect group.
+
+To group the aspects, we first mine frequent items for all aspect words, namely, aspect words in the extracted aspectopinion pairs. Then, we cluster aspect-opinion pairs with common frequent items (words). For example, given that auto correct is a frequent item in all aspect words, if there are two aspect-opinion pairs which contain this item, they if a pair will be clustered into one group. In particular, has two or more frequent items that can be clustered into more than two different groups, we cluster it into the group with the highest frequency of items or words. For example, a pair <background color, nice> can be grouped with both <background, beautiful> and <color, disgusting>. However, if we have already known that the aspect background has a higher frequency than that of color, we will group the first pair with the second one instead of the third one. If there is no frequent item in the two aspect-opinion pairs, we group them together when they have common words in their aspects.
+
+For each group, we select a group keyword as the word or the item which has the largest frequency in that group. We also calculate a group sentiment as the average adjusted sentiment of aspect-opinion pairs in that group.
+
+F. Step 6 - Visualization
+
+We designed two interactive diagrams, namely, Aspect Heat Map and Aspect Trend Map, to illustrate the summaries.
+
+The Aspect Heat Map demonstrates popular aspects that users are concerned with. It aims to help developers and managers grasp which parts (aspects) of the app are loved or disliked by users. Figure 4 shows an example of the Aspect Heat Map with each circle indicating an aspect. The larger the circle is, the more popular and liked the aspect is. We define the size of the circle as size = log(#comments) + sentiment. The horizontal axis represents the number of comments, and the vertical axis represents the adjusted rating. Therefore, circles in the top right represent most popular and loved aspects, and vice versa. To get insight into an aspect group, developers can click each aspect (circle) to view the specific comments with the top positive and top negative sentiments. For each comment, the aspect words are underlined and the opinion words are in bold.
+
+The Aspect Trend Map demonstrates the sentiment trends over time. Capturing user reactions is important for developers to select and prioritize features [16], [34]. The Aspect Trend Map aims to help developers assess whether their recent changes affected users’ satisfaction. It also enables developers to estimate and predict users’ preferences so that they can improve parts of their product in the future. Figure 5 shows an example of the diagram with each line indicating the sentiment trend for a popular aspect. The horizontal axis represents date, and the vertical axis represents user sentiments.
+
+Both the Aspect Heat Map and Aspect Trend Map are available on our project website at 
+http://www.cse.ust.hk/∼xguaa/srminer/.
+
+IV.EMPIRICAL EVALUATION
+
+We evaluate our framework through three dimensions: effectiveness, comparison and usefulness. To evaluate the effectiveness and advantages, we apply common measures in the text mining literature and compare the results with state-of-theart methods. We also conduct developer surveys to evaluate the usefulness. Specifically, our evaluation addresses the following research questions:
+
+・RQ1 (effectiveness): How effectively can SUR-Miner classify reviews, extract aspects and opinions, and analyze sentiments for app reviews?
+
+・RQ2 (comparison): How does the SUR-Miner compare to state-of-the-art techniques for app review summarization?
+
+・RQ3 (usefulness): How the summaries by SUR-Miner useful for developers?
+
+A. Data Collection
+
+We choose 17 popular Android apps such as Swiftkey, Camera360, WeChat and Templerun2 from Google Play as our subjects. These apps cover 16 most popular categories such as games, communication, books and music. We collected the reviews roughly in the period from Aug, 2014 to Mar, 2015 using an open-source Android market API [2]. For each review, we collect its timestamp, rating, title and content. Table III shows the description of the subjects.
+
+B. Effectiveness (RQ1)
+
+In this section, we present our evaluation of SUR-Miner’s effectiveness in each single step, namely, review classification, aspect-opinion extraction, and sentiment analysis.
+
+1) Review Classification: First, we evaluate SUR-Miner on the review classification task. We sampled 2,000 review sentences from each dataset and compared the predicted results with golden standard labels. We manually labeled golden standard classes according to the rules in Table I. To reduce the labeling bias, two researchers separately applied the labeling rules to the 2,000 review sentences. Consensus labels were selected in the first iteration. For the disagreements, we discussed and clarified our labeling rules and relabeled again. A second iteration resulted in 100% agreement between the two researchers.
+
+We use F1-score to measure the classification accuracy. The F1-score is widely used in the text classification literature [16], [38]. It is defined as follows
+
+<math>
+
+where the precision is the ratio of the number of instances correctly classified as a class (TP) to the number of instances classified as the class (TP+FP).
+
+The recall is the ratio of the number of instances correctly classified as a class (TP) to the number of instances in the class (TP+FN).
+
+<math>
+
+We performed a five-fold cross validation [38] in the data sets 100 times with each folder containing 400 review sentences.
+
+Table IV shows the F1-scores for different categories4. Each column shows the F1-scores of a review category in all subjects. The last column averages the results for each subject in all review categories, and the last row averages F1scores for each review category in all subjects. As indicated in the table, the classification performance is reasonable (with an average F1-score of 0.75) as well as for the aspect evaluation category (with an average F1-score of 0.74). That means the classification step can accurately provide different developers with different it provides reliable review sentences for the aspect evaluation. The F1-scores for specific categories such as “bug” are not good in some apps. We manually checked those reviews and found that these apps received rare bug reports. The extremely unbalanced data could be the main reason for these outliers.
+
+2) Aspect-Opinion Extraction: To evaluate SUR-Miner’s performance on aspect-opinion extraction, we follow the same procedures as in the review classification experiment to check if SUR-Miner correctly extracts aspects and corresponding opinions from review sentences. For each subject, we sampled 2,000 review sentences and selected those in the Aspect Evaluation category. We use F1-score to measure the accuracy of aspect extraction and opinion extraction separately. In particular, the number of true positives (TP) in Equation 13 is the number of correctly extracted aspects or opinions; the number of false positives (FP) means the number of mistakenly extracted aspects or opinions; the number of false negatives (FN) is defined as the number of aspects or opinions that have not been extracted.
+
+The results are shown in the first two columns in Table V.
+
+As is indicated, both aspect extraction and opinion extraction have reasonable accuracy, with average F1-scores of 0.85 and 0.84, respectively4. The results suggest that the aspect extraction step provides reliable aspects and opinions.
+
+3) Sentiment Analysis: To evaluate the sentiment analysis step, we also follow the same procedures as in the classification and aspect extraction stages. For each subject, we sampled 2,000 review sentences and selected those in the Aspect Evaluation category, and compared the sentiment for each aspect-opinion pair with golden standard sentiment labels. To simplify the estimation, we divided the sentiment scale (04) into two polarities, that is, positive (3-4) and negative (01) [32], and labeled them according the their polarities. We labeled the golden standard sentiments manually as we did for review classification.
+
+We use F1-score to measure the accuracy of each sentiment category. In particular, the number of true positives (TP) in Equation 1-3 is defined as the number of correctly classified sentiments; the number of false positives (FP) means the number of misclassified sentiments; the number of false negative (FN) means the number of sentiments that are not classified in that category.
+
+The results are shown in the last two columns in Table V. As is indicated, both positive and negative sentiments have acceptable accuracy, with average F1-scores of 0.85 and 0.75, respectively4. The average F1-score for both is 0.80. The reason that the negative sentiment has a relatively low performance in Camera360 and Duolingo could be that these two apps received much more positive reviews so that the sentiment categories become extremely unbalanced. The results suggest that the sentiment analysis step produces reliable results.
+
+SUR-Miner provides reliable results on review classification, aspect-opinion extraction, and sentiment analysis, with average F1-scores of 0.75, 0.85 and 0.80, respectively.
+
+C. Comparison (RQ2)
+
+Our next evaluation aims to compare SUR-Miner with state-of-the-art techniques with respect to final summaries.
+
+1) Quantitative Comparison: We first compare the accuracy of SUR-Miner for aspect extraction with those of related work: ReviewSpotlight [37] and Guzman’s method [17]. As discussed in Section II, ReviewSpotlight is a review summarization tool for general products by identifying noun-adjective pairs (Section II-C), and Guzmans’ tool is the most related work to ours that also extracts aspects from app user reviews (Section II-B).
+
+We run aspect extraction by simulating real world usage scenarios. For each subject, we randomly select 400 review sentences in all categories from the original dataset except those for training classifiers. First, we run review classification on these sentences. Then, we apply aspect extraction on sentences that are classified as Aspect Evaluation. We compare the extracted aspects with golden standard aspects that were manually labeled. We use F1-score to evaluate the accuracy using the same definition in Section IV-B2.
+
+Table VI shows the average F1-scores of three approaches in all subjects. We reproduced ReviewSpotlight and applied it for extracting app aspects. The result of Guzmans’ approach is excerpted from their paper [17]. As we can see, the F1-score for SUR-Miner is 0.81, significantly greater than those of the ReviewSpotlight (0.56) and Guzman’s tool (0.55).
+
+To investigate the reasons for these results, we manually checked the results of ReviewSpotlight. We found that without distinguishing review categories, it tends to extract aspects for reviews in other categories such as aspect requests and bug reports. For example, consider the review “I hate that you can’t use offline dictionary” which requires for a new aspect offline dictionary. The ReviewSpotlight just outputs <dictionary, offline> which is meaningless while SUR-Miner can filter such review from aspect evaluation since it talks about a nonexistent aspect.
+
+Another shortcoming of these related approaches is that, they cannot identify complex phrases as they simply consider frequent items or noun-adjective pairs as aspects. For example, for the review “Also, love the way it auto ads reminders” , the ReviewSpotlight simply outputs <ads, auto> while SUR-Miner outputs < the way it auto ads reminers, love>.
+
+It is also interesting to see that even though both the classification and extraction stages have mistakes, combining them does not result in worse accuracy. The classification step has an F1-score of 0.74. The aspect extraction step has an F1score of 0.85 (Section IV-B). However, when extracting aspects from the outputs of classification stage, the final F1-score is 0.81, even greater than that in the classification stage. By manually checking the extracted aspects, we found that though some reviews were misclassified during the classification stage, the aspect extraction stage can still “re-correct” them since a misclassified review may not be parsed by our semantic patterns. For example, consider a misclassified review “No public transportation navigation!” which requires a new aspect but was misclassified as Aspect Evaluation in the classification stage. Nevertheless, SUR-Miner still cannot recognize any aspect since there is no semantic pattern to parse this review.
+
+2) Qualitative Comparison: Topic models such as LDA are widely used by most state-of-the-art app review summarization tools [10], [15], [17]. To investigate the advantages of SURMiner over these topic-based techniques, we qualitatively compare the extracted aspects by SUR-Miner with topics extracted by topic models.
+
+Table VIII compares the top five aspects we extracted with the top five topics by AR-Miner (a state-of-the-art review summarization tool that applies EMNB-LDA topic model) [10] in the Swiftkey subject. We collected data in the same period from Google Play as AR-Miner did. We have two observations: 1) SUR-Miner can distinguish different review purposes. For example, opinions extracted by SUR-Miner are aspect evaluations except some noises, while top words by LDA (ARMiner) are miscellaneous. For example, if a manager would like to know users’ evaluations on the aspect prediction, SURMiner can provide users’ opinions such as excellent, accurate, hate while AR-Miner (LDA) cannot provide such information; 2) SUR-Miner can distinguish users’ sentiments while ARMiner (LDA) cannot. For example, managers and developers can find both positive and negative sentiments by SUR-Miner but cannot tell whether user like or dislike the aspect prediction by LDA.
+
+Overall, SUR-Miner produces much clearer summaries in distinguishing review purposes and sentiments than LDA models. 
+
+SUR-Miner produces much more accurate and clearer summaries than state-of-the-art methods.
+
+D. Usefulness (RQ3)
+
+As the usefulness evaluation may be subjective, we consulted developers to assess the usefulness of SUR-Miner. We applied SUR-Miner to the latest user reviews of 17 popular Android apps such as Swiftkey, Camera360, WeChat and Templerun2. We presented the visualized summaries as demos in our website and asked the questions shown in Table VII to developers. The two questions are related to the two diagrams respectively. We provided five options for each of them (5 strongly agree, 4 agree, 3 neither, 2 disagree and 1 strongly disagree). The number of choices to each option was also listed for each question.
+
+We sent invitation mails to developers of the selected apps, posted our website to Android developer communities in Google+, and also invited developers from IT companies such as Samsung, Tencent and Baidu for feedback.
+
+Developers showed great interest in our SUR-Miner. As indicated in Table VII, of all 32 answers received, 28 of them (88%) agreed that our tool helps developers. Only two held conservative opinions (6.3%) and two (6.3%) disagreed. Figure 6 shows the box plot statistics of developer feedback.
+
+We quantize the answers to ratings from 1 to 5. Each box shows answers for a question. As the results indicate, answers to both questions have average ratings much greater than 3. That means developers agree the usefulness of SUR-Miner in general.
+
+In addition, we received the following encouraging comments from developers:
+
+“This is a great project. The visualization data impresses me much!”
+
+“I think if possible, we would like to work with these researchers. I really like the performance of your sentiment classifier.”
+
+“The provided visualized information serves as quite clear way to get insight of products including advantages and disadvantages. Analyzing large scale user comments calls for great human efforts. Such project makes the understanding as well as iteration of products fast.”
+
+These comments indicate that developers appreciate our tool to help grasp users’ opinions toward different aspects.
+
+Developers feedback indicates our SUR-Miner helps developers grasp users’ opinions and sentiments in practice.
+
+V.THREATS TO VALIDITY
+
+We have identified the following threats to validity:
+
+Subjects are all free Android apps.
+All projects investigated in this paper are free Android apps. Hence, they might not be representative of charged apps and apps in other markets (e.g., AppStore) [27]. Commercial apps may have different review patterns. In the future, we will mitigate this threat by investigating user reviews of commercial apps and apps in other markets.
+
+Ground truth labels were judged by two people.
+As the golden standard labels require large human efforts, they were judged by only two people in our experiments. They could be biased from real app developers. For mitigating this threat we presented final results to developers and made sure that they were satisfied with the accuracy. In the future, we will further reduce this threat by inviting more developers for labeling.
+
+VI. CONCLUSION
+
+We proposed SUR-Miner for effective and automatic user review summarization. The summaries from SUR-Miner provide a desirable answer to the important question “What part of your apps are loved by users” for developers.
+
+Our evaluation results show that SUR-Miner provides reliable results, with average F1-scores of 0.75, 0.85 and 0.80 for review classification, aspect-opinion extraction and sentiment analysis, respectively. The final aspects from SURMiner are significantly more accurate and clearer than stateof-the-art techniques, with an F1-score of 0.81, greater than that of ReviewSpotlight (0.56) and Guzmans’ method (0.55). Feedback from app developers is also very encouraging, and 88% answers from developers agree with the usefulness of SUR-Miner.
+
+In the future, we will summarize other review categories such as feature requests. In addition, we will propose techniques to summarize other software text data such as code comments and bug reports.
