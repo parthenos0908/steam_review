@@ -6,6 +6,7 @@ ID = 227300  # Eur
 
 INPUT_FILENAME = "{0}/{0}_forum_cleaned.json".format(ID)
 INPUT_FILENAME = "{0}/{0}_review.json".format(ID)
+INPUT_FILENAME = "227300/227300_review_FR_5813_out.json"
 
 
 def main():
