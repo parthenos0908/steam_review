@@ -98,7 +98,7 @@ def main():
         path.dirname(__file__), MODEL_WEIGHT_FILENAME)
 
     # 新しく学習する(0)or既存の学習結果使う(1)
-    tmp = 0
+    tmp = 1
     if tmp == 0:
         # 訓練
         model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs)
@@ -130,39 +130,8 @@ def main():
         score_list[1].append(score[1])
         score_list[2].append(score[2])
 
-    # roc
-    for i in range(len(TAGS)):
-        fpr, tpr, thresholds = roc_curve(true_list[i], score_list[i])
-        label = "[{0}] AUC = {1}".format(TAGS[i], round(
-            roc_auc_score(true_list[i], score_list[i]), 3))
-        plt.plot(fpr, tpr, label=label, color=COLOR[i])
-        plt.xlabel('FPR: False positive rate')
-        plt.ylabel('TPR: True positive rate')
-        plt.ylim([0, 1])
-        plt.grid()
-    plt.plot([0, 1], [0, 1], 'k--', lw=1)
-    plt.legend(loc="lower right")
-    roc_filename = path.join(path.dirname(__file__), ROC_FILENAME + ".pdf")
-    plt.savefig(roc_filename)
-
-    # 描画リセット
-    plt.clf()
-
-    # pr
-    for i in range(len(TAGS)-1):
-        precision, recall, thresholds = precision_recall_curve(
-            true_list[i], score_list[i])
-        label = "[{0}] AUC = {1}".format(
-            TAGS[i], round(auc(recall, precision), 3))
-        plt.plot(recall, precision, label=label, color=COLOR[i])
-        plt.xlabel('recall')
-        plt.ylabel('precision')
-        plt.ylim([0, 1])
-        plt.grid()
-    plt.plot([1, 0], [1, 1], 'k--', lw=1)
-    plt.legend(loc="lower left")
-    pr_filename = path.join(path.dirname(__file__), PR_FILENAME + ".pdf")
-    plt.savefig(pr_filename)
+    plot_roc(true_list, score_list)
+    plot_pr(true_list, score_list)
 
     print("Accuracy: %.5f" % accuracy_score(y_test, y_pred))
     print(classification_report(y_test, y_pred))
@@ -171,6 +140,45 @@ def main():
     output_json_filename = path.join(path.dirname(__file__), OUTPUT_FILENAME)
     output_json(output_json_filename, test_texts,
                 y_test, y_pred, test_texts_origin)
+
+def plot_roc(true_list, score_list, TAGS=["バグ報告", "機能要求", "その他　"], COLOR = ["#d62728", "#2ca02c", "#1f77b4"], fontsize=16):
+    plt.rcParams["font.size"] = fontsize
+    plt.rcParams['pdf.fonttype'] = 42 #Type3フォント回避
+    for i in range(len(TAGS)):
+        fpr, tpr, thresholds = roc_curve(true_list[i], score_list[i])
+        label = "{0}：AUC = {1}".format(TAGS[i], round(
+            roc_auc_score(true_list[i], score_list[i]), 2))
+        plt.plot(fpr, tpr, label=label, color=COLOR[i])
+        plt.xlabel('FPR: False positive rate')
+        plt.ylabel('TPR: True positive rate')
+        plt.ylim([0, 1])
+        plt.grid()
+    plt.plot([0, 1], [0, 1], 'k--', lw=1)
+    plt.legend(loc="lower right", prop={"family":"meiryo"})
+    plt.tight_layout()
+    roc_filename = path.join(path.dirname(__file__), ROC_FILENAME + ".pdf")
+    plt.savefig(roc_filename)
+    plt.clf()  # 描画リセット
+
+def plot_pr(true_list, score_list, TAGS=["バグ報告", "機能要求", "その他　"], COLOR = ["#d62728", "#2ca02c", "#1f77b4"], fontsize=16):
+    plt.rcParams["font.size"] = fontsize
+    plt.rcParams['pdf.fonttype'] = 42 #Type3フォント回避
+    plt.tight_layout()
+    for i in range(len(TAGS)-1):
+        precision, recall, thresholds = precision_recall_curve(
+            true_list[i], score_list[i])
+        label = "[{0}] AUC = {1}".format(
+            TAGS[i], round(auc(recall, precision), 2))
+        plt.plot(recall, precision, label=label, color=COLOR[i])
+        plt.xlabel('recall')
+        plt.ylabel('precision')
+        plt.ylim([0, 1])
+        plt.grid()
+    plt.plot([1, 0], [1, 1], 'k--', lw=1)
+    plt.legend(loc="lower left", prop={"family":"meiryo"})
+    plt.tight_layout()
+    pr_filename = path.join(path.dirname(__file__), PR_FILENAME + ".pdf")
+    plt.savefig(pr_filename)
 
 # テキストのリストをtransformers用の入力データに変換
 
