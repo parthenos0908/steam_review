@@ -148,8 +148,7 @@ def plot_roc(true_list, score_list, TAGS=["バグ報告", "機能要求", "そ�
     plt.rcParams['pdf.fonttype'] = 42 #Type3フォント回避
     for i in range(len(TAGS)):
         fpr, tpr, thresholds = roc_curve(true_list[i], score_list[i])
-        label = "{0}：AUC = {1}".format(TAGS[i], round(
-            roc_auc_score(true_list[i], score_list[i]), 2))
+        label = "{0}：AUC = {1:.2f}".format(TAGS[i], roc_auc_score(true_list[i], score_list[i]))
         plt.plot(fpr, tpr, label=label, color=COLOR[i])
         plt.xlabel('FPR: False positive rate')
         plt.ylabel('TPR: True positive rate')
@@ -169,8 +168,7 @@ def plot_pr(true_list, score_list, TAGS=["バグ報告", "機能要求", "その
     for i in range(len(TAGS)-1):
         precision, recall, thresholds = precision_recall_curve(
             true_list[i], score_list[i])
-        label = "[{0}] AUC = {1}".format(
-            TAGS[i], round(auc(recall, precision), 2))
+        label = "[{0}] AUC = {1:.2f}".format(TAGS[i], auc(recall, precision))
         plt.plot(recall, precision, label=label, color=COLOR[i])
         plt.xlabel('recall')
         plt.ylabel('precision')
