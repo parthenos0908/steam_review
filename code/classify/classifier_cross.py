@@ -12,6 +12,7 @@ from sklearn.preprocessing import label_binarize
 import numpy
 from tqdm import tqdm
 import matplotlib.pyplot as plt
+import japanize_matplotlib # matplotで日本語使える
 
 # model_nameはここから取得(cf. https://huggingface.co/transformers/pretrained_models.html)
 # model_name = "cl-tohoku/bert-base-japanese"
@@ -143,7 +144,6 @@ def main():
 
 def plot_roc(true_list, score_list, TAGS=["バグ報告", "機能要求", "その他　"], COLOR = ["#d62728", "#2ca02c", "#1f77b4"], fontsize=16):
     plt.rcParams["font.size"] = fontsize
-    plt.rcParams['pdf.fonttype'] = 42 #Type3フォント回避
     for i in range(len(TAGS)):
         fpr, tpr, thresholds = roc_curve(true_list[i], score_list[i])
         label = "{0}：AUC = {1:.2f}".format(TAGS[i], roc_auc_score(true_list[i], score_list[i]))
@@ -153,7 +153,7 @@ def plot_roc(true_list, score_list, TAGS=["バグ報告", "機能要求", "そ�
         plt.ylim([0, 1])
         plt.grid()
     plt.plot([0, 1], [0, 1], 'k--', lw=1)
-    plt.legend(loc="lower right", prop={"family":"meiryo"})
+    plt.legend(loc="lower right")
     plt.tight_layout()
     roc_filename = path.join(path.dirname(__file__), ROC_FILENAME + ".pdf")
     plt.savefig(roc_filename)
@@ -161,7 +161,6 @@ def plot_roc(true_list, score_list, TAGS=["バグ報告", "機能要求", "そ�
 
 def plot_pr(true_list, score_list, TAGS=["バグ報告", "機能要求", "その他　"], COLOR = ["#d62728", "#2ca02c", "#1f77b4"], fontsize=16):
     plt.rcParams["font.size"] = fontsize
-    plt.rcParams['pdf.fonttype'] = 42 #Type3フォント回避
     plt.tight_layout()
     for i in range(len(TAGS)-1):
         precision, recall, thresholds = precision_recall_curve(
@@ -173,10 +172,11 @@ def plot_pr(true_list, score_list, TAGS=["バグ報告", "機能要求", "その
         plt.ylim([0, 1])
         plt.grid()
     plt.plot([1, 0], [1, 1], 'k--', lw=1)
-    plt.legend(loc="lower left", prop={"family":"meiryo"})
+    plt.legend(loc="lower left")
     plt.tight_layout()
     pr_filename = path.join(path.dirname(__file__), PR_FILENAME + ".pdf")
     plt.savefig(pr_filename)
+
 
 # テキストのリストをtransformers用の入力データに変換
 
