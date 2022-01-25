@@ -1,27 +1,25 @@
-[train data] BR:11297, FR:3820, OTHER:3456 [test data] BR:28, FR:20, OTHER:305
-Epoch 1/30
-581/581 [==============================] - 440s 672ms/step - loss: 0.3444 - acc: 0.8647 - precision: 0.8859 - recall: 0.8440 - auc: 0.9682 - val_loss: 0.6077 - val_acc: 0.7875 - val_precision: 0.7994 - val_recall: 0.7450 - val_auc: 0.9051
-Epoch 2/30
-581/581 [==============================] - 381s 656ms/step - loss: 0.1970 - acc: 0.9295 - precision: 0.9327 - recall: 0.9246 - auc: 0.9885 - val_loss: 0.6243 - val_acc: 0.7564 - val_precision: 0.7580 - val_recall: 0.7365 - val_auc: 0.8945
-Epoch 3/30
-581/581 [==============================] - 382s 657ms/step - loss: 0.1116 - acc: 0.9630 - precision: 0.9648 - recall: 0.9616 - auc: 0.9954 - val_loss: 0.9375 - val_acc: 0.6827 - val_precision: 0.6814 - val_recall: 0.6544 - val_auc: 0.8243
-Epoch 4/30
-581/581 [==============================] - ETA: 0s - loss: 0.0597 - acc: 0.9805 - precision: 0.9809 - recall: 0.9798 - auc: 0.9983
-Epoch 00004: early stopping
-
-Restoring model weights from the end of the best epoch: 1.
-
-Accuracy: 0.78754
+[train data] BR:11297, FR:3820, OTHER:3456 [test data] BR:26, FR:22, OTHER:269
+Accuracy: 0.78864
               precision    recall  f1-score   support
 
-           0       0.50      0.50      0.50        28
-           1       0.23      0.65      0.34        20
-           2       0.94      0.82      0.88       305
+           0       0.64      0.54      0.58        26
+           1       0.26      0.68      0.38        22
+           2       0.93      0.82      0.87       269
 
-    accuracy                           0.79       353
-   macro avg       0.55      0.66      0.57       353
-weighted avg       0.86      0.79      0.82       353
+    accuracy                           0.79       317
+   macro avg       0.61      0.68      0.61       317
+weighted avg       0.86      0.79      0.81       317
 
-[[ 14   3  11]
- [  1  13   6]
- [ 13  41 251]]
+AUC_BR:0.91
+AUC_FR:0.83
+AUC_OTHER:0.77
+
+[[ 14   1  11]
+ [  1  15   6]
+ [  7  41 221]]
+---------------------------------
+max_length:128
+batch_size:32
+hold_out_rate:0.7
+is_learn:1
+is_del_less_words:True

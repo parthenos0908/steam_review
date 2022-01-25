@@ -1,6 +1,6 @@
 from asyncore import write
 from lib2to3.pgen2.token import AT
-from pickle import NONE
+from pickle import FALSE, NONE
 from tkinter import font
 import numpy as np
 import pandas as pd
@@ -23,7 +23,6 @@ import matplotlib.pyplot as plt
 import japanize_matplotlib  # matplotで日本語使える
 
 # model_nameはここから取得(cf. https://huggingface.co/transformers/pretrained_models.html)
-# model_name = "cl-tohoku/bert-base-japanese"
 model_name = "bert-base-uncased"
 tokenizer = transformers.BertTokenizer.from_pretrained(model_name)
 
@@ -34,71 +33,55 @@ batch_size = 32
 epochs = 30
 hold_out_rate = 0.7  # 訓練データとテストデータの比率
 
-is_learn = 0  # 新しく学習する(0) or 既存の学習結果使う(1)
+is_learn = 1  # 新しく学習する(0) or 既存の学習結果使う(1)
+is_del_less_words = True  # 1単語以下をテストデータから除外
 
 
 def main():
-    # log_filename = path.join(
-    #     path.dirname(__file__), LOG_FILENAME)
-    # sys.stdout = open(log_filename, "w")
-
     # review読み込み
     input_review_json_filename = path.join(
         path.dirname(__file__), INPUT_REVIEW_FILENAME)
-    r_text_list, r_label_list, r_origin_list = load_review_json(
-        input_review_json_filename)
 
-    # テキストとラベルの関係を維持したままリストをシャッフル
-    p = list(zip(r_text_list, r_label_list, r_origin_list))
+    review_data = load_review_json(input_review_json_filename)
     random.seed(1)
-    random.shuffle(p)
-    r_text_list, r_label_list, r_origin_list = zip(*p)
+    random.shuffle(review_data)
 
     # 訓練データ(review)
-    train_texts = r_text_list[:int(len(r_text_list)*hold_out_rate)]
-    train_labels = r_label_list[:int(len(r_label_list)*hold_out_rate)]
-    train_texts_origin = r_origin_list[:int(
-        len(r_origin_list)*hold_out_rate)]
+    train_data = review_data[:int(len(review_data)*hold_out_rate)]
+    train_texts = []
+    train_labels = []
+    train_texts_origin = []
+    for train_d in train_data:
+        train_texts.append(train_d['review_lem'])
+        train_labels.append(train_d['label'])
+        train_texts_origin.append(train_d['review'])
 
     # テストデータ
-    test_texts = r_text_list[int(len(r_text_list)*hold_out_rate):]
-    test_labels = r_label_list[int(len(r_label_list)*hold_out_rate):]
-    test_texts_origin = r_origin_list[int(len(r_origin_list)*hold_out_rate):]
+    test_data = review_data[int(len(review_data)*hold_out_rate):]
+    test_texts = []
+    test_labels = []
+    test_texts_origin = []
+    # 単語数1以下を除去
+    for test_d in test_data:
+        if (test_d['num_words'] > 1) or (not is_del_less_words):
+            test_texts.append(test_d['review_lem'])
+            test_labels.append(test_d['label'])
+            test_texts_origin.append(test_d['review'])
 
     # 教師データにforumを使う場合
     if MODE in ["forum", "cross"]:
         input_forum_json_filename = path.join(
             path.dirname(__file__), INPUT_FORUM_FILENAME)
-        f_text_list, f_label_list = load_forum_json(input_forum_json_filename)
-
-        # forumのデータ数をreviewのtestデータ数に合わせて学習--------------------------------------
-        # forum = load_forum_json(input_forum_json_filename)
-        # br = []
-        # fr = []
-        # other = []
-        # for f in forum:
-        #     if forum[1] == 0:
-        #         br.append(forum[0])
-        #     elif forum[1] == 1:
-        #         fr.append(forum[0])
-        #     elif forum[1] == 2:
-        #         other.append(forum[0])
-        # f_text_list = random.sample(br, k=train_texts.count(0)) + random.sample(fr, k=train_texts.count(1)) + random.sample(other, k=train_texts.count(2))
-        # f_label_list = []
-        # for _ in range(train_texts.count(0)):
-        #     f_label_list.append(0)
-        # for _ in range(train_texts.count(1)):
-        #     f_label_list.append(1)
-        # for _ in range(train_texts.count(2)):
-        #     f_label_list.append(2)
-        # ---------------------------------------------------------------------------------------------
-
-        p = list(zip(f_text_list, f_label_list))
+        forum_data = load_forum_json(input_forum_json_filename)
         random.seed(1)
-        random.shuffle(p)
-        f_text_list, f_label_list = zip(*p)
-        train_texts = f_text_list
-        train_labels = f_label_list
+        random.shuffle(forum_data)
+        train_texts = []
+        train_labels = []
+        train_texts_origin = []
+        for forum_d in forum_data:
+            train_texts.append(forum_d['combined'])
+            train_labels.append(forum_d['label'])
+            train_texts_origin.append(forum_d['title'])
 
     print("[train data] BR:{0}, FR:{1}, OTHER:{2} [test data] BR:{3}, FR:{4}, OTHER:{5}".format(
         train_labels.count(0), train_labels.count(1), train_labels.count(2), test_labels.count(0), test_labels.count(1), test_labels.count(2)))
@@ -132,76 +115,85 @@ def main():
         model.load_weights(output_model_filename)
 
 
-# ===============================tmp===============================
+# ===============================予測(学習)===============================
+    # x_test = to_features(test_texts, max_length)
+    # y_test = np.asarray(test_labels)
+    # y_test_b = label_binarize(y_test, classes=[0, 1, 2])
+    # y_preda = model.predict(x_test)
+    # score = y_preda
+    # y_pred = np.argmax(score, axis=1)
+
+# # ===============================予測(既存モデル利用)===============================
     x_test = to_features(test_texts, max_length)
     y_test = np.asarray(test_labels)
     y_test_b = label_binarize(y_test, classes=[0, 1, 2])
     y_preda = model.predict(x_test)
-    score = y_preda
+    # score[num_test_data][num_class(3)]
+    score = y_preda[0]
     y_pred = np.argmax(score, axis=1)
-
-# # ===============================予測===============================
-#     x_test = to_features(test_texts, max_length)
-#     y_test = np.asarray(test_labels)
-#     y_test_b = label_binarize(y_test, classes=[0, 1, 2])
-#     y_preda = model.predict(x_test)
-#     # score[num_test_data][num_class(3)]
-#     score = y_preda[0]
-#     y_pred = np.argmax(score, axis=1)
 
 # # ===============================attentionの可視化===============================
 
-#     # _attention[num_test_data][num_heads(12)][max_length][max_length]
-#     _attention = y_preda[1]
-#     attention = np.zeros((len(_attention), max_length))
-#     for i in range(len(_attention)):
-#         for j in range(12):
-#             attention[i] += _attention[i][j][0]
-#     ids, split_texts = to_ids(test_texts, max_length)
+    # _attention[num_test_data][num_heads(12)][max_length][max_length]
+    _attention = y_preda[1]
+    attention = np.zeros((len(_attention), max_length))
+    for i in range(len(_attention)):
+        for j in range(12):
+            attention[i] += _attention[i][j][0]
+    ids, split_texts = to_ids(test_texts, max_length)
 
-#     attention_filename = path.join(path.dirname(__file__), ATTENTION_FILENAME)
-#     wb = openpyxl.Workbook()
-#     ws1 = wb.worksheets[0]
-#     ws1.title = "texts"
-#     ws2 = wb.create_sheet(title="attention")
-#     ws3 = wb.create_sheet(title="low text")
+    attention_filename = path.join(path.dirname(__file__), ATTENTION_FILENAME)
+    wb = openpyxl.Workbook()
+    ws1 = wb.worksheets[0]
+    ws1.title = "texts"
+    ws2 = wb.create_sheet(title="attention")
+    ws3 = wb.create_sheet(title="low text")
 
-#     for i in range(len(split_texts)):
-#         ws1.cell(2*i+1, 1, value=y_test[i])
-#         ws1.cell(2*i+1, 2, value=y_pred[i])
-#         ws2.cell(2*i+1, 1, value=y_test[i])
-#         ws2.cell(2*i+1, 2, value=y_pred[i])
-#         ws3.cell(2*i+1, 1, value=y_test[i])
-#         ws3.cell(2*i+1, 2, value=y_pred[i])
-#         ws3.cell(2*i+1, 3, value=test_texts_origin[i])
-#         ws3.cell(2*i+2, 3, value=test_texts[i])
-#         for j in range(len(split_texts[i])):
-#             ws1.cell(2*i+1, j+3, value=split_texts[i][j])
-#             ws2.cell(2*i+1, j+3, value=attention[i][j])
+    for i in range(len(split_texts)):
+        ws1.cell(2*i+1, 1, value=y_test[i])
+        ws1.cell(2*i+1, 2, value=y_pred[i])
+        ws2.cell(2*i+1, 1, value=y_test[i])
+        ws2.cell(2*i+1, 2, value=y_pred[i])
+        ws3.cell(2*i+1, 1, value=y_test[i])
+        ws3.cell(2*i+1, 2, value=y_pred[i])
+        ws3.cell(2*i+1, 3, value=test_texts_origin[i])
+        ws3.cell(2*i+2, 3, value=test_texts[i])
+        for j in range(len(split_texts[i])):
+            ws1.cell(2*i+1, j+3, value=split_texts[i][j])
+            ws2.cell(2*i+1, j+3, value=attention[i][j])
 
-#     for row in ws3.iter_rows():
-#         for cell in row:
-#             cell.font = openpyxl.styles.Font(name="游ゴシック")
+    for row in ws3.iter_rows():
+        for cell in row:
+            cell.font = openpyxl.styles.Font(name="游ゴシック")
 
-#     class_color = ["FFC0CB", "98FB98", "FFFACD"] #ピンク, 薄緑, 黄色
-#     for row in ws1.iter_rows():
-#         for cell in row:
-#             if cell.value == "[PAD]":
-#                 cell.font = openpyxl.styles.Font(name="游ゴシック", color="d3d3d3", bold=True) # d3d3d3:グレー
-#                 ws2[cell.coordinate].font = openpyxl.styles.Font(name="游ゴシック", color="d3d3d3", bold=True)
-#             else:
-#                 cell.font = openpyxl.styles.Font(name="游ゴシック", bold=True)
-#                 ws2[cell.coordinate].font = openpyxl.styles.Font(name="游ゴシック", bold=True)
-#             if cell.column < 3 and cell.value in [0,1,2]:
-#                 cell.fill = openpyxl.styles.PatternFill(patternType='solid', fgColor = class_color[cell.value], bgColor = class_color[cell.value])
-#                 ws2[cell.coordinate].fill = openpyxl.styles.PatternFill(patternType='solid', fgColor = class_color[cell.value], bgColor = class_color[cell.value])
-#                 ws3[cell.coordinate].fill = openpyxl.styles.PatternFill(patternType='solid', fgColor = class_color[cell.value], bgColor = class_color[cell.value])
-#             if cell.column > 3 and not (cell.value in ["[CLS]", "[SEP]", "[PAD]"]) and cell.value:
-#                 bg_color = to_hex_rgb(255, int(255*(1.0-min(1.0, ws2[cell.coordinate].value))), int(255*(1.0-min(1.0, ws2[cell.coordinate].value))))
-#                 cell.fill = openpyxl.styles.PatternFill(patternType='solid', fgColor = bg_color, bgColor = bg_color)
-#                 ws2[cell.coordinate].fill = openpyxl.styles.PatternFill(patternType='solid', fgColor = bg_color, bgColor = bg_color)
+    class_color = ["FFC0CB", "98FB98", "FFFACD"]  # ピンク, 薄緑, 黄色
+    for row in ws1.iter_rows():
+        for cell in row:
+            if cell.value == "[PAD]":
+                cell.font = openpyxl.styles.Font(
+                    name="游ゴシック", color="d3d3d3", bold=True)  # d3d3d3:グレー
+                ws2[cell.coordinate].font = openpyxl.styles.Font(
+                    name="游ゴシック", color="d3d3d3", bold=True)
+            else:
+                cell.font = openpyxl.styles.Font(name="游ゴシック", bold=True)
+                ws2[cell.coordinate].font = openpyxl.styles.Font(
+                    name="游ゴシック", bold=True)
+            if cell.column < 3 and cell.value in [0, 1, 2]:
+                cell.fill = openpyxl.styles.PatternFill(
+                    patternType='solid', fgColor=class_color[cell.value], bgColor=class_color[cell.value])
+                ws2[cell.coordinate].fill = openpyxl.styles.PatternFill(
+                    patternType='solid', fgColor=class_color[cell.value], bgColor=class_color[cell.value])
+                ws3[cell.coordinate].fill = openpyxl.styles.PatternFill(
+                    patternType='solid', fgColor=class_color[cell.value], bgColor=class_color[cell.value])
+            if cell.column > 3 and not (cell.value in ["[CLS]", "[SEP]", "[PAD]"]) and cell.value:
+                bg_color = to_hex_rgb(255, int(255*(1.0-min(1.0, ws2[cell.coordinate].value))), int(
+                    255*(1.0-min(1.0, ws2[cell.coordinate].value))))
+                cell.fill = openpyxl.styles.PatternFill(
+                    patternType='solid', fgColor=bg_color, bgColor=bg_color)
+                ws2[cell.coordinate].fill = openpyxl.styles.PatternFill(
+                    patternType='solid', fgColor=bg_color, bgColor=bg_color)
 
-#     wb.save(attention_filename)
+    wb.save(attention_filename)
 
 # ===============================AUC plot===============================
     true_list = [[], [], []]
@@ -216,12 +208,36 @@ def main():
         score_list[1].append(s[1])
         score_list[2].append(s[2])
 
-    plot_roc(true_list, score_list)
+    auc = plot_roc(true_list, score_list)
     plot_pr(true_list, score_list)
+
+# ===============================log===============================
 
     print("Accuracy: %.5f" % accuracy_score(y_test, y_pred))
     print(classification_report(y_test, y_pred))
     print(confusion_matrix(y_test, y_pred, labels=[0, 1, 2]))
+
+    log_filename = path.join(
+        path.dirname(__file__), LOG_FILENAME)
+    with open(log_filename, "w") as f:
+        print("[train data] BR:{0}, FR:{1}, OTHER:{2} [test data] BR:{3}, FR:{4}, OTHER:{5}".format(
+            train_labels.count(0), train_labels.count(1), train_labels.count(2), test_labels.count(0), test_labels.count(1), test_labels.count(2)), file=f)
+        print("Accuracy: %.5f" % accuracy_score(y_test, y_pred), file=f)
+        print(classification_report(y_test, y_pred), file=f)
+
+        print("AUC_BR:{0:.2f}".format(auc[0]), file=f)
+        print("AUC_FR:{0:.2f}".format(auc[1]), file=f)
+        print("AUC_OTHER:{0:.2f}".format(auc[2]), file=f)
+        print("", file=f)
+
+        print(confusion_matrix(y_test, y_pred, labels=[0, 1, 2]), file=f)
+
+        print("---------------------------------", file=f)
+        print("max_length:{0}".format(max_length), file=f)
+        print("batch_size:{0}".format(batch_size), file=f)
+        print("hold_out_rate:{0}".format(hold_out_rate), file=f)
+        print("is_learn:{0}".format(is_learn), file=f)
+        print("is_del_less_words:{0}".format(is_del_less_words), file=f)
 
     output_json_filename = path.join(path.dirname(__file__), OUTPUT_FILENAME)
     output_json(output_json_filename, test_texts,
@@ -233,11 +249,14 @@ def to_hex_rgb(r, g, b):
 
 
 def plot_roc(true_list, score_list, TAGS=["バグ報告", "機能要求", "その他　"], COLOR=["#d62728", "#2ca02c", "#1f77b4"], fontsize=16):
+    auc = []
     plt.rcParams["font.size"] = fontsize
     for i in range(len(TAGS)):
         fpr, tpr, thresholds = roc_curve(true_list[i], score_list[i])
+        _auc = roc_auc_score(true_list[i], score_list[i])
         label = "{0}：AUC = {1:.2f}".format(
-            TAGS[i], roc_auc_score(true_list[i], score_list[i]))
+            TAGS[i], _auc)
+        auc.append(_auc)
         plt.plot(fpr, tpr, label=label, color=COLOR[i])
         plt.xlabel('FPR: False positive rate')
         plt.ylabel('TPR: True positive rate')
@@ -249,6 +268,8 @@ def plot_roc(true_list, score_list, TAGS=["バグ報告", "機能要求", "そ�
     roc_filename = path.join(path.dirname(__file__), ROC_FILENAME + ".pdf")
     plt.savefig(roc_filename)
     plt.clf()  # 描画リセット
+
+    return auc
 
 
 def plot_pr(true_list, score_list, TAGS=["バグ報告", "機能要求", "その他　"], COLOR=["#d62728", "#2ca02c", "#1f77b4"], fontsize=16):
@@ -313,6 +334,29 @@ METRICS = [
 ]
 
 
+# def build_model(model_name, num_classes, max_length):
+#     input_shape = (max_length, )
+#     input_ids = tf.keras.layers.Input(input_shape, dtype=tf.int32)
+#     attention_mask = tf.keras.layers.Input(input_shape, dtype=tf.int32)
+#     token_type_ids = tf.keras.layers.Input(input_shape, dtype=tf.int32)
+#     bert_model = transformers.TFBertModel.from_pretrained(
+#         model_name, output_attentions=True)
+#     last_hidden_state, pooler_output, attention_output = bert_model.bert(
+#         input_ids,
+#         attention_mask=attention_mask,
+#         token_type_ids=token_type_ids
+#     )
+#     # transformersのバージョンによってはエラーが起きる．ver2.11.0で実行
+#     score = tf.keras.layers.Dense(
+#         num_classes, activation="softmax")(pooler_output)
+#     model = tf.keras.Model(
+#         inputs=[input_ids, attention_mask, token_type_ids], outputs=[score])
+#     optimizer = tf.keras.optimizers.Adam(
+#         learning_rate=3e-5, epsilon=1e-08, clipnorm=1.0)
+#     model.compile(optimizer=optimizer,
+#                   loss="categorical_crossentropy", metrics=METRICS)
+#     return model
+
 def build_model(model_name, num_classes, max_length):
     input_shape = (max_length, )
     input_ids = tf.keras.layers.Input(input_shape, dtype=tf.int32)
@@ -329,64 +373,34 @@ def build_model(model_name, num_classes, max_length):
     score = tf.keras.layers.Dense(
         num_classes, activation="softmax")(pooler_output)
     model = tf.keras.Model(
-        inputs=[input_ids, attention_mask, token_type_ids], outputs=[score])
+        inputs=[input_ids, attention_mask, token_type_ids], outputs=[score, attention_output[-1]])
     optimizer = tf.keras.optimizers.Adam(
         learning_rate=3e-5, epsilon=1e-08, clipnorm=1.0)
     model.compile(optimizer=optimizer,
                   loss="categorical_crossentropy", metrics=METRICS)
-    # model.compile(optimizer=optimizer,
-    #               loss="mse", metrics=METRICS)
     return model
-
-# def build_model(model_name, num_classes, max_length):
-#     input_shape = (max_length, )
-#     input_ids = tf.keras.layers.Input(input_shape, dtype=tf.int32)
-#     attention_mask = tf.keras.layers.Input(input_shape, dtype=tf.int32)
-#     token_type_ids = tf.keras.layers.Input(input_shape, dtype=tf.int32)
-#     bert_model = transformers.TFBertModel.from_pretrained(model_name, output_attentions=True)
-#     last_hidden_state, pooler_output, attention_output = bert_model.bert(
-#         input_ids,
-#         attention_mask=attention_mask,
-#         token_type_ids=token_type_ids
-#     )
-#     # transformersのバージョンによってはエラーが起きる．ver2.11.0で実行
-#     score = tf.keras.layers.Dense(
-#         num_classes, activation="softmax")(pooler_output)
-#     model = tf.keras.Model(
-#         inputs=[input_ids, attention_mask, token_type_ids], outputs=[score, attention_output[-1]])
-#     optimizer = tf.keras.optimizers.Adam(
-#         learning_rate=3e-5, epsilon=1e-08, clipnorm=1.0)
-#     model.compile(optimizer=optimizer,
-#                   loss="categorical_crossentropy", metrics=METRICS)
-#     return model
 
 # jsonを読み込んでリストに格納
 
 
 def load_review_json(json_filename):
-    text_list = []
-    label_list = []
-    origin_list = []
+    review_labeled = []
     with open(json_filename, mode='r') as f:
         json_data = json.load(f)
     for text in json_data:
         if ("label" in text) and (text["label"] in [0, 1, 2]):
-            text_list.append(text['review_lem'])
-            label_list.append(text['label'])
-            origin_list.append(text['review'])
-    return text_list, label_list, origin_list
+            review_labeled.append(text)
+    return review_labeled
 
 
 def load_forum_json(json_filename):
-    text_list = []
-    label_list = []
+    forum_list = []
     with open(json_filename, mode='r') as f:
         json_data = json.load(f)
     for text in json_data:
         if text["num_words"] <= max_length:
-            text_list.append(text['combined'])
-            label_list.append(text['label'])
-    return text_list, label_list
+            forum_list.append(text)
+    return forum_list
 
 # 予測結果をjsonに書き込み
 
