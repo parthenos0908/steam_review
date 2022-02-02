@@ -34,7 +34,7 @@ epochs = 30
 hold_out_rate = 0.7  # 訓練データとテストデータの比率
 
 is_learn = 1  # 新しく学習する(0) or 既存の学習結果使う(1)
-is_del_less_words = True  # 1単語以下をテストデータから除外
+is_del_less_words = False  # 1単語以下をテストデータから除外
 
 
 def main():
