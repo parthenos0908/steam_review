@@ -33,8 +33,9 @@ batch_size = 32
 epochs = 30
 hold_out_rate = 0.7  # 訓練データとテストデータの比率
 
-is_learn = 1  # 新しく学習する(0) or 既存の学習結果使う(1)
+is_learn = True  # 新しく学習する(True) or 既存の学習結果使う(False)
 is_del_less_words = False  # 1単語以下をテストデータから除外
+is_less_train_data = True  # フォーラムの教師データ数をレビューに合わせる
 
 
 def main():
@@ -46,7 +47,7 @@ def main():
     random.seed(1)
     random.shuffle(review_data)
 
-    # 訓練データ(review)
+    # 教師データ(review)
     train_data = review_data[:int(len(review_data)*hold_out_rate)]
     train_texts = []
     train_labels = []
@@ -75,6 +76,8 @@ def main():
         forum_data = load_forum_json(input_forum_json_filename)
         random.seed(1)
         random.shuffle(forum_data)
+        if is_less_train_data:  # 教師データの数をreviewに合わせる
+            forum_data = random.sample(forum_data, len(train_data))
         train_texts = []
         train_labels = []
         train_texts_origin = []
@@ -94,14 +97,18 @@ def main():
     x_valid = to_features(test_texts, max_length)
     y_valid = tf.keras.utils.to_categorical(
         test_labels, num_classes=num_classes)
-    model = build_model(model_name, num_classes=num_classes,
-                        max_length=max_length)
+    if is_learn:
+        model = build_model(
+            model_name, num_classes=num_classes, max_length=max_length)
+    else:
+        model = build_model_with_attention(
+            model_name, num_classes=num_classes, max_length=max_length)
 
     output_model_filename = path.join(
         path.dirname(__file__), MODEL_WEIGHT_FILENAME)
 
     # 学習or既存のモデル使う
-    if is_learn == 0:
+    if is_learn:
         # 訓練
         es_cb = keras.callbacks.EarlyStopping(
             monitor='val_loss', patience=3, verbose=1, mode='auto', restore_best_weights=True)
@@ -110,90 +117,86 @@ def main():
 
         # モデルの保存
         model.save_weights(output_model_filename)
-    elif is_learn == 1:
+    else:
         # モデルの読み込み
         model.load_weights(output_model_filename)
 
-
-# ===============================予測(学習)===============================
-    # x_test = to_features(test_texts, max_length)
-    # y_test = np.asarray(test_labels)
-    # y_test_b = label_binarize(y_test, classes=[0, 1, 2])
-    # y_preda = model.predict(x_test)
-    # score = y_preda
-    # y_pred = np.argmax(score, axis=1)
-
-# # ===============================予測(既存モデル利用)===============================
+# # ===============================予測===============================
     x_test = to_features(test_texts, max_length)
     y_test = np.asarray(test_labels)
     y_test_b = label_binarize(y_test, classes=[0, 1, 2])
     y_preda = model.predict(x_test)
     # score[num_test_data][num_class(3)]
-    score = y_preda[0]
+    if is_learn:
+        score = y_preda
+    else:
+        score = y_preda[0]
     y_pred = np.argmax(score, axis=1)
 
 # # ===============================attentionの可視化===============================
 
-    # _attention[num_test_data][num_heads(12)][max_length][max_length]
-    _attention = y_preda[1]
-    attention = np.zeros((len(_attention), max_length))
-    for i in range(len(_attention)):
-        for j in range(12):
-            attention[i] += _attention[i][j][0]
-    ids, split_texts = to_ids(test_texts, max_length)
+    if not is_learn:
+        # _attention[num_test_data][num_heads(12)][max_length][max_length]
+        _attention = y_preda[1]
+        attention = np.zeros((len(_attention), max_length))
+        for i in range(len(_attention)):
+            for j in range(12):
+                attention[i] += _attention[i][j][0]
+        ids, split_texts = to_ids(test_texts, max_length)
 
-    attention_filename = path.join(path.dirname(__file__), ATTENTION_FILENAME)
-    wb = openpyxl.Workbook()
-    ws1 = wb.worksheets[0]
-    ws1.title = "texts"
-    ws2 = wb.create_sheet(title="attention")
-    ws3 = wb.create_sheet(title="low text")
+        attention_filename = path.join(
+            path.dirname(__file__), ATTENTION_FILENAME)
+        wb = openpyxl.Workbook()
+        ws1 = wb.worksheets[0]
+        ws1.title = "texts"
+        ws2 = wb.create_sheet(title="attention")
+        ws3 = wb.create_sheet(title="low text")
 
-    for i in range(len(split_texts)):
-        ws1.cell(2*i+1, 1, value=y_test[i])
-        ws1.cell(2*i+1, 2, value=y_pred[i])
-        ws2.cell(2*i+1, 1, value=y_test[i])
-        ws2.cell(2*i+1, 2, value=y_pred[i])
-        ws3.cell(2*i+1, 1, value=y_test[i])
-        ws3.cell(2*i+1, 2, value=y_pred[i])
-        ws3.cell(2*i+1, 3, value=test_texts_origin[i])
-        ws3.cell(2*i+2, 3, value=test_texts[i])
-        for j in range(len(split_texts[i])):
-            ws1.cell(2*i+1, j+3, value=split_texts[i][j])
-            ws2.cell(2*i+1, j+3, value=attention[i][j])
+        for i in range(len(split_texts)):
+            ws1.cell(2*i+1, 1, value=y_test[i])
+            ws1.cell(2*i+1, 2, value=y_pred[i])
+            ws2.cell(2*i+1, 1, value=y_test[i])
+            ws2.cell(2*i+1, 2, value=y_pred[i])
+            ws3.cell(2*i+1, 1, value=y_test[i])
+            ws3.cell(2*i+1, 2, value=y_pred[i])
+            ws3.cell(2*i+1, 3, value=test_texts_origin[i])
+            ws3.cell(2*i+2, 3, value=test_texts[i])
+            for j in range(len(split_texts[i])):
+                ws1.cell(2*i+1, j+3, value=split_texts[i][j])
+                ws2.cell(2*i+1, j+3, value=attention[i][j])
 
-    for row in ws3.iter_rows():
-        for cell in row:
-            cell.font = openpyxl.styles.Font(name="游ゴシック")
+        for row in ws3.iter_rows():
+            for cell in row:
+                cell.font = openpyxl.styles.Font(name="游ゴシック")
 
-    class_color = ["FFC0CB", "98FB98", "FFFACD"]  # ピンク, 薄緑, 黄色
-    for row in ws1.iter_rows():
-        for cell in row:
-            if cell.value == "[PAD]":
-                cell.font = openpyxl.styles.Font(
-                    name="游ゴシック", color="d3d3d3", bold=True)  # d3d3d3:グレー
-                ws2[cell.coordinate].font = openpyxl.styles.Font(
-                    name="游ゴシック", color="d3d3d3", bold=True)
-            else:
-                cell.font = openpyxl.styles.Font(name="游ゴシック", bold=True)
-                ws2[cell.coordinate].font = openpyxl.styles.Font(
-                    name="游ゴシック", bold=True)
-            if cell.column < 3 and cell.value in [0, 1, 2]:
-                cell.fill = openpyxl.styles.PatternFill(
-                    patternType='solid', fgColor=class_color[cell.value], bgColor=class_color[cell.value])
-                ws2[cell.coordinate].fill = openpyxl.styles.PatternFill(
-                    patternType='solid', fgColor=class_color[cell.value], bgColor=class_color[cell.value])
-                ws3[cell.coordinate].fill = openpyxl.styles.PatternFill(
-                    patternType='solid', fgColor=class_color[cell.value], bgColor=class_color[cell.value])
-            if cell.column > 3 and not (cell.value in ["[CLS]", "[SEP]", "[PAD]"]) and cell.value:
-                bg_color = to_hex_rgb(255, int(255*(1.0-min(1.0, ws2[cell.coordinate].value))), int(
-                    255*(1.0-min(1.0, ws2[cell.coordinate].value))))
-                cell.fill = openpyxl.styles.PatternFill(
-                    patternType='solid', fgColor=bg_color, bgColor=bg_color)
-                ws2[cell.coordinate].fill = openpyxl.styles.PatternFill(
-                    patternType='solid', fgColor=bg_color, bgColor=bg_color)
+        class_color = ["FFC0CB", "98FB98", "FFFACD"]  # ピンク, 薄緑, 黄色
+        for row in ws1.iter_rows():
+            for cell in row:
+                if cell.value == "[PAD]":
+                    cell.font = openpyxl.styles.Font(
+                        name="游ゴシック", color="d3d3d3", bold=True)  # d3d3d3:グレー
+                    ws2[cell.coordinate].font = openpyxl.styles.Font(
+                        name="游ゴシック", color="d3d3d3", bold=True)
+                else:
+                    cell.font = openpyxl.styles.Font(name="游ゴシック", bold=True)
+                    ws2[cell.coordinate].font = openpyxl.styles.Font(
+                        name="游ゴシック", bold=True)
+                if cell.column < 3 and cell.value in [0, 1, 2]:
+                    cell.fill = openpyxl.styles.PatternFill(
+                        patternType='solid', fgColor=class_color[cell.value], bgColor=class_color[cell.value])
+                    ws2[cell.coordinate].fill = openpyxl.styles.PatternFill(
+                        patternType='solid', fgColor=class_color[cell.value], bgColor=class_color[cell.value])
+                    ws3[cell.coordinate].fill = openpyxl.styles.PatternFill(
+                        patternType='solid', fgColor=class_color[cell.value], bgColor=class_color[cell.value])
+                if cell.column > 3 and not (cell.value in ["[CLS]", "[SEP]", "[PAD]"]) and cell.value:
+                    bg_color = to_hex_rgb(255, int(255*(1.0-min(1.0, ws2[cell.coordinate].value))), int(
+                        255*(1.0-min(1.0, ws2[cell.coordinate].value))))
+                    cell.fill = openpyxl.styles.PatternFill(
+                        patternType='solid', fgColor=bg_color, bgColor=bg_color)
+                    ws2[cell.coordinate].fill = openpyxl.styles.PatternFill(
+                        patternType='solid', fgColor=bg_color, bgColor=bg_color)
 
-    wb.save(attention_filename)
+        wb.save(attention_filename)
 
 # ===============================AUC plot===============================
     true_list = [[], [], []]
@@ -334,30 +337,31 @@ METRICS = [
 ]
 
 
-# def build_model(model_name, num_classes, max_length):
-#     input_shape = (max_length, )
-#     input_ids = tf.keras.layers.Input(input_shape, dtype=tf.int32)
-#     attention_mask = tf.keras.layers.Input(input_shape, dtype=tf.int32)
-#     token_type_ids = tf.keras.layers.Input(input_shape, dtype=tf.int32)
-#     bert_model = transformers.TFBertModel.from_pretrained(
-#         model_name, output_attentions=True)
-#     last_hidden_state, pooler_output, attention_output = bert_model.bert(
-#         input_ids,
-#         attention_mask=attention_mask,
-#         token_type_ids=token_type_ids
-#     )
-#     # transformersのバージョンによってはエラーが起きる．ver2.11.0で実行
-#     score = tf.keras.layers.Dense(
-#         num_classes, activation="softmax")(pooler_output)
-#     model = tf.keras.Model(
-#         inputs=[input_ids, attention_mask, token_type_ids], outputs=[score])
-#     optimizer = tf.keras.optimizers.Adam(
-#         learning_rate=3e-5, epsilon=1e-08, clipnorm=1.0)
-#     model.compile(optimizer=optimizer,
-#                   loss="categorical_crossentropy", metrics=METRICS)
-#     return model
-
 def build_model(model_name, num_classes, max_length):
+    input_shape = (max_length, )
+    input_ids = tf.keras.layers.Input(input_shape, dtype=tf.int32)
+    attention_mask = tf.keras.layers.Input(input_shape, dtype=tf.int32)
+    token_type_ids = tf.keras.layers.Input(input_shape, dtype=tf.int32)
+    bert_model = transformers.TFBertModel.from_pretrained(
+        model_name, output_attentions=True)
+    last_hidden_state, pooler_output, attention_output = bert_model.bert(
+        input_ids,
+        attention_mask=attention_mask,
+        token_type_ids=token_type_ids
+    )
+    # transformersのバージョンによってはエラーが起きる．ver2.11.0で実行
+    score = tf.keras.layers.Dense(
+        num_classes, activation="softmax")(pooler_output)
+    model = tf.keras.Model(
+        inputs=[input_ids, attention_mask, token_type_ids], outputs=[score])
+    optimizer = tf.keras.optimizers.Adam(
+        learning_rate=3e-5, epsilon=1e-08, clipnorm=1.0)
+    model.compile(optimizer=optimizer,
+                  loss="categorical_crossentropy", metrics=METRICS)
+    return model
+
+
+def build_model_with_attention(model_name, num_classes, max_length):
     input_shape = (max_length, )
     input_ids = tf.keras.layers.Input(input_shape, dtype=tf.int32)
     attention_mask = tf.keras.layers.Input(input_shape, dtype=tf.int32)
