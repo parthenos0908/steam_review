@@ -1,0 +1,27 @@
+[train data] BR:5166, FR:1863, OTHER:4468 [test data] BR:26, FR:22, OTHER:305
+Accuracy: 0.87535
+              precision    recall  f1-score   support
+
+           0       0.58      0.81      0.68        26
+           1       0.45      0.59      0.51        22
+           2       0.95      0.90      0.93       305
+
+    accuracy                           0.88       353
+   macro avg       0.66      0.77      0.70       353
+weighted avg       0.90      0.88      0.88       353
+
+AUC_BR:0.95
+AUC_FR:0.83
+AUC_OTHER:0.89
+
+[[ 21   0   5]
+ [  1  13   8]
+ [ 14  16 275]]
+---------------------------------
+max_length:128
+batch_size:32
+hold_out_rate:0.7
+is_learn:True
+is_del_less_words:False
+is_less_train_data:False
+is_earlystop:True

@@ -8,20 +8,20 @@ from os import path
 # ID = 227300
 ID = 255710
 
-ATTENTION_FILENAME = "data/" + str(ID) + "/" + str(ID) + "_result.xlsx"
+RESULT_FILENAME = "result/" + str(ID) + "/" + str(ID) + "_result.xlsx"
 
 
 def main():
     r_filename = path.join(path.dirname(
-        __file__), "data/" + str(ID) + "/" + str(ID) + "_review_predict.json")
+        __file__), "result/" + str(ID) + "/" + str(ID) + "_review_predict.json")
     with open(r_filename, mode='r') as f:
         review_pred = json.load(f)
     f_filename = path.join(path.dirname(
-        __file__), "data/" + str(ID) + "/" + str(ID) + "_forum_predict.json")
+        __file__), "result/" + str(ID) + "/" + str(ID) + "_forum_predict.json")
     with open(f_filename, mode='r') as f:
         forum_pred = json.load(f)
     c_filename = path.join(path.dirname(
-        __file__), "data/" + str(ID) + "/" + str(ID) + "_cross_predict.json")
+        __file__), "result/" + str(ID) + "/" + str(ID) + "_cross_predict.json")
     with open(c_filename, mode='r') as f:
         cross_pred = json.load(f)
 
@@ -37,7 +37,7 @@ def main():
         c_pred_list.append(cross_pred[i]["pred"])
         review_list.append(review_pred[i]["review"])
 
-    attention_filename = path.join(path.dirname(__file__), ATTENTION_FILENAME)
+    result_filename = path.join(path.dirname(__file__), RESULT_FILENAME)
     wb = openpyxl.Workbook()
     ws1 = wb.worksheets[0]
 
@@ -76,7 +76,7 @@ def main():
 
     ws1.auto_filter.ref = "A1:D{0}".format(len(review_pred) + 1)
 
-    wb.save(attention_filename)
+    wb.save(result_filename)
 
 
 if __name__ == '__main__':

@@ -22,20 +22,23 @@ from tqdm import tqdm
 import matplotlib.pyplot as plt
 import japanize_matplotlib  # matplotで日本語使える
 
+import settings  # パラメータの設定ファイル
+
 # model_nameはここから取得(cf. https://huggingface.co/transformers/pretrained_models.html)
 model_name = "bert-base-uncased"
 tokenizer = transformers.BertTokenizer.from_pretrained(model_name)
 
 # DLパラメータ
-num_classes = 3
-max_length = 128  # 256はメモリ不足
-batch_size = 32
-epochs = 30
-hold_out_rate = 0.7  # 訓練データとテストデータの比率
+num_classes = settings.num_classes
+max_length = settings.max_length
+batch_size = settings.batch_size
+max_epochs = settings.max_epochs
+hold_out_rate = settings.hold_out_rate
 
-is_learn = True  # 新しく学習する(True) or 既存の学習結果使う(False)
-is_del_less_words = False  # 1単語以下をテストデータから除外
-is_less_train_data = True  # フォーラムの教師データ数をレビューに合わせる
+is_learn = settings.is_learn  # 新しく学習する(True) or 既存の学習結果使う(False)
+is_del_less_words = settings.is_del_less_words  # 1単語以下をテストデータから除外
+is_less_train_data = settings.is_less_train_data  # フォーラムの教師データ数をレビューに合わせる
+is_earlystop = settings.is_earlystop  # 早期終了を行う
 
 
 def main():
@@ -69,7 +72,7 @@ def main():
             test_labels.append(test_d['label'])
             test_texts_origin.append(test_d['review'])
 
-    # 教師データにforumを使う場合
+    # 教師データ(forum)
     if MODE in ["forum", "cross"]:
         input_forum_json_filename = path.join(
             path.dirname(__file__), INPUT_FORUM_FILENAME)
@@ -110,10 +113,15 @@ def main():
     # 学習or既存のモデル使う
     if is_learn:
         # 訓練
+        # 早期終了のコールバック関数
         es_cb = keras.callbacks.EarlyStopping(
             monitor='val_loss', patience=3, verbose=1, mode='auto', restore_best_weights=True)
-        model.fit(x_train, y_train, batch_size=batch_size, epochs=epochs,
-                  verbose=1, validation_data=(x_valid, y_valid), callbacks=[es_cb])
+        if is_earlystop:
+            model.fit(x_train, y_train, batch_size=batch_size, epochs=max_epochs,
+                      verbose=1, validation_data=(x_valid, y_valid), callbacks=[es_cb])
+        else:
+            model.fit(x_train, y_train, batch_size=batch_size, epochs=max_epochs,
+                      verbose=1, validation_data=(x_valid, y_valid))
 
         # モデルの保存
         model.save_weights(output_model_filename)
@@ -241,6 +249,8 @@ def main():
         print("hold_out_rate:{0}".format(hold_out_rate), file=f)
         print("is_learn:{0}".format(is_learn), file=f)
         print("is_del_less_words:{0}".format(is_del_less_words), file=f)
+        print("is_less_train_data:{0}".format(is_less_train_data), file=f)
+        print("is_earlystop:{0}".format(is_earlystop), file=f)
 
     output_json_filename = path.join(path.dirname(__file__), OUTPUT_FILENAME)
     output_json(output_json_filename, test_texts,
@@ -388,6 +398,7 @@ def build_model_with_attention(model_name, num_classes, max_length):
 
 
 def load_review_json(json_filename):
+    print(json_filename)
     review_labeled = []
     with open(json_filename, mode='r') as f:
         json_data = json.load(f)
@@ -442,26 +453,15 @@ if __name__ == '__main__':
                 if args[3] == "c":
                     MODE = "cross"
 
-                INPUT_REVIEW_FILENAME = "data/" + \
-                    str(ID1) + "/" + str(ID1) + "_review_cleaned_out.json"
-                INPUT_FORUM_FILENAME = "data/" + \
-                    str(ID2) + "/" + str(ID2) + "_forum_cleaned.json"
+                INPUT_REVIEW_FILENAME = f"../../data/{str(ID1)}/{str(ID1)}_review_cleaned_out.json"
+                INPUT_FORUM_FILENAME = f"../../data/{str(ID1)}/{str(ID1)}_forum_cleaned.json"
 
-                OUTPUT_FILENAME = "data/" + \
-                    str(ID1) + "/" + str(ID1) + "_" + \
-                    str(MODE) + "_predict" + ".json"
-                MODEL_WEIGHT_FILENAME = "data/" + \
-                    str(ID1) + "/" + str(ID1) + "_" + \
-                    str(MODE) + "_model" + "/checkpoint"
-                ATTENTION_FILENAME = "data/" + \
-                    str(ID1) + "/" + str(ID1) + "_" + \
-                    str(MODE) + "_attention.xlsx"
-                ROC_FILENAME = "data/" + \
-                    str(ID1) + "/" + str(ID1) + "_" + str(MODE) + "_ROC"
-                PR_FILENAME = "data/" + \
-                    str(ID1) + "/" + str(ID1) + "_" + str(MODE) + "_PR"
-                LOG_FILENAME = "data/" + \
-                    str(ID1) + "/" + str(ID1) + "_" + str(MODE) + "_log.txt"
+                OUTPUT_FILENAME = f"result/{str(ID1)}/{str(ID1)}_{str(MODE)}_predict.json"
+                MODEL_WEIGHT_FILENAME = f"result/{str(ID1)}/{str(ID1)}_{str(MODE)}_model/checkpoint"
+                ATTENTION_FILENAME = f"result/{str(ID1)}/{str(ID1)}_{str(MODE)}_attention.xlsx"
+                ROC_FILENAME = f"result/{str(ID1)}/{str(ID1)}_{str(MODE)}_ROC"
+                PR_FILENAME = f"result/{str(ID1)}/{str(ID1)}_{str(MODE)}_PR"
+                LOG_FILENAME = f"result/{str(ID1)}/{str(ID1)}_{str(MODE)}_log.txt"
                 main()
             else:
                 print('Argument must be "f" or "r" or "c"')

@@ -12,15 +12,17 @@ from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from bs4 import BeautifulSoup
 import chromedriver_binary  # chromedriverとのPATHを通すために必要
-from webdriver_manager.chrome import ChromeDriverManager  # chromedriverのバージョンを管理
+# from webdriver_manager.chrome import ChromeDriverManager  # chromedriverのバージョンを管理
 import re
 import time
 
 
 translator = Translator()
 
-INPUT_FILENAME = "review/227300_review_cleaned_out.json"
-OUTPUT_FILENAME = "review/227300_review_cleaned_out.json"
+ID = 227300
+
+INPUT_FILENAME = f"../../data/{ID}/{ID}_review_cleaned_out.json"
+OUTPUT_FILENAME = f"../../data/{ID}/{ID}_review_cleaned_out.json"
 
 
 WIDTH = 1000
@@ -58,6 +60,7 @@ class labelingApp(tk.Frame):
         self.iterator = 0
 
         input_filepath = path.join(path.dirname(__file__), INPUT_FILENAME)
+        print(input_filepath)
         self.json_data = load_json(input_filepath)
         self.data_size = len(self.json_data)
 
