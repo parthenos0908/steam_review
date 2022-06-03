@@ -10,7 +10,7 @@
 - `xxx_forum_cleaned.json`：`xxx_forum.json`に`code/preprocessing/preprocessing.py`した実行結果
 - `xxx_review.json`：`code/scraping/get_review.json`の実行結果（xxxは実行時指定）
 - `xxx_review_cleaned.json`：`xxx_review.json`に`code/preprocessing/preprocessing.py`した実行結果
-- `xxx_review_cleaned_out.json`：`xxx_review_cleaned.json`を目視でラベル付けした結果．
+- `xxx_review_cleaned_out.json`：`xxx_review_cleaned.json`を目視でラベル付けした結果．  
 ラベルの対応は，0：バグ報告，1：機能要求，2：その他，3：英語以外，-1：未分類
 
 それ以外は`code/labeling/labeling.py`でラベリングする際に，jsonがデカすぎたので分割したファイルです．
@@ -98,6 +98,17 @@ is_earlystop = True  # 早期終了を行う
 ```
 - `is_learn = True`の場合，学習と分類を行います．resultフォルダがない場合は新たに作成されます．学習結果に再現性はありません．基本こちらを使います．  
 - `is_learn = False`の場合，学習は行わず分類のみ行います．resultフォルダ内の`xxx/xxx_MODE_model/checkpoint`を参照して，以前`is_learn = True`で実行した際に保存したモデルデータを参照して分類を行います．モデルが同一であれば分類結果は再現性があります．
+- 訓練データとテストデータはrandomに分けられますが，seedを固定しているので再現性があります．
+
+### 前処理を行わないで実験したい場合
+59，71行目`train_texts.append(train_d['review_lem'])`→`train_texts.append(train_d['review'])`に変更  
+88行目`train_texts.append(forum_d['combined'])`→`train_texts.append(forum_d['title'] + forum_d['comment'])`に変更  
+で上手くいくと思います
+https://github.com/parthenos0908/steam_review/blob/50f0fbe59b1a3bc8221fe54f61de2a48542b369e/code/classify/classifier.py#L54-L90
 
 
-`steam_review/code/classify/c`
+## `code/preprocessing/preprocessing.py`の使い方
+- スクレイピングした直後のreview,forumに前処理（小文字化，ストップワード除去，lemmatize）を行います
+- コード内の変数`INPUT_FILENAME`と`OUTPUT_FILENAME`と`MODE`を適宜変更して実行してください．コマンドライン引数は不要です．
+- `code/preprocessing`に`INPUT_FILENAME`ファイルを置いて実行することで，同フォルダに`OUTPUT_FILENAME`ファイルが生成されます．
+- `MODE`はF(forum)かR(review)を設定してください．
