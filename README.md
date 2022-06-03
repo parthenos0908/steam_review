@@ -29,7 +29,7 @@
     "url": "https://forum.scssoft.com/viewtopic.php?f=41&t=304816&sid=756637e85960522bd70695712dbd8353"
 },
 ```
-学習時はcombied（前処理をしてタイトルと本文をつなげた文）を入力として用いる
+学習時はcombied（前処理をしてタイトルと本文をつなげた文）を入力として用いる．
 
 ### `xxx_review_cleaned_out.json`の形式
 ```json
@@ -50,7 +50,7 @@
     "num_words": 19,
     "received_for_free": false,
     "recommendationid": "101210709",
-    "review": "Great game. Solid content. Playing since 2012. Recommended for trucking enthusiast, driving thousand kilometers at 80 kph.\nValue 10/10.",
+    "review": "Great game. Solid content. Playing since 2012. Recommended for trucking enth，usiast, driving thousand kilometers at 80 kph.\nValue 10/10.",
     "review_lem": "great game solid content play since 2012 recommend for truck enthusiast drive thousand kilometer at 80 kph value 10/10",
     "steam_purchase": false,
     "timestamp_created": 1634492456,
@@ -62,9 +62,42 @@
     "written_during_early_access": false
 },
 ```
-学習時はreview_lem（前処理したレビュー文）を入力として用いる
+学習時はreview_lem（前処理したレビュー文）を入力として用いる．  
 色々情報が載っているがreview_lemとlabel以外特に使わない
 
 ## `code/classify/classifier.py`の使い方
-`steam_review/code/classify`で以下を実行
-`$ python classifier.py [教師データ] [テストデータ] [mode]`
+以下を実行（相対パスでファイルを指定しているので`code/classify`の中で実行してください）  
+`$ python classifier.py [ID1] [ID2] [MODE]`  
+例：`$ python classifier.py 255710 255710 r`
+- ID1：ゲームのID
+- ID2：ゲームのID
+- MODE：r(review), f(forum), c(cross) から選択
+    - r：ID1の**review**を教師データとしてID1の**review**を分類する（ID2関係なし）
+    - f：ID1の**forum**を教師データとしてID1の**review**を分類する（ID2関係なし）
+    - c：ID2の**forum**を教師データとしてID1の**review**を分類する（ID1=ID2ならMODE=fと同じ）
+
+実行結果は`code/classify/result`に保存される．**既に存在するファイルは上書きされるので，上書きされたくない場合はresultフォルダを別名に変更してください**
+
+`code/classify/classifier.bat`で今回実験を行った6パターン（R_Cities ⇒ R_Cities, R_Cities ⇒ F_Cities...）を一度に実行できます
+
+### パラメータの設定
+`steam_review/code/classify/setting`は設定ファイルです．学習時の各パラメータを変更できます
+```python
+# DLパラメータ
+num_classes = 3
+max_length = 128  # 256はメモリ不足
+batch_size = 32
+max_epochs = 10
+hold_out_rate = 0.7  # 訓練データとテストデータの比率
+
+# 設定
+is_learn = True  # 新しく学習する(True) or 既存の学習結果使う(False)
+is_del_less_words = False  # 1単語以下をテストデータから除外
+is_less_train_data = False  # フォーラムの教師データ数をレビューに合わせる
+is_earlystop = True  # 早期終了を行う
+```
+- `is_learn = True`の場合，学習と分類を行います．resultフォルダがない場合は新たに作成されます．学習結果に再現性はありません．基本こちらを使います．  
+- `is_learn = False`の場合，学習は行わず分類のみ行います．resultフォルダ内の`xxx/xxx_MODE_model/checkpoint`を参照して，以前`is_learn = True`で実行した際に保存したモデルデータを参照して分類を行います．モデルが同一であれば分類結果は再現性があります．
+
+
+`steam_review/code/classify/c`
