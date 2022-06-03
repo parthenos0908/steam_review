@@ -81,7 +81,7 @@
 `code/classify/classifier.bat`で今回実験を行った6パターン（R_Cities ⇒ R_Cities, R_Cities ⇒ F_Cities...）を一度に実行できます
 
 ### パラメータの設定
-`steam_review/code/classify/setting`は設定ファイルです．学習時の各パラメータを変更できます
+`steam_review/code/classify/setting`は設定ファイルです．学習/分類時の各パラメータを変更できます
 ```python
 # DLパラメータ
 num_classes = 3
