@@ -112,3 +112,7 @@ https://github.com/parthenos0908/steam_review/blob/50f0fbe59b1a3bc8221fe54f61de2
 - コード内の変数`INPUT_FILENAME`と`OUTPUT_FILENAME`と`MODE`を適宜変更して実行してください．コマンドライン引数は不要です．
 - `code/preprocessing`に`INPUT_FILENAME`ファイルを置いて実行することで，同フォルダに`OUTPUT_FILENAME`ファイルが生成されます．
 - `MODE`はF(forum)かR(review)を設定してください．
+
+## link
+- [実験メモ](https://hackmd.io/ufssII94QwC2EuZRT1PcUw)
+- [目視ラベリングの基準決め](https://hackmd.io/O0oe4PYNQWaVdcLDaL35Pg)
