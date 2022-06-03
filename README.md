@@ -98,7 +98,7 @@ is_earlystop = True  # 早期終了を行う
 ```
 - `is_learn = True`の場合，学習と分類を行います．resultフォルダがない場合は新たに作成されます．学習結果に再現性はありません．基本こちらを使います．  
 - `is_learn = False`の場合，学習は行わず分類のみ行います．resultフォルダ内の`xxx/xxx_MODE_model/checkpoint`を参照して，以前`is_learn = True`で実行した際に保存したモデルデータを参照して分類を行います．モデルが同一であれば分類結果は再現性があります．
-- 訓練データとテストデータはrandomに分けられますが，seedを固定しているので再現性があります．
+- データはランダムにシャッフルされたのち訓練データとテストデータに分けられますが，seedを固定しているので再現性があります．
 
 ### 前処理を行わないで実験したい場合
 59，71行目`train_texts.append(train_d['review_lem'])`→`train_texts.append(train_d['review'])`に変更  
