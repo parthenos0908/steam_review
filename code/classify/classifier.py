@@ -454,7 +454,7 @@ if __name__ == '__main__':
                     MODE = "cross"
 
                 INPUT_REVIEW_FILENAME = f"../../data/{str(ID1)}/{str(ID1)}_review_cleaned_out.json"
-                INPUT_FORUM_FILENAME = f"../../data/{str(ID1)}/{str(ID1)}_forum_cleaned.json"
+                INPUT_FORUM_FILENAME = f"../../data/{str(ID2)}/{str(ID2)}_forum_cleaned.json"
 
                 OUTPUT_FILENAME = f"result/{str(ID1)}/{str(ID1)}_{str(MODE)}_predict.json"
                 MODEL_WEIGHT_FILENAME = f"result/{str(ID1)}/{str(ID1)}_{str(MODE)}_model/checkpoint"
